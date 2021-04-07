@@ -2,7 +2,8 @@
   "name": "star-wars-timeline",
   "version": "1.0.0",
   "scripts": {
-    "dev": "webpack serve --config ./bundler/webpack.dev.js"
+    "dev": "webpack serve --config ./bundler/webpack.dev.js",
+    "build": "webpack --config ./bundler/webpack.prod.js"
   },
   "keywords": [
     "star-wars",
