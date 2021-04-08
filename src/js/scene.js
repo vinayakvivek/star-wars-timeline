@@ -1,6 +1,7 @@
 import * as THREE from 'three'
 import { gui } from './config';
 
+
 const textureLoader = new THREE.TextureLoader();
 const normalTexture = textureLoader.load('/textures/normal.png');
 
@@ -23,7 +24,7 @@ scene.add(sphere)
 
 // Light 2
 const pointLight2 = new THREE.PointLight(0xff0000, 2);
-pointLight2.position.set(-1.8, 1, -1.6);
+pointLight2.position.set(1.6, 1, 1.6);
 pointLight2.intensity = 5; 
 scene.add(pointLight2);
 
