@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import scene from './scene';
+import scene, { animateScene } from './scene';
 import camera from './camera';
 import { size } from './config';
 
@@ -26,9 +26,8 @@ window.addEventListener('resize', () => {
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 });
 
-const clock = new THREE.Clock();
 const render = () => {
-  const elapsedTime = clock.getElapsedTime();
+  animateScene();
   renderer.render(scene, camera);
   window.requestAnimationFrame(render);
 }

@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "dat.gui": "^0.7.7",
+    "gsap": "^3.6.1",
     "three": "0.127.0"
   }
 }
