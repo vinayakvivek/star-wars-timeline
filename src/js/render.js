@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import scene, { animateScene } from './scene';
 import camera from './camera';
 import { size } from './config';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 
 const canvas = document.querySelector('canvas.webgl')
@@ -26,8 +27,12 @@ window.addEventListener('resize', () => {
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 });
 
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+
 const render = () => {
   animateScene();
+  controls.update();  // for damping
   renderer.render(scene, camera);
   window.requestAnimationFrame(render);
 }

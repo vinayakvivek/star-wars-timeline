@@ -36,6 +36,8 @@ folder.add(pointLight.position, 'y').min(-3).max(3).step(0.01);
 folder.add(pointLight.position, 'z').min(-3).max(3).step(0.01);
 folder.add(pointLight, 'intensity').min(0).max(10).step(0.01);
 
+const axesHelper = new THREE.AxesHelper(2);
+scene.add(axesHelper);
 
 gsap.to(mesh.position, { duration: 1, delay: 1, x: 2 });
 gsap.to(mesh.position, { duration: 1, delay: 2, x: 0 });
