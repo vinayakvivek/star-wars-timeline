@@ -10,7 +10,7 @@ const scene = new THREE.Scene();
 scene.add(camera);
 
 const timeline = new Timeline();
-scene.add(timeline.item);
+scene.add(timeline);
 
 const axesHelper = new THREE.AxesHelper(2);
 scene.add(axesHelper);

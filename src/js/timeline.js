@@ -1,23 +1,24 @@
 import * as THREE from "three";
-import { gui } from "./config";
+import { gui, fontLoader } from "./config";
 
-class Timeline {
+class Timeline extends THREE.Group {
   constructor() {
+    super();
     this.params = {
       color: "#b94e00",
       width: 0.05,
     };
-    this.item = new THREE.Group();
     this._resetLine();
+    this._createYearLabels();
 
     // add gui tweaks
     this._initTweaks();
   }
 
   _resetLine() {
-    this.item.remove(this.line);
+    this.remove(this.line);
     this.line = this._createLine();
-    this.item.add(this.line);
+    this.add(this.line);
   }
 
   _createLine() {
@@ -29,6 +30,33 @@ class Timeline {
     const geometry = new THREE.TubeGeometry(path, 10, r, 8, false);
     const material = new THREE.MeshBasicMaterial({ color: this.params.color });
     return new THREE.Mesh(geometry, material);
+  }
+
+  _createYearLabels() {
+    const _createTextGeometry = (text, font, size = 0.2) => {
+      return new THREE.TextGeometry(text, {
+        font,
+        size,
+        height: 0.01,
+        curveSegments: 4,
+        bevelEnabled: false,
+      });
+    };
+
+    this.yearLabels = new THREE.Group();
+    this.add(this.yearLabels);
+    const textMaterial = new THREE.MeshBasicMaterial();
+    fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
+      for (let year = -10; year < 10; ++year) {
+        const label = `${year}`
+        const textGeometry = _createTextGeometry(label, font, 0.1);
+        textGeometry.center();
+        const text = new THREE.Mesh(textGeometry, textMaterial);
+        text.position.y -= 0.2;
+        text.position.x = 1 * year;
+        this.yearLabels.add(text);
+      }
+    });
   }
 
   _initTweaks() {
