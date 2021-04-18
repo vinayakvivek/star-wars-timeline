@@ -3,7 +3,6 @@ import { gui } from "./config";
 import camera from "./camera";
 import Timeline from "./timeline";
 
-
 const textureLoader = new THREE.TextureLoader();
 
 const scene = new THREE.Scene();
@@ -21,5 +20,16 @@ const clock = new THREE.Clock();
 export const animateScene = () => {
   const elapsedTime = clock.getElapsedTime();
 };
+
+let isScrolling;
+window.addEventListener("wheel", (e) => {
+  const dx = -0.01 * e.deltaY;
+  timeline.scroll(dx);
+
+  window.clearTimeout(isScrolling);
+  isScrolling = setTimeout(() => {
+    timeline.snap();
+  }, 66);
+});
 
 export default scene;
