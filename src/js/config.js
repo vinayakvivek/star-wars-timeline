@@ -6,7 +6,9 @@ const size = {
   height: window.innerHeight,
 };
 
-const gui = new dat.GUI();
+const gui = new dat.GUI({
+  width: 400,
+});
 
 export {
   size,

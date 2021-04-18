@@ -29,6 +29,7 @@ window.addEventListener('resize', () => {
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
+controls.enableZoom = false;
 
 const render = () => {
   animateScene();
