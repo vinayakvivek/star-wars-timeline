@@ -10,7 +10,7 @@ class Timeline extends THREE.Group {
       width: 0.05,
       startYear: -10,
       endYear: 20,
-      gap: 1,
+      gap: 1.5,
     };
     this._resetLine();
     this._createYearLabels();
@@ -68,12 +68,12 @@ class Timeline extends THREE.Group {
         // add marker
         const marker = new THREE.Mesh(
           new THREE.BoxGeometry(0.01, 0.1, 0),
-          textMaterial,
+          textMaterial
         );
         marker.position.x = text.position.x;
         this.yearMarkers.add(marker);
       }
-      this._updateLabelScale();  // to set label scale
+      this._updateLabelScale(); // to set label scale
     });
 
     // startYear must be negative, endYear must be positive
@@ -101,7 +101,7 @@ class Timeline extends THREE.Group {
 
   _updateLabelScale() {
     const labels = this.yearLabels.children;
-    const rawPos = -(this.position.x / this.params.gap) - this.params.startYear
+    const rawPos = -(this.position.x / this.params.gap) - this.params.startYear;
     const pos = Math.round(rawPos);
     const diff = Math.abs(pos - rawPos);
     labels[pos].scale.setScalar(1 + 4 * (0.5 - diff));
@@ -125,20 +125,22 @@ class Timeline extends THREE.Group {
 
   _computeCurrentYear() {
     this.currentYear = -Math.round(this.position.x / this.params.gap);
-    console.log(this.currentYear);
   }
 
   snap() {
     this._computeCurrentYear();
-    const pos = this.position.x / this.params.gap;
-    const toPos = Math.round(pos);
-    const data = { x: pos };
-    let prev = pos;
-    gsap.to(data, { x: toPos, duration: 0.2, onUpdate: (args) => {
-      const dx = data.x - prev;
-      prev = data.x;
-      this._translate(dx);
-    } });
+    const toPos = -this.currentYear * this.params.gap;
+    const data = { x: this.position.x };
+    let prev = data.x;
+    gsap.to(data, {
+      x: toPos,
+      duration: 0.2,
+      onUpdate: () => {
+        const dx = data.x - prev;
+        prev = data.x;
+        this._translate(dx);
+      },
+    });
   }
 }
 
