@@ -23,7 +23,7 @@ export const animateScene = () => {
 
 let isScrolling;
 window.addEventListener("wheel", (e) => {
-  const dx = -0.01 * e.deltaY;
+  const dx = -0.003 * e.deltaY;
   timeline.scroll(dx);
 
   window.clearTimeout(isScrolling);

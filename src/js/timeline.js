@@ -14,6 +14,7 @@ class Timeline extends THREE.Group {
     };
     this._resetLine();
     this._createYearLabels();
+    this.currentYear = 0;
 
     // add gui tweaks
     this._initTweaks();
@@ -27,8 +28,8 @@ class Timeline extends THREE.Group {
 
   _createLine() {
     const path = new THREE.LineCurve3(
-      new THREE.Vector3(-5, 0, 0),
-      new THREE.Vector3(5, 0, 0)
+      new THREE.Vector3(-10, 0, 0),
+      new THREE.Vector3(10, 0, 0)
     );
     const r = this.params.width / 2;
     const geometry = new THREE.TubeGeometry(path, 10, r, 8, false);
@@ -37,38 +38,48 @@ class Timeline extends THREE.Group {
   }
 
   _createYearLabels() {
+    const startYear = this.params.startYear;
+    const endYear = this.params.endYear;
     const _createTextGeometry = (text, font, size = 0.2) => {
       return new THREE.TextGeometry(text, {
         font,
         size,
-        height: 0.01,
+        height: 0.0,
         curveSegments: 4,
         bevelEnabled: false,
       });
     };
 
     this.yearLabels = new THREE.Group();
-    this.add(this.yearLabels);
-    const textMaterial = new THREE.MeshBasicMaterial();
+    this.yearMarkers = new THREE.Group();
+    this.add(this.yearLabels, this.yearMarkers);
+    const textMaterial = new THREE.MeshBasicMaterial({});
     fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
-      for (
-        let year = this.params.startYear;
-        year <= this.params.endYear;
-        ++year
-      ) {
+      for (let year = startYear; year <= endYear; ++year) {
+        // const label = `${Math.abs(year)} ${year < 0 ? 'BBY' : 'ABY'}`;
         const label = `${year}`;
         const textGeometry = _createTextGeometry(label, font, 0.1);
         textGeometry.center();
         const text = new THREE.Mesh(textGeometry, textMaterial);
-        text.position.y -= 0.2;
+        text.position.y -= 0.3;
         text.position.x = this.params.gap * year;
         this.yearLabels.add(text);
+
+        // add marker
+        const marker = new THREE.Mesh(
+          new THREE.BoxGeometry(0.01, 0.1, 0),
+          textMaterial,
+        );
+        marker.position.x = text.position.x;
+        this.yearMarkers.add(marker);
       }
+      this._updateLabelScale();  // to set label scale
     });
 
     // startYear must be negative, endYear must be positive
-    this.leftMax = -(this.params.gap * this.params.startYear);
-    this.rightMax = -(this.params.gap * this.params.endYear);
+    this.leftMax = -(this.params.gap * startYear);
+    this.rightMax = -(this.params.gap * endYear);
+    this.numYears = endYear - startYear + 1;
   }
 
   _initTweaks() {
@@ -84,6 +95,22 @@ class Timeline extends THREE.Group {
   _translate(dx) {
     this.line.translateX(-dx);
     this.translateX(dx);
+
+    this._updateLabelScale();
+  }
+
+  _updateLabelScale() {
+    const labels = this.yearLabels.children;
+    const rawPos = -(this.position.x / this.params.gap) - this.params.startYear
+    const pos = Math.round(rawPos);
+    const diff = Math.abs(pos - rawPos);
+    labels[pos].scale.setScalar(1 + 4 * (0.5 - diff));
+    if (pos > 0) {
+      labels[pos - 1].scale.setScalar(1);
+    }
+    if (pos < labels.length - 1) {
+      labels[pos + 1].scale.setScalar(1);
+    }
   }
 
   scroll(dx) {
@@ -96,12 +123,18 @@ class Timeline extends THREE.Group {
     this._translate(dx);
   }
 
+  _computeCurrentYear() {
+    this.currentYear = -Math.round(this.position.x / this.params.gap);
+    console.log(this.currentYear);
+  }
+
   snap() {
+    this._computeCurrentYear();
     const pos = this.position.x / this.params.gap;
     const toPos = Math.round(pos);
     const data = { x: pos };
     let prev = pos;
-    gsap.to(data, { x: toPos, duration: 0.5, onUpdate: (args) => {
+    gsap.to(data, { x: toPos, duration: 0.2, onUpdate: (args) => {
       const dx = data.x - prev;
       prev = data.x;
       this._translate(dx);
