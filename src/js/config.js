@@ -1,5 +1,5 @@
 import * as dat from 'dat.gui'
-import { FontLoader } from "three";
+import { FontLoader, TextureLoader } from "three";
 
 const size = {
   width: window.innerWidth,
@@ -10,9 +10,11 @@ const gui = new dat.GUI({
   width: 400,
 });
 const fontLoader = new FontLoader();
+const textureLoader = new TextureLoader();
 
 export {
   size,
   gui,
   fontLoader,
+  textureLoader,
 }

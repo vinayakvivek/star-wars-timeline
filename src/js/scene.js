@@ -1,7 +1,8 @@
 import * as THREE from "three";
-import { gui } from "./config";
+import { gui, fontLoader } from "./config";
 import camera from "./camera";
 import Timeline from "./timeline";
+import MovieTile from "./movie-tile";
 
 const textureLoader = new THREE.TextureLoader();
 
@@ -11,8 +12,14 @@ scene.add(camera);
 const timeline = new Timeline();
 scene.add(timeline);
 
-const axesHelper = new THREE.AxesHelper(2);
-scene.add(axesHelper);
+const movieTile = new MovieTile("A New Hope", "/images/a-new-hope.webp");
+scene.add(movieTile);
+fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
+  movieTile.createLabel(font, new THREE.MeshBasicMaterial());
+})
+
+// const axesHelper = new THREE.AxesHelper(2);
+// scene.add(axesHelper);
 
 const clock = new THREE.Clock();
 
