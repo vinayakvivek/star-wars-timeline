@@ -10,12 +10,11 @@ const scene = new THREE.Scene();
 scene.add(camera);
 
 const timeline = new Timeline();
+timeline.position.y = -1.0;
 scene.add(timeline);
 
-const movieTile = new MovieTile("A New Hope", "/images/a-new-hope.webp");
-scene.add(movieTile);
 fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
-  movieTile.createLabel(font, new THREE.MeshBasicMaterial());
+  timeline.addMovieTile("A New Hope", 0, "/images/a-new-hope.webp", font);
 })
 
 // const axesHelper = new THREE.AxesHelper(2);

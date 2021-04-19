@@ -2,10 +2,11 @@ import * as THREE from "three";
 import { textureLoader } from "./config";
 
 class MovieTile extends THREE.Group {
-  constructor(name, imagePath) {
+  constructor(name, imagePath, font) {
     super();
     this.name = name;
     this.texture = textureLoader.load(imagePath);
+    this.font = font;
     this.params = {
       tileScale: 0.75,
       labelSize: 0.1,
@@ -16,6 +17,7 @@ class MovieTile extends THREE.Group {
     };
     this._resetTile();
     // this._createBorder();
+    this._createLabel();
     this._createMarker();
 
     this.position.y = this.params.height;
@@ -61,17 +63,16 @@ class MovieTile extends THREE.Group {
     this.add(this.border);
   }
 
-  createLabel(font, material) {
-    if (this.label) return;  // label already exists
+  _createLabel() {
     const textGeometry = new THREE.TextGeometry(this.name, {
-      font,
+      font: this.font,
       size: this.params.labelSize,
       height: 0.0,
       curveSegments: 4,
       bevelEnabled: false,
     });
     textGeometry.center();
-    this.label = new THREE.Mesh(textGeometry, material);
+    this.label = new THREE.Mesh(textGeometry, new THREE.MeshBasicMaterial());
     this.label.position.y = this.params.labelPos;
     this.add(this.label);
   }

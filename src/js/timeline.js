@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { gui, fontLoader } from "./config";
 import gsap from "gsap";
+import MovieTile from "./movie-tile";
 
 class Timeline extends THREE.Group {
   constructor() {
@@ -15,9 +16,17 @@ class Timeline extends THREE.Group {
     this._resetLine();
     this._createYearLabels();
     this.currentYear = 0;
+    this.movies = new THREE.Group();
+    this.add(this.movies);
 
     // add gui tweaks
     this._initTweaks();
+  }
+
+  addMovieTile(name, year, imagePath, font) {
+    const movieTile = new MovieTile(name, imagePath, font);
+    movieTile.position.x = year * this.params.gap;
+    this.movies.add(movieTile);
   }
 
   _resetLine() {
