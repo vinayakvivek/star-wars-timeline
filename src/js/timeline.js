@@ -9,8 +9,8 @@ class Timeline extends THREE.Group {
     this.params = {
       color: "#b94e00",
       width: 0.05,
-      startYear: -10,
-      endYear: 20,
+      startYear: -33,
+      endYear: 40,
       gap: 1,
     };
     this._resetLine();
@@ -23,15 +23,15 @@ class Timeline extends THREE.Group {
     this._initTweaks();
   }
 
-  addMovieTile(name, year, imagePath, font) {
-    const movieTile = new MovieTile(name, imagePath, font);
+  addMovieTile(name, year, imagePath, font, params = {}) {
+    const movieTile = new MovieTile(name, imagePath, font, params);
     movieTile.position.x = year * this.params.gap;
     movieTile.createMarker();
     this.movies.add(movieTile);
   }
 
-  addMovieTileWithDuration(name, startYear, endYear, imagePath, font) {
-    const movieTile = new MovieTile(name, imagePath, font);
+  addMovieTileWithDuration(name, startYear, endYear, imagePath, font, params = {}) {
+    const movieTile = new MovieTile(name, imagePath, font, params);
     const startX = startYear * this.params.gap;
     const endX = endYear * this.params.gap;
     movieTile.position.x = (startX + endX) / 2;
@@ -78,10 +78,10 @@ class Timeline extends THREE.Group {
       for (let year = startYear; year <= endYear; ++year) {
         // const label = `${Math.abs(year)} ${year < 0 ? 'BBY' : 'ABY'}`;
         const label = `${year}`;
-        const textGeometry = _createTextGeometry(label, font, 0.1);
+        const textGeometry = _createTextGeometry(label, font, 0.07);
         textGeometry.center();
         const text = new THREE.Mesh(textGeometry, textMaterial);
-        text.position.y -= 0.3;
+        text.position.y -= 0.2;
         text.position.x = this.params.gap * year;
         this.yearLabels.add(text);
 

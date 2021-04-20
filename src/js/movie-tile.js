@@ -2,7 +2,7 @@ import * as THREE from "three";
 import { textureLoader } from "./config";
 
 class MovieTile extends THREE.Group {
-  constructor(name, imagePath, font) {
+  constructor(name, imagePath, font, params = {}) {
     super();
     this.name = name;
     this.texture = textureLoader.load(imagePath);
@@ -10,11 +10,11 @@ class MovieTile extends THREE.Group {
     this.font = font;
     this.params = {
       tileScale: 0.5,
-      labelSize: 0.1,
-      labelPos: -0.7,
+      labelSize: params.labelSize || 0.08,
+      labelPos: -0.6,
       borderSize: 1.5,
       markerStart: -1.0,
-      height: 2,
+      height: params.height || 2,
     };
     this._resetTile();
     this._createLabel();
@@ -52,7 +52,7 @@ class MovieTile extends THREE.Group {
     marker2.position.x = halfWidth;
 
     const connector = new THREE.Mesh(
-      new THREE.PlaneGeometry(halfWidth * 2, 0.05),
+      new THREE.PlaneGeometry(halfWidth * 2 + 0.01, 0.05),
       this.material,
     );
     this.add(marker1, marker2, connector);
@@ -61,7 +61,7 @@ class MovieTile extends THREE.Group {
   createMarker() {
     const h = this.params.height;
     const marker = new THREE.Mesh(
-      new THREE.PlaneGeometry(0.01, h),
+      new THREE.PlaneGeometry(0.01, Math.abs(h)),
       this.material,
     );
     marker.position.y = - h / 2;
@@ -90,7 +90,7 @@ class MovieTile extends THREE.Group {
     const border = new THREE.Mesh(
       new THREE.PlaneGeometry(w, h),
       new THREE.MeshBasicMaterial({
-        color: "rgb(0, 0, 0)",
+        color: "rgb(24, 24, 24)",
       }),
     );
     border.position.set(cx, cy, 0.01);
