@@ -26,12 +26,23 @@ class Timeline extends THREE.Group {
   addMovieTile(name, year, imagePath, font) {
     const movieTile = new MovieTile(name, imagePath, font);
     movieTile.position.x = year * this.params.gap;
+    movieTile.createMarker();
+    this.movies.add(movieTile);
+  }
+
+  addMovieTileWithDuration(name, startYear, endYear, imagePath, font) {
+    const movieTile = new MovieTile(name, imagePath, font);
+    const startX = startYear * this.params.gap;
+    const endX = endYear * this.params.gap;
+    movieTile.position.x = (startX + endX) / 2;
+    movieTile.createYearMarkers((endX - startX) / 2);
     this.movies.add(movieTile);
   }
 
   _resetLine() {
     this.remove(this.line);
     this.line = this._createLine();
+    this.line.position.z = -0.03;
     this.add(this.line);
   }
 

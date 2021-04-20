@@ -15,7 +15,7 @@ scene.add(timeline);
 
 fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
   timeline.addMovieTile("A New Hope", 0, "/images/a-new-hope.webp", font);
-  timeline.addMovieTile("Rebels", -5, "/images/rebels.webp", font);
+  timeline.addMovieTileWithDuration("Rebels", -5, -1, "/images/rebels.webp", font);
 })
 
 // const axesHelper = new THREE.AxesHelper(2);

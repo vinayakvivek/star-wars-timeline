@@ -6,6 +6,7 @@ class MovieTile extends THREE.Group {
     super();
     this.name = name;
     this.texture = textureLoader.load(imagePath);
+    this.material = this.material;
     this.font = font;
     this.params = {
       tileScale: 0.5,
@@ -18,7 +19,6 @@ class MovieTile extends THREE.Group {
     this._resetTile();
     this._createLabel();
     this._createBorderMask();
-    this._createMarker();
     this.position.y = this.params.height;
   }
 
@@ -36,19 +36,36 @@ class MovieTile extends THREE.Group {
       })
     );
     tile.scale.setScalar(this.params.tileScale);
+    tile.position.z = 0.02;
     return tile;
   }
 
-  _createMarker() {
+  createYearMarkers(halfWidth) {
+    const h = this.params.height;
+    const geometry = new THREE.PlaneGeometry(0.01, h);
+    const marker1 = new THREE.Mesh(geometry, this.material);
+    marker1.position.y = - h / 2;
+    marker1.position.x = -halfWidth;
+
+    const marker2 = new THREE.Mesh(geometry, this.material);
+    marker2.position.y = - h / 2;
+    marker2.position.x = halfWidth;
+
+    const connector = new THREE.Mesh(
+      new THREE.PlaneGeometry(halfWidth * 2, 0.05),
+      this.material,
+    );
+    this.add(marker1, marker2, connector);
+  }
+
+  createMarker() {
     const h = this.params.height;
     const marker = new THREE.Mesh(
       new THREE.PlaneGeometry(0.01, h),
-      new THREE.MeshBasicMaterial(),
+      this.material,
     );
     marker.position.y = - h / 2;
-    marker.position.z = -0.02;
     this.add(marker);
-    this.marker = marker;
   }
 
   _createBorder() {
@@ -56,7 +73,7 @@ class MovieTile extends THREE.Group {
     const gap = 0.05;
     this.border = new THREE.Mesh(
       new THREE.RingGeometry(size, size + gap, 4),
-      new THREE.MeshBasicMaterial(),
+      this.material,
     );
     this.border.rotation.z = Math.PI / 4;
     this.border.position.y = -0.2;
@@ -76,7 +93,7 @@ class MovieTile extends THREE.Group {
         color: "rgb(0, 0, 0)",
       }),
     );
-    border.position.set(cx, cy, -0.01);
+    border.position.set(cx, cy, 0.01);
     this.add(border);
   }
 
@@ -89,8 +106,9 @@ class MovieTile extends THREE.Group {
       bevelEnabled: false,
     });
     textGeometry.center();
-    this.label = new THREE.Mesh(textGeometry, new THREE.MeshBasicMaterial());
+    this.label = new THREE.Mesh(textGeometry, this.material);
     this.label.position.y = this.params.labelPos;
+    this.label.position.z = 0.02;
     this.add(this.label);
   }
 }
