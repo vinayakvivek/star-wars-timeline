@@ -8,18 +8,17 @@ class MovieTile extends THREE.Group {
     this.texture = textureLoader.load(imagePath);
     this.font = font;
     this.params = {
-      tileScale: 0.75,
+      tileScale: 0.5,
       labelSize: 0.1,
-      labelPos: -0.9,
+      labelPos: -0.7,
       borderSize: 1.5,
       markerStart: -1.0,
       height: 2,
     };
     this._resetTile();
-    // this._createBorder();
     this._createLabel();
+    this._createBorderMask();
     this._createMarker();
-
     this.position.y = this.params.height;
   }
 
@@ -41,12 +40,13 @@ class MovieTile extends THREE.Group {
   }
 
   _createMarker() {
-    const h = this.params.height + this.params.labelPos - 0.1;
+    const h = this.params.height;
     const marker = new THREE.Mesh(
       new THREE.PlaneGeometry(0.01, h),
       new THREE.MeshBasicMaterial(),
     );
-    marker.position.y = this.params.markerStart - h / 2;
+    marker.position.y = - h / 2;
+    marker.position.z = -0.02;
     this.add(marker);
     this.marker = marker;
   }
@@ -61,6 +61,23 @@ class MovieTile extends THREE.Group {
     this.border.rotation.z = Math.PI / 4;
     this.border.position.y = -0.2;
     this.add(this.border);
+  }
+
+  _createBorderMask() {
+    const bbox = new THREE.Box3().setFromObject(this);
+    const margin = 0.1;
+    const w = bbox.max.x - bbox.min.x + margin;
+    const h = bbox.max.y - bbox.min.y + margin;
+    const cx = (bbox.max.x + bbox.min.x) / 2;
+    const cy = (bbox.max.y + bbox.min.y) / 2;
+    const border = new THREE.Mesh(
+      new THREE.PlaneGeometry(w, h),
+      new THREE.MeshBasicMaterial({
+        color: "rgb(0, 0, 0)",
+      }),
+    );
+    border.position.set(cx, cy, -0.01);
+    this.add(border);
   }
 
   _createLabel() {
