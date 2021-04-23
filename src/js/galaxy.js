@@ -5,7 +5,7 @@ class Galaxy extends THREE.Group {
   constructor() {
     super();
     this.starGeometry = new THREE.SphereGeometry(0.1, 8, 8);
-    this.starMaterial = new THREE.MeshBasicMaterial({ color: "#777777", });
+    this.starMaterial = new THREE.MeshBasicMaterial({ color: "#aaaaaa", });
     this.reset();
   }
 

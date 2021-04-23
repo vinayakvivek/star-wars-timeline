@@ -81,7 +81,7 @@ class MovieTile extends THREE.Group {
   }
 
   _createBorderMask() {
-    const bbox = new THREE.Box3().setFromObject(this);
+    const bbox = new THREE.Box3().setFromObject(this.label);
     const margin = 0.1;
     const w = bbox.max.x - bbox.min.x + margin;
     const h = bbox.max.y - bbox.min.y + margin;
@@ -90,7 +90,7 @@ class MovieTile extends THREE.Group {
     const border = new THREE.Mesh(
       new THREE.PlaneGeometry(w, h),
       new THREE.MeshBasicMaterial({
-        color: "rgb(24, 24, 24)",
+        color: "rgb(0, 0, 0)",
       }),
     );
     border.position.set(cx, cy, 0.01);

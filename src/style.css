@@ -6,7 +6,8 @@
 html, body {
   height: 100vh;
   font-family: 'Poppins';
-  background: rgb(24, 24, 24);
+  /* background: rgb(24, 24, 24); */
+  background: rgb(0, 0, 0);
   overflow: hidden;
 }
 
