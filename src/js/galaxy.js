@@ -1,62 +1,75 @@
 import * as THREE from 'three';
-import { size } from './config';
+import { size, textureLoader } from './config';
+
+const randomPos = (width) => {
+  return (Math.random() - 0.5) * 2 * width;
+}
 
 class Galaxy extends THREE.Group {
   constructor() {
     super();
-    this.starGeometry = new THREE.SphereGeometry(0.1, 8, 8);
-    this.starMaterial = new THREE.MeshBasicMaterial({ color: "#aaaaaa", });
-    this.reset();
+    this.starTexture = textureLoader.load('/textures/particles/1.png');
+    this.starFields = [];
+    this.count = 10000;
+    this.fieldSize = {
+      x: 160,
+      y: 100,
+      z: 200,
+    };
+    this.starSize = 0.5;
+    this.scrollOffset = 10;
+    this._generateFields();
   }
 
-  _createStar() {
-    return new THREE.Mesh(this.starGeometry, this.starMaterial);
+  /**
+   * Idea is to have 3 fields like 3 boxes in line,
+   * with origin at the center of middle box
+   * and when the scroll crosses the middle box's border,
+   * switch the box behind it to the front and continue
+   */
+  _generateFields() {
+    this.sf1 = this._createStarField('red');
+    this.sf2 = this._createStarField('blue');
+    this.sf3 = this._createStarField('green');
+    this.sf1.position.z = -this.fieldSize.z * 2;
+    this.sf3.position.z = this.fieldSize.z * 2;
+    this.add(this.sf1, this.sf2, this.sf3);
   }
 
-  _createRandomStar(offset = 0) {
-    const star = this._createStar();
-    const z = -(this.position.z + 50 + Math.random() * 100 + offset);
-    const x = (Math.random() - 0.5) * 200;
-    const y = (Math.random() - 0.5) * 100;
-    star.position.set(x, y, z);
-    return star;
+  _createStarField(color) {
+    const points = new Float32Array(this.count * 3);
+    for (let i = 0; i < this.count; ++i) {
+      const i3 = i * 3;
+      const z = randomPos(this.fieldSize.z);
+      points[i3] = randomPos(this.fieldSize.x);
+      points[i3 + 1] = randomPos(this.fieldSize.y);
+      points[i3 + 2] = z;
+    }
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute('position', new THREE.BufferAttribute(points, 3));
+    const material = new THREE.PointsMaterial({
+      size: this.starSize,
+      // color: color,
+      transparent: true,
+      alphaMap: this.starTexture,
+      depthWrite: false,
+    });
+    const starField = new THREE.Points(geometry, material);
+    return starField;
   }
 
-  reset() {
-    this.stars = new THREE.Group();
-    this.add(this.stars);
-
-    const numStars = 2000;
-    for (let i = 0; i < numStars; ++i) {
-      this.stars.add(this._createRandomStar());
+  scroll(dz) {
+    this.position.z += dz;
+    const offset = this.scrollOffset;
+    if (this.position.z > -this.sf2.position.z + this.fieldSize.z + offset) {
+      this.sf3.position.z -= 6 * this.fieldSize.z;
+      [this.sf1, this.sf2, this.sf3] = [this.sf3, this.sf1, this.sf2];
+    } else if (this.position.z < -this.sf2.position.z - this.fieldSize.z - offset) {
+      this.sf1.position.z += 6 * this.fieldSize.z;
+      [this.sf3, this.sf2, this.sf1] = [this.sf1, this.sf3, this.sf2];
     }
   }
 
-  respawn() {
-    const stars = this.stars.children;
-    for (let i = 0; i < stars.length; ++i) {
-      if (stars[i].position.z > -this.position.z) {
-        this.stars.remove(stars[i]);
-        this.stars.add(this._createRandomStar(50));
-      }
-    }
-    // console.log(stars[0].position.z, this.position.z);
-  }
-
-  respawnNegative() {
-    const stars = this.stars.children;
-    for (let i = 0; i < stars.length; ++i) {
-      if (stars[i].position.z < -this.position.z-100) {
-        this.stars.remove(stars[i]);
-        this.stars.add(this._createRandomStar(-50));
-      }
-    }
-    // console.log(stars[0].position.z, this.position.z);
-  }
-
-  activateHyperspace() {
-
-  }
 }
 
 export default Galaxy;

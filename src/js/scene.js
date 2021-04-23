@@ -95,18 +95,9 @@ fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
 
 const clock = new THREE.Clock();
 
-let gap = 1;
-let v = 10;
 // this must be called inside the render loop
 export const animateScene = () => {
   const elapsedTime = clock.getElapsedTime();
-
-  // galaxy.position.z = elapsedTime * v;
-  // // v += 0.01;
-  // if (elapsedTime > gap) {
-  //   galaxy.respawn();
-  //   gap += 1;
-  // }
 };
 
 let isScrolling;
@@ -114,12 +105,7 @@ window.addEventListener("wheel", (e) => {
   const dx = -0.003 * e.deltaY;
   timeline.scroll(dx);
 
-  galaxy.position.z += 0.1 * e.deltaY;
-  if (e.deltaY > 0) {
-    galaxy.respawn();
-  } else {
-    galaxy.respawnNegative();
-  }
+  galaxy.scroll(0.1 * e.deltaY);
 
   window.clearTimeout(isScrolling);
   isScrolling = setTimeout(() => {
