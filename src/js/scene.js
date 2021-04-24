@@ -12,7 +12,7 @@ const scene = new THREE.Scene();
 scene.add(camera);
 
 const timeline = new Timeline();
-timeline.position.y = -1;
+timeline.position.y = -2;
 scene.add(timeline);
 
 const galaxy = new Galaxy();
@@ -20,14 +20,23 @@ scene.add(galaxy);
 
 fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
   for (const item of data) {
-    console.log(item);
     if (item.year) {
       timeline.addMovieTile(item.name, item.year, item.thumbnail, font, item.params);
     } else {
       timeline.addMovieTileWithDuration(item.name, item.startYear, item.endYear, item.thumbnail, font, item.params);
     }
   }
+  timeline.scroll(20);
 });
+
+gui.add(camera.position, 'x', -5, 5, 0.01).name('Camera x');
+gui.add(camera.position, 'y', -5, 5, 0.01).name('Camera y');
+gui.add(camera.position, 'z', -5, 5, 0.01).name('Camera z');
+
+// lights
+const pointLight = new THREE.PointLight("#ffffff", 2);
+pointLight.position.set(0, 2, 2);
+scene.add(pointLight);
 
 // const axesHelper = new THREE.AxesHelper(2);
 // scene.add(axesHelper);

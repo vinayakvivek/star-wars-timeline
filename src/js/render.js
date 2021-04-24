@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import scene, { animateScene } from './scene';
 import camera from './camera';
-import { size } from './config';
+import { gui, size } from './config';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 
@@ -30,6 +30,9 @@ window.addEventListener('resize', () => {
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.enableZoom = false;
+controls.enabled = false;
+
+gui.add(controls, 'enabled').name('Enable orbit controls');
 // controls.target.set(-5, 0, 0);
 
 const render = () => {

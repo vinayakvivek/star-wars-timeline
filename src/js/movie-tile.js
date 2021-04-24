@@ -15,11 +15,13 @@ class MovieTile extends THREE.Group {
       borderSize: 1.5,
       markerStart: -1.0,
       height: params.height || 2,
+      zPos: params.zPos || 0,
     };
     this._resetTile();
     this._createLabel();
     this._createBorderMask();
     this.position.y = this.params.height;
+    this.position.z = -this.params.zPos;
   }
 
   _resetTile() {
@@ -62,7 +64,7 @@ class MovieTile extends THREE.Group {
   createMarker() {
     const h = this.params.height;
     const marker = new THREE.Mesh(
-      new THREE.PlaneGeometry(0.01, Math.abs(h)),
+      new THREE.PlaneGeometry(0.05, Math.abs(h)),
       this.material,
     );
     marker.position.y = - h / 2;

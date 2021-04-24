@@ -2,31 +2,39 @@
   {
     "name": "Episode I : The Phantom Menace",
     "year": -32,
-    "thumbnail": "/images/ep1-phantom-menace.jpeg"
+    "thumbnail": "/images/ep1-phantom-menace.jpeg",
+    "params": {
+      "height": 1.5,
+      "zPos": 0.04
+    }
   },
   {
     "name": "Episode II : Attack of the Clones",
     "year": -22,
     "thumbnail": "/images/ep2-attack-of-the-clones.jpeg",
     "params": {
-      "labelSize": 0.07
+      "labelSize": 0.07,
+      "height": 1.5,
+      "zPos": 0.04
     }
   },
   {
     "name": "The Clone Wars (film)",
-    "year": -21.8,
+    "year": -22,
     "thumbnail": "/images/clone-wars-movie.jpeg",
     "params": {
-      "height": -1.0
+      "height": 2.3,
+      "zPos": 1.0
     }
   },
   {
     "name": "The Clone Wars",
-    "startYear": -21.9,
-    "endYear": -19.1,
+    "startYear": -22,
+    "endYear": -19,
     "thumbnail": "/images/clone-wars.jpeg",
     "params": {
-      "height": 1.0
+      "height": 1.0,
+      "zPos": 0.5
     }
   },
   {
@@ -35,7 +43,8 @@
     "thumbnail": "/images/ep3-revenge-of-the-sith.jpeg",
     "params": {
       "height": 2.0,
-      "labelSize": 0.07
+      "labelSize": 0.07,
+      "zPos": 0.04
     }
   },
   {
@@ -44,7 +53,8 @@
     "endYear": -5.1,
     "thumbnail": "/images/bad-batch.jpg",
     "params": {
-      "height": 1.0
+      "height": 1.0,
+      "zPos": 1.0
     }
   },
   {
@@ -53,7 +63,8 @@
     "endYear": -1,
     "thumbnail": "/images/rebels.jpeg",
     "params": {
-      "height": 1.0
+      "height": 1.0,
+      "zPos": 0.04
     }
   },
   {
@@ -62,7 +73,8 @@
     "endYear": 0.001,
     "thumbnail": "/images/a-new-hope.webp",
     "params": {
-      "height": 1.5
+      "height": 1.5,
+      "zPos": 0.04
     }
   }
 ]

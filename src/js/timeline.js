@@ -7,13 +7,13 @@ class Timeline extends THREE.Group {
   constructor() {
     super();
     this.params = {
-      color: "#b94e00",
-      width: 0.05,
+      color: "#292929",
+      width: 5,
       startYear: -33,
       endYear: 40,
       gap: 1,
     };
-    this._resetLine();
+    this._createLine();
     this._createYearLabels();
     this.currentYear = 0;
     this.movies = new THREE.Group();
@@ -47,14 +47,29 @@ class Timeline extends THREE.Group {
   }
 
   _createLine() {
-    const path = new THREE.LineCurve3(
-      new THREE.Vector3(this.params.gap * this.params.startYear, 0, 0),
-      new THREE.Vector3(this.params.gap * this.params.endYear, 0, 0)
-    );
-    const r = this.params.width / 2;
-    const geometry = new THREE.TubeGeometry(path, 10, r, 8, false);
-    const material = new THREE.MeshBasicMaterial({ color: this.params.color });
-    return new THREE.Mesh(geometry, material);
+    // const path = new THREE.LineCurve3(
+    //   new THREE.Vector3(this.params.gap * this.params.startYear, 0, 0),
+    //   new THREE.Vector3(this.params.gap * this.params.endYear, 0, 0)
+    // );
+    // const r = this.params.width / 2;
+    // const geometry = new THREE.TubeGeometry(path, 10, r, 8, false);
+    // const material = new THREE.MeshBasicMaterial({ color: this.params.color });
+    // return new THREE.Mesh(geometry, material);
+    const leftX = this.params.gap * this.params.startYear;
+    const rightX = this.params.gap * this.params.endYear;
+    const width = this.params.width;
+    const length = rightX - leftX;
+    const geometry = new THREE.BoxGeometry(length, width, 0.1);
+    const material = new THREE.MeshStandardMaterial({
+      color: this.params.color,
+      metalness: 0.2,
+      roughness: 0.7,
+    });
+    this.line = new THREE.Mesh(geometry, material);
+    this.line.lookAt(new THREE.Vector3(0, 1, 0));
+    this.line.position.z = -width / 2 - 0.03;
+
+    this.add(this.line);
   }
 
   _createYearLabels() {
@@ -91,7 +106,15 @@ class Timeline extends THREE.Group {
           textMaterial
         );
         marker.position.x = text.position.x;
-        this.yearMarkers.add(marker);
+        const markerTop = new THREE.Mesh(
+          new THREE.BoxGeometry(0.01, this.params.width, 0),
+          textMaterial
+        );
+        markerTop.rotation.x = Math.PI / 2;
+        markerTop.position.y = 0.05 + 0.01;
+        markerTop.position.z = -this.params.width / 2 - 0.03;
+        markerTop.position.x = text.position.x;
+        this.yearMarkers.add(marker, markerTop);
       }
       this._updateLabelScale(); // to set label scale
     });
