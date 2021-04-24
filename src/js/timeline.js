@@ -9,7 +9,7 @@ class Timeline extends THREE.Group {
     this.params = {
       color: "#292929",
       width: 5,
-      startYear: -33,
+      startYear: -45,
       endYear: 40,
       gap: 1,
     };
@@ -47,14 +47,6 @@ class Timeline extends THREE.Group {
   }
 
   _createLine() {
-    // const path = new THREE.LineCurve3(
-    //   new THREE.Vector3(this.params.gap * this.params.startYear, 0, 0),
-    //   new THREE.Vector3(this.params.gap * this.params.endYear, 0, 0)
-    // );
-    // const r = this.params.width / 2;
-    // const geometry = new THREE.TubeGeometry(path, 10, r, 8, false);
-    // const material = new THREE.MeshBasicMaterial({ color: this.params.color });
-    // return new THREE.Mesh(geometry, material);
     const leftX = this.params.gap * this.params.startYear;
     const rightX = this.params.gap * this.params.endYear;
     const width = this.params.width;
@@ -68,6 +60,7 @@ class Timeline extends THREE.Group {
     this.line = new THREE.Mesh(geometry, material);
     this.line.lookAt(new THREE.Vector3(0, 1, 0));
     this.line.position.z = -width / 2 - 0.03;
+    this.line.position.x = leftX + length / 2;
 
     this.add(this.line);
   }

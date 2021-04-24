@@ -1,11 +1,73 @@
 [
   {
+    "name": "Master & Apprentice",
+    "type": "Novel",
+    "startYear": -40,
+    "endYear": -32,
+    "thumbnail": "/images/novels/master-and-apprentice.jpeg",
+    "params": {
+      "height": 1.0,
+      "zPos": 1.5
+    }
+  },
+  {
+    "name": "Darth Maul",
+    "type": "Comic",
+    "year": -32,
+    "thumbnail": "/images/comics/darth-maul.jpeg",
+    "params": {
+      "height": 2.5,
+      "zPos": 1.0
+    }
+  },
+  {
+    "name": "Queen's Peril",
+    "type": "Novel",
+    "year": -32,
+    "thumbnail": "/images/novels/QueensPeril.png",
+    "params": {
+      "height": 3.5,
+      "zPos": 2.0
+    }
+  },
+  {
     "name": "Episode I : The Phantom Menace",
+    "type": "Movie",
     "year": -32,
     "thumbnail": "/images/ep1-phantom-menace.jpeg",
     "params": {
       "height": 1.5,
       "zPos": 0.04
+    }
+  },
+  {
+    "name": "Obi-Wan and Anakin",
+    "type": "Comic",
+    "year": -29,
+    "thumbnail": "/images/comics/Obi-wan_anakin.jpeg",
+    "params": {
+      "height": 1.5,
+      "zPos": 1.0
+    }
+  },
+  {
+    "name": "Queen's Shadow",
+    "type": "Novel",
+    "year": -28,
+    "thumbnail": "/images/novels/QueensShadow.png",
+    "params": {
+      "height": 2.5,
+      "zPos": 2.0
+    }
+  },
+  {
+    "name": "Dooku: Jedi Lost",
+    "type": "AudioBook",
+    "year": -22.5,
+    "thumbnail": "/images/DookuJediLost.jpeg",
+    "params": {
+      "height": 5,
+      "zPos": 3.0
     }
   },
   {
@@ -16,6 +78,16 @@
       "labelSize": 0.07,
       "height": 1.5,
       "zPos": 0.04
+    }
+  },
+  {
+    "name": "Jedi of the Republic – Mace Windu",
+    "type": "Comic",
+    "year": -22,
+    "thumbnail": "/images/comics/Mace_Windu_cover.jpeg",
+    "params": {
+      "height": 3.5,
+      "zPos": 2.0
     }
   },
   {
@@ -35,6 +107,28 @@
     "params": {
       "height": 1.0,
       "zPos": 0.5
+    }
+  },
+  {
+    "name": "Queen's Hope",
+    "type": "Novel",
+    "startYear": -22,
+    "endYear": -19,
+    "thumbnail": "/images/novels/QueensHope.jpeg",
+    "params": {
+      "height": 4.0,
+      "zPos": 3.0
+    }
+  },
+  {
+    "name": "Catalyst: A Rogue One Novel",
+    "type": "Novel",
+    "startYear": -21,
+    "endYear": -17,
+    "thumbnail": "/images/novels/Catalyst_A_Rogue_One_Novel.png",
+    "params": {
+      "height": 3.0,
+      "zPos": 2.0
     }
   },
   {
