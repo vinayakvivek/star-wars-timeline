@@ -4,6 +4,7 @@ import camera from "./camera";
 import Timeline from "./timeline";
 import MovieTile from "./movie-tile";
 import Galaxy from "./galaxy";
+import data from './data.json';
 
 const textureLoader = new THREE.TextureLoader();
 
@@ -18,76 +19,14 @@ const galaxy = new Galaxy();
 scene.add(galaxy);
 
 fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
-  timeline.addMovieTile(
-    "Episode I : The Phantom Menace",
-    -32,
-    "/images/ep1-phantom-menace.jpeg",
-    font
-  );
-  timeline.addMovieTile(
-    "Episode II : Attack of the Clones",
-    -22,
-    "/images/ep2-attack-of-the-clones.jpeg",
-    font,
-    {
-      labelSize: 0.07,
+  for (const item of data) {
+    console.log(item);
+    if (item.year) {
+      timeline.addMovieTile(item.name, item.year, item.thumbnail, font, item.params);
+    } else {
+      timeline.addMovieTileWithDuration(item.name, item.startYear, item.endYear, item.thumbnail, font, item.params);
     }
-  );
-  timeline.addMovieTile(
-    "The Clone Wars (film)",
-    -21.8,
-    "/images/clone-wars-movie.jpeg",
-    font,
-    {
-      height: -1.0,
-    }
-  );
-  timeline.addMovieTileWithDuration(
-    "The Clone Wars",
-    -21.9,
-    -19.1,
-    "/images/clone-wars.jpeg",
-    font,
-    {
-      height: 1.0,
-    }
-  );
-  timeline.addMovieTile(
-    "Episode III : Revenge of the Sith",
-    -19,
-    "/images/ep3-revenge-of-the-sith.jpeg",
-    font,
-    {
-      height: 2.0,
-      labelSize: 0.07,
-    }
-  );
-  timeline.addMovieTileWithDuration(
-    "The Bad Batch",
-    -18.9,
-    -5.1,
-    "/images/bad-batch.jpg",
-    font,
-    {
-      height: 1.0,
-    }
-  );
-  timeline.addMovieTileWithDuration(
-    "Rebels",
-    -5,
-    -1,
-    "/images/rebels.jpeg",
-    font
-  );
-  timeline.addMovieTile(
-    "Episode IV: A New Hope",
-    0,
-    "/images/a-new-hope.webp",
-    font,
-    {
-      height: 1.5,
-    }
-  );
+  }
 });
 
 // const axesHelper = new THREE.AxesHelper(2);

@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Episode I : The Phantom Menace",
+    "year": -32,
+    "thumbnail": "/images/ep1-phantom-menace.jpeg"
+  },
+  {
+    "name": "Episode II : Attack of the Clones",
+    "year": -22,
+    "thumbnail": "/images/ep2-attack-of-the-clones.jpeg",
+    "params": {
+      "labelSize": 0.07
+    }
+  },
+  {
+    "name": "The Clone Wars (film)",
+    "year": -21.8,
+    "thumbnail": "/images/clone-wars-movie.jpeg",
+    "params": {
+      "height": -1.0
+    }
+  },
+  {
+    "name": "The Clone Wars",
+    "startYear": -21.9,
+    "endYear": -19.1,
+    "thumbnail": "/images/clone-wars.jpeg",
+    "params": {
+      "height": 1.0
+    }
+  },
+  {
+    "name": "Episode III : Revenge of the Sith",
+    "year": -19,
+    "thumbnail": "/images/ep3-revenge-of-the-sith.jpeg",
+    "params": {
+      "height": 2.0,
+      "labelSize": 0.07
+    }
+  },
+  {
+    "name": "The Bad Batch",
+    "startYear": -18.9,
+    "endYear": -5.1,
+    "thumbnail": "/images/bad-batch.jpg",
+    "params": {
+      "height": 1.0
+    }
+  },
+  {
+    "name": "Rebels",
+    "startYear": -5,
+    "endYear": -1,
+    "thumbnail": "/images/rebels.jpeg",
+    "params": {
+      "height": 1.0
+    }
+  },
+  {
+    "name": "Episode IV: A New Hope",
+    "startYear": -0.001,
+    "endYear": 0.001,
+    "thumbnail": "/images/a-new-hope.webp",
+    "params": {
+      "height": 1.5
+    }
+  }
+]
