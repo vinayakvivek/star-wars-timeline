@@ -6,7 +6,7 @@ class MovieTile extends THREE.Group {
     super();
     this.name = name;
     this.texture = textureLoader.load(imagePath);
-    this.material = this.material;
+    this.material = new THREE.MeshBasicMaterial({});
     this.font = font;
     this.params = {
       tileScale: 0.5,
@@ -33,6 +33,7 @@ class MovieTile extends THREE.Group {
       new THREE.CircleBufferGeometry(1, 64),
       new THREE.MeshBasicMaterial({
         map: this.texture,
+        side: THREE.DoubleSide,
       })
     );
     tile.scale.setScalar(this.params.tileScale);

@@ -48,8 +48,8 @@ class Timeline extends THREE.Group {
 
   _createLine() {
     const path = new THREE.LineCurve3(
-      new THREE.Vector3(-10, 0, 0),
-      new THREE.Vector3(10, 0, 0)
+      new THREE.Vector3(this.params.gap * this.params.startYear, 0, 0),
+      new THREE.Vector3(this.params.gap * this.params.endYear, 0, 0)
     );
     const r = this.params.width / 2;
     const geometry = new THREE.TubeGeometry(path, 10, r, 8, false);
@@ -113,7 +113,7 @@ class Timeline extends THREE.Group {
   }
 
   _translate(dx) {
-    this.line.translateX(-dx);
+    // this.line.translateX(-dx);
     this.translateX(dx);
 
     this._updateLabelScale();
@@ -161,6 +161,13 @@ class Timeline extends THREE.Group {
         this._translate(dx);
       },
     });
+  }
+
+  updateScale(scale) {
+    const xpos = this.position.x;
+    this.position.x = 0;
+    this.scale.setScalar(scale);
+    this.position.x = xpos;
   }
 }
 

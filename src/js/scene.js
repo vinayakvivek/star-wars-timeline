@@ -95,13 +95,30 @@ fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
 
 const clock = new THREE.Clock();
 
+let v = 1;
+let a = 0.1;
+let prevT = clock.getElapsedTime();
 // this must be called inside the render loop
 export const animateScene = () => {
   const elapsedTime = clock.getElapsedTime();
+  // const dt = elapsedTime - prevT;
+  // prevT = elapsedTime;
+  // galaxy.scroll(v * dt);
+  // v += a;
 };
 
 let isScrolling;
+let scale;
 window.addEventListener("wheel", (e) => {
+
+  if (e.ctrlKey) {
+    // zoom event;
+    scale = timeline.scale.x - 0.001 * e.deltaY;
+    // timeline.scale.setScalar(scale);
+    // timeline.updateScale(scale);
+    return;
+  }
+
   const dx = -0.003 * e.deltaY;
   timeline.scroll(dx);
 

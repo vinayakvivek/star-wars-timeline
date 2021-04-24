@@ -53,6 +53,7 @@ class Galaxy extends THREE.Group {
       transparent: true,
       alphaMap: this.starTexture,
       depthWrite: false,
+      // blending: THREE.AdditiveBlending,
     });
     const starField = new THREE.Points(geometry, material);
     return starField;
