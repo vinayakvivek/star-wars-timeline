@@ -6,7 +6,7 @@ export const createTile = (item, font) => {
   let tile;
   if (['Novel', 'Comic', 'Junior Novel'].includes(type)) {
     const bookTileParams = {
-      labelPos: -0.7,
+      labelPos: -0.73,
       tileScale: 0.8,
       ...params,
     }

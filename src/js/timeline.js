@@ -11,7 +11,7 @@ class Timeline extends THREE.Group {
       width: 5,
       startYear: -45,
       endYear: 40,
-      gap: 1,
+      gap: 1.5,
     };
     this._createLine();
     this._createYearLabels();

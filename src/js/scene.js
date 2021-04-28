@@ -24,7 +24,7 @@ fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
     const tile = createTile(item, font);
     timeline.addTile(tile, item);
   }
-  timeline.scroll(20);
+  timeline.scroll(0);
 });
 
 gui.add(camera.position, 'x', -5, 5, 0.01).name('Camera x');

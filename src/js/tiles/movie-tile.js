@@ -17,7 +17,7 @@ class MovieTile extends Tile {
     tile.scale.setScalar(this.params.tileScale);
     tile.position.z = 0.02;
     this.tile = tile;
-    this.add(this.tile);
+    this.movable.add(this.tile);
   }
 }
 
