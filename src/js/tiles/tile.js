@@ -10,12 +10,13 @@ class Tile extends THREE.Group {
     this.font = font;
     this.params = {
       tileScale: 0.5,
-      labelSize: params.labelSize || 0.08,
+      labelSize: 0.08,
       labelPos: -0.6,
       borderSize: 1.5,
       markerStart: -1.0,
-      height: params.height || 2,
-      zPos: params.zPos || 0,
+      height: 2,
+      zPos: 0,
+      ...params,
     };
     this._createTile();
     this._createLabel();

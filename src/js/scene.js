@@ -3,6 +3,7 @@ import { gui, fontLoader } from "./config";
 import camera from "./camera";
 import Timeline from "./timeline";
 import MovieTile from "./tiles/movie-tile";
+import { createTile } from './tiles/tile-factory';
 import Galaxy from "./galaxy";
 import data from './data.json';
 
@@ -20,11 +21,8 @@ scene.add(galaxy);
 
 fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
   for (const item of data) {
-    if (item.year) {
-      timeline.addMovieTile(item.name, item.year, item.thumbnail, font, item.params);
-    } else {
-      timeline.addMovieTileWithDuration(item.name, item.startYear, item.endYear, item.thumbnail, font, item.params);
-    }
+    const tile = createTile(item, font);
+    timeline.addTile(tile, item);
   }
   timeline.scroll(20);
 });

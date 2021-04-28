@@ -20,23 +20,21 @@ class Timeline extends THREE.Group {
     this.add(this.movies);
 
     // add gui tweaks
-    this._initTweaks();
+    // this._initTweaks();
   }
 
-  addMovieTile(name, year, imagePath, font, params = {}) {
-    const movieTile = new MovieTile(name, imagePath, font, params);
-    movieTile.position.x = year * this.params.gap;
-    movieTile.createMarker();
-    this.movies.add(movieTile);
-  }
-
-  addMovieTileWithDuration(name, startYear, endYear, imagePath, font, params = {}) {
-    const movieTile = new MovieTile(name, imagePath, font, params);
-    const startX = startYear * this.params.gap;
-    const endX = endYear * this.params.gap;
-    movieTile.position.x = (startX + endX) / 2;
-    movieTile.createYearMarkers((endX - startX) / 2);
-    this.movies.add(movieTile);
+  addTile(tile, item) {
+    this.movies.add(tile);
+    const { year, startYear, endYear } = item;
+    if (year) {
+      tile.position.x = year * this.params.gap;
+      tile.createMarker();
+    } else {
+      const startX = startYear * this.params.gap;
+      const endX = endYear * this.params.gap;
+      tile.position.x = (startX + endX) / 2;
+      tile.createYearMarkers((endX - startX) / 2);
+    }
   }
 
   _resetLine() {
