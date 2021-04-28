@@ -120,7 +120,7 @@
     "thumbnail": "/images/novels/QueensHope.jpeg",
     "params": {
       "height": 4.0,
-      "zPos": 3.0
+      "zPos": 4.0
     }
   },
   {
@@ -161,7 +161,7 @@
     "thumbnail": "/images/novels/ChaosRising_cover.jpeg",
     "params": {
       "height": 5.5,
-      "zPos": 3.5
+      "zPos": 4.5
     }
   },
   {
@@ -194,7 +194,7 @@
     "thumbnail": "/images/comics/Kanan_cover.jpeg",
     "params": {
       "height": 3.0,
-      "zPos": 4.8
+      "zPos": 3.5
     }
   },
   {

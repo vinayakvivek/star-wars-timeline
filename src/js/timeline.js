@@ -84,7 +84,7 @@ class Timeline extends THREE.Group {
       for (let year = startYear; year <= endYear; ++year) {
         // const label = `${Math.abs(year)} ${year < 0 ? 'BBY' : 'ABY'}`;
         const label = `${year}`;
-        const textGeometry = _createTextGeometry(label, font, 0.07);
+        const textGeometry = _createTextGeometry(label, font, 0.2);
         textGeometry.center();
         const text = new THREE.Mesh(textGeometry, textMaterial);
         text.position.y -= 0.2;
@@ -138,7 +138,7 @@ class Timeline extends THREE.Group {
     const rawPos = -(this.position.x / this.params.gap) - this.params.startYear;
     const pos = Math.round(rawPos);
     const diff = Math.abs(pos - rawPos);
-    labels[pos].scale.setScalar(1 + 4 * (0.5 - diff));
+    labels[pos].scale.setScalar(1 + 2 * (0.5 - diff));
     if (pos > 0) {
       labels[pos - 1].scale.setScalar(1);
     }

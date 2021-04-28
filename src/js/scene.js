@@ -59,11 +59,14 @@ window.addEventListener("wheel", (e) => {
 
   if (e.ctrlKey) {
     // zoom event;
-    scale = timeline.scale.x - 0.001 * e.deltaY;
+    // scale = timeline.scale.x - 0.001 * e.deltaY;
     // timeline.scale.setScalar(scale);
     // timeline.updateScale(scale);
     return;
   }
+
+  const dz = 0.003 * e.deltaX;
+  timeline.position.z += dz;
 
   const dx = -0.003 * e.deltaY;
   timeline.scroll(dx);
@@ -72,7 +75,7 @@ window.addEventListener("wheel", (e) => {
 
   window.clearTimeout(isScrolling);
   isScrolling = setTimeout(() => {
-    timeline.snap();
+    // timeline.snap();
   }, 66);
 });
 

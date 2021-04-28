@@ -8,6 +8,7 @@ const size = {
 
 const gui = new dat.GUI({
   width: 400,
+  closed: true,
 });
 const fontLoader = new FontLoader();
 const textureLoader = new TextureLoader();

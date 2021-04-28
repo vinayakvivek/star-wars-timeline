@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { MeshBasicMaterial } from "three";
 import { textureLoader } from "../config";
 
 class Tile extends THREE.Group {
@@ -7,6 +8,11 @@ class Tile extends THREE.Group {
     this.name = name;
     this.texture = textureLoader.load(imagePath);
     this.material = new THREE.MeshBasicMaterial({});
+    this.durationMaterial = new MeshBasicMaterial({
+      color: '#aaaaaa',
+      opacity: 0.5,
+      transparent: true,
+    });
     this.font = font;
     this.params = {
       tileScale: 0.5,
@@ -36,10 +42,15 @@ class Tile extends THREE.Group {
     marker2.position.y = - h / 2;
     marker2.position.x = halfWidth;
 
+    // const connector = new THREE.Mesh(
+    //   new THREE.PlaneGeometry(halfWidth * 2 + 0.01, 0.05),
+    //   this.material,
+    // );
     const connector = new THREE.Mesh(
-      new THREE.PlaneGeometry(halfWidth * 2 + 0.01, 0.05),
-      this.material,
+      new THREE.PlaneGeometry(halfWidth * 2 + 0.01, h),
+      this.durationMaterial,
     );
+    connector.position.y = - h / 2;
     this.add(marker1, marker2, connector);
   }
 
