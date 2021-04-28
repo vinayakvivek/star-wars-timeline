@@ -16,7 +16,7 @@ class Tile extends THREE.Group {
     this.font = font;
     this.params = {
       tileScale: 0.5,
-      tileOffset: 0.0,
+      tileOffset: 0.0,  // percentage offset (of halfWidth)
       labelSize: 0.08,
       labelPos: -0.6,
       borderSize: 1.5,
@@ -56,7 +56,7 @@ class Tile extends THREE.Group {
     connectorPlane.position.y = - h / 2;
     this.add(marker1, marker2, connector, connectorPlane);
 
-    this.movable.position.x += this.params.tileOffset;
+    this.movable.position.x += halfWidth * this.params.tileOffset;
   }
 
   createMarker() {

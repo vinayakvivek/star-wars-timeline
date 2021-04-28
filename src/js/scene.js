@@ -45,7 +45,7 @@ let audioStarted = false;
 window.addEventListener("wheel", (e) => {
 
   if (!audioStarted) {
-    loadAudio();
+    // loadAudio();
     audioStarted = true;
   }
 
