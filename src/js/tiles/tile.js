@@ -1,7 +1,7 @@
 import * as THREE from "three";
-import { textureLoader } from "./config";
+import { textureLoader } from "../config";
 
-class MovieTile extends THREE.Group {
+class Tile extends THREE.Group {
   constructor(name, imagePath, font, params = {}) {
     super();
     this.name = name;
@@ -17,36 +17,11 @@ class MovieTile extends THREE.Group {
       height: params.height || 2,
       zPos: params.zPos || 0,
     };
-    this._resetTile();
+    this._createTile();
     this._createLabel();
     this._createMask();
     this.position.y = this.params.height;
     this.position.z = -this.params.zPos;
-  }
-
-  _resetTile() {
-    this.remove(this.tile);
-    this.tile = this._createTile();
-    this.add(this.tile);
-  }
-
-  _createTile() {
-    const tile = new THREE.Mesh(
-      new THREE.CircleBufferGeometry(1, 64),
-      new THREE.MeshBasicMaterial({
-        map: this.texture,
-        side: THREE.DoubleSide,
-      })
-    );
-    tile.scale.setScalar(this.params.tileScale);
-    tile.position.z = 0.02;
-    return tile;
-  }
-
-  updateLookAt(x) {
-    this.tile.lookAt(x, 0, 0);
-    this.label.lookAt(x, 0, 0);
-    this.mask.lookAt(x, 0, 0);
   }
 
   createYearMarkers(halfWidth) {
@@ -123,4 +98,4 @@ class MovieTile extends THREE.Group {
   }
 }
 
-export default MovieTile;
+export default Tile;

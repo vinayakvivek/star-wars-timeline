@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { gui, fontLoader } from "./config";
 import gsap from "gsap";
-import MovieTile from "./movie-tile";
+import MovieTile from "./tiles/movie-tile";
 
 class Timeline extends THREE.Group {
   constructor() {

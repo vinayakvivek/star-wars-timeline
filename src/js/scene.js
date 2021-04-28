@@ -2,7 +2,7 @@ import * as THREE from "three";
 import { gui, fontLoader } from "./config";
 import camera from "./camera";
 import Timeline from "./timeline";
-import MovieTile from "./movie-tile";
+import MovieTile from "./tiles/movie-tile";
 import Galaxy from "./galaxy";
 import data from './data.json';
 
