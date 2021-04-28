@@ -30,10 +30,8 @@ window.addEventListener('resize', () => {
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.enableZoom = false;
-controls.enabled = false;
 
 gui.add(controls, 'enabled').name('Enable orbit controls');
-// controls.target.set(-5, 0, 0);
 
 const render = () => {
   animateScene();

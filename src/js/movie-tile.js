@@ -19,7 +19,7 @@ class MovieTile extends THREE.Group {
     };
     this._resetTile();
     this._createLabel();
-    this._createBorderMask();
+    this._createMask();
     this.position.y = this.params.height;
     this.position.z = -this.params.zPos;
   }
@@ -41,6 +41,12 @@ class MovieTile extends THREE.Group {
     tile.scale.setScalar(this.params.tileScale);
     tile.position.z = 0.02;
     return tile;
+  }
+
+  updateLookAt(x) {
+    this.tile.lookAt(x, 0, 0);
+    this.label.lookAt(x, 0, 0);
+    this.mask.lookAt(x, 0, 0);
   }
 
   createYearMarkers(halfWidth) {
@@ -83,21 +89,22 @@ class MovieTile extends THREE.Group {
     this.add(this.border);
   }
 
-  _createBorderMask() {
+  _createMask() {
     const bbox = new THREE.Box3().setFromObject(this.label);
     const margin = 0.1;
     const w = bbox.max.x - bbox.min.x + margin;
     const h = bbox.max.y - bbox.min.y + margin;
     const cx = (bbox.max.x + bbox.min.x) / 2;
     const cy = (bbox.max.y + bbox.min.y) / 2;
-    const border = new THREE.Mesh(
+    const mask = new THREE.Mesh(
       new THREE.PlaneGeometry(w, h),
       new THREE.MeshBasicMaterial({
         color: "rgb(0, 0, 0)",
       }),
     );
-    border.position.set(cx, cy, 0.01);
-    this.add(border);
+    mask.position.set(cx, cy, 0.01);
+    this.add(mask);
+    this.mask = mask;
   }
 
   _createLabel() {

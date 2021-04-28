@@ -72,6 +72,7 @@
   },
   {
     "name": "Episode II : Attack of the Clones",
+    "type": "Movie",
     "year": -22,
     "thumbnail": "/images/ep2-attack-of-the-clones.jpeg",
     "params": {
@@ -92,6 +93,7 @@
   },
   {
     "name": "The Clone Wars (film)",
+    "type": "Movie",
     "year": -22,
     "thumbnail": "/images/clone-wars-movie.jpeg",
     "params": {
@@ -101,6 +103,7 @@
   },
   {
     "name": "The Clone Wars",
+    "type": "Series",
     "startYear": -22,
     "endYear": -19,
     "thumbnail": "/images/clone-wars.jpeg",
@@ -128,31 +131,86 @@
     "thumbnail": "/images/novels/Catalyst_A_Rogue_One_Novel.png",
     "params": {
       "height": 3.0,
-      "zPos": 2.0
+      "zPos": 1.5
+    }
+  },
+  {
+    "name": "Darth Maul: Son of Dathomir",
+    "type": "Comic",
+    "year": -19,
+    "thumbnail": "/images/comics/Darth_Maul_Son_of_Dathomir.png",
+    "params": {
+      "height": 2.5,
+      "zPos": 0.7
+    }
+  },
+  {
+    "name": "Dark Disciple",
+    "type": "Novel",
+    "year": -19,
+    "thumbnail": "/images/novels/Dark_Disciple_Cover.png",
+    "params": {
+      "height": 4,
+      "zPos": 2.5
+    }
+  },
+  {
+    "name": "Thrawn Ascendancy: Chaos Rising",
+    "type": "Novel",
+    "year": -19,
+    "thumbnail": "/images/novels/ChaosRising_cover.jpeg",
+    "params": {
+      "height": 5.5,
+      "zPos": 3.5
     }
   },
   {
     "name": "Episode III : Revenge of the Sith",
+    "type": "Movie",
     "year": -19,
     "thumbnail": "/images/ep3-revenge-of-the-sith.jpeg",
     "params": {
-      "height": 2.0,
+      "height": 1.5,
       "labelSize": 0.07,
       "zPos": 0.04
     }
   },
   {
+    "name": "Darth Vader: Dark Lord of the Sith",
+    "type": "Comic",
+    "startYear": -19,
+    "endYear": -12,
+    "thumbnail": "/images/comics/DarthVader-DLotS.jpeg",
+    "params": {
+      "height": 2.0,
+      "zPos": 1.2
+    }
+  },
+  {
+    "name": "Kanan",
+    "type": "Comic",
+    "startYear": -19,
+    "endYear": -18,
+    "thumbnail": "/images/comics/Kanan_cover.jpeg",
+    "params": {
+      "height": 3.0,
+      "zPos": 4.8
+    }
+  },
+  {
     "name": "The Bad Batch",
-    "startYear": -18.9,
-    "endYear": -5.1,
+    "type": "Series",
+    "startYear": -19,
+    "endYear": -5,
     "thumbnail": "/images/bad-batch.jpg",
     "params": {
       "height": 1.0,
-      "zPos": 1.0
+      "zPos": 0.25
     }
   },
   {
     "name": "Rebels",
+    "type": "Series",
     "startYear": -5,
     "endYear": -1,
     "thumbnail": "/images/rebels.jpeg",
@@ -163,6 +221,7 @@
   },
   {
     "name": "Episode IV: A New Hope",
+    "type": "Movie",
     "startYear": -0.001,
     "endYear": 0.001,
     "thumbnail": "/images/a-new-hope.webp",
