@@ -5,12 +5,8 @@ export const createTile = (item, font) => {
   const { name, type, thumbnail, params } = item;
   let tile;
   if (['Novel', 'Comic', 'Junior Novel'].includes(type)) {
-    const bookTileParams = {
-      labelPos: -0.73,
-      tileScale: 0.8,
-      ...params,
-    }
-    tile = new BookTile(name, thumbnail, font, bookTileParams);
+    if (!params.tileScale) params.tileScale = 0.8;
+    tile = new BookTile(name, thumbnail, font, params);
   } else {
     tile = new MovieTile(name, thumbnail, font, params);
   }

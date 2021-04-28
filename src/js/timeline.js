@@ -1,7 +1,6 @@
 import * as THREE from "three";
 import { gui, fontLoader } from "./config";
 import gsap from "gsap";
-import MovieTile from "./tiles/movie-tile";
 
 class Timeline extends THREE.Group {
   constructor() {
@@ -35,6 +34,11 @@ class Timeline extends THREE.Group {
       tile.position.x = (startX + endX) / 2;
       tile.createYearMarkers((endX - startX) / 2);
     }
+  }
+
+  removeTile(tile) {
+    tile.dispose();
+    this.movies.remove(tile);
   }
 
   _resetLine() {

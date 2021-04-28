@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { MeshBasicMaterial } from "three";
 import { textureLoader } from "../config";
+import { disposeHierarchy } from "../utils";
 
 class Tile extends THREE.Group {
   constructor(name, imagePath, font, params = {}) {
@@ -18,7 +19,7 @@ class Tile extends THREE.Group {
       tileScale: 0.5,
       tileOffset: 0.0,  // percentage offset (of halfWidth)
       labelSize: 0.08,
-      labelPos: -0.6,
+      labelPos: -0.1,
       borderSize: 1.5,
       markerStart: -1.0,
       height: 2,
@@ -32,6 +33,10 @@ class Tile extends THREE.Group {
     this._createMask();
     this.position.y = this.params.height;
     this.position.z = -this.params.zPos;
+  }
+
+  dispose() {
+    disposeHierarchy(this);
   }
 
   createYearMarkers(halfWidth) {
@@ -88,6 +93,7 @@ class Tile extends THREE.Group {
   }
 
   _createLabel() {
+    const tileBox = new THREE.Box3().setFromObject(this.tile);
     const textGeometry = new THREE.TextGeometry(this.name, {
       font: this.font,
       size: this.params.labelSize,
@@ -97,7 +103,7 @@ class Tile extends THREE.Group {
     });
     textGeometry.center();
     this.label = new THREE.Mesh(textGeometry, this.material);
-    this.label.position.y = this.params.labelPos;
+    this.label.position.y = tileBox.min.y + this.params.labelPos;
     this.label.position.z = 0.02;
     this.movable.add(this.label);
   }
