@@ -2,12 +2,10 @@ import * as THREE from "three";
 import { gui, fontLoader } from "./config";
 import camera from "./camera";
 import Timeline from "./timeline";
-import MovieTile from "./tiles/movie-tile";
 import { createTile } from './tiles/tile-factory';
 import Galaxy from "./galaxy";
 import data from './data.json';
-
-const textureLoader = new THREE.TextureLoader();
+import { loadAudio } from "./audio";
 
 const scene = new THREE.Scene();
 scene.add(camera);
@@ -27,10 +25,6 @@ fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
   timeline.scroll(0);
 });
 
-gui.add(camera.position, 'x', -5, 5, 0.01).name('Camera x');
-gui.add(camera.position, 'y', -5, 5, 0.01).name('Camera y');
-gui.add(camera.position, 'z', -5, 5, 0.01).name('Camera z');
-
 // lights
 const pointLight = new THREE.PointLight("#ffffff", 2);
 pointLight.position.set(0, 2, 2);
@@ -41,21 +35,19 @@ scene.add(pointLight);
 
 const clock = new THREE.Clock();
 
-let v = 1;
-let a = 0.1;
-let prevT = clock.getElapsedTime();
 // this must be called inside the render loop
 export const animateScene = () => {
   const elapsedTime = clock.getElapsedTime();
-  // const dt = elapsedTime - prevT;
-  // prevT = elapsedTime;
-  // galaxy.scroll(v * dt);
-  // v += a;
 };
 
 let isScrolling;
-let scale;
+let audioStarted = false;
 window.addEventListener("wheel", (e) => {
+
+  if (!audioStarted) {
+    loadAudio();
+    audioStarted = true;
+  }
 
   if (e.ctrlKey) {
     // zoom event;
