@@ -1,4 +1,4 @@
-import { data } from "./scene";
+import { data, timeline, galaxy } from "./scene";
 import { setDebugModeByLocation } from "./debug";
 
 window.addEventListener("load", () => {
@@ -19,4 +19,28 @@ const download = (content, fileName, contentType) => {
 
 $("#export-btn").click(() => {
   download(JSON.stringify(data), "data.json", "application/json");
+});
+
+let isScrolling;
+window.addEventListener("wheel", (e) => {
+  if (e.ctrlKey) {
+    // zoom event;
+    // scale = timeline.scale.x - 0.001 * e.deltaY;
+    // timeline.scale.setScalar(scale);
+    // timeline.updateScale(scale);
+    return;
+  }
+
+  const dz = 0.003 * e.deltaX;
+  timeline.position.z += dz;
+
+  const dx = -0.003 * e.deltaY;
+  timeline.scroll(dx);
+
+  galaxy.scroll(0.1 * e.deltaY);
+
+  window.clearTimeout(isScrolling);
+  isScrolling = setTimeout(() => {
+    // timeline.snap();
+  }, 66);
 });
