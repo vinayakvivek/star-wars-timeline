@@ -1,10 +1,10 @@
 import * as THREE from "three";
-import { gui, fontLoader } from "./config";
+import { gui, fontLoader } from "../config";
 import camera from "./camera";
 import Timeline from "./timeline";
 import { createTile } from "./tiles/tile-factory";
 import Galaxy from "./galaxy";
-import data from "./data.json";
+import data from "../data.json";
 
 const scene = new THREE.Scene();
 scene.add(camera);
@@ -73,7 +73,7 @@ scene.add(pointLight);
 const clock = new THREE.Clock();
 
 // this must be called inside the render loop
-export const animateScene = () => {
+const animateScene = () => {
   const elapsedTime = clock.getElapsedTime();
 };
 
@@ -101,44 +101,5 @@ window.addEventListener("wheel", (e) => {
   }, 66);
 });
 
-
-
-const toggleDebug = () => {
-  if (window.location.hash === "#debug") {
-    enableDebug();
-  } else {
-    disableDebug();
-  }
-}
-
-window.addEventListener('load', () => {
-  toggleDebug();
-});
-
-window.addEventListener('popstate', () => {
-  toggleDebug();
-});
-
-const download = (content, fileName, contentType) => {
-  var a = document.createElement("a");
-  var file = new Blob([content], {type: contentType});
-  a.href = URL.createObjectURL(file);
-  a.download = fileName;
-  a.click();
-}
-$("#export-btn").click(() => {
-  download(JSON.stringify(data), 'data.json', 'application/json');
-})
-
-const disableDebug = () => {
-  $(gui.domElement).attr("hidden", true);
-  $("#export-btn").hide();
-}
-disableDebug();
-
-const enableDebug = () => {
-  $(gui.domElement).attr("hidden", false);
-  $("#export-btn").show();
-}
-
+export { animateScene, data, timeline, galaxy };
 export default scene;

@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { gui, fontLoader } from "./config";
+import { gui, fontLoader } from "../config";
 import gsap from "gsap";
 
 class Timeline extends THREE.Group {

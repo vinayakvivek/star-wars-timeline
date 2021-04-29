@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { size, textureLoader } from './config';
+import { size, textureLoader } from '../config';
 
 const randomPos = (width) => {
   return (Math.random() - 0.5) * 2 * width;

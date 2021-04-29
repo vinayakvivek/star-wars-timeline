@@ -1,9 +1,8 @@
 import * as THREE from 'three';
-import scene, { animateScene } from './scene';
-import camera from './camera';
+import { scene, camera, animateScene } from './scene';
 import { gui, size } from './config';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-
+import './events';
 
 const renderer = new THREE.WebGLRenderer({ alpha: true });
 document.querySelector('.webgl').appendChild(renderer.domElement);

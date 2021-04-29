@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { MeshBasicMaterial } from "three";
-import { textureLoader } from "../config";
-import { disposeHierarchy } from "../utils";
+import { textureLoader } from "../../config";
+import { disposeHierarchy } from "../../utils";
 
 class Tile extends THREE.Group {
   constructor(name, imagePath, font, params = {}) {
