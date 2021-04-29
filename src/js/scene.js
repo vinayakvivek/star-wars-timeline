@@ -5,7 +5,6 @@ import Timeline from "./timeline";
 import { createTile } from "./tiles/tile-factory";
 import Galaxy from "./galaxy";
 import data from "./data.json";
-import { loadAudio } from "./audio";
 
 const scene = new THREE.Scene();
 scene.add(camera);
@@ -102,12 +101,22 @@ window.addEventListener("wheel", (e) => {
   }, 66);
 });
 
-let audioStarted = false;
-window.addEventListener("click", () => {
-  if (!audioStarted) {
-    // loadAudio();
-    audioStarted = true;
+
+
+const toggleDebug = () => {
+  if (window.location.hash === "#debug") {
+    enableDebug();
+  } else {
+    disableDebug();
   }
+}
+
+window.addEventListener('load', () => {
+  toggleDebug();
+});
+
+window.addEventListener('popstate', () => {
+  toggleDebug();
 });
 
 const download = (content, fileName, contentType) => {
@@ -117,9 +126,19 @@ const download = (content, fileName, contentType) => {
   a.download = fileName;
   a.click();
 }
-const exportButton = document.querySelector("#export-btn");
-exportButton.addEventListener("click", () => {
+$("#export-btn").click(() => {
   download(JSON.stringify(data), 'data.json', 'application/json');
-});
+})
+
+const disableDebug = () => {
+  $(gui.domElement).attr("hidden", true);
+  $("#export-btn").hide();
+}
+disableDebug();
+
+const enableDebug = () => {
+  $(gui.domElement).attr("hidden", false);
+  $("#export-btn").show();
+}
 
 export default scene;

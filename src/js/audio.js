@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import camera from "./camera";
 
-export const loadAudio = () => {
+const loadAudio = () => {
   const listener = new THREE.AudioListener();
   camera.add(listener);
 
@@ -14,3 +14,11 @@ export const loadAudio = () => {
     sound.play();
   });
 }
+
+let audioStarted = false;
+window.addEventListener("click", () => {
+  if (!audioStarted) {
+    // loadAudio();
+    audioStarted = true;
+  }
+});
