@@ -5,11 +5,8 @@ import { gui, size } from './config';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 
-const canvas = document.querySelector('canvas.webgl')
-const renderer = new THREE.WebGLRenderer({
-  canvas: canvas,
-  alpha: true,
-})
+const renderer = new THREE.WebGLRenderer({ alpha: true });
+document.querySelector('.webgl').appendChild(renderer.domElement);
 renderer.setSize(size.width, size.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 

@@ -12,8 +12,54 @@ html, body {
 }
 
 .webgl {
-  position: fixed;
+  /* width: 100%;
+  height: 100%;
+  display: block; */
+  position: absolute;
   top: 0;
   left: 0;
+  height: 100vh;
+}
+
+.container {
+  position: absolute;
+  width: 100vw;
+  /* height: 100vh; */
+  place-items: center;
+}
+
+h1 {
+  font-size: 8rem;
+  color: white;
+  text-align: center;
+}
+
+.btn {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  padding: 10px;
+  background: rgba(0,0,0,0.9);
+  color: white;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #444;
+}
+.btn:focus {
   outline: none;
+}
+
+#export-btn {
+  right: 450px;
+  left: auto;
+  top: 50px;
+}
+
+#insideText {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  color: white;
 }

@@ -18,7 +18,7 @@ const galaxy = new Galaxy();
 scene.add(galaxy);
 
 let loadedFont;
-const tilesFolder = gui.addFolder('Tiles');
+const tilesFolder = gui.addFolder("Tiles");
 const createItemTweaks = (index) => {
   let tile = tiles[index];
   const item = data[index];
@@ -79,13 +79,7 @@ export const animateScene = () => {
 };
 
 let isScrolling;
-let audioStarted = false;
 window.addEventListener("wheel", (e) => {
-  if (!audioStarted) {
-    // loadAudio();
-    audioStarted = true;
-  }
-
   if (e.ctrlKey) {
     // zoom event;
     // scale = timeline.scale.x - 0.001 * e.deltaY;
@@ -106,6 +100,26 @@ window.addEventListener("wheel", (e) => {
   isScrolling = setTimeout(() => {
     // timeline.snap();
   }, 66);
+});
+
+let audioStarted = false;
+window.addEventListener("click", () => {
+  if (!audioStarted) {
+    // loadAudio();
+    audioStarted = true;
+  }
+});
+
+const download = (content, fileName, contentType) => {
+  var a = document.createElement("a");
+  var file = new Blob([content], {type: contentType});
+  a.href = URL.createObjectURL(file);
+  a.download = fileName;
+  a.click();
+}
+const exportButton = document.querySelector("#export-btn");
+exportButton.addEventListener("click", () => {
+  download(JSON.stringify(data), 'data.json', 'application/json');
 });
 
 export default scene;
