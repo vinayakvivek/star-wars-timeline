@@ -4,7 +4,6 @@ import camera from "./camera";
 import Timeline from "./timeline";
 import { createTile } from "./tiles/tile-factory";
 import Galaxy from "./galaxy";
-import data from "../data.json";
 
 const scene = new THREE.Scene();
 scene.add(camera);
@@ -28,5 +27,5 @@ const animateScene = () => {
   const elapsedTime = clock.getElapsedTime();
 };
 
-export { animateScene, data, timeline, galaxy };
+export { animateScene, timeline, galaxy };
 export default scene;

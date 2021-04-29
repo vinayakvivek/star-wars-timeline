@@ -1,20 +1,47 @@
-import { gui, fontLoader } from '../config';
-import { data, timeline } from './scene';
-import { createTile } from './tiles/tile-factory';
+import { gui, fontLoader } from "../config";
+import { timeline } from "./scene";
+import { createTile } from "./tiles/tile-factory";
+import data from "../data.json";
+
+const saveData = () => {
+  sessionStorage.setItem("data", JSON.stringify(sessionData));
+};
+
+const fetchData = () => {
+  const d = sessionStorage.getItem("data");
+  if (d) {
+    return JSON.parse(d);
+  }
+  return data;
+};
+
+const sessionData = fetchData();
 
 let loadedFont;
 const tilesFolder = gui.addFolder("Tiles");
+const tweakParams = [
+  ["height", 0, 6, 0.01],
+  ["zPos", 0, 6, 0.01],
+  ["tileScale", 0.1, 3, 0.01],
+  ["tileOffset", -1, 1, 0.01],
+  ["labelSize", 0.01, 1, 0.01],
+  ["labelPos", -1, 1, 0.01],
+];
+const defaultParams = {
+  height: 2.0,
+  zPos: 0.05,
+  tileScale: 0.5,
+  tileOffset: 0.0,
+  labelSize: 0.08,
+  labelPos: -0.1,
+};
+
 const createItemTweaks = (index) => {
   let tile = tiles[index];
-  const item = data[index];
+  const item = sessionData[index];
   const { name, type, thumbnail } = item;
   item.params = {
-    height: 2.0,
-    zPos: 0.05,
-    tileScale: 0.5,
-    tileOffset: 0.0,
-    labelSize: 0.08,
-    labelPos: -0.1,
+    ...defaultParams,
     ...item.params,
   };
   const params = item.params;
@@ -25,18 +52,18 @@ const createItemTweaks = (index) => {
     timeline.addTile(tile, item);
   };
   const folder = tilesFolder.addFolder(name);
-  folder.add(params, "height", 0, 6, 0.01).onChange(resetTile);
-  folder.add(params, "zPos", 0, 6, 0.01).onChange(resetTile);
-  folder.add(params, "tileScale", 0.1, 3, 0.01).onChange(resetTile);
-  folder.add(params, "tileOffset", -1, 1, 0.01).onChange(resetTile);
-  folder.add(params, "labelSize", 0.01, 1, 0.01).onChange(resetTile);
-  folder.add(params, "labelPos", -1, 1, 0.01).onChange(resetTile);
+  tweakParams.forEach((tp) => {
+    folder
+      .add(params, ...tp)
+      .onChange(resetTile)
+      .onFinishChange(saveData);
+  });
 };
 
 const tiles = [];
-const n = data.length;
+const n = sessionData.length;
 fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
-  for (const item of data) {
+  for (const item of sessionData) {
     const tile = createTile(item, font);
     tiles.push(tile);
     timeline.addTile(tile, item);
@@ -47,3 +74,5 @@ fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
   }
   timeline.scroll(0);
 });
+
+export { sessionData as data };
