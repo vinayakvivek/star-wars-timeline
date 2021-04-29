@@ -1,8 +1,7 @@
 import * as THREE from "three";
-import { gui, fontLoader } from "../config";
+import { loadingManager } from "../config";
 import camera from "./camera";
 import Timeline from "./timeline";
-import { createTile } from "./tiles/tile-factory";
 import Galaxy from "./galaxy";
 
 const scene = new THREE.Scene();
@@ -10,7 +9,12 @@ scene.add(camera);
 
 const timeline = new Timeline();
 timeline.position.y = -2;
+timeline.visible = false;
 scene.add(timeline);
+
+loadingManager.onLoad = () => {
+  timeline.visible = true;
+}
 
 const galaxy = new Galaxy();
 scene.add(galaxy);
