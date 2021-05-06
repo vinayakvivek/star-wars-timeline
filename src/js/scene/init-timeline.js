@@ -1,5 +1,4 @@
 import { gui, fontLoader } from "../config";
-import { timeline } from "./scene";
 import { createTile } from "./tiles/tile-factory";
 import data from "../data.json";
 
@@ -36,7 +35,7 @@ const defaultParams = {
   labelPos: -0.1,
 };
 
-const createItemTweaks = (index) => {
+const createItemTweaks = (index, timeline) => {
   let tile = tiles[index];
   const item = sessionData[index];
   const { name, type, thumbnail } = item;
@@ -62,17 +61,19 @@ const createItemTweaks = (index) => {
 
 const tiles = [];
 const n = sessionData.length;
-fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
-  for (const item of sessionData) {
-    const tile = createTile(item, font);
-    tiles.push(tile);
-    timeline.addTile(tile, item);
-  }
-  loadedFont = font;
-  for (let i = 0; i < n; ++i) {
-    createItemTweaks(i);
-  }
-  timeline.scroll(0);
-});
+const initTimeline = (timeline) => {
+  fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
+    for (const item of sessionData) {
+      const tile = createTile(item, font);
+      tiles.push(tile);
+      timeline.addTile(tile, item);
+    }
+    loadedFont = font;
+    for (let i = 0; i < n; ++i) {
+      createItemTweaks(i, timeline);
+    }
+    timeline.scroll(0);
+  });
+};
 
-export { sessionData as data };
+export { sessionData as data, initTimeline };

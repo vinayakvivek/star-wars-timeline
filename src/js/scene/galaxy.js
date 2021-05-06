@@ -1,14 +1,14 @@
-import * as THREE from 'three';
-import { size, textureLoader } from '../config';
+import * as THREE from "three";
 
 const randomPos = (width) => {
   return (Math.random() - 0.5) * 2 * width;
-}
+};
 
 class Galaxy extends THREE.Group {
   constructor() {
     super();
-    this.starTexture = textureLoader.load('/textures/particles/1.png');
+    const textureLoader = new THREE.TextureLoader();
+    this.starTexture = textureLoader.load("/textures/particles/1.png");
     this.starFields = [];
     this.count = 10000;
     this.fieldSize = {
@@ -28,9 +28,9 @@ class Galaxy extends THREE.Group {
    * switch the box behind it to the front and continue
    */
   _generateFields() {
-    this.sf1 = this._createStarField('red');
-    this.sf2 = this._createStarField('blue');
-    this.sf3 = this._createStarField('green');
+    this.sf1 = this._createStarField("red");
+    this.sf2 = this._createStarField("blue");
+    this.sf3 = this._createStarField("green");
     this.sf1.position.z = -this.fieldSize.z * 2;
     this.sf3.position.z = this.fieldSize.z * 2;
     this.add(this.sf1, this.sf2, this.sf3);
@@ -46,7 +46,7 @@ class Galaxy extends THREE.Group {
       points[i3 + 2] = z;
     }
     const geometry = new THREE.BufferGeometry();
-    geometry.setAttribute('position', new THREE.BufferAttribute(points, 3));
+    geometry.setAttribute("position", new THREE.BufferAttribute(points, 3));
     const material = new THREE.PointsMaterial({
       size: this.starSize,
       // color: color,
@@ -65,12 +65,14 @@ class Galaxy extends THREE.Group {
     if (this.position.z > -this.sf2.position.z + this.fieldSize.z + offset) {
       this.sf3.position.z -= 6 * this.fieldSize.z;
       [this.sf1, this.sf2, this.sf3] = [this.sf3, this.sf1, this.sf2];
-    } else if (this.position.z < -this.sf2.position.z - this.fieldSize.z - offset) {
+    } else if (
+      this.position.z <
+      -this.sf2.position.z - this.fieldSize.z - offset
+    ) {
       this.sf1.position.z += 6 * this.fieldSize.z;
       [this.sf3, this.sf2, this.sf1] = [this.sf1, this.sf3, this.sf2];
     }
   }
-
 }
 
 export default Galaxy;

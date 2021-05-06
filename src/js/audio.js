@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import camera from "./camera";
+import { camera } from "./scene";
 
 const loadAudio = () => {
   const listener = new THREE.AudioListener();
@@ -13,7 +13,7 @@ const loadAudio = () => {
     sound.setVolume(0.5);
     sound.play();
   });
-}
+};
 
 let audioStarted = false;
 window.addEventListener("click", () => {

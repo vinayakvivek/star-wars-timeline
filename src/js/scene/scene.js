@@ -1,23 +1,29 @@
 import * as THREE from "three";
-import { loadingManager } from "../config";
+import { loadingManager, gltfLoader } from "../config";
 import camera from "./camera";
 import Timeline from "./timeline";
 import Galaxy from "./galaxy";
+import { initTimeline } from "./init-timeline";
 
 const scene = new THREE.Scene();
 scene.add(camera);
 
-const timeline = new Timeline();
-timeline.position.y = -2;
-timeline.visible = false;
-scene.add(timeline);
+let timeline;
+const createTimeline = () => {
+  timeline = new Timeline();
+  timeline.position.y = -2;
+  scene.add(timeline);
+  initTimeline(timeline);
 
-loadingManager.onLoad = () => {
-  timeline.visible = true;
-}
+  loadingManager.onLoad = () => {
+    // timeline.visible = true;
+  };
+};
 
 const galaxy = new Galaxy();
 scene.add(galaxy);
+
+scene.add(new THREE.AxesHelper());
 
 // lights
 const pointLight = new THREE.PointLight("#ffffff", 2);
@@ -31,5 +37,5 @@ const animateScene = () => {
   const elapsedTime = clock.getElapsedTime();
 };
 
-export { animateScene, timeline, galaxy };
+export { createTimeline, animateScene, timeline, galaxy };
 export default scene;
