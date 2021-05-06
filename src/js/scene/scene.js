@@ -23,8 +23,6 @@ const createTimeline = () => {
 const galaxy = new Galaxy();
 scene.add(galaxy);
 
-scene.add(new THREE.AxesHelper());
-
 // lights
 const pointLight = new THREE.PointLight("#ffffff", 2);
 pointLight.position.set(0, 2, 2);

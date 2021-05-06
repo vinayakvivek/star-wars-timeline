@@ -16,7 +16,6 @@ const fetchData = () => {
 
 const sessionData = fetchData();
 
-let loadedFont;
 const tilesFolder = gui.addFolder("Tiles");
 const tweakParams = [
   ["height", 0, 6, 0.01],
@@ -46,7 +45,7 @@ const createItemTweaks = (index, timeline) => {
   const params = item.params;
   const resetTile = () => {
     timeline.removeTile(tile);
-    tile = createTile(item, loadedFont);
+    tile = createTile(item);
     tiles[index] = tile;
     timeline.addTile(tile, item);
   };
@@ -62,18 +61,15 @@ const createItemTweaks = (index, timeline) => {
 const tiles = [];
 const n = sessionData.length;
 const initTimeline = (timeline) => {
-  fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
-    for (const item of sessionData) {
-      const tile = createTile(item, font);
-      tiles.push(tile);
-      timeline.addTile(tile, item);
-    }
-    loadedFont = font;
-    for (let i = 0; i < n; ++i) {
-      createItemTweaks(i, timeline);
-    }
-    timeline.scroll(0);
-  });
+  for (const item of sessionData) {
+    const tile = createTile(item);
+    tiles.push(tile);
+    timeline.addTile(tile, item);
+  }
+  for (let i = 0; i < n; ++i) {
+    createItemTweaks(i, timeline);
+  }
+  timeline.scroll(0);
 };
 
 export { sessionData as data, initTimeline };

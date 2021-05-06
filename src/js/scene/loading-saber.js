@@ -1,4 +1,4 @@
-import { gltfLoader, loadingManager } from "../config";
+import { assets, fontLoader, gltfLoader, loadingManager } from "../config";
 import scene, { createTimeline } from "./scene";
 import * as THREE from "three";
 import { KernelSize } from "postprocessing";
@@ -43,7 +43,6 @@ const updateSaber = () => {
 const maxLength = saberParams.length;
 loadingManager.onProgress = (url, itemsLoaded, itemsTotal) => {
   const length = (itemsLoaded / itemsTotal) * maxLength;
-  console.log(itemsLoaded, itemsTotal, length);
   saberParams.length = length;
   updateSaber();
 };
@@ -54,7 +53,11 @@ gltfLoader.load("/models/light-saber/scene.gltf", (gltf) => {
   saberHandle.scale.setScalar(0.08);
   saberHandle.rotation.z = -Math.PI / 2;
   saberHandle.position.copy(saberParams.position);
-  createTimeline();
+
+  fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
+    assets.font = font;
+    createTimeline();
+  });
 });
 
 // saberHandle light

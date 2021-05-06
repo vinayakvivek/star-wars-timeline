@@ -11,9 +11,22 @@ const gui = new dat.GUI({
   width: 400,
   closed: true,
 });
+
+const assets = {
+  font: null,
+};
+
 const loadingManager = new LoadingManager();
 const fontLoader = new FontLoader();
 const textureLoader = new TextureLoader(loadingManager);
 const gltfLoader = new GLTFLoader();
 
-export { size, gui, fontLoader, textureLoader, gltfLoader, loadingManager };
+export {
+  size,
+  gui,
+  assets,
+  fontLoader,
+  textureLoader,
+  gltfLoader,
+  loadingManager,
+};

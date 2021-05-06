@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { gui, fontLoader } from "../config";
+import { gui, fontLoader, assets } from "../config";
 import gsap from "gsap";
 
 class Timeline extends THREE.Group {
@@ -84,35 +84,33 @@ class Timeline extends THREE.Group {
     this.yearMarkers = new THREE.Group();
     this.add(this.yearLabels, this.yearMarkers);
     const textMaterial = new THREE.MeshBasicMaterial({});
-    fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
-      for (let year = startYear; year <= endYear; ++year) {
-        // const label = `${Math.abs(year)} ${year < 0 ? 'BBY' : 'ABY'}`;
-        const label = `${year}`;
-        const textGeometry = _createTextGeometry(label, font, 0.2);
-        textGeometry.center();
-        const text = new THREE.Mesh(textGeometry, textMaterial);
-        text.position.y -= 0.2;
-        text.position.x = this.params.gap * year;
-        this.yearLabels.add(text);
+    for (let year = startYear; year <= endYear; ++year) {
+      // const label = `${Math.abs(year)} ${year < 0 ? 'BBY' : 'ABY'}`;
+      const label = `${year}`;
+      const textGeometry = _createTextGeometry(label, assets.font, 0.2);
+      textGeometry.center();
+      const text = new THREE.Mesh(textGeometry, textMaterial);
+      text.position.y -= 0.2;
+      text.position.x = this.params.gap * year;
+      this.yearLabels.add(text);
 
-        // add marker
-        const marker = new THREE.Mesh(
-          new THREE.BoxGeometry(0.01, 0.1, 0),
-          textMaterial
-        );
-        marker.position.x = text.position.x;
-        const markerTop = new THREE.Mesh(
-          new THREE.BoxGeometry(0.01, this.params.width, 0),
-          textMaterial
-        );
-        markerTop.rotation.x = Math.PI / 2;
-        markerTop.position.y = 0.05 + 0.01;
-        markerTop.position.z = -this.params.width / 2 - 0.03;
-        markerTop.position.x = text.position.x;
-        this.yearMarkers.add(marker, markerTop);
-      }
-      this._updateLabelScale(); // to set label scale
-    });
+      // add marker
+      const marker = new THREE.Mesh(
+        new THREE.BoxGeometry(0.01, 0.1, 0),
+        textMaterial
+      );
+      marker.position.x = text.position.x;
+      const markerTop = new THREE.Mesh(
+        new THREE.BoxGeometry(0.01, this.params.width, 0),
+        textMaterial
+      );
+      markerTop.rotation.x = Math.PI / 2;
+      markerTop.position.y = 0.05 + 0.01;
+      markerTop.position.z = -this.params.width / 2 - 0.03;
+      markerTop.position.x = text.position.x;
+      this.yearMarkers.add(marker, markerTop);
+    }
+    this._updateLabelScale(); // to set label scale
 
     // startYear must be negative, endYear must be positive
     this.leftMax = -(this.params.gap * startYear);
