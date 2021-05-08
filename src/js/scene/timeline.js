@@ -10,8 +10,15 @@ class Timeline extends THREE.Group {
       width: 5,
       startYear: -45,
       endYear: 40,
-      gap: 1.5,
+      gap: 1,
     };
+
+    // startYear must be negative, endYear must be positive
+    const { startYear, endYear, gap } = this.params;
+    this.startPos = gap * startYear;
+    this.endPos = gap * endYear;
+    this.numYears = endYear - startYear + 1;
+
     this._createLine();
     this._createYearLabels();
     this.currentYear = 0;
@@ -19,21 +26,22 @@ class Timeline extends THREE.Group {
     this.add(this.movies);
 
     // add gui tweaks
-    // this._initTweaks();
+    this._initTweaks();
   }
 
   addTile(tile, item) {
     this.movies.add(tile);
     const { year, startYear, endYear } = item;
     if (year) {
-      tile.position.x = year * this.params.gap;
+      tile.position.z = year * this.params.gap;
       tile.createMarker();
     } else {
       const startX = startYear * this.params.gap;
       const endX = endYear * this.params.gap;
-      tile.position.x = (startX + endX) / 2;
+      tile.position.z = (startX + endX) / 2;
       tile.createYearMarkers((endX - startX) / 2);
     }
+    tile.rotation.y = Math.PI / 2;
   }
 
   removeTile(tile) {
@@ -41,29 +49,27 @@ class Timeline extends THREE.Group {
     this.movies.remove(tile);
   }
 
-  _resetLine() {
-    this.remove(this.line);
-    this.line = this._createLine();
-    this.line.position.z = -0.03;
-    this.add(this.line);
-  }
-
   _createLine() {
-    const leftX = this.params.gap * this.params.startYear;
-    const rightX = this.params.gap * this.params.endYear;
+    if (this.line) {
+      this.line.geometry.dispose();
+      this.line.material.dispose();
+      this.remove(this.line);
+    }
+    const startPos = this.params.gap * this.params.startYear;
+    const endPos = this.params.gap * this.params.endYear;
     const width = this.params.width;
-    const length = rightX - leftX;
-    const geometry = new THREE.BoxGeometry(length, width, 0.1);
+    const length = endPos - startPos;
+    const geometry = new THREE.PlaneGeometry(width, length);
     const material = new THREE.MeshStandardMaterial({
       color: this.params.color,
       metalness: 0.2,
       roughness: 0.7,
+      transparent: true,
+      opacity: 0.5,
     });
     this.line = new THREE.Mesh(geometry, material);
     this.line.lookAt(new THREE.Vector3(0, 1, 0));
-    this.line.position.z = -width / 2 - 0.03;
-    this.line.position.x = leftX + length / 2;
-
+    this.line.position.z = startPos + length / 2;
     this.add(this.line);
   }
 
@@ -74,7 +80,7 @@ class Timeline extends THREE.Group {
       return new THREE.TextGeometry(text, {
         font,
         size,
-        height: 0.0,
+        height: 0.01,
         curveSegments: 4,
         bevelEnabled: false,
       });
@@ -83,80 +89,54 @@ class Timeline extends THREE.Group {
     this.yearLabels = new THREE.Group();
     this.yearMarkers = new THREE.Group();
     this.add(this.yearLabels, this.yearMarkers);
-    const textMaterial = new THREE.MeshBasicMaterial({});
+    const textMaterial = new THREE.MeshBasicMaterial({
+      side: THREE.DoubleSide,
+    });
     for (let year = startYear; year <= endYear; ++year) {
       // const label = `${Math.abs(year)} ${year < 0 ? 'BBY' : 'ABY'}`;
       const label = `${year}`;
       const textGeometry = _createTextGeometry(label, assets.font, 0.2);
       textGeometry.center();
       const text = new THREE.Mesh(textGeometry, textMaterial);
-      text.position.y -= 0.2;
-      text.position.x = this.params.gap * year;
+      // text.position.y = 0.01;
+      text.position.z = this.params.gap * year;
+      text.rotation.x = -Math.PI / 2;
       this.yearLabels.add(text);
 
       // add marker
-      const marker = new THREE.Mesh(
-        new THREE.BoxGeometry(0.01, 0.1, 0),
-        textMaterial
-      );
-      marker.position.x = text.position.x;
       const markerTop = new THREE.Mesh(
-        new THREE.BoxGeometry(0.01, this.params.width, 0),
+        new THREE.PlaneGeometry(0.02, this.params.width),
         textMaterial
       );
-      markerTop.rotation.x = Math.PI / 2;
-      markerTop.position.y = 0.05 + 0.01;
-      markerTop.position.z = -this.params.width / 2 - 0.03;
-      markerTop.position.x = text.position.x;
-      this.yearMarkers.add(marker, markerTop);
+      markerTop.lookAt(new THREE.Vector3(0, 1, 0));
+      markerTop.position.z = this.params.gap * (year - 0.5);
+      markerTop.rotation.z = Math.PI / 2;
+      this.yearMarkers.add(markerTop);
     }
-    this._updateLabelScale(); // to set label scale
-
-    // startYear must be negative, endYear must be positive
-    this.leftMax = -(this.params.gap * startYear);
-    this.rightMax = -(this.params.gap * endYear);
-    this.numYears = endYear - startYear + 1;
   }
 
   _initTweaks() {
     const folder = gui.addFolder("Timeline");
-    folder.addColor(this.params, "color").onChange(() => {
-      this._resetLine();
-    });
-    folder.add(this.params, "width", 0.01, 0.2, 0.001).onChange(() => {
-      this._resetLine();
-    });
+    folder
+      .addColor(this.params, "color")
+      .onFinishChange(() => this._createLine());
+    folder
+      .add(this.params, "width", 1, 10, 0.1)
+      .onFinishChange(() => this._createLine());
   }
 
-  _translate(dx) {
-    // this.line.translateX(-dx);
-    this.translateX(dx);
-
-    this._updateLabelScale();
+  _translate(dz) {
+    this.translateZ(dz);
   }
 
-  _updateLabelScale() {
-    const labels = this.yearLabels.children;
-    const rawPos = -(this.position.x / this.params.gap) - this.params.startYear;
-    const pos = Math.round(rawPos);
-    const diff = Math.abs(pos - rawPos);
-    labels[pos].scale.setScalar(1 + 2 * (0.5 - diff));
-    if (pos > 0) {
-      labels[pos - 1].scale.setScalar(1);
-    }
-    if (pos < labels.length - 1) {
-      labels[pos + 1].scale.setScalar(1);
-    }
-  }
-
-  scroll(dx) {
+  scroll(dz) {
     if (
-      (this.position.x <= this.rightMax && dx < 0) ||
-      (this.position.x >= this.leftMax && dx > 0)
+      (this.position.z >= -this.startPos && dz > 0) ||
+      (this.position.z <= -this.endPos && dz < 0)
     ) {
       return;
     }
-    this._translate(dx);
+    this._translate(dz);
   }
 
   _computeCurrentYear() {

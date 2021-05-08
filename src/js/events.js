@@ -31,10 +31,7 @@ window.addEventListener("wheel", (e) => {
     return;
   }
 
-  const dz = 0.003 * e.deltaX;
-  timeline.position.z += dz;
-
-  const dx = -0.003 * e.deltaY;
+  const dx = 0.003 * e.deltaY;
   timeline.scroll(dx);
 
   galaxy.scroll(0.1 * e.deltaY);

@@ -11,7 +11,6 @@ scene.add(camera);
 let timeline;
 const createTimeline = () => {
   timeline = new Timeline();
-  timeline.position.y = -2;
   scene.add(timeline);
   initTimeline(timeline);
 

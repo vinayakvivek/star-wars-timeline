@@ -10,14 +10,15 @@ class Tile extends THREE.Group {
     this.texture = textureLoader.load(imagePath);
     this.material = new THREE.MeshBasicMaterial({});
     this.durationMaterial = new MeshBasicMaterial({
-      color: '#aaaaaa',
+      color: "#aaaaaa",
       opacity: 0.5,
       transparent: true,
+      side: THREE.DoubleSide,
     });
     this.font = font;
     this.params = {
       tileScale: 0.5,
-      tileOffset: 0.0,  // percentage offset (of halfWidth)
+      tileOffset: 0.0, // percentage offset (of halfWidth)
       labelSize: 0.08,
       labelPos: -0.1,
       borderSize: 1.5,
@@ -32,7 +33,8 @@ class Tile extends THREE.Group {
     this._createLabel();
     this._createMask();
     this.position.y = this.params.height;
-    this.position.z = -this.params.zPos;
+    this.position.x = -this.params.zPos;
+    this.movable.rotation.y = -Math.PI / 2;
   }
 
   dispose() {
@@ -43,22 +45,22 @@ class Tile extends THREE.Group {
     const h = this.params.height;
     const geometry = new THREE.PlaneGeometry(0.01, h);
     const marker1 = new THREE.Mesh(geometry, this.material);
-    marker1.position.y = - h / 2;
+    marker1.position.y = -h / 2;
     marker1.position.x = -halfWidth;
 
     const marker2 = new THREE.Mesh(geometry, this.material);
-    marker2.position.y = - h / 2;
+    marker2.position.y = -h / 2;
     marker2.position.x = halfWidth;
 
     const connector = new THREE.Mesh(
       new THREE.PlaneGeometry(halfWidth * 2 + 0.01, 0.02),
-      this.material,
+      this.material
     );
     const connectorPlane = new THREE.Mesh(
       new THREE.PlaneGeometry(halfWidth * 2 + 0.01, h),
-      this.durationMaterial,
+      this.durationMaterial
     );
-    connectorPlane.position.y = - h / 2;
+    connectorPlane.position.y = -h / 2;
     this.add(marker1, marker2, connector, connectorPlane);
 
     this.movable.position.x += halfWidth * this.params.tileOffset;
@@ -68,9 +70,9 @@ class Tile extends THREE.Group {
     const h = this.params.height;
     const marker = new THREE.Mesh(
       new THREE.PlaneGeometry(0.05, Math.abs(h)),
-      this.material,
+      this.material
     );
-    marker.position.y = - h / 2;
+    marker.position.y = -h / 2;
     this.add(marker);
   }
 
@@ -85,7 +87,7 @@ class Tile extends THREE.Group {
       new THREE.PlaneGeometry(w, h),
       new THREE.MeshBasicMaterial({
         color: "rgb(0, 0, 0)",
-      }),
+      })
     );
     mask.position.set(cx, cy, 0.01);
     this.movable.add(mask);

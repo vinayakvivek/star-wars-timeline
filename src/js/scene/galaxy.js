@@ -47,12 +47,16 @@ class Galaxy extends THREE.Group {
     }
     const geometry = new THREE.BufferGeometry();
     geometry.setAttribute("position", new THREE.BufferAttribute(points, 3));
+
+    // Found a weird behaviour. When scrolling at some point particles
+    // were not visible through transparent timeline.
+    // Fix: https://stackoverflow.com/a/11828400/13793292 (alphaTest)
     const material = new THREE.PointsMaterial({
       size: this.starSize,
       // color: color,
-      transparent: true,
       alphaMap: this.starTexture,
       depthWrite: false,
+      alphaTest: 0.5,
       // blending: THREE.AdditiveBlending,
     });
     const starField = new THREE.Points(geometry, material);
