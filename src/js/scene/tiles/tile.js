@@ -3,18 +3,24 @@ import { MeshBasicMaterial } from "three";
 import { textureLoader } from "../../config";
 import { disposeHierarchy } from "../../utils";
 
+const material = new THREE.MeshBasicMaterial({
+  side: THREE.DoubleSide,
+});
+const durationMaterial = new MeshBasicMaterial({
+  color: "#aaaaaa",
+  opacity: 0.5,
+  transparent: true,
+  side: THREE.DoubleSide,
+});
+const maskMaterial = new THREE.MeshBasicMaterial({
+  color: "rgb(0, 0, 0)",
+});
+
 class Tile extends THREE.Group {
   constructor(name, imagePath, font, params = {}) {
     super();
     this.name = name;
     this.texture = textureLoader.load(imagePath);
-    this.material = new THREE.MeshBasicMaterial({});
-    this.durationMaterial = new MeshBasicMaterial({
-      color: "#aaaaaa",
-      opacity: 0.5,
-      transparent: true,
-      side: THREE.DoubleSide,
-    });
     this.font = font;
     this.params = {
       tileScale: 0.5,
@@ -24,7 +30,7 @@ class Tile extends THREE.Group {
       borderSize: 1.5,
       markerStart: -1.0,
       height: 2,
-      zPos: 0,
+      pos: 0,
       ...params,
     };
     this.movable = new THREE.Group();
@@ -33,7 +39,7 @@ class Tile extends THREE.Group {
     this._createLabel();
     this._createMask();
     this.position.y = this.params.height;
-    this.position.x = -this.params.zPos;
+    this.position.x = -this.params.pos;
     this.movable.rotation.y = -Math.PI / 2;
   }
 
@@ -43,22 +49,24 @@ class Tile extends THREE.Group {
 
   createYearMarkers(halfWidth) {
     const h = this.params.height;
-    const geometry = new THREE.PlaneGeometry(0.01, h);
-    const marker1 = new THREE.Mesh(geometry, this.material);
+    const geometry = new THREE.PlaneGeometry(0.05, h);
+    const marker1 = new THREE.Mesh(geometry, material);
     marker1.position.y = -h / 2;
     marker1.position.x = -halfWidth;
+    marker1.rotation.y = Math.PI / 2;
 
-    const marker2 = new THREE.Mesh(geometry, this.material);
+    const marker2 = new THREE.Mesh(geometry, material);
     marker2.position.y = -h / 2;
     marker2.position.x = halfWidth;
+    marker2.rotation.y = Math.PI / 2;
 
     const connector = new THREE.Mesh(
       new THREE.PlaneGeometry(halfWidth * 2 + 0.01, 0.02),
-      this.material
+      material
     );
     const connectorPlane = new THREE.Mesh(
       new THREE.PlaneGeometry(halfWidth * 2 + 0.01, h),
-      this.durationMaterial
+      durationMaterial
     );
     connectorPlane.position.y = -h / 2;
     this.add(marker1, marker2, connector, connectorPlane);
@@ -70,9 +78,10 @@ class Tile extends THREE.Group {
     const h = this.params.height;
     const marker = new THREE.Mesh(
       new THREE.PlaneGeometry(0.05, Math.abs(h)),
-      this.material
+      material
     );
     marker.position.y = -h / 2;
+    marker.rotation.y = Math.PI / 2;
     this.add(marker);
   }
 
@@ -83,12 +92,7 @@ class Tile extends THREE.Group {
     const h = bbox.max.y - bbox.min.y + margin;
     const cx = (bbox.max.x + bbox.min.x) / 2;
     const cy = (bbox.max.y + bbox.min.y) / 2;
-    const mask = new THREE.Mesh(
-      new THREE.PlaneGeometry(w, h),
-      new THREE.MeshBasicMaterial({
-        color: "rgb(0, 0, 0)",
-      })
-    );
+    const mask = new THREE.Mesh(new THREE.PlaneGeometry(w, h), maskMaterial);
     mask.position.set(cx, cy, 0.01);
     this.movable.add(mask);
     this.mask = mask;
@@ -104,7 +108,7 @@ class Tile extends THREE.Group {
       bevelEnabled: false,
     });
     textGeometry.center();
-    this.label = new THREE.Mesh(textGeometry, this.material);
+    this.label = new THREE.Mesh(textGeometry, material);
     this.label.position.y = tileBox.min.y + this.params.labelPos;
     this.label.position.z = 0.02;
     this.movable.add(this.label);

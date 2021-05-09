@@ -1,5 +1,5 @@
 import { gui, fontLoader } from "../config";
-import { createTile } from "./tiles/tile-factory";
+import { createTile, findLayout } from "./tiles/tile-factory";
 import data from "../data.json";
 
 const saveData = () => {
@@ -19,7 +19,7 @@ const sessionData = fetchData();
 const tilesFolder = gui.addFolder("Tiles");
 const tweakParams = [
   ["height", 0, 6, 0.01],
-  ["zPos", 0, 6, 0.01],
+  ["pos", -10, 10, 0.01],
   ["tileScale", 0.1, 3, 0.01],
   ["tileOffset", -1, 1, 0.01],
   ["labelSize", 0.01, 1, 0.01],
@@ -27,7 +27,7 @@ const tweakParams = [
 ];
 const defaultParams = {
   height: 2.0,
-  zPos: 0.05,
+  pos: 0.0,
   tileScale: 0.5,
   tileOffset: 0.0,
   labelSize: 0.08,
@@ -61,6 +61,7 @@ const createItemTweaks = (index, timeline) => {
 const tiles = [];
 const n = sessionData.length;
 const initTimeline = (timeline) => {
+  findLayout(sessionData);
   for (const item of sessionData) {
     const tile = createTile(item);
     tiles.push(tile);
