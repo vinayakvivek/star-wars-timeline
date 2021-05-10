@@ -31,10 +31,12 @@ export const findLayout = (data) => {
       // TODO: round year
       const year = Math.round(item.year);
       addItem(year, item);
+    } else {
+      item.params.pos = (Math.random() - 0.5) * 8;
     }
   }
 
-  const gap = 1.5;
+  const gap = 2;
   for (const year in yearBuckets) {
     const count = yearBuckets[year].length;
     // const offset = 0.5 * (year % 2 == 0 ? -1 : 1);

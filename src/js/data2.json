@@ -1,0 +1,989 @@
+[
+  {
+    "name": "Jedi Fallen Order - Dark Temple",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/JediFallenOrderDarkTemple.jpg",
+    "params": {},
+    "year": -42.0
+  },
+  {
+    "name": "Master & Apprentice",
+    "releaseDate": [2019],
+    "type": "Novel",
+    "thumbnail": "/images/MasterApprentice.jpg",
+    "params": {},
+    "startYear": -40.0,
+    "endYear": -32.0
+  },
+  {
+    "name": "Darth Maul",
+    "releaseDate": [2017],
+    "type": "Comic",
+    "thumbnail": "/images/DarthMaul.jpg",
+    "params": {},
+    "year": -32.0
+  },
+  {
+    "name": "Queen's Peril",
+    "releaseDate": [2020],
+    "type": "Novel",
+    "thumbnail": "/images/QueensPeril.jpg",
+    "params": {},
+    "year": -32.0
+  },
+  {
+    "name": "Episode I: The Phantom Menace",
+    "releaseDate": [1999],
+    "type": "Movie",
+    "thumbnail": "/images/EpisodeIThePhantomMenace.jpg",
+    "params": {},
+    "year": -32.0
+  },
+  {
+    "name": "Obi-Wan and Anakin",
+    "releaseDate": [2016],
+    "type": "Comic",
+    "thumbnail": "/images/ObiWanandAnakin.jpg",
+    "params": {},
+    "year": -29.0
+  },
+  {
+    "name": "Queen's Shadow",
+    "releaseDate": [2019],
+    "type": "Novel",
+    "thumbnail": "/images/QueensShadow.jpg",
+    "params": {},
+    "year": -28.0
+  },
+  {
+    "name": "Dooku: Jedi Lost",
+    "releaseDate": [2019],
+    "type": "AudioBook",
+    "thumbnail": "/images/DookuJediLost.jpg",
+    "params": {},
+    "year": -22.0
+  },
+  {
+    "name": "Episode II: Attack of the Clones",
+    "releaseDate": [2002],
+    "type": "Movie",
+    "thumbnail": "/images/EpisodeIIAttackoftheClones.jpg",
+    "params": {},
+    "year": -22.0
+  },
+  {
+    "name": "Jedi of the Republic \u2013 Mace Windu",
+    "releaseDate": [2017],
+    "type": "Comic",
+    "thumbnail": "/images/JedioftheRepublicMaceWindu.jpg",
+    "params": {},
+    "year": -22.0
+  },
+  {
+    "name": "The Clone Wars (film) ",
+    "releaseDate": [2008],
+    "type": "Movie",
+    "thumbnail": "/images/TheCloneWarsfilm.jpg",
+    "params": {},
+    "year": -22.0
+  },
+  {
+    "name": "The Clone Wars",
+    "releaseDate": [2008, 2020],
+    "type": "Series",
+    "thumbnail": "/images/TheCloneWars.jpg",
+    "params": {},
+    "startYear": -22.0,
+    "endYear": -19.0
+  },
+  {
+    "name": "Queen's Hope",
+    "releaseDate": [2021],
+    "type": "Novel",
+    "thumbnail": "/images/QueensHope.jpg",
+    "params": {},
+    "startYear": -22.0,
+    "endYear": -19.0
+  },
+  {
+    "name": "Catalyst: A Rogue One Novel",
+    "releaseDate": [2016],
+    "type": "Novel",
+    "thumbnail": "/images/CatalystARogueOneNovel.jpg",
+    "params": {},
+    "startYear": -21.0,
+    "endYear": -17.0
+  },
+  {
+    "name": "Darth Maul: Son of Dathomir",
+    "releaseDate": [2014],
+    "type": "Comic",
+    "thumbnail": "/images/DarthMaulSonofDathomir.jpg",
+    "params": {},
+    "year": -19.0
+  },
+  {
+    "name": "Dark Disciple",
+    "releaseDate": [2015],
+    "type": "Novel",
+    "thumbnail": "/images/DarkDisciple.jpg",
+    "params": {},
+    "year": -19.0
+  },
+  {
+    "name": "Thrawn Ascendancy: Chaos Rising",
+    "releaseDate": [2020],
+    "type": "Novel",
+    "thumbnail": "/images/ThrawnAscendancyChaosRising.jpg",
+    "params": {},
+    "year": -19.0
+  },
+  {
+    "name": "Thrawn Ascendancy: Greater Good",
+    "releaseDate": [2021],
+    "type": "Novel",
+    "thumbnail": "/images/ThrawnAscendancyGreaterGood.jpg",
+    "params": {},
+    "year": -19.0
+  },
+  {
+    "name": "Episode III: Revenge of the Sith",
+    "releaseDate": [2005],
+    "type": "Movie",
+    "thumbnail": "/images/EpisodeIIIRevengeoftheSith.jpg",
+    "params": {},
+    "year": -19.0
+  },
+  {
+    "name": "Darth Vader: Dark Lord of the Sith",
+    "releaseDate": [2017, 2018],
+    "type": "Comic",
+    "thumbnail": "/images/DarthVaderDarkLordoftheSith.jpg",
+    "params": {},
+    "startYear": -19.0,
+    "endYear": -12.0
+  },
+  {
+    "name": "Age of Rebellion - Darth Vader",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/AgeofRebellionDarthVader.jpg",
+    "params": {},
+    "startYear": -19.0,
+    "endYear": -14.0
+  },
+  {
+    "name": "Kanan",
+    "releaseDate": [2015, 2016],
+    "type": "Comic",
+    "thumbnail": "/images/Kanan.jpg",
+    "params": {},
+    "startYear": -19.0,
+    "endYear": -18.0
+  },
+  {
+    "name": "Age of Rebellion Special - \"The Long Game\"",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/AgeofRebellionSpecialTheLongGame.jpg",
+    "params": {},
+    "startYear": -19.0,
+    "endYear": -5.0
+  },
+  {
+    "name": "Adventures in Wild Space: The Escape",
+    "releaseDate": [2016],
+    "type": "Junior Novel",
+    "thumbnail": "/images/AdventuresinWildSpaceTheEscape.jpg",
+    "params": {},
+    "year": -18.0
+  },
+  {
+    "name": "Ahsoka",
+    "releaseDate": [2016],
+    "type": "Novel",
+    "thumbnail": "/images/Ahsoka.jpg",
+    "params": {},
+    "year": -18.0
+  },
+  {
+    "name": "The Bad Batch",
+    "releaseDate": [2021],
+    "type": "Series",
+    "thumbnail": "/images/TheBadBatch.jpg",
+    "params": {},
+    "startYear": -19.0,
+    "endYear": -5.0
+  },
+  {
+    "name": "Lords of the Sith",
+    "releaseDate": [2015],
+    "type": "Novel",
+    "thumbnail": "/images/LordsoftheSith.jpg",
+    "params": {},
+    "year": -14.0
+  },
+  {
+    "name": "Tarkin",
+    "releaseDate": [2015],
+    "type": "Novel",
+    "thumbnail": "/images/Tarkin.jpg",
+    "params": {},
+    "year": -14.0
+  },
+  {
+    "name": "Jedi: Fallen Order",
+    "releaseDate": [2019],
+    "type": "Game",
+    "thumbnail": "/images/JediFallenOrder.jpg",
+    "params": {},
+    "year": -14.0
+  },
+  {
+    "name": "Most Wanted",
+    "releaseDate": [2018],
+    "type": "Novel",
+    "thumbnail": "/images/MostWanted.jpg",
+    "params": {},
+    "year": -13.0
+  },
+  {
+    "name": "Solo",
+    "releaseDate": [2018],
+    "type": "Movie",
+    "thumbnail": "/images/Solo.jpg",
+    "params": {},
+    "startYear": -13.0,
+    "endYear": -10.0
+  },
+  {
+    "name": "Han Solo - Imperial Cadet",
+    "releaseDate": null,
+    "type": "Comic",
+    "thumbnail": "/images/HanSoloImperialCadet.jpg",
+    "params": {},
+    "startYear": -13.0,
+    "endYear": -10.0
+  },
+  {
+    "name": "Rebel Rising",
+    "releaseDate": [2017],
+    "type": "Novel",
+    "thumbnail": "/images/RebelRising.jpg",
+    "params": {},
+    "startYear": -13.0,
+    "endYear": -0.0
+  },
+  {
+    "name": "Lost stars",
+    "releaseDate": [2015],
+    "type": "Novel",
+    "thumbnail": "/images/Loststars.jpg",
+    "params": {},
+    "startYear": -11.0,
+    "endYear": -5.0
+  },
+  {
+    "name": "Thrawn",
+    "releaseDate": [2017],
+    "type": "Novel",
+    "thumbnail": "/images/Thrawn.jpg",
+    "params": {},
+    "startYear": -11.0,
+    "endYear": -2.0
+  },
+  {
+    "name": "A New Dawn",
+    "releaseDate": [2014],
+    "type": "Novel",
+    "thumbnail": "/images/ANewDawn.jpg",
+    "params": {},
+    "year": -11.0
+  },
+  {
+    "name": "Lando's Luck",
+    "releaseDate": [2018],
+    "type": "Junior Novel",
+    "thumbnail": "/images/LandosLuck.jpg",
+    "params": {},
+    "year": -10.0
+  },
+  {
+    "name": "Lando: Double or Nothing",
+    "releaseDate": [2018],
+    "type": "Comic",
+    "thumbnail": "/images/LandoDoubleorNothing.jpg",
+    "params": {},
+    "year": -10.0
+  },
+  {
+    "name": "Age of Rebellion - Jabba the Hutt",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/AgeofRebellionJabbatheHutt.jpg",
+    "params": {},
+    "startYear": -10.0,
+    "endYear": 4.0
+  },
+  {
+    "name": "Obi-Wan Kenobi",
+    "releaseDate": [2022],
+    "type": "Series",
+    "thumbnail": "/images/ObiWanKenobi.jpg",
+    "params": {},
+    "year": -9.0
+  },
+  {
+    "name": "Andor",
+    "releaseDate": [2022],
+    "type": "Series",
+    "thumbnail": "/images/Andor.jpg",
+    "params": {},
+    "year": -5.0
+  },
+  {
+    "name": "Servants of the Empire: Edge of the Galaxy",
+    "releaseDate": [2014],
+    "type": "Junior Novel",
+    "thumbnail": "/images/ServantsoftheEmpireEdgeoftheGalaxy.jpg",
+    "params": {},
+    "startYear": -6.0,
+    "endYear": -5.0
+  },
+  {
+    "name": "Servants of the Empire: Rebel in the Ranks ",
+    "releaseDate": [2015],
+    "type": "Junior Novel",
+    "thumbnail": "/images/ServantsoftheEmpireRebelintheRanks.jpg",
+    "params": {},
+    "year": -5.0
+  },
+  {
+    "name": "Servants of the Empire: Imperial Justice",
+    "releaseDate": [2015],
+    "type": "Junior Novel",
+    "thumbnail": "/images/ServantsoftheEmpireImperialJustice.jpg",
+    "params": {},
+    "year": -5.0
+  },
+  {
+    "name": "Servants of the Empire: The Secret Academy",
+    "releaseDate": [2015],
+    "type": "Junior Novel",
+    "thumbnail": "/images/ServantsoftheEmpireTheSecretAcademy.jpg",
+    "params": {},
+    "year": -5.0
+  },
+  {
+    "name": "Rebels",
+    "releaseDate": [2014, 2018],
+    "type": "Series",
+    "thumbnail": "/images/Rebels.jpg",
+    "params": {},
+    "startYear": -5.0,
+    "endYear": -1.0
+  },
+  {
+    "name": "Leia, Princess of Alderaan",
+    "releaseDate": [2017],
+    "type": "Novel",
+    "thumbnail": "/images/LeiaPrincessofAlderaan.jpg",
+    "params": {},
+    "year": -3.0
+  },
+  {
+    "name": "The Mighty Chewbacca in the Forest of Fear!",
+    "releaseDate": [2018],
+    "type": "Junior Novel",
+    "thumbnail": "/images/TheMightyChewbaccaintheForestofFear.jpg",
+    "params": {},
+    "startYear": -2.0,
+    "endYear": -0.0
+  },
+  {
+    "name": "Secrets of the Empire",
+    "releaseDate": [2017],
+    "type": "VR",
+    "thumbnail": "/images/SecretsoftheEmpire.jpg",
+    "params": {},
+    "startYear": -2.0,
+    "endYear": -0.0
+  },
+  {
+    "name": "Vader Immortal",
+    "releaseDate": [2019],
+    "type": "VR",
+    "thumbnail": "/images/VaderImmortal.jpg",
+    "params": {},
+    "startYear": -2.0,
+    "endYear": -0.0
+  },
+  {
+    "name": "Age of Rebellion Special - \"Stolen Valor\"",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/AgeofRebellionSpecialStolenValor.jpg",
+    "params": {},
+    "startYear": -2.0,
+    "endYear": -0.0
+  },
+  {
+    "name": "Age of Rebellion - Boba Fett",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/AgeofRebellionBobaFett.jpg",
+    "params": {},
+    "startYear": -2.0,
+    "endYear": 4.0
+  },
+  {
+    "name": "Thrawn: Alliances",
+    "releaseDate": [2018],
+    "type": "Novel",
+    "thumbnail": "/images/ThrawnAlliances.jpg",
+    "params": {},
+    "year": -2.0
+  },
+  {
+    "name": "Thrawn: Treason",
+    "releaseDate": [2019],
+    "type": "Novel",
+    "thumbnail": "/images/ThrawnTreason.jpg",
+    "params": {},
+    "year": -1.0
+  },
+  {
+    "name": "Guardians of the Whills",
+    "releaseDate": [2017],
+    "type": "Novel",
+    "thumbnail": "/images/GuardiansoftheWhills.jpg",
+    "params": {},
+    "year": -0.0
+  },
+  {
+    "name": "Rogue One",
+    "releaseDate": [2016],
+    "type": "Movie",
+    "thumbnail": "/images/RogueOne.jpg",
+    "params": {},
+    "year": -0.0
+  },
+  {
+    "name": "Age of Rebellion - Grand Moff Tarkin",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/AgeofRebellionGrandMoffTarkin.jpg",
+    "params": {},
+    "year": -0.0
+  },
+  {
+    "name": "Episode IV: A New Hope",
+    "releaseDate": [1977],
+    "type": "Movie",
+    "thumbnail": "/images/EpisodeIVANewHope.jpg",
+    "params": {},
+    "year": -0.0
+  },
+  {
+    "name": "Tales from Vader's Castle",
+    "releaseDate": [2018],
+    "type": "Comic",
+    "thumbnail": "/images/TalesfromVadersCastle.jpg",
+    "params": {},
+    "startYear": -0.0,
+    "endYear": 4.0
+  },
+  {
+    "name": "Return to Vader's Castle",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/ReturntoVadersCastle.jpg",
+    "params": {},
+    "startYear": -0.0,
+    "endYear": 4.0
+  },
+  {
+    "name": "Smuggler's Run: A Han Solo & Chewbacca Adventure",
+    "releaseDate": [2015],
+    "type": "Junior Novel",
+    "thumbnail": "/images/SmugglersRunAHanSoloChewbaccaAdventure.jpg",
+    "params": {},
+    "year": 0.0
+  },
+  {
+    "name": "Age of Rebellion - Han Solo",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/AgeofRebellionHanSolo.jpg",
+    "params": {},
+    "year": 0.0
+  },
+  {
+    "name": "Princess Leia",
+    "releaseDate": [2015],
+    "type": "Comic",
+    "thumbnail": "/images/PrincessLeia.jpg",
+    "params": {},
+    "year": 0.0
+  },
+  {
+    "name": "Chewbacca",
+    "releaseDate": [2015],
+    "type": "Comic",
+    "thumbnail": "/images/Chewbacca.jpg",
+    "params": {},
+    "year": 0.0
+  },
+  {
+    "name": "Han Solo",
+    "releaseDate": [2016],
+    "type": "Comic",
+    "thumbnail": "/images/HanSolo.jpg",
+    "params": {},
+    "year": 0.0
+  },
+  {
+    "name": "Lando",
+    "releaseDate": [2015],
+    "type": "Comic",
+    "thumbnail": "/images/Lando.jpg",
+    "params": {},
+    "year": 0.0
+  },
+  {
+    "name": "Darth Vader",
+    "releaseDate": [2015],
+    "type": "Comic",
+    "thumbnail": "/images/DarthVader.jpg",
+    "params": {},
+    "year": 0.0
+  },
+  {
+    "name": "Battlefront II: Inferno Squad",
+    "releaseDate": [2017],
+    "type": "Novel",
+    "thumbnail": "/images/BattlefrontIIInfernoSquad.jpg",
+    "params": {},
+    "year": 0.0
+  },
+  {
+    "name": "Heir to the Jedi",
+    "releaseDate": [2015],
+    "type": "Novel",
+    "thumbnail": "/images/HeirtotheJedi.jpg",
+    "params": {},
+    "year": 0.0
+  },
+  {
+    "name": "The Weapon of a Jedi: A Luke Skywalker Adventure",
+    "releaseDate": [2015],
+    "type": "Junior Novel",
+    "thumbnail": "/images/TheWeaponofaJediALukeSkywalkerAdventure.jpg",
+    "params": {},
+    "year": 0.0
+  },
+  {
+    "name": "Star Wars (Marvel 2015)",
+    "releaseDate": [2015],
+    "type": "Comic",
+    "thumbnail": "/images/StarWarsMarvel2015.jpg",
+    "params": {},
+    "startYear": 0.0,
+    "endYear": 3.0
+  },
+  {
+    "name": "Age of Rebellion - Lando Calrissian",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/AgeofRebellionLandoCalrissian.jpg",
+    "params": {},
+    "startYear": 0.0,
+    "endYear": 3.0
+  },
+  {
+    "name": "Doctor Aphra",
+    "releaseDate": [2016],
+    "type": "Comic",
+    "thumbnail": "/images/DoctorAphra.jpg",
+    "params": {},
+    "startYear": 1.0,
+    "endYear": 3.0
+  },
+  {
+    "name": "Target Vader",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/TargetVader.jpg",
+    "params": {},
+    "year": 3.0
+  },
+  {
+    "name": "Episode V: The Empire Strikes Back",
+    "releaseDate": [1980],
+    "type": "Movie",
+    "thumbnail": "/images/EpisodeVTheEmpireStrikesBack.jpg",
+    "params": {},
+    "year": 3.0
+  },
+  {
+    "name": "Age of Rebellion Special - \"The Trial of Dagobah\"",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/AgeofRebellionSpecialTheTrialofDagobah.jpg",
+    "params": {},
+    "year": 3.0
+  },
+  {
+    "name": "Star Wars (Marvel 2020)",
+    "releaseDate": [2020],
+    "type": "Comic",
+    "thumbnail": "/images/StarWarsMarvel2020.jpg",
+    "params": {},
+    "year": 3.0
+  },
+  {
+    "name": "Darth Vader (2020)",
+    "releaseDate": [2020],
+    "type": "Comic",
+    "thumbnail": "/images/DarthVader2020.jpg",
+    "params": {},
+    "year": 3.0
+  },
+  {
+    "name": "Bounty Hunters",
+    "releaseDate": [2020],
+    "type": "Comic",
+    "thumbnail": "/images/BountyHunters.jpg",
+    "params": {},
+    "year": 3.0
+  },
+  {
+    "name": "Doctor Aphra (2020)",
+    "releaseDate": [2020],
+    "type": "Comic",
+    "thumbnail": "/images/DoctorAphra2020.jpg",
+    "params": {},
+    "startYear": 3.0,
+    "endYear": 4.0
+  },
+  {
+    "name": "Battlefront: Twilight Company",
+    "releaseDate": [2015],
+    "type": "Novel",
+    "thumbnail": "/images/BattlefrontTwilightCompany.jpg",
+    "params": {},
+    "year": 3.0
+  },
+  {
+    "name": "Age of Resistance Special: The Bridge",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/AgeofResistanceSpecialTheBridge.jpg",
+    "params": {},
+    "startYear": -2.0,
+    "endYear": 4.0
+  },
+  {
+    "name": "Moving Target: A Princess Leia Adventure",
+    "releaseDate": [2015],
+    "type": "Junior Novel",
+    "thumbnail": "/images/MovingTargetAPrincessLeiaAdventure.jpg",
+    "params": {},
+    "year": 4.0
+  },
+  {
+    "name": "Age of Rebellion - Luke Skywalker",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/AgeofRebellionLukeSkywalker.jpg",
+    "params": {},
+    "year": 4.0
+  },
+  {
+    "name": "Age of Rebellion - Princess Leia",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/AgeofRebellionPrincessLeia.jpg",
+    "params": {},
+    "year": 4.0
+  },
+  {
+    "name": "Episode VI: Return of the Jedi",
+    "releaseDate": [1983],
+    "type": "Movie",
+    "thumbnail": "/images/EpisodeVIReturnoftheJedi.jpg",
+    "params": {},
+    "year": 4.0
+  },
+  {
+    "name": "TIE Fighter (*)",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/TIEFighter.jpg",
+    "params": {},
+    "startYear": 3.0,
+    "endYear": 4.0
+  },
+  {
+    "name": "Alphabet Squadron",
+    "releaseDate": [2019],
+    "type": "Novel",
+    "thumbnail": "/images/AlphabetSquadron.jpg",
+    "params": {},
+    "year": 4.0
+  },
+  {
+    "name": "Aftermath",
+    "releaseDate": [2015],
+    "type": "Novel",
+    "thumbnail": "/images/Aftermath.jpg",
+    "params": {},
+    "year": 4.0
+  },
+  {
+    "name": "Uprising",
+    "releaseDate": [2015],
+    "type": "Game",
+    "thumbnail": "/images/Uprising.jpg",
+    "params": {},
+    "startYear": 4.0,
+    "endYear": 5.0
+  },
+  {
+    "name": "Squadrons: \"Hunted\"",
+    "releaseDate": [2020],
+    "type": "Short",
+    "thumbnail": "/images/SquadronsHunted.jpg",
+    "params": {},
+    "year": 4.0
+  },
+  {
+    "name": "Squadrons",
+    "releaseDate": [2020],
+    "type": "Game",
+    "thumbnail": "/images/Squadrons.jpg",
+    "params": {},
+    "year": 4.0
+  },
+  {
+    "name": "Shattered Empire",
+    "releaseDate": [2015],
+    "type": "Comic",
+    "thumbnail": "/images/ShatteredEmpire.jpg",
+    "params": {},
+    "startYear": 4.0,
+    "endYear": 5.0
+  },
+  {
+    "name": "Battlefront II (DICE)",
+    "releaseDate": [2017],
+    "type": "Game",
+    "thumbnail": "/images/BattlefrontIIDICE.jpg",
+    "params": {},
+    "startYear": 4.0,
+    "endYear": 5.0
+  },
+  {
+    "name": "Shadow Fall",
+    "releaseDate": [2020],
+    "type": "Novel",
+    "thumbnail": "/images/ShadowFall.jpg",
+    "params": {},
+    "year": 5.0
+  },
+  {
+    "name": "Aftermath: Life Debt",
+    "releaseDate": [2016],
+    "type": "Novel",
+    "thumbnail": "/images/AftermathLifeDebt.jpg",
+    "params": {},
+    "year": 5.0
+  },
+  {
+    "name": "Victory's Price",
+    "releaseDate": [2021],
+    "type": "Novel",
+    "thumbnail": "/images/VictorysPrice.jpg",
+    "params": {},
+    "year": 5.0
+  },
+  {
+    "name": "Aftermath: Empire's End",
+    "releaseDate": [2017],
+    "type": "Novel",
+    "thumbnail": "/images/AftermathEmpiresEnd.jpg",
+    "params": {},
+    "year": 5.0
+  },
+  {
+    "name": "Age of Resistance Special: Maz's Scoundrels",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/AgeofResistanceSpecialMazsScoundrels.jpg",
+    "params": {},
+    "startYear": -4.0,
+    "endYear": 7.0
+  },
+  {
+    "name": "Last Shot",
+    "releaseDate": [2018],
+    "type": "Novel",
+    "thumbnail": "/images/LastShot.jpg",
+    "params": {},
+    "year": 7.0
+  },
+  {
+    "name": "The Mandalorian",
+    "releaseDate": [2019],
+    "type": "Series",
+    "thumbnail": "/images/TheMandalorian.jpg",
+    "params": {},
+    "year": 9.0
+  },
+  {
+    "name": "Poe Dameron: Free Fall",
+    "releaseDate": [2020],
+    "type": "Novel",
+    "thumbnail": "/images/PoeDameronFreeFall.jpg",
+    "params": {},
+    "year": 18.0
+  },
+  {
+    "name": "Bloodline",
+    "releaseDate": [2016],
+    "type": "Novel",
+    "thumbnail": "/images/Bloodline.jpg",
+    "params": {},
+    "year": 28.0
+  },
+  {
+    "name": "The Rise of Kylo Ren",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/TheRiseofKyloRen.jpg",
+    "params": {},
+    "year": 28.0
+  },
+  {
+    "name": "Age of Resistance: Rose Tico",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/AgeofResistanceRoseTico.jpg",
+    "params": {},
+    "startYear": 28.0,
+    "endYear": 34.0
+  },
+  {
+    "name": "Age of Resistance: Supreme Leader Snoke",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/AgeofResistanceSupremeLeaderSnoke.jpg",
+    "params": {},
+    "startYear": 28.0,
+    "endYear": 34.0
+  },
+  {
+    "name": "Age of Resistance: Finn",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/AgeofResistanceFinn.jpg",
+    "params": {},
+    "startYear": 29.0,
+    "endYear": 34.0
+  },
+  {
+    "name": "Age of Resistance: Captain Phasma",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/AgeofResistanceCaptainPhasma.jpg",
+    "params": {},
+    "startYear": 29.0,
+    "endYear": 34.0
+  },
+  {
+    "name": "Age of Resistance: General Hux",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/AgeofResistanceGeneralHux.jpg",
+    "params": {},
+    "startYear": 29.0,
+    "endYear": 34.0
+  },
+  {
+    "name": "Age of Resistance: Kylo Ren",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/AgeofResistanceKyloRen.jpg",
+    "params": {},
+    "startYear": 29.0,
+    "endYear": 34.0
+  },
+  {
+    "name": "Age of Resistance: Poe Dameron",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/AgeofResistancePoeDameron.jpg",
+    "params": {},
+    "startYear": 30.0,
+    "endYear": 31.0
+  },
+  {
+    "name": "Resistance",
+    "releaseDate": [2018, 2020],
+    "type": "Series",
+    "thumbnail": "/images/Resistance.jpg",
+    "params": {},
+    "year": 34.0
+  },
+  {
+    "name": "Age of Resistance Special: Robot Resistance",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/AgeofResistanceSpecialRobotResistance.jpg",
+    "params": {},
+    "startYear": 31.0,
+    "endYear": 35.0
+  },
+  {
+    "name": "Episode VII: The Force Awakens",
+    "releaseDate": [2015],
+    "type": "Movie",
+    "thumbnail": "/images/EpisodeVIITheForceAwakens.jpg",
+    "params": {},
+    "startYear": 34.0,
+    "endYear": 35.0
+  },
+  {
+    "name": "Battlefront II: Resurrection",
+    "releaseDate": null,
+    "type": "Game",
+    "thumbnail": "/images/BattlefrontIIResurrection.jpg",
+    "params": {},
+    "year": 34.0
+  },
+  {
+    "name": "Age of Resistance: Rey",
+    "releaseDate": [2019],
+    "type": "Comic",
+    "thumbnail": "/images/AgeofResistanceRey.jpg",
+    "params": {},
+    "year": 34.0
+  },
+  {
+    "name": "Episode VIII: The Last Jedi",
+    "releaseDate": [2017],
+    "type": "Movie",
+    "thumbnail": "/images/EpisodeVIIITheLastJedi.jpg",
+    "params": {},
+    "year": 34.0
+  },
+  {
+    "name": "Episode IX: The Rise of Skywalker",
+    "releaseDate": [2019],
+    "type": "Movie",
+    "thumbnail": "/images/EpisodeIXTheRiseofSkywalker.jpg",
+    "params": {},
+    "year": 35.0
+  }
+]

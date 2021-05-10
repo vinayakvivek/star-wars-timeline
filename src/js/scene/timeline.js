@@ -7,10 +7,10 @@ class Timeline extends THREE.Group {
     super();
     this.params = {
       color: "#292929",
-      width: 5,
+      width: 10,
       startYear: -45,
       endYear: 40,
-      gap: 1,
+      gap: 1.5,
     };
 
     // startYear must be negative, endYear must be positive
@@ -99,7 +99,7 @@ class Timeline extends THREE.Group {
       textGeometry.center();
       const text = new THREE.Mesh(textGeometry, textMaterial);
       // text.position.y = 0.01;
-      text.position.z = this.params.gap * year;
+      text.position.z = this.params.gap * (year + 0.2);
       text.rotation.x = -Math.PI / 2;
       this.yearLabels.add(text);
 
