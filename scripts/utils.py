@@ -58,18 +58,20 @@ def crop_image(im, aspect_ratio=1.6):
 
 def fetch_image(url, type, save_path, size=512):
     if os.path.exists(save_path):
-        print(f"Image already exists: {save_path}")
+        # print(f"Image already exists: {save_path}")
         return
 
-    im = Image.open(requests.get(url, stream=True).raw)
+    try:
+        im = Image.open(requests.get(url, stream=True).raw)
+        if type in ["Novel", "Comic", "Junior Novel", "Short Story"]:
+            im = crop_image(im, 1.6)
+            im = im.resize((size, int(size * 1.6)), Image.ANTIALIAS)
+        else:
+            im = crop_image(im, 1.0)
+            im = im.resize((size, size), Image.ANTIALIAS)
 
-    if type in ["Novel", "Comic", "Junior Novel"]:
-        im = crop_image(im, 1.6)
-        im = im.resize((size, int(size * 1.6)), Image.ANTIALIAS)
-    else:
-        im = crop_image(im, 1.0)
-        im = im.resize((size, size), Image.ANTIALIAS)
-
-    rgb_im = im.convert("RGB")
-    rgb_im.save(save_path, optimize=True, quality=50)
-    print(f"Saved image: {save_path}")
+        rgb_im = im.convert("RGB")
+        rgb_im.save(save_path, optimize=True, quality=50)
+        print(f"Saved image: {save_path}")
+    except:
+        print(f"Error fetching image: {save_path}, url: {url}")

@@ -34,6 +34,8 @@ window.addEventListener("wheel", (e) => {
   const dx = 0.003 * e.deltaY;
   timeline.scroll(dx);
 
+  // timeline.translateX(0.003 * e.deltaX);
+
   galaxy.scroll(0.1 * e.deltaY);
 
   window.clearTimeout(isScrolling);
