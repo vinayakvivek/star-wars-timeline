@@ -31,15 +31,15 @@ class Timeline extends THREE.Group {
 
   addTile(tile, item) {
     this.movies.add(tile);
-    const { year, startYear, endYear } = item;
-    if (year) {
-      tile.position.z = year * this.params.gap;
-      tile.createMarker();
-    } else {
-      const startX = startYear * this.params.gap;
-      const endX = endYear * this.params.gap;
+    const { year, duration } = item;
+    if (duration > 0) {
+      const startX = year * this.params.gap;
+      const endX = (year + duration) * this.params.gap;
       tile.position.z = (startX + endX) / 2;
       tile.createYearMarkers((endX - startX) / 2);
+    } else {
+      tile.position.z = year * this.params.gap;
+      tile.createMarker();
     }
     tile.rotation.y = Math.PI / 2;
   }

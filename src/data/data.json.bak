@@ -1,0 +1,445 @@
+[
+  {
+    "name": "Master & Apprentice",
+    "type": "Novel",
+    "startYear": -40,
+    "endYear": -32,
+    "thumbnail": "/images/novels/master-and-apprentice.jpeg",
+    "params": {
+      "height": 1.5,
+      "zPos": 1.5
+    }
+  },
+  {
+    "name": "Darth Maul",
+    "type": "Comic",
+    "year": -32,
+    "thumbnail": "/images/comics/darth-maul.jpeg",
+    "params": {
+      "height": 2.5,
+      "zPos": 1.0
+    }
+  },
+  {
+    "name": "Queen's Peril",
+    "type": "Novel",
+    "year": -32,
+    "thumbnail": "/images/novels/QueensPeril.png",
+    "params": {
+      "height": 3.5,
+      "zPos": 2.0
+    }
+  },
+  {
+    "name": "Episode I: The Phantom Menace",
+    "type": "Movie",
+    "year": -32,
+    "thumbnail": "/images/ep1-phantom-menace.jpeg",
+    "params": {
+      "height": 1.5,
+      "zPos": 0.04
+    }
+  },
+  {
+    "name": "Obi-Wan and Anakin",
+    "type": "Comic",
+    "year": -29,
+    "thumbnail": "/images/comics/Obi-wan_anakin.jpeg",
+    "params": {
+      "height": 1.5,
+      "zPos": 1.0
+    }
+  },
+  {
+    "name": "Queen's Shadow",
+    "type": "Novel",
+    "year": -28,
+    "thumbnail": "/images/novels/QueensShadow.png",
+    "params": {
+      "height": 2.5,
+      "zPos": 2.0
+    }
+  },
+  {
+    "name": "Dooku: Jedi Lost",
+    "type": "AudioBook",
+    "year": -22.5,
+    "thumbnail": "/images/DookuJediLost.jpeg",
+    "params": {
+      "height": 5,
+      "zPos": 3.0
+    }
+  },
+  {
+    "name": "Episode II: Attack of the Clones",
+    "type": "Movie",
+    "year": -22,
+    "thumbnail": "/images/ep2-attack-of-the-clones.jpeg",
+    "params": {
+      "labelSize": 0.07,
+      "height": 1.5,
+      "zPos": 0.04
+    }
+  },
+  {
+    "name": "Jedi of the Republic - Mace Windu",
+    "type": "Comic",
+    "year": -22,
+    "thumbnail": "/images/comics/Mace_Windu_cover.jpeg",
+    "params": {
+      "height": 3.5,
+      "zPos": 2.0
+    }
+  },
+  {
+    "name": "The Clone Wars (film)",
+    "type": "Movie",
+    "year": -22,
+    "thumbnail": "/images/clone-wars-movie.jpeg",
+    "params": {
+      "height": 2.3,
+      "zPos": 1.0
+    }
+  },
+  {
+    "name": "The Clone Wars",
+    "type": "Series",
+    "startYear": -22,
+    "endYear": -19,
+    "thumbnail": "/images/clone-wars.jpeg",
+    "params": {
+      "height": 1.0,
+      "zPos": 0.5
+    }
+  },
+  {
+    "name": "Queen's Hope",
+    "type": "Novel",
+    "startYear": -22,
+    "endYear": -19,
+    "thumbnail": "/images/novels/QueensHope.jpeg",
+    "params": {
+      "height": 2.0,
+      "zPos": 4.0
+    }
+  },
+  {
+    "name": "Catalyst: A Rogue One Novel",
+    "type": "Novel",
+    "startYear": -21,
+    "endYear": -17,
+    "thumbnail": "/images/novels/Catalyst_A_Rogue_One_Novel.png",
+    "params": {
+      "height": 3.0,
+      "zPos": 1.5
+    }
+  },
+  {
+    "name": "Darth Maul: Son of Dathomir",
+    "type": "Comic",
+    "year": -19,
+    "thumbnail": "/images/comics/Darth_Maul_Son_of_Dathomir.png",
+    "params": {
+      "height": 2.5,
+      "zPos": 0.7
+    }
+  },
+  {
+    "name": "Dark Disciple",
+    "type": "Novel",
+    "year": -19,
+    "thumbnail": "/images/novels/Dark_Disciple_Cover.png",
+    "params": {
+      "height": 4,
+      "zPos": 2.5
+    }
+  },
+  {
+    "name": "Thrawn Ascendancy: Chaos Rising",
+    "type": "Novel",
+    "year": -19,
+    "thumbnail": "/images/novels/ChaosRising_cover.jpeg",
+    "params": {
+      "height": 5.5,
+      "zPos": 4.5
+    }
+  },
+  {
+    "name": "Episode III: Revenge of the Sith",
+    "type": "Movie",
+    "year": -19,
+    "thumbnail": "/images/ep3-revenge-of-the-sith.jpeg",
+    "params": {
+      "height": 1.5,
+      "labelSize": 0.07,
+      "zPos": 0.04
+    }
+  },
+  {
+    "name": "Darth Vader: Dark Lord of the Sith",
+    "type": "Comic",
+    "startYear": -19,
+    "endYear": -12,
+    "thumbnail": "/images/comics/DarthVader-DLotS.jpeg",
+    "params": {
+      "height": 2.0,
+      "zPos": 1.2
+    }
+  },
+  {
+    "name": "Kanan",
+    "type": "Comic",
+    "startYear": -19,
+    "endYear": -18,
+    "thumbnail": "/images/comics/Kanan_cover.jpeg",
+    "params": {
+      "height": 3.0,
+      "zPos": 3.5
+    }
+  },
+  {
+    "name": "Ahsoka",
+    "type": "Novel",
+    "year": -18,
+    "thumbnail": "/images/novels/Ahsoka_cover.png",
+    "params": {
+      "height": 1.5,
+      "zPos": 0.5
+    }
+  },
+  {
+    "name": "The Bad Batch",
+    "type": "Series",
+    "startYear": -19,
+    "endYear": -5,
+    "thumbnail": "/images/bad-batch.jpg",
+    "params": {
+      "height": 3.0,
+      "zPos": 4.25
+    }
+  },
+  {
+    "name": "Most Wanted",
+    "type": "Novel",
+    "year": -13,
+    "thumbnail": "/images/novels/Most_Wanted_cover.jpeg",
+    "params": {
+      "height": 2.0,
+      "zPos": 0.3
+    }
+  },
+  {
+    "name": "Solo",
+    "type": "Movie",
+    "startYear": -13,
+    "endYear": -10,
+    "thumbnail": "/images/Solo_poster.png",
+    "params": {
+      "height": 1.0,
+      "zPos": 0.04
+    }
+  },
+  {
+    "name": "Han Solo - Imperial Cadet",
+    "type": "Comic",
+    "startYear": -13,
+    "endYear": -10,
+    "thumbnail": "/images/comics/HanSolo-ImperialCadet.jpeg",
+    "params": {
+      "height": 2.2,
+      "zPos": 0.5
+    }
+  },
+  {
+    "name": "A New Dawn",
+    "type": "Novel",
+    "year": -11,
+    "thumbnail": "/images/novels/ANewDawn.png",
+    "params": {
+      "height": 2.5,
+      "zPos": 1.0
+    }
+  },
+  {
+    "name": "Lando's Luck",
+    "type": "Junior Novel",
+    "year": -10,
+    "thumbnail": "/images/novels/LandosLuck.jpeg",
+    "params": {
+      "height": 1.5,
+      "zPos": 0.2
+    }
+  },
+  {
+    "name": "Lando: Double or Nothing",
+    "type": "Comic",
+    "year": -10,
+    "thumbnail": "/images/comics/Lando-DoubleorNothing.jpeg",
+    "params": {
+      "height": 3.0,
+      "zPos": 1.0
+    }
+  },
+  {
+    "name": "Obi-Wan Kenobi",
+    "type": "Series",
+    "year": -9,
+    "thumbnail": "/images/obi-wan-kenobi.png",
+    "params": {
+      "height": 4.0,
+      "zPos": 3.5
+    }
+  },
+  {
+    "name": "Andor",
+    "type": "Series",
+    "year": -5,
+    "thumbnail": "/images/Andor2.jpg",
+    "params": {
+      "height": 4.0,
+      "zPos": 3.5
+    }
+  },
+  {
+    "name": "Rebel Rising",
+    "type": "Novel",
+    "startYear": -13,
+    "endYear": -0,
+    "thumbnail": "/images/novels/RebelRising.jpeg",
+    "params": {
+      "height": 2.5,
+      "zPos": 3.5
+    }
+  },
+  {
+    "name": "Lost Stars",
+    "type": "Novel",
+    "startYear": -11,
+    "endYear": -5,
+    "thumbnail": "/images/novels/Lost_Stars.png",
+    "params": {
+      "height": 2.5,
+      "zPos": 2.5
+    }
+  },
+  {
+    "name": "Servants of the Empire",
+    "type": "Junior Novel",
+    "startYear": -6,
+    "endYear": -5,
+    "thumbnail": "/images/novels/Servants-Edge.png",
+    "params": {
+      "height": 2.5,
+      "zPos": 1.7
+    }
+  },
+  {
+    "name": "Rebels",
+    "type": "Series",
+    "startYear": -5,
+    "endYear": -1,
+    "thumbnail": "/images/rebels.jpeg",
+    "params": {
+      "height": 1.0,
+      "zPos": 0.04
+    }
+  },
+  {
+    "name": "Leia, Princess of Alderaan",
+    "type": "Novel",
+    "year": -3,
+    "thumbnail": "/images/novels/LeiaPrincessofAlderaan.jpeg",
+    "params": {
+      "height": 2.5,
+      "zPos": 0.6
+    }
+  },
+  {
+    "name": "Thrawn",
+    "type": "Novel",
+    "startYear": -11,
+    "endYear": -2,
+    "thumbnail": "/images/novels/Thrawn.png",
+    "params": {
+      "height": 1.5,
+      "zPos": 0.21
+    }
+  },
+  {
+    "name": "Thrawn: Alliances",
+    "type": "Novel",
+    "year": -2,
+    "thumbnail": "/images/novels/Thrawn_Alliances_cover.png",
+    "params": {
+      "height": 1.5,
+      "zPos": 0.5
+    }
+  },
+  {
+    "name": "Thrawn: Treason",
+    "type": "Novel",
+    "year": -1,
+    "thumbnail": "/images/novels/ThrawnTreason.jpeg",
+    "params": {
+      "height": 1.5,
+      "zPos": 0.7
+    }
+  },
+  {
+    "name": "Secrets of the Empire",
+    "type": "VR",
+    "startYear": -2,
+    "endYear": -0,
+    "thumbnail": "/images/VR/Secrets_of_the_Empire.jpg",
+    "params": {
+      "height": 2.0,
+      "zPos": 1.5,
+      "tileOffset": -0.5
+    }
+  },
+  {
+    "name": "The Mighty Chewbacca in the Forest of Fear!",
+    "type": "Junior Novel",
+    "startYear": -2,
+    "endYear": -0,
+    "thumbnail": "/images/novels/The_Mighty_Chewbacca_Forest_of_Fear.jpeg",
+    "params": {
+      "height": 3.0,
+      "zPos": 2.0,
+      "tileOffset": -0.5
+    }
+  },
+  {
+    "name": "Vader Immortal",
+    "type": "VR",
+    "startYear": -2,
+    "endYear": -0,
+    "thumbnail": "/images/VR/vader-immortal.webp",
+    "params": {
+      "height": 4.5,
+      "zPos": 3.0,
+      "tileOffset": -0.3
+    }
+  },
+  {
+    "name": "Guardians of the Whills",
+    "type": "Novel",
+    "year": -0.7,
+    "thumbnail": "/images/novels/Guardians-of-the-whills.jpeg",
+    "params": {
+      "height": 3.5,
+      "zPos": 1.7
+    }
+  },
+  {
+    "name": "Episode IV: A New Hope",
+    "type": "Movie",
+    "startYear": -0.001,
+    "endYear": 0.001,
+    "thumbnail": "/images/a-new-hope.webp",
+    "params": {
+      "height": 1.5,
+      "zPos": 0.04
+    }
+  }
+]

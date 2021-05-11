@@ -6,8 +6,8 @@ from utils import parse_date, parse_rdate, fetch_image
 import json
 from random import random
 
-curr_data_path = "../src/data/data3.json"
-data_path = "../src/data/data4.json"
+curr_data_path = "../src/data/data2.json"
+data_path = "../src/data/data3.json"
 static_dir = "../static"
 last_row = 155
 
@@ -52,11 +52,8 @@ for row in values:
     date = parse_date(row[1])
     if date is None:
         continue
-    if len(date) == 1:
-        item["year"] = date[0]
-    else:
-        item["startYear"] = date[0]
-        item["endYear"] = date[1]
+    item["year"] = date[0]
+    item["duration"] = (date[1] - date[0]) if len(date) > 1 else 0
     data.append(item)
 
 

@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import Tile from './tile';
+import Tile from "./tile";
 
 class MovieTile extends Tile {
   constructor(name, imagePath, font, params = {}) {

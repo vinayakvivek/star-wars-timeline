@@ -1,15 +1,25 @@
 import { gui } from "../config";
 import { createTile } from "./tiles/tile-factory";
-import data from "../../data/data2.json";
+import data from "../../data/data.json";
 
-const saveData = () => {
-  sessionStorage.setItem("data", JSON.stringify(sessionData));
+let paramsList = [];
+
+const saveData = (index, params) => {
+  paramsList[index] = params;
+  sessionStorage.setItem("paramsList", JSON.stringify(paramsList));
 };
 
 const fetchData = () => {
-  const d = sessionStorage.getItem("data");
+  const d = sessionStorage.getItem("paramsList");
   if (d) {
-    return JSON.parse(d);
+    paramsList = JSON.parse(d);
+    for (const index in paramsList) {
+      data[index].params = paramsList[index];
+    }
+  } else {
+    for (const item of data) {
+      paramsList.push(item.params);
+    }
   }
   return data;
 };
@@ -54,7 +64,7 @@ const createItemTweaks = (index, timeline) => {
     folder
       .add(params, ...tp)
       .onChange(resetTile)
-      .onFinishChange(saveData);
+      .onFinishChange(() => saveData(index, params));
   });
 };
 
