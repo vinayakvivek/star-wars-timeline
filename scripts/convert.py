@@ -6,8 +6,8 @@ from utils import parse_date, parse_rdate, fetch_image
 import json
 from random import random
 
-curr_data_path = "../src/data/data2.json"
-data_path = "../src/data/data3.json"
+curr_data_path = "../src/data/data.json"
+data_path = "../src/data/data.json"
 static_dir = "../static"
 last_row = 155
 

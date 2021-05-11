@@ -192,7 +192,7 @@
     "type": "Novel",
     "thumbnail": "/images/ThrawnAscendancyGreaterGood.jpg",
     "link": "https://starwars.fandom.com/wiki/Thrawn_Ascendancy:_Greater_Good",
-    "imageUrl": "",
+    "imageUrl": "https://static.wikia.nocookie.net/starwars/images/d/d1/GreaterGood.jpg/revision/latest/scale-to-width-down/1000?cb=20201029174446",
     "params": { "height": 1.0, "pos": 0.2703525133997925 },
     "year": -19.0,
     "duration": 0
@@ -247,7 +247,7 @@
     "type": "Comic",
     "thumbnail": "/images/AgeofRebellionSpecialTheLongGame.jpg",
     "link": "https://starwars.fandom.com/wiki/The_Long_Game_(Age_of_Rebellion)",
-    "imageUrl": "",
+    "imageUrl": "https://static.wikia.nocookie.net/starwars/images/d/d8/AoRSpecial-Checchetto.jpg/revision/latest/scale-to-width-down/900?cb=20190415215313",
     "params": { "height": 1.0, "pos": 1.6584387031577301 },
     "year": -19.0,
     "duration": 14.0
@@ -258,7 +258,7 @@
     "type": "Junior Novel",
     "thumbnail": "/images/AdventuresinWildSpaceTheEscape.jpg",
     "link": "https://starwars.fandom.com/wiki/Adventures_in_Wild_Space:_The_Escape",
-    "imageUrl": "",
+    "imageUrl": "https://static.wikia.nocookie.net/starwars/images/c/ce/Adventures_in_Wild_Space_cover.jpg/revision/latest/scale-to-width-down/1000?cb=20151110210206",
     "params": { "height": 1.0, "pos": 0.22677392368474047 },
     "year": -18.0,
     "duration": 0
@@ -291,7 +291,7 @@
     "type": "Novel",
     "thumbnail": "/images/LordsoftheSith.jpg",
     "link": "https://starwars.fandom.com/wiki/Lords_of_the_Sith",
-    "imageUrl": "",
+    "imageUrl": "https://static.wikia.nocookie.net/starwars/images/6/6b/Lords_of_the_Sith.jpg/revision/latest/scale-to-width-down/631?cb=20140425200446",
     "params": { "height": 1.0, "pos": 2.256079270218911 },
     "year": -14.0,
     "duration": 0
@@ -302,7 +302,7 @@
     "type": "Novel",
     "thumbnail": "/images/Tarkin.jpg",
     "link": "https://starwars.fandom.com/wiki/Tarkin_(novel)",
-    "imageUrl": "",
+    "imageUrl": "https://static.wikia.nocookie.net/starwars/images/d/df/TarkinCover.jpg/revision/latest?cb=20140425191637",
     "params": { "height": 1.0, "pos": -0.200837170320865 },
     "year": -14.0,
     "duration": 0
@@ -313,7 +313,7 @@
     "type": "Game",
     "thumbnail": "/images/JediFallenOrder.jpg",
     "link": "https://starwars.fandom.com/wiki/Star_Wars_Jedi:_Fallen_Order",
-    "imageUrl": "",
+    "imageUrl": "https://static.wikia.nocookie.net/starwars/images/5/57/Fallen-Order-Box-Art.jpg/revision/latest?cb=20190607015712",
     "params": { "height": 1.0, "pos": 1.8208346796493386 },
     "year": -14.0,
     "duration": 0
@@ -423,7 +423,7 @@
     "type": "Comic",
     "thumbnail": "/images/AgeofRebellionJabbatheHutt.jpg",
     "link": "https://starwars.fandom.com/wiki/Age_of_Rebellion_-_Jabba_the_Hutt_1",
-    "imageUrl": "",
+    "imageUrl": "https://static.wikia.nocookie.net/starwars/images/1/10/AoR-JabbatheHutt.jpg/revision/latest/scale-to-width-down/1000?cb=20190521014005",
     "params": { "height": 1.0, "pos": 2.2701737065167023 },
     "year": -10.0,
     "duration": 14.0
@@ -522,7 +522,7 @@
     "type": "Comic",
     "thumbnail": "/images/AgeofRebellionSpecialStolenValor.jpg",
     "link": "https://starwars.fandom.com/wiki/Stolen_Valor",
-    "imageUrl": "",
+    "imageUrl": "https://static.wikia.nocookie.net/starwars/images/3/34/AgeofRebellionSpecial-McKone.jpg/revision/latest/scale-to-width-down/900?cb=20190415215319",
     "params": { "height": 1.0, "pos": 2.3932765683157395 },
     "year": -2.0,
     "duration": 2.0
@@ -533,7 +533,7 @@
     "type": "Comic",
     "thumbnail": "/images/AgeofRebellionBobaFett.jpg",
     "link": "https://starwars.fandom.com/wiki/Age_of_Rebellion_-_Boba_Fett_1",
-    "imageUrl": "",
+    "imageUrl": "https://static.wikia.nocookie.net/starwars/images/7/70/AoR-BobaFett.jpg/revision/latest/scale-to-width-down/1000?cb=20190506190654",
     "params": { "height": 1.0, "pos": 0.48926484207033993 },
     "year": -2.0,
     "duration": 6.0
@@ -588,7 +588,7 @@
     "type": "Comic",
     "thumbnail": "/images/AgeofRebellionGrandMoffTarkin.jpg",
     "link": "https://starwars.fandom.com/wiki/Age_of_Rebellion_-_Grand_Moff_Tarkin_1",
-    "imageUrl": "",
+    "imageUrl": "https://static.wikia.nocookie.net/starwars/images/2/23/AOR-GrandMoffTarkin.jpg/revision/latest/scale-to-width-down/1000?cb=20190407164043",
     "params": { "height": 1.0, "pos": -2.047782336626355 },
     "year": -0.0,
     "duration": 0
@@ -797,7 +797,7 @@
     "type": "Comic",
     "thumbnail": "/images/AgeofRebellionSpecialTheTrialofDagobah.jpg",
     "link": "https://starwars.fandom.com/wiki/The_Trial_of_Dagobah",
-    "imageUrl": "",
+    "imageUrl": "https://static.wikia.nocookie.net/starwars/images/a/ad/Age_of_Rebellion_Special_1.jpg/revision/latest/scale-to-width-down/1000?cb=20190415215248",
     "params": { "height": 1.0, "pos": -2.2437984740074595 },
     "year": 3.0,
     "duration": 0
