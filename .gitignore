@@ -5,4 +5,5 @@ dist/
 
 static/models/test/
 data/
+!src/data/
 */tmp/

@@ -1,6 +1,6 @@
 import { gui, fontLoader } from "../config";
 import { createTile, findLayout } from "./tiles/tile-factory";
-import data from "../data2.json";
+import data from "../../data/data2.json";
 
 const saveData = () => {
   sessionStorage.setItem("data", JSON.stringify(sessionData));

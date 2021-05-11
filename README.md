@@ -3,9 +3,15 @@
 A minimal starter code to get started with a threejs project with npm.
 
 ### Usage
+
 - Clone the repo
 - Install dependencies: `npm i`
-- Update `name` in `package.json` and title in `src/index.html` 
+- Update `name` in `package.json` and title in `src/index.html`
 - Run: `npm run dev`
   - Now you can access your webpage at: http://localhost:8080
-- To build:  `npm run build`
+- To build: `npm run build`
+
+### To add
+
+- [Choose Your Destiny](https://starwars.fandom.com/wiki/Star_Wars:_Choose_Your_Destiny)
+- [Age of Republic](https://starwars.fandom.com/wiki/Star_Wars:_Age_of_Republic)
