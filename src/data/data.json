@@ -31,7 +31,7 @@
     }
   },
   {
-    "name": "Episode I : The Phantom Menace",
+    "name": "Episode I: The Phantom Menace",
     "type": "Movie",
     "year": -32,
     "thumbnail": "/images/ep1-phantom-menace.jpeg",
@@ -71,7 +71,7 @@
     }
   },
   {
-    "name": "Episode II : Attack of the Clones",
+    "name": "Episode II: Attack of the Clones",
     "type": "Movie",
     "year": -22,
     "thumbnail": "/images/ep2-attack-of-the-clones.jpeg",
@@ -82,7 +82,7 @@
     }
   },
   {
-    "name": "Jedi of the Republic – Mace Windu",
+    "name": "Jedi of the Republic - Mace Windu",
     "type": "Comic",
     "year": -22,
     "thumbnail": "/images/comics/Mace_Windu_cover.jpeg",
@@ -165,7 +165,7 @@
     }
   },
   {
-    "name": "Episode III : Revenge of the Sith",
+    "name": "Episode III: Revenge of the Sith",
     "type": "Movie",
     "year": -19,
     "thumbnail": "/images/ep3-revenge-of-the-sith.jpeg",

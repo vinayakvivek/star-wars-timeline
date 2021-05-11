@@ -1,5 +1,5 @@
-import { gui, fontLoader } from "../config";
-import { createTile, findLayout } from "./tiles/tile-factory";
+import { gui } from "../config";
+import { createTile } from "./tiles/tile-factory";
 import data from "../../data/data2.json";
 
 const saveData = () => {
@@ -61,7 +61,6 @@ const createItemTweaks = (index, timeline) => {
 const tiles = [];
 const n = sessionData.length;
 const initTimeline = (timeline) => {
-  findLayout(sessionData);
   for (const item of sessionData) {
     const tile = createTile(item);
     tiles.push(tile);
