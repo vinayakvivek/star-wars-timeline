@@ -35,6 +35,7 @@ const tweakParams = [
   ["tileOffset", -1, 1, 0.01],
   ["labelSize", 0.01, 1, 0.01],
   ["labelPos", -1, 1, 0.01],
+  ["yearOffset", -1, 1, 0.01],
 ];
 const defaultParams = {
   height: 2.0,
@@ -42,7 +43,8 @@ const defaultParams = {
   tileScale: 0.5,
   tileOffset: 0.0,
   labelSize: 0.08,
-  labelPos: -0.1,
+  labelPos: 0.1,
+  yearOffset: 0.0,
 };
 
 const createItemTweaks = (index, timeline) => {
@@ -82,7 +84,7 @@ const tiles = [];
 const n = sessionData.length;
 const initTimeline = async (timeline, loadingCallback) => {
   let index = 1;
-  for (const item of sessionData.reverse()) {
+  for (const item of sessionData) {
     const tile = createTile(item);
     tiles.push(tile);
     timeline.addTile(tile, item);
@@ -92,7 +94,6 @@ const initTimeline = async (timeline, loadingCallback) => {
   for (let i = 0; i < n; ++i) {
     createItemTweaks(i, timeline);
   }
-  timeline.scroll(0);
 };
 
 export { sessionData as data, initTimeline };

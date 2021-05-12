@@ -18,7 +18,18 @@ const download = (content, fileName, contentType) => {
 };
 
 $("#export-btn").click(() => {
-  download(JSON.stringify(data), "data.json", "application/json");
+  download(JSON.stringify(data, null, 2), "data.json", "application/json");
+});
+
+const delta = 0.5;
+window.addEventListener("keydown", (e) => {
+  switch (e.key) {
+    case "ArrowLeft":
+      timeline.translateX(delta);
+      break;
+    case "ArrowRight":
+      timeline.translateX(-delta);
+  }
 });
 
 let isScrolling;

@@ -7,11 +7,11 @@ class Timeline extends THREE.Group {
     super();
     this.params = {
       color: "#0f0f0f",
-      width: 10,
+      width: 20,
       lineLength: 100,
       startYear: -45,
       endYear: 40,
-      gap: 1.5,
+      gap: 2.0,
     };
 
     // startYear must be negative, endYear must be positive
@@ -33,13 +33,14 @@ class Timeline extends THREE.Group {
   addTile(tile, item) {
     this.movies.add(tile);
     const { year, duration } = item;
+    const gap = this.params.gap;
     if (duration > 0) {
-      const startX = year * this.params.gap;
-      const endX = (year + duration) * this.params.gap;
-      tile.position.z = (startX + endX) / 2;
+      const startX = year * gap;
+      const endX = (year + duration) * gap;
+      tile.setLocation((startX + endX) / 2, gap);
       tile.createYearMarkers((endX - startX) / 2);
     } else {
-      tile.position.z = year * this.params.gap;
+      tile.setLocation(year * gap, gap);
       tile.createMarker();
     }
     tile.rotation.y = Math.PI / 2;

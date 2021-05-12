@@ -11,6 +11,7 @@ let timeline;
 const createTimeline = (loadingCallback) => {
   timeline = new Timeline();
   scene.add(timeline);
+  timeline.scroll(-50);
   // setTimeout(() => {
   //   initTimeline(timeline, loadingCallback);
   // }, 100);

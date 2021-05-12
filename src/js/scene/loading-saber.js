@@ -18,7 +18,7 @@ const saberParams = {
   radius: 0.029,
   length: 4,
   color: "#ffffff",
-  position: new THREE.Vector3(-2, 3, 0),
+  position: new THREE.Vector3(-2, -1, 0),
 };
 
 let saber = new THREE.Mesh();
