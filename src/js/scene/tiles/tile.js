@@ -48,27 +48,32 @@ class Tile extends THREE.Group {
   }
 
   createYearMarkers(halfWidth) {
-    const h = this.params.height;
+    const hOffset = this.label.position.y + 0.4;
+    const h = this.params.height + hOffset;
+    const yPos = -h / 2 + hOffset;
+
     const geometry = new THREE.PlaneGeometry(0.05, h);
     const marker1 = new THREE.Mesh(geometry, material);
-    marker1.position.y = -h / 2;
+    marker1.position.y = yPos;
     marker1.position.x = -halfWidth;
     marker1.rotation.y = Math.PI / 2;
 
     const marker2 = new THREE.Mesh(geometry, material);
-    marker2.position.y = -h / 2;
+    marker2.position.y = yPos;
     marker2.position.x = halfWidth;
     marker2.rotation.y = Math.PI / 2;
 
     const connector = new THREE.Mesh(
-      new THREE.PlaneGeometry(halfWidth * 2 + 0.01, 0.02),
+      new THREE.PlaneGeometry(halfWidth * 2, 0.05),
       material
     );
     const connectorPlane = new THREE.Mesh(
-      new THREE.PlaneGeometry(halfWidth * 2 + 0.01, h),
+      new THREE.PlaneGeometry(halfWidth * 2, h),
       durationMaterial
     );
-    connectorPlane.position.y = -h / 2;
+    connector.lookAt(new THREE.Vector3(0, 1, 0));
+    connector.position.y = hOffset;
+    connectorPlane.position.y = yPos;
     this.add(marker1, marker2, connector, connectorPlane);
 
     this.movable.position.x += halfWidth * this.params.tileOffset;
