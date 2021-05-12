@@ -7,8 +7,6 @@ import { initTimeline } from "./init-timeline";
 const scene = new THREE.Scene();
 scene.add(camera);
 
-const raycaster = new THREE.Raycaster();
-
 let timeline;
 const createTimeline = (loadingCallback) => {
   timeline = new Timeline();

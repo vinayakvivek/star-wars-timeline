@@ -1,6 +1,6 @@
-import { data, timeline, galaxy } from "./scene";
+import { data, timeline, galaxy, camera } from "./scene";
 import { setDebugModeByLocation } from "./debug";
-import { mouse, size } from "./config";
+import { mouse, raycaster, size } from "./config";
 
 window.addEventListener("load", () => {
   setDebugModeByLocation();
@@ -25,7 +25,9 @@ $("#export-btn").click(() => {
 window.addEventListener("click", (event) => {
   mouse.x = (event.clientX / size.width) * 2 - 1;
   mouse.y = -(event.clientY / size.height) * 2 + 1;
+  raycaster.setFromCamera(mouse, camera);
   console.log(mouse);
+  timeline.onClick();
 });
 
 const delta = 0.5;

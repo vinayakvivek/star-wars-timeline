@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { MeshBasicMaterial } from "three";
-import { assets, textureLoader } from "../../config";
+import { assets, raycaster, textureLoader } from "../../config";
 import { disposeHierarchy } from "../../utils";
 
 const material = new THREE.MeshBasicMaterial({
@@ -122,6 +122,14 @@ class Tile extends THREE.Group {
     this.label.position.y = tileBox.max.y + (labelBox.max.y - labelBox.min.y);
     this.label.position.z = 0.02;
     this.movable.add(this.label);
+  }
+
+  checkClick() {
+    const intersection = raycaster.intersectObject(this.tile);
+    if (intersection.length) {
+      console.log(this.name, intersection);
+    }
+    return intersection.length;
   }
 }
 

@@ -1,5 +1,11 @@
 import * as dat from "dat.gui";
-import { FontLoader, TextureLoader, LoadingManager, Vector2 } from "three";
+import {
+  FontLoader,
+  TextureLoader,
+  LoadingManager,
+  Vector2,
+  Raycaster,
+} from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 const size = {
@@ -8,6 +14,7 @@ const size = {
 };
 
 const mouse = new Vector2();
+const raycaster = new Raycaster();
 
 const gui = new dat.GUI({
   width: 400,
@@ -26,6 +33,7 @@ const gltfLoader = new GLTFLoader();
 export {
   size,
   mouse,
+  raycaster,
   gui,
   assets,
   fontLoader,

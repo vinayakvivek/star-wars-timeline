@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { gui, fontLoader, assets } from "../config";
+import { gui, fontLoader, assets, raycaster } from "../config";
 import gsap from "gsap";
 
 class Timeline extends THREE.Group {
@@ -23,15 +23,15 @@ class Timeline extends THREE.Group {
     this._createLine();
     this._createYearLabels();
     this.currentYear = 0;
-    this.movies = new THREE.Group();
-    this.add(this.movies);
+    this.tiles = new THREE.Group();
+    this.add(this.tiles);
 
     // add gui tweaks
     this._initTweaks();
   }
 
   addTile(tile, item) {
-    this.movies.add(tile);
+    this.tiles.add(tile);
     const { year, duration } = item;
     const gap = this.params.gap;
     if (duration > 0) {
@@ -48,7 +48,7 @@ class Timeline extends THREE.Group {
 
   removeTile(tile) {
     tile.dispose();
-    this.movies.remove(tile);
+    this.tiles.remove(tile);
   }
 
   _createLine() {
@@ -154,6 +154,18 @@ class Timeline extends THREE.Group {
     this.line.translateY(dz);
     this.translateZ(dz);
     this._udpateActiveYearPlane();
+  }
+
+  onClick() {
+    const tiles = this.tiles.children;
+    this.activeTile = null;
+    for (let i = 0; i < tiles.length; i++) {
+      if (tiles[i].checkClick()) {
+        this.activeTile = tiles[i];
+        break;
+      }
+    }
+    console.log(this.activeTile);
   }
 
   scroll(dz) {

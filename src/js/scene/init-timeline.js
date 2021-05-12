@@ -83,17 +83,19 @@ function sleep(ms) {
 const tiles = [];
 const n = sessionData.length;
 const initTimeline = async (timeline, loadingCallback) => {
-  let index = 1;
+  let index = 0;
   for (const item of sessionData) {
     const tile = createTile(item);
     tiles.push(tile);
     timeline.addTile(tile, item);
-    loadingCallback(index++ / n);
+    // createItemTweaks(index, timeline);
+    loadingCallback((index + 1) / n);
     await sleep(0);
+    index++;
   }
-  for (let i = 0; i < n; ++i) {
-    createItemTweaks(i, timeline);
-  }
+  // for (let i = 0; i < n; ++i) {
+  //   createItemTweaks(i, timeline);
+  // }
 };
 
 export { sessionData as data, initTimeline };
