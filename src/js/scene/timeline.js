@@ -8,6 +8,7 @@ class Timeline extends THREE.Group {
     this.params = {
       color: "#292929",
       width: 10,
+      lineLength: 100,
       startYear: -45,
       endYear: 40,
       gap: 1.5,
@@ -50,16 +51,17 @@ class Timeline extends THREE.Group {
   }
 
   _createLine() {
+    let linePos = 0;
     if (this.line) {
       this.line.geometry.dispose();
       this.line.material.dispose();
+      linePos = this.line.position.y;
       this.remove(this.line);
     }
     const startPos = this.params.gap * this.params.startYear;
     const endPos = this.params.gap * this.params.endYear;
     const width = this.params.width;
-    const length = endPos - startPos;
-    const geometry = new THREE.PlaneGeometry(width, length);
+    const geometry = new THREE.PlaneGeometry(width, this.params.lineLength);
     const material = new THREE.MeshStandardMaterial({
       color: this.params.color,
       metalness: 0.2,
@@ -69,7 +71,7 @@ class Timeline extends THREE.Group {
     });
     this.line = new THREE.Mesh(geometry, material);
     this.line.lookAt(new THREE.Vector3(0, 1, 0));
-    this.line.position.z = startPos + length / 2;
+    this.line.position.y = linePos;
     this.add(this.line);
   }
 
@@ -123,9 +125,13 @@ class Timeline extends THREE.Group {
     folder
       .add(this.params, "width", 1, 10, 0.1)
       .onFinishChange(() => this._createLine());
+    folder
+      .add(this.params, "lineLength", 1, 100, 0.1)
+      .onFinishChange(() => this._createLine());
   }
 
   _translate(dz) {
+    this.line.translateY(dz);
     this.translateZ(dz);
   }
 
