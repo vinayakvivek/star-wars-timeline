@@ -4,8 +4,8 @@ import data from "../../data/data.json";
 
 let paramsList = [];
 
-const saveData = (index, params) => {
-  paramsList[index] = params;
+const saveData = (index, { paramName, value }) => {
+  paramsList[index][paramName] = value;
   sessionStorage.setItem("paramsList", JSON.stringify(paramsList));
 };
 
@@ -14,12 +14,13 @@ const fetchData = () => {
   if (d) {
     paramsList = JSON.parse(d);
     for (const index in paramsList) {
-      data[index].params = paramsList[index];
+      data[index].params = { ...data[index].params, ...paramsList[index] };
     }
   } else {
     for (const item of data) {
       paramsList.push(item.params);
     }
+    sessionStorage.setItem("paramsList", JSON.stringify(paramsList));
   }
   return data;
 };
@@ -64,7 +65,12 @@ const createItemTweaks = (index, timeline) => {
     folder
       .add(params, ...tp)
       .onChange(resetTile)
-      .onFinishChange(() => saveData(index, params));
+      .onFinishChange(() =>
+        saveData(index, {
+          paramName: tp[0],
+          value: params[tp[0]],
+        })
+      );
   });
 };
 

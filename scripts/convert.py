@@ -85,5 +85,5 @@ for item in data:
 
 
 with open(data_path, "w") as f:
-    json.dump(data, f)
+    json.dump(data, f, indent=2, separators=(",", ": "), sort_keys=True)
     print(f"Saved data: {data_path}")
