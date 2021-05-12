@@ -6,7 +6,7 @@ class Timeline extends THREE.Group {
   constructor() {
     super();
     this.params = {
-      color: "#292929",
+      color: "#0f0f0f",
       width: 10,
       lineLength: 100,
       startYear: -45,
@@ -67,7 +67,7 @@ class Timeline extends THREE.Group {
       metalness: 0.2,
       roughness: 0.7,
       transparent: true,
-      opacity: 0.5,
+      opacity: 0.3,
     });
     this.line = new THREE.Mesh(geometry, material);
     this.line.lookAt(new THREE.Vector3(0, 1, 0));
@@ -82,7 +82,7 @@ class Timeline extends THREE.Group {
       return new THREE.TextGeometry(text, {
         font,
         size,
-        height: 0.01,
+        height: 0.02,
         curveSegments: 4,
         bevelEnabled: false,
       });
@@ -97,7 +97,7 @@ class Timeline extends THREE.Group {
     for (let year = startYear; year <= endYear; ++year) {
       // const label = `${Math.abs(year)} ${year < 0 ? 'BBY' : 'ABY'}`;
       const label = `${year}`;
-      const textGeometry = _createTextGeometry(label, assets.font, 0.2);
+      const textGeometry = _createTextGeometry(label, assets.font, 0.3);
       textGeometry.center();
       const text = new THREE.Mesh(textGeometry, textMaterial);
       // text.position.y = 0.01;
@@ -107,7 +107,7 @@ class Timeline extends THREE.Group {
 
       // add marker
       const markerTop = new THREE.Mesh(
-        new THREE.PlaneGeometry(0.02, this.params.width),
+        new THREE.PlaneGeometry(0.1, this.params.width),
         textMaterial
       );
       markerTop.lookAt(new THREE.Vector3(0, 1, 0));
@@ -115,6 +115,25 @@ class Timeline extends THREE.Group {
       markerTop.rotation.z = Math.PI / 2;
       this.yearMarkers.add(markerTop);
     }
+
+    // create active year
+    this.activeYearPlane = new THREE.Mesh(
+      new THREE.PlaneGeometry(this.params.width, this.params.gap),
+      new THREE.MeshBasicMaterial({
+        color: "#292929",
+        side: THREE.DoubleSide,
+        opacity: 0.3,
+      })
+    );
+    this.activeYearPlane.lookAt(new THREE.Vector3(0, 1, 0));
+    this.activeYearPlane.position.y = 0.001;
+    this.add(this.activeYearPlane);
+    this._udpateActiveYearPlane();
+  }
+
+  _udpateActiveYearPlane() {
+    this._computeCurrentYear();
+    this.activeYearPlane.position.z = this.currentYear * this.params.gap;
   }
 
   _initTweaks() {
@@ -133,6 +152,7 @@ class Timeline extends THREE.Group {
   _translate(dz) {
     this.line.translateY(dz);
     this.translateZ(dz);
+    this._udpateActiveYearPlane();
   }
 
   scroll(dz) {
@@ -146,7 +166,7 @@ class Timeline extends THREE.Group {
   }
 
   _computeCurrentYear() {
-    this.currentYear = -Math.round(this.position.x / this.params.gap);
+    this.currentYear = -Math.round(this.position.z / this.params.gap);
   }
 
   snap() {

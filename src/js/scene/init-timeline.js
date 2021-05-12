@@ -74,13 +74,20 @@ const createItemTweaks = (index, timeline) => {
   });
 };
 
+function sleep(ms) {
+  return new Promise((res) => setTimeout(res, ms));
+}
+
 const tiles = [];
 const n = sessionData.length;
-const initTimeline = (timeline) => {
-  for (const item of sessionData) {
+const initTimeline = async (timeline, loadingCallback) => {
+  let index = 1;
+  for (const item of sessionData.reverse()) {
     const tile = createTile(item);
     tiles.push(tile);
     timeline.addTile(tile, item);
+    loadingCallback(index++ / n);
+    await sleep(0);
   }
   for (let i = 0; i < n; ++i) {
     createItemTweaks(i, timeline);

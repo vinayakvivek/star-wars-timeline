@@ -40,13 +40,18 @@ const updateSaber = () => {
     saberParams.position.x + (saberParams.length * 1.15) / 2;
 };
 
-const maxLength = saberParams.length;
-loadingManager.onProgress = (url, itemsLoaded, itemsTotal) => {
-  const length = (itemsLoaded / itemsTotal) * maxLength;
-  saberParams.length = length;
+const loadingCallback = (t) => {
+  saberParams.length = t * maxLength;
+  loadingValueElement.innerText = `${Math.round(t * 100)} %`;
   updateSaber();
 };
 
+// loadingManager.onProgress = (url, loaded, total) => {
+//   loadingCallback(loaded / total);
+// };
+
+const maxLength = saberParams.length;
+const loadingValueElement = document.getElementById("loading-value");
 gltfLoader.load("/models/light-saber/scene.gltf", (gltf) => {
   const saberHandle = gltf.scene;
   scene.add(saberHandle);
@@ -56,7 +61,7 @@ gltfLoader.load("/models/light-saber/scene.gltf", (gltf) => {
 
   fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
     assets.font = font;
-    createTimeline();
+    createTimeline(loadingCallback);
   });
 });
 

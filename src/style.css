@@ -57,6 +57,13 @@ h1 {
   top: 50px;
 }
 
+#loading-text {
+  right: 450px;
+  left: auto;
+  top: 10px;
+  color: white;
+}
+
 #insideText {
   position: absolute;
   left: 20px;

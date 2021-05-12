@@ -1,5 +1,4 @@
 import * as THREE from "three";
-import { loadingManager, gltfLoader } from "../config";
 import camera from "./camera";
 import Timeline from "./timeline";
 import Galaxy from "./galaxy";
@@ -9,14 +8,13 @@ const scene = new THREE.Scene();
 scene.add(camera);
 
 let timeline;
-const createTimeline = () => {
+const createTimeline = (loadingCallback) => {
   timeline = new Timeline();
   scene.add(timeline);
-  initTimeline(timeline);
-
-  loadingManager.onLoad = () => {
-    // timeline.visible = true;
-  };
+  // setTimeout(() => {
+  //   initTimeline(timeline, loadingCallback);
+  // }, 100);
+  initTimeline(timeline, loadingCallback);
 };
 
 const galaxy = new Galaxy();
