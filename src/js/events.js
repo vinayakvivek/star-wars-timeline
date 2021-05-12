@@ -1,5 +1,6 @@
 import { data, timeline, galaxy } from "./scene";
 import { setDebugModeByLocation } from "./debug";
+import { mouse, size } from "./config";
 
 window.addEventListener("load", () => {
   setDebugModeByLocation();
@@ -21,6 +22,12 @@ $("#export-btn").click(() => {
   download(JSON.stringify(data, null, 2), "data.json", "application/json");
 });
 
+window.addEventListener("click", (event) => {
+  mouse.x = (event.clientX / size.width) * 2 - 1;
+  mouse.y = -(event.clientY / size.height) * 2 + 1;
+  console.log(mouse);
+});
+
 const delta = 0.5;
 window.addEventListener("keydown", (e) => {
   switch (e.key) {
@@ -29,6 +36,13 @@ window.addEventListener("keydown", (e) => {
       break;
     case "ArrowRight":
       timeline.translateX(-delta);
+      break;
+    case "ArrowUp":
+      timeline.translateY(delta);
+      break;
+    case "ArrowDown":
+      timeline.translateY(-delta);
+      break;
   }
 });
 

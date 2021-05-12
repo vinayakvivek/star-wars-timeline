@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { MeshBasicMaterial } from "three";
-import { textureLoader } from "../../config";
+import { assets, textureLoader } from "../../config";
 import { disposeHierarchy } from "../../utils";
 
 const material = new THREE.MeshBasicMaterial({
@@ -17,11 +17,10 @@ const maskMaterial = new THREE.MeshBasicMaterial({
 });
 
 class Tile extends THREE.Group {
-  constructor(name, imagePath, font, params = {}) {
+  constructor(item) {
     super();
-    this.name = name;
-    this.texture = textureLoader.load(imagePath);
-    this.font = font;
+    this.name = item.name;
+    this.texture = textureLoader.load(item.thumbnail);
     this.params = {
       tileScale: 0.5,
       tileOffset: 0.0, // percentage offset (of halfWidth)
@@ -32,7 +31,7 @@ class Tile extends THREE.Group {
       yearOffset: 0.0,
       height: 2,
       pos: 0,
-      ...params,
+      ...item.params,
     };
     this.movable = new THREE.Group();
     this.add(this.movable);
@@ -111,7 +110,7 @@ class Tile extends THREE.Group {
   _createLabel() {
     const tileBox = new THREE.Box3().setFromObject(this.tile);
     const textGeometry = new THREE.TextGeometry(this.name, {
-      font: this.font,
+      font: assets.font,
       size: this.params.labelSize,
       height: 0.0,
       curveSegments: 4,

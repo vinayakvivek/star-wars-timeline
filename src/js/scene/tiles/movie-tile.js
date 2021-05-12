@@ -2,8 +2,8 @@ import * as THREE from "three";
 import Tile from "./tile";
 
 class MovieTile extends Tile {
-  constructor(name, imagePath, font, params = {}) {
-    super(name, imagePath, font, params);
+  constructor(item) {
+    super(item);
   }
 
   _createTile() {

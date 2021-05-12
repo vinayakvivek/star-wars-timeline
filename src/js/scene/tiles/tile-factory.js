@@ -3,13 +3,13 @@ import BookTile from "./book-tile";
 import MovieTile from "./movie-tile";
 
 export const createTile = (item) => {
-  const { name, type, thumbnail, params } = item;
+  const { type, params } = item;
   let tile;
   if (["Novel", "Comic", "Junior Novel", "Short Story"].includes(type)) {
     if (!params.tileScale) params.tileScale = 0.8;
-    tile = new BookTile(name, thumbnail, assets.font, params);
+    tile = new BookTile(item);
   } else {
-    tile = new MovieTile(name, thumbnail, assets.font, params);
+    tile = new MovieTile(item);
   }
   return tile;
 };
