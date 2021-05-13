@@ -1,6 +1,7 @@
 import { gui } from "../config";
 import { createTile } from "./tiles/tile-factory";
 import data from "../../data/data.json";
+// check why orbit controls is not working
 
 let paramsList = [];
 
@@ -25,7 +26,7 @@ const fetchData = () => {
   return data;
 };
 
-const sessionData = fetchData();
+const sessionData = data;
 
 const tilesFolder = gui.addFolder("Tiles");
 const tweakParams = [

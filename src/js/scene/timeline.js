@@ -168,6 +168,33 @@ class Timeline extends THREE.Group {
     console.log(this.activeTile);
   }
 
+  onKeyPress(key) {
+    const delta = 0.1;
+    let dPos = 0,
+      dH = 0;
+    switch (key) {
+      case "ArrowLeft":
+        if (!this.activeTile) this.translateX(delta);
+        dPos += delta;
+        break;
+      case "ArrowRight":
+        if (!this.activeTile) this.translateX(-delta);
+        dPos -= delta;
+        break;
+      case "ArrowUp":
+        if (!this.activeTile) this.translateY(delta);
+        dH += delta;
+        break;
+      case "ArrowDown":
+        if (!this.activeTile) this.translateY(-delta);
+        dH -= delta;
+        break;
+    }
+    if (this.activeTile) {
+      this.activeTile.update(dPos, dH);
+    }
+  }
+
   scroll(dz) {
     if (
       (this.position.z >= -this.startPos && dz > 0) ||

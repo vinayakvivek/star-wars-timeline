@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import Tile from "./tile";
 
+const movieTileGeometry = new THREE.CircleBufferGeometry(1, 64);
 class MovieTile extends Tile {
   constructor(item) {
     super(item);
@@ -8,7 +9,7 @@ class MovieTile extends Tile {
 
   _createTile() {
     const tile = new THREE.Mesh(
-      new THREE.CircleBufferGeometry(1, 64),
+      movieTileGeometry,
       new THREE.MeshBasicMaterial({
         map: this.texture,
         side: THREE.DoubleSide,

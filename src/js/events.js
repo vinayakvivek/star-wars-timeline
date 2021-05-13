@@ -26,26 +26,12 @@ window.addEventListener("click", (event) => {
   mouse.x = (event.clientX / size.width) * 2 - 1;
   mouse.y = -(event.clientY / size.height) * 2 + 1;
   raycaster.setFromCamera(mouse, camera);
-  console.log(mouse);
   timeline.onClick();
 });
 
 const delta = 0.5;
 window.addEventListener("keydown", (e) => {
-  switch (e.key) {
-    case "ArrowLeft":
-      timeline.translateX(delta);
-      break;
-    case "ArrowRight":
-      timeline.translateX(-delta);
-      break;
-    case "ArrowUp":
-      timeline.translateY(delta);
-      break;
-    case "ArrowDown":
-      timeline.translateY(-delta);
-      break;
-  }
+  timeline.onKeyPress(e.key);
 });
 
 let isScrolling;

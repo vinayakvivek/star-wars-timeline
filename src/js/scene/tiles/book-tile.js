@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import Tile from "./tile";
 
+const bookTileGeometry = new THREE.PlaneGeometry(1, 1.6);
 class BookTile extends Tile {
   constructor(item) {
     super(item);
@@ -8,7 +9,7 @@ class BookTile extends Tile {
 
   _createTile() {
     const tile = new THREE.Mesh(
-      new THREE.PlaneGeometry(1, 1.6),
+      bookTileGeometry,
       new THREE.MeshBasicMaterial({
         map: this.texture,
         side: THREE.DoubleSide,
