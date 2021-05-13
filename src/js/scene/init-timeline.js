@@ -1,4 +1,4 @@
-import { gui } from "../config";
+import { gui, state } from "../config";
 import { createTile } from "./tiles/tile-factory";
 import data from "../../data/data.json";
 // check why orbit controls is not working
@@ -94,6 +94,7 @@ const initTimeline = async (timeline, loadingCallback) => {
     await sleep(0);
     index++;
   }
+  state.loading = false;
   // for (let i = 0; i < n; ++i) {
   //   createItemTweaks(i, timeline);
   // }

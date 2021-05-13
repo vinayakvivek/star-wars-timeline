@@ -1,8 +1,8 @@
 import { assets, fontLoader, gltfLoader, loadingManager } from "../config";
-import scene, { createTimeline } from "./scene";
+import { createTimeline } from "./scene";
 import * as THREE from "three";
 import { KernelSize } from "postprocessing";
-import { PointLight } from "three";
+import camera from "./camera";
 
 const saberEffectOptions = {
   height: 480,
@@ -21,6 +21,10 @@ const saberParams = {
   position: new THREE.Vector3(-2, -1, 0),
 };
 
+const saberScene = new THREE.Scene();
+// use a separate camera?
+saberScene.add(camera);
+
 let saber = new THREE.Mesh();
 saber.material = new THREE.MeshBasicMaterial({ color: saberParams.color });
 saber.frustumCulled = false;
@@ -29,7 +33,10 @@ const saberGroup = new THREE.Group();
 saberGroup.add(saber);
 saberGroup.rotation.z = Math.PI / 2;
 saberGroup.position.copy(saberParams.position);
+
+let saberHandleLoaded = false;
 const updateSaber = () => {
+  if (!saberHandleLoaded) return;
   if (saber.geometry) {
     saber.geometry.dispose();
   }
@@ -54,21 +61,22 @@ const maxLength = saberParams.length;
 const loadingValueElement = document.getElementById("loading-value");
 gltfLoader.load("/models/light-saber/scene.gltf", (gltf) => {
   const saberHandle = gltf.scene;
-  scene.add(saberHandle);
+  saberScene.add(saberHandle);
   saberHandle.scale.setScalar(0.08);
   saberHandle.rotation.z = -Math.PI / 2;
   saberHandle.position.copy(saberParams.position);
+  saberHandleLoaded = true;
+});
 
-  fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
-    assets.font = font;
-    createTimeline(loadingCallback);
-  });
+fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
+  assets.font = font;
+  createTimeline(loadingCallback);
 });
 
 // saberHandle light
-const saberHandleLight = new PointLight("#ffffff", 2);
+const saberHandleLight = new THREE.PointLight("#ffffff", 2);
 saberHandleLight.position.copy(saberParams.position);
 saberHandleLight.position.z += 1;
-scene.add(saberHandleLight);
+saberScene.add(saberHandleLight);
 
-export { saber, saberEffectOptions };
+export { saberScene, saber, saberEffectOptions };

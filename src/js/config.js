@@ -13,6 +13,10 @@ const size = {
   height: window.innerHeight,
 };
 
+const state = {
+  loading: true,
+};
+
 const mouse = new Vector2();
 const raycaster = new Raycaster();
 
@@ -32,6 +36,7 @@ const gltfLoader = new GLTFLoader();
 
 export {
   size,
+  state,
   mouse,
   raycaster,
   gui,
