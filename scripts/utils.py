@@ -71,7 +71,7 @@ def fetch_image(url, type, save_path, size=512):
             im = im.resize((size, size), Image.ANTIALIAS)
 
         rgb_im = im.convert("RGB")
-        rgb_im.save(save_path, optimize=True, quality=50)
+        rgb_im.save(save_path, optimize=True, quality=10)
         print(f"Saved image: {save_path}")
     except:
         print(f"Error fetching image: {save_path}, url: {url}")
