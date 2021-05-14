@@ -61,18 +61,18 @@ class Tile extends THREE.Group {
   }
 
   createYearMarkers(halfWidth) {
-    const hOffset = -0.4;
-    const h = this.params.height + hOffset;
-    const yPos = -h / 2 + hOffset;
+    const labelBox = new THREE.Box3().setFromObject(this.label);
+    const h = this.params.height + labelBox.min.y;
+
+    const markerGroup = new THREE.Group();
+    this.add(markerGroup);
 
     const geometry = new THREE.PlaneGeometry(0.05, h);
     const marker1 = new THREE.Mesh(geometry, material);
-    marker1.position.y = yPos;
     marker1.position.x = -halfWidth;
     marker1.rotation.y = Math.PI / 2;
 
     const marker2 = new THREE.Mesh(geometry, material);
-    marker2.position.y = yPos;
     marker2.position.x = halfWidth;
     marker2.rotation.y = Math.PI / 2;
 
@@ -85,9 +85,10 @@ class Tile extends THREE.Group {
       durationMaterial
     );
     connector.lookAt(new THREE.Vector3(0, 1, 0));
-    connector.position.y = hOffset;
-    connectorPlane.position.y = yPos;
-    this.add(marker1, marker2, connector, connectorPlane);
+    connector.position.y = h / 2;
+
+    markerGroup.add(marker1, marker2, connector, connectorPlane);
+    markerGroup.position.y = -this.params.height + h / 2;
 
     this.movable.position.x += halfWidth * this.params.tileOffset;
   }
@@ -103,7 +104,48 @@ class Tile extends THREE.Group {
     this.add(marker);
   }
 
-  _createMask() {
+  _createMask() {}
+
+  _textGeometry(text) {
+    const geometry = new THREE.TextGeometry(text, {
+      font: assets.font,
+      size: this.params.labelSize,
+      height: 0.0,
+      curveSegments: 4,
+      bevelEnabled: false,
+    });
+    geometry.center();
+    return geometry;
+  }
+
+  _nameParts() {
+    const name = this.name;
+    if (name.length < 20) {
+      return [name];
+    }
+    if (name.includes(": ")) {
+      const parts = name.split(": ");
+      parts[0] += " :";
+      return parts;
+    }
+    if (name.includes(" - ")) {
+      const parts = name.split(" - ");
+      return parts;
+    }
+    return [name];
+  }
+
+  _createLabel() {
+    const tileBox = new THREE.Box3().setFromObject(this.tile);
+    this.label = new THREE.Group();
+    let index = 0;
+    for (const namePart of this._nameParts()) {
+      const mesh = new THREE.Mesh(this._textGeometry(namePart), material);
+      mesh.position.y -= index++ * 0.15;
+      this.label.add(mesh);
+    }
+
+    // mask
     const bbox = new THREE.Box3().setFromObject(this.label);
     const margin = 0.1;
     const w = bbox.max.x - bbox.min.x + margin;
@@ -111,25 +153,11 @@ class Tile extends THREE.Group {
     const cx = (bbox.max.x + bbox.min.x) / 2;
     const cy = (bbox.max.y + bbox.min.y) / 2;
     const mask = new THREE.Mesh(new THREE.PlaneGeometry(w, h), maskMaterial);
-    mask.position.set(cx, cy, 0.01);
-    this.movable.add(mask);
-    this.mask = mask;
-  }
+    mask.position.set(cx, cy, -0.001);
+    this.label.add(mask);
 
-  _createLabel() {
-    const tileBox = new THREE.Box3().setFromObject(this.tile);
-    const textGeometry = new THREE.TextGeometry(this.name, {
-      font: assets.font,
-      size: this.params.labelSize,
-      height: 0.0,
-      curveSegments: 4,
-      bevelEnabled: false,
-    });
-    textGeometry.center();
-    this.label = new THREE.Mesh(textGeometry, material);
-    const labelBox = new THREE.Box3().setFromObject(this.label);
-    this.label.position.y = tileBox.max.y + (labelBox.max.y - labelBox.min.y);
-    this.label.position.z = 0.02;
+    this.label.position.y = tileBox.min.y + 0.1;
+    this.label.position.z = 0.025;
     this.movable.add(this.label);
   }
 

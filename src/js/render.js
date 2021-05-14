@@ -8,7 +8,6 @@ import {
   saberEffectOptions,
 } from "./scene";
 import { gui, size, state } from "./config";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import "./events";
 import "./audio";
 import {
@@ -44,9 +43,6 @@ const reset = () => {
 reset();
 
 window.addEventListener("resize", reset);
-
-const controls = new OrbitControls(saberCamera, renderer.domElement);
-controls.enabled = false;
 
 // postprocessing effect composer
 const composer = new EffectComposer(renderer);
