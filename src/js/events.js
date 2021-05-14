@@ -1,4 +1,4 @@
-import { data, timeline, galaxy, camera } from "./scene";
+import { data, timeline, galaxy, camera, updateSaberPosition } from "./scene";
 import { setDebugModeByLocation } from "./debug";
 import { mouse, raycaster, size } from "./config";
 

@@ -11,6 +11,11 @@ html, body {
   overflow: hidden;
 }
 
+@font-face {
+  font-family: star-jedi-hollow;
+  src: url('../static/fonts/starjedi/Starjedi.ttf');
+}
+
 .webgl {
   /* width: 100%;
   height: 100%;
@@ -28,8 +33,9 @@ html, body {
   place-items: center;
 }
 
-h1 {
-  font-size: 8rem;
+#title {
+  font-family: 'star-jedi-hollow';
+  font-size: 4rem;
   color: white;
   text-align: center;
 }
