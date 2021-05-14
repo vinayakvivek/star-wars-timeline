@@ -44,14 +44,20 @@ class Tile extends THREE.Group {
     this.movable.rotation.y = -Math.PI / 2;
   }
 
-  update(dPos = 0, dH = 0, dY = 0) {
+  update(dPos = 0, dH = 0, dY = 0, dS = 0, dO = 0) {
     this.item.params.pos += dPos;
     this.item.params.height += dH;
     this.item.params.yearOffset += dY;
+    this.item.params.tileScale += dS;
+    this.item.params.tileOffset += dO;
     this.params = { ...this.params, ...this.item.params };
-    this.position.y = this.params.height;
-    this.position.x = -this.params.pos;
+    this.position.y += dH;
+    this.position.x -= dPos;
     this.position.z += this.timelineGap * dY;
+    this.tile.scale.setScalar(this.params.tileScale);
+    if (this.halfWidth) {
+      this.movable.position.x += this.halfWidth * dO;
+    }
   }
 
   dispose() {
@@ -64,6 +70,7 @@ class Tile extends THREE.Group {
   }
 
   createYearMarkers(halfWidth) {
+    this.halfWidth = halfWidth;
     const labelBox = new THREE.Box3().setFromObject(this.label);
     const h = this.params.height + labelBox.min.y;
 

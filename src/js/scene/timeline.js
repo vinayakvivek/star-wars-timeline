@@ -190,7 +190,8 @@ class Timeline extends THREE.Group {
     let dPos = 0;
     let dH = 0;
     let dY = 0;
-    console.log(key);
+    let dS = 0;
+    let dO = 0;
     switch (key) {
       case "ArrowLeft":
         dPos += delta;
@@ -210,8 +211,19 @@ class Timeline extends THREE.Group {
       case "e":
         dY -= 0.01;
         break;
+      case "a":
+        dS -= 0.01;
+        break;
+      case "d":
+        dS += 0.01;
+        break;
+      case "z":
+        dO += 0.01;
+        break;
+      case "c":
+        dO -= 0.01;
     }
-    this.activeTile.update(dPos, dH, dY);
+    this.activeTile.update(dPos, dH, dY, dS, dO);
   }
 
   scroll(dz) {
