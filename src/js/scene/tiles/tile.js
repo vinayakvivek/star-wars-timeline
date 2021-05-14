@@ -44,12 +44,14 @@ class Tile extends THREE.Group {
     this.movable.rotation.y = -Math.PI / 2;
   }
 
-  update(dPos = 0, dH = 0) {
+  update(dPos = 0, dH = 0, dY = 0) {
     this.item.params.pos += dPos;
     this.item.params.height += dH;
+    this.item.params.yearOffset += dY;
     this.params = { ...this.params, ...this.item.params };
     this.position.y = this.params.height;
     this.position.x = -this.params.pos;
+    this.position.z += this.timelineGap * dY;
   }
 
   dispose() {
@@ -57,6 +59,7 @@ class Tile extends THREE.Group {
   }
 
   setLocation(z, gap) {
+    this.timelineGap = gap;
     this.position.z = z + gap * this.params.yearOffset;
   }
 
