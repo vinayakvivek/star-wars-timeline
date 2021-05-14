@@ -1,4 +1,11 @@
-import { assets, fontLoader, gltfLoader, gui, loadingManager } from "../config";
+import {
+  assets,
+  fontLoader,
+  gltfLoader,
+  gui,
+  loadingManager,
+  state,
+} from "../config";
 import { createTimeline } from "./scene";
 import * as THREE from "three";
 import { KernelSize } from "postprocessing";
@@ -58,19 +65,6 @@ const updateSaberPosition = (dx) => {
 
 gui.add(saberParams.position, "y", 0, 5, 0.01).onFinishChange(updateSaber);
 
-// loadingManager.onProgress = (url, loaded, total) => {
-//   loadingCallback(loaded / total);
-// };
-
-gltfLoader.load("/models/light-saber/scene.gltf", (gltf) => {
-  saberHandle = gltf.scene;
-  saberScene.add(saberHandle);
-  saberHandle.scale.setScalar(0.08);
-  saberHandle.rotation.z = -Math.PI / 2;
-  saberHandle.position.copy(saberParams.position);
-  saberHandleLoaded = true;
-});
-
 let loadingText = new THREE.Mesh();
 loadingText.material = new THREE.MeshBasicMaterial({ color: "#ffffff" });
 loadingText.position.copy(saberParams.position);
@@ -91,10 +85,19 @@ const updateLoadingText = (value) => {
   loadingText.geometry.center();
 };
 
-fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
-  assets.font = font;
-  updateLoadingText(0);
-  createTimeline(loadingCallback);
+gltfLoader.load("/models/light-saber/scene.gltf", (gltf) => {
+  saberHandle = gltf.scene;
+  saberScene.add(saberHandle);
+  saberHandle.scale.setScalar(0.08);
+  saberHandle.rotation.z = -Math.PI / 2;
+  saberHandle.position.copy(saberParams.position);
+  saberHandleLoaded = true;
+
+  fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
+    assets.font = font;
+    updateLoadingText(0);
+    createTimeline(() => {});
+  });
 });
 
 const maxLength = saberParams.length;
@@ -105,6 +108,14 @@ const loadingCallback = (t) => {
   // loadingValueElement.innerText = `${value} %`;
   updateSaber();
   updateLoadingText(value);
+};
+
+loadingManager.onProgress = (url, loaded, total) => {
+  loadingCallback(loaded / total);
+};
+
+loadingManager.onLoad = () => {
+  state.loading = false;
 };
 
 // saberHandle light

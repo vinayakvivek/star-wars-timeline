@@ -91,10 +91,10 @@ const initTimeline = async (timeline, loadingCallback) => {
     timeline.addTile(tile, item);
     // createItemTweaks(index, timeline);
     loadingCallback((index + 1) / n);
-    await sleep(0);
+    // await sleep(0);
     index++;
   }
-  state.loading = false;
+  // state.loading = false;
   // for (let i = 0; i < n; ++i) {
   //   createItemTweaks(i, timeline);
   // }
