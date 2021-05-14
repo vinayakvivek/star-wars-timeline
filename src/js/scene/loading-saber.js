@@ -2,7 +2,7 @@ import { assets, fontLoader, gltfLoader, loadingManager } from "../config";
 import { createTimeline } from "./scene";
 import * as THREE from "three";
 import { KernelSize } from "postprocessing";
-import camera from "./camera";
+import { saberCamera } from "./camera";
 
 const saberEffectOptions = {
   height: 480,
@@ -18,12 +18,12 @@ const saberParams = {
   radius: 0.029,
   length: 4,
   color: "#ffffff",
-  position: new THREE.Vector3(-2, -1, 0),
+  position: new THREE.Vector3(-2, 1.5, -2),
 };
 
 const saberScene = new THREE.Scene();
-// use a separate camera?
-saberScene.add(camera);
+saberCamera.position.set(0, 0, 2);
+saberScene.add(saberCamera);
 
 let saber = new THREE.Mesh();
 saber.material = new THREE.MeshBasicMaterial({ color: saberParams.color });

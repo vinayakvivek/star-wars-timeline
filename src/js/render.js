@@ -17,6 +17,7 @@ import {
   RenderPass,
   GodRaysEffect,
 } from "postprocessing";
+import { saberCamera } from "./scene/camera";
 
 const renderer = new THREE.WebGLRenderer({
   alpha: true,
@@ -33,6 +34,8 @@ const reset = () => {
   // Update camera
   camera.aspect = size.width / size.height;
   camera.updateProjectionMatrix();
+  saberCamera.aspect = size.width / size.height;
+  saberCamera.updateProjectionMatrix();
 
   // Update renderer
   renderer.setSize(size.width, size.height);
@@ -42,21 +45,17 @@ reset();
 
 window.addEventListener("resize", reset);
 
-const controls = new OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true;
-controls.enableZoom = false;
-
-gui.add(controls, "enabled").name("Enable orbit controls");
+const controls = new OrbitControls(saberCamera, renderer.domElement);
+controls.enabled = false;
 
 // postprocessing effect composer
 const composer = new EffectComposer(renderer);
-composer.addPass(new RenderPass(saberScene, camera));
-const godRaysEffect = new GodRaysEffect(camera, saber, saberEffectOptions);
-composer.addPass(new EffectPass(camera, godRaysEffect));
+composer.addPass(new RenderPass(saberScene, saberCamera));
+const godRaysEffect = new GodRaysEffect(saberCamera, saber, saberEffectOptions);
+composer.addPass(new EffectPass(saberCamera, godRaysEffect));
 
 const render = () => {
   animateScene();
-  controls.update(); // for damping
   if (state.loading) {
     composer.render();
   }
