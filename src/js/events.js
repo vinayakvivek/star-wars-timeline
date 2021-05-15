@@ -35,24 +35,22 @@ window.addEventListener("keydown", (e) => {
 });
 
 let isScrolling;
+let isFront = false;
 window.addEventListener("wheel", (e) => {
   if (e.ctrlKey) {
     // zoom event;
-    // scale = timeline.scale.x - 0.001 * e.deltaY;
-    // timeline.scale.setScalar(scale);
-    // timeline.updateScale(scale);
     return;
   }
 
-  const dx = 0.003 * e.deltaY;
-  timeline.scroll(dx);
-
-  // timeline.translateX(0.003 * e.deltaX);
-
   galaxy.scroll(0.1 * e.deltaY);
+
+  const dz = 0.003 * e.deltaY;
+  timeline.scroll(dz);
+
+  isFront = dz < 0;
 
   window.clearTimeout(isScrolling);
   isScrolling = setTimeout(() => {
-    // timeline.snap();
+    timeline.snapToNext(isFront);
   }, 66);
 });

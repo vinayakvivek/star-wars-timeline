@@ -26,6 +26,11 @@ class Timeline extends THREE.Group {
     this.tiles = new THREE.Group();
     this.add(this.tiles);
 
+    this.yearValidity = new Array(this.numYears);
+    for (let i = 0; i < this.numYears; ++i) {
+      this.yearValidity[i] = false;
+    }
+
     // add gui tweaks
     this._initTweaks();
   }
@@ -44,6 +49,17 @@ class Timeline extends THREE.Group {
       tile.createMarker();
     }
     tile.rotation.y = Math.PI / 2;
+
+    // add to yearValidity
+    const { startYear } = this.params;
+    this.yearValidity[Math.round(year - startYear)] = true;
+    if (duration > 0) {
+      const start = Math.round(year - startYear);
+      const end = Math.round(year + duration - startYear);
+      for (let i = start; i <= end; ++i) {
+        this.yearValidity[i] = true;
+      }
+    }
   }
 
   removeTile(tile) {
@@ -249,27 +265,38 @@ class Timeline extends THREE.Group {
     this.currentYear = -Math.round(this.position.z / this.params.gap);
   }
 
-  snap() {
+  snapToNext(f) {
+    // f -> front(true) or back(false)
     this._computeCurrentYear();
-    const toPos = -this.currentYear * this.params.gap;
-    const data = { x: this.position.x };
-    let prev = data.x;
+    const startYear = this.params.startYear;
+    const yearIndex = Math.round(this.currentYear) - startYear;
+    let toIndex = yearIndex;
+    if (f) {
+      while (toIndex < this.numYears && !this.yearValidity[toIndex]) toIndex++;
+    } else {
+      while (toIndex > 0 && !this.yearValidity[toIndex]) toIndex--;
+    }
+    // if diff less than 1, do not move
+    if (
+      Math.abs(yearIndex - toIndex) < 2 ||
+      toIndex == this.numYears ||
+      toIndex == 0
+    ) {
+      return;
+    }
+
+    const toPos = -(toIndex + startYear + 1) * this.params.gap;
+    const data = { z: this.position.z };
+    let prev = data.z;
     gsap.to(data, {
-      x: toPos,
-      duration: 0.2,
+      z: toPos,
+      duration: 1.0,
       onUpdate: () => {
-        const dx = data.x - prev;
-        prev = data.x;
-        this._translate(dx);
+        const dz = data.z - prev;
+        prev = data.z;
+        this._translate(dz);
       },
     });
-  }
-
-  updateScale(scale) {
-    const xpos = this.position.x;
-    this.position.x = 0;
-    this.scale.setScalar(scale);
-    this.position.x = xpos;
   }
 }
 
