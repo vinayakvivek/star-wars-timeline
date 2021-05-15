@@ -77,8 +77,6 @@ class Timeline extends THREE.Group {
   }
 
   _createYearLabels() {
-    const startYear = this.params.startYear;
-    const endYear = this.params.endYear;
     const _createTextGeometry = (text, font, size = 0.2) => {
       return new THREE.TextGeometry(text, {
         font,
@@ -90,11 +88,27 @@ class Timeline extends THREE.Group {
     };
 
     this.yearLabels = new THREE.Group();
-    this.yearMarkers = new THREE.Group();
-    this.add(this.yearLabels, this.yearMarkers);
+    this.add(this.yearLabels);
     const textMaterial = new THREE.MeshBasicMaterial({
       side: THREE.DoubleSide,
     });
+
+    const { startYear, endYear } = this.params;
+    const markerGeometry = new THREE.PlaneGeometry(0.1, this.params.width);
+    const markerMaterial = new THREE.MeshBasicMaterial({
+      side: THREE.DoubleSide,
+    });
+    const markers = new THREE.InstancedMesh(
+      markerGeometry,
+      markerMaterial,
+      endYear - startYear + 1
+    );
+    this.add(markers);
+
+    const dummy = new THREE.Object3D();
+    dummy.lookAt(new THREE.Vector3(0, 1, 0));
+    dummy.rotation.z = Math.PI / 2;
+
     for (let year = startYear; year <= endYear; ++year) {
       // const label = `${Math.abs(year)} ${year < 0 ? 'BBY' : 'ABY'}`;
       const label = `${year}`;
@@ -107,14 +121,9 @@ class Timeline extends THREE.Group {
       this.yearLabels.add(text);
 
       // add marker
-      const markerTop = new THREE.Mesh(
-        new THREE.PlaneGeometry(0.1, this.params.width),
-        textMaterial
-      );
-      markerTop.lookAt(new THREE.Vector3(0, 1, 0));
-      markerTop.position.z = this.params.gap * (year - 0.5);
-      markerTop.rotation.z = Math.PI / 2;
-      this.yearMarkers.add(markerTop);
+      dummy.position.z = this.params.gap * (year - 0.5);
+      dummy.updateMatrix();
+      markers.setMatrixAt(year - startYear, dummy.matrix);
     }
 
     // create active year
