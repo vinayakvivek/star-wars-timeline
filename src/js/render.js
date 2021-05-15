@@ -16,6 +16,7 @@ import {
   RenderPass,
   GodRaysEffect,
 } from "postprocessing";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { saberCamera } from "./scene/camera";
 
 const renderer = new THREE.WebGLRenderer({
@@ -44,6 +45,12 @@ reset();
 
 window.addEventListener("resize", reset);
 
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableZoom = false;
+controls.enabled = true;
+controls.enableDamping = true;
+controls.dampingFactor = 0.1;
+
 // postprocessing effect composer
 const composer = new EffectComposer(renderer);
 composer.addPass(new RenderPass(saberScene, saberCamera));
@@ -52,6 +59,7 @@ composer.addPass(new EffectPass(saberCamera, godRaysEffect));
 
 const render = () => {
   animateScene();
+  controls.update();
   if (state.loading) {
     composer.render();
   }
