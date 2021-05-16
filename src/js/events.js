@@ -46,6 +46,7 @@ window.addEventListener("wheel", (e) => {
 
   const dz = 0.003 * e.deltaY;
   timeline.scroll(dz);
+  timeline.translateX(-0.003 * e.deltaX);
 
   isFront = dz < 0;
 

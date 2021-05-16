@@ -9,6 +9,7 @@ html, body {
   /* background: rgb(24, 24, 24); */
   background: rgb(0, 0, 0);
   overflow: hidden;
+  overscroll-behavior-x: none;
 }
 
 @font-face {
