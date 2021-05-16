@@ -6,21 +6,17 @@
 html, body {
   height: 100vh;
   font-family: 'Poppins';
-  /* background: rgb(24, 24, 24); */
   background: rgb(0, 0, 0);
   overflow: hidden;
   overscroll-behavior-x: none;
 }
 
 @font-face {
-  font-family: star-jedi-hollow;
+  font-family: star-jedi;
   src: url('../static/fonts/starjedi/Starjedi.ttf');
 }
 
 .webgl {
-  /* width: 100%;
-  height: 100%;
-  display: block; */
   position: absolute;
   top: 0;
   left: 0;
@@ -30,12 +26,11 @@ html, body {
 .container {
   position: absolute;
   width: 100vw;
-  /* height: 100vh; */
   place-items: center;
 }
 
 #title {
-  font-family: 'star-jedi-hollow';
+  font-family: 'star-jedi';
   font-size: 4rem;
   color: white;
   text-align: center;
@@ -64,16 +59,27 @@ html, body {
   top: 50px;
 }
 
-#loading-text {
-  right: 450px;
-  left: auto;
-  top: 10px;
-  color: white;
-}
-
-#insideText {
+#legends-container {
   position: absolute;
   left: 20px;
   top: 20px;
+  width: 20vw;
+  height: 20vh;
+}
+
+#legends-container > ul > li {
   color: white;
+  font-family: monospace;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  padding: 5px;
+}
+
+.color-box {
+  width: 20px;
+  height: 10px;
+  border: solid 4px green;
+  border-radius: 30%;
+  margin-right: 10px;
 }

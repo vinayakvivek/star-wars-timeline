@@ -101,11 +101,9 @@ gltfLoader.load("/models/light-saber/scene.gltf", (gltf) => {
 });
 
 const maxLength = saberParams.length;
-// const loadingValueElement = document.getElementById("loading-value");
 const loadingCallback = (t) => {
   saberParams.length = t * maxLength;
   const value = Math.round(t * 100);
-  // loadingValueElement.innerText = `${value} %`;
   updateSaber();
   updateLoadingText(value);
 };
@@ -116,6 +114,7 @@ loadingManager.onProgress = (url, loaded, total) => {
 
 loadingManager.onLoad = () => {
   state.loading = false;
+  loadingText.visible = false;
 };
 
 // saberHandle light

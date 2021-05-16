@@ -1,22 +1,38 @@
 import BookTile from "./book-tile";
 import MovieTile from "./movie-tile";
 
-const tileCreators = {
-  Novel: (item) => new BookTile(item, "#ff0000"),
-  Comic: (item) => new BookTile(item, "#00ff00"),
-  "Junior Novel": (item) => new BookTile(item, "#0000ff"),
-  "Short Story": (item) => new BookTile(item, "#ff5500"),
-  AudioBook: (item) => new BookTile(item, "#665432"),
-  Movie: (item) => new MovieTile(item, "#550055"),
-  Series: (item) => new MovieTile(item, "#128b4e"),
-  VR: (item) => new MovieTile(item, "#873249"),
-  Game: (item) => new MovieTile(item, "#ab3498"),
-  Short: (item) => new MovieTile(item, "#ab3448"),
+const legendsListElement = $("#legends-list");
+console.log(legendsListElement);
+
+const tileTypeProps = {
+  Novel: { type: 1, color: "#ff0000" },
+  Comic: { type: 1, color: "#00ff00" },
+  "Junior Novel": { type: 1, color: "#0000ff" },
+  "Short Story": { type: 1, color: "#ff5500" },
+  AudioBook: { type: 1, color: "#665432" },
+  Movie: { type: 0, color: "#550055" },
+  Series: { type: 0, color: "#128b4e" },
+  VR: { type: 0, color: "#873249" },
+  Game: { type: 0, color: "#ab3498" },
+  Short: { type: 0, color: "#ab3448" },
 };
+
+const items = [];
+for (const key in tileTypeProps) {
+  items.push(
+    `<li><div class="color-box" style="border-color: ${tileTypeProps[key].color}"></div>${key}</li>`
+  );
+}
+legendsListElement.html(items.join(""));
 
 export const createTile = (item) => {
   try {
-    return tileCreators[item.type](item);
+    const { type, color } = tileTypeProps[item.type];
+    if (type == 0) {
+      return new MovieTile(item, color);
+    } else {
+      return new BookTile(item, color);
+    }
   } catch (e) {
     return new MovieTile(item, "#ffffff");
   }
