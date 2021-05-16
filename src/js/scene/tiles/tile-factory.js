@@ -1,53 +1,23 @@
-import { assets } from "../../config";
 import BookTile from "./book-tile";
 import MovieTile from "./movie-tile";
 
-export const createTile = (item) => {
-  const { type, params } = item;
-  let tile;
-  if (["Novel", "Comic", "Junior Novel", "Short Story"].includes(type)) {
-    if (!params.tileScale) params.tileScale = 0.8;
-    tile = new BookTile(item);
-  } else {
-    tile = new MovieTile(item);
-  }
-  return tile;
+const tileCreators = {
+  Novel: (item) => new BookTile(item, "#ff0000"),
+  Comic: (item) => new BookTile(item, "#00ff00"),
+  "Junior Novel": (item) => new BookTile(item, "#0000ff"),
+  "Short Story": (item) => new BookTile(item, "#ff5500"),
+  AudioBook: (item) => new BookTile(item, "#665432"),
+  Movie: (item) => new MovieTile(item, "#550055"),
+  Series: (item) => new MovieTile(item, "#128b4e"),
+  VR: (item) => new MovieTile(item, "#873249"),
+  Game: (item) => new MovieTile(item, "#ab3498"),
+  Short: (item) => new MovieTile(item, "#ab3448"),
 };
 
-export const findLayout = (data) => {
-  const yearBuckets = {};
-  const addItem = (year, item) => {
-    if (year in yearBuckets) {
-      yearBuckets[year].push(item);
-    } else {
-      yearBuckets[year] = [item];
-    }
-  };
-
-  for (const item of data) {
-    item.params.height = 1.5;
-    item.params.pos = 0.0;
-    if (item.year) {
-      // TODO: round year
-      const year = Math.round(item.year);
-      addItem(year, item);
-    } else {
-      item.params.pos = (Math.random() - 0.5) * 8;
-    }
-  }
-
-  const gap = 2;
-  for (const year in yearBuckets) {
-    const count = yearBuckets[year].length;
-    // const offset = 0.5 * (year % 2 == 0 ? -1 : 1);
-    const startPos = (count / 2.0 - 0.5) * gap;
-    let i = 0;
-    for (const item of yearBuckets[year]) {
-      item.params.pos = startPos - i++ * gap;
-    }
-  }
-
-  for (const item of data) {
-    console.log(item.params.pos);
+export const createTile = (item) => {
+  try {
+    return tileCreators[item.type](item);
+  } catch (e) {
+    return new MovieTile(item, "#ffffff");
   }
 };

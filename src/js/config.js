@@ -13,6 +13,8 @@ const size = {
   height: window.innerHeight,
 };
 
+const showBorders = true;
+
 const state = {
   loading: true,
 };
@@ -37,6 +39,7 @@ const gltfLoader = new GLTFLoader();
 export {
   size,
   state,
+  showBorders,
   mouse,
   raycaster,
   gui,

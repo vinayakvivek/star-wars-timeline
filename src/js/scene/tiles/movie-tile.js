@@ -1,24 +1,33 @@
 import * as THREE from "three";
+import { showBorders } from "../../config";
 import Tile from "./tile";
 
 const movieTileGeometry = new THREE.CircleBufferGeometry(1, 64);
+const borderGeometry = new THREE.RingGeometry(1, 1.1, 32);
+
 class MovieTile extends Tile {
-  constructor(item) {
-    super(item);
+  constructor(item, borderColor) {
+    super(item, borderColor);
   }
 
-  _createTile() {
-    const tile = new THREE.Mesh(
+  _generateTileMesh() {
+    const tile = new THREE.Group();
+    const image = new THREE.Mesh(
       movieTileGeometry,
       new THREE.MeshBasicMaterial({
         map: this.texture,
         side: THREE.DoubleSide,
       })
     );
-    tile.scale.setScalar(this.params.tileScale);
-    tile.position.z = 0.02;
-    this.tile = tile;
-    this.movable.add(this.tile);
+    tile.add(image);
+    if (showBorders) {
+      const border = new THREE.Mesh(
+        borderGeometry,
+        new THREE.MeshBasicMaterial({ color: this.borderColor })
+      );
+      tile.add(border);
+    }
+    return tile;
   }
 }
 

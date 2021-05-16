@@ -17,10 +17,11 @@ const maskMaterial = new THREE.MeshBasicMaterial({
 });
 
 class Tile extends THREE.Group {
-  constructor(item) {
+  constructor(item, borderColor) {
     super();
     this.item = item;
     this.name = item.name;
+    this.borderColor = borderColor;
     this.texture = textureLoader.load(item.thumbnail);
     this.params = {
       tileScale: 0.5,
@@ -42,6 +43,14 @@ class Tile extends THREE.Group {
     this.position.y = this.params.height;
     this.position.x = -this.params.pos;
     this.movable.rotation.y = -Math.PI / 2;
+  }
+
+  _createTile() {
+    const tile = this._generateTileMesh();
+    tile.scale.setScalar(this.params.tileScale);
+    tile.position.z = 0.02;
+    this.tile = tile;
+    this.movable.add(this.tile);
   }
 
   update(dPos = 0, dH = 0, dY = 0, dS = 0, dO = 0) {
@@ -172,7 +181,7 @@ class Tile extends THREE.Group {
   }
 
   checkClick() {
-    const intersection = raycaster.intersectObject(this.tile);
+    const intersection = raycaster.intersectObject(this.tile.children[0]);
     return intersection.length;
   }
 }
