@@ -9,7 +9,7 @@ import {
 import { createTimeline, timeline } from "./scene";
 import * as THREE from "three";
 import { KernelSize } from "postprocessing";
-import { saberCamera } from "./camera";
+import camera, { saberCamera } from "./camera";
 import gsap from "gsap";
 import { Vector3 } from "three";
 
@@ -163,7 +163,20 @@ loadingManager.onProgress = (url, loaded, total) => {
   loadingCallback(loaded / total);
 };
 
-const initialCameraMovement = () => {};
+// after light sabers are closed
+const postLoadAnimation = () => {
+  state.loading = false;
+  timeline.visible = true;
+  const legendsContainer = $("#legends-container");
+  gsap.to(camera.rotation, {
+    x: 0.0,
+    duration: 2.0,
+    ease: "expo.inOut",
+    onUpdate: () => {
+      legendsContainer.css("opacity", `${1 - camera.rotation.x}`);
+    },
+  });
+};
 
 loadingManager.onLoad = () => {
   loadingText.visible = false;
@@ -182,10 +195,7 @@ loadingManager.onLoad = () => {
     intensity: 0.0,
     duration: 1.0,
     delay: 1.5,
-    onComplete: () => {
-      state.loading = false;
-      timeline.visible = true;
-    },
+    onComplete: postLoadAnimation,
   });
 };
 

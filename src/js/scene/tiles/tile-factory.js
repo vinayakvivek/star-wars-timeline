@@ -2,12 +2,12 @@ import BookTile from "./book-tile";
 import MovieTile from "./movie-tile";
 
 const legendsListElement = $("#legends-list");
-console.log(legendsListElement);
 
 const tileTypeProps = {
   Novel: { type: 1, color: "#ff0000" },
   Comic: { type: 1, color: "#00ff00" },
   "Junior Novel": { type: 1, color: "#0000ff" },
+  "Young Adult Novel": { type: 1, color: "#f0aa99" },
   "Short Story": { type: 1, color: "#ff5500" },
   AudioBook: { type: 1, color: "#665432" },
   Movie: { type: 0, color: "#550055" },

@@ -4,6 +4,7 @@ import {
   TextureLoader,
   LoadingManager,
   Vector2,
+  Vector3,
   Raycaster,
 } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
@@ -17,6 +18,7 @@ const showBorders = true;
 
 const state = {
   loading: true,
+  cameraPosition: new Vector3(0, 0.5, 3),
 };
 
 const mouse = new Vector2();

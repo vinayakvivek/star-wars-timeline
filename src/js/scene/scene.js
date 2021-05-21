@@ -20,8 +20,10 @@ const createTimeline = (loadingCallback) => {
   initTimeline(timeline, loadingCallback);
 };
 
+const galaxyScene = new THREE.Scene();
+galaxyScene.add(camera);
 const galaxy = new Galaxy();
-scene.add(galaxy);
+galaxyScene.add(galaxy);
 
 // lights
 const pointLight = new THREE.PointLight("#ffffff", 2);
@@ -35,5 +37,5 @@ const animateScene = () => {
   const elapsedTime = clock.getElapsedTime();
 };
 
-export { createTimeline, animateScene, timeline, galaxy };
+export { createTimeline, animateScene, timeline, galaxy, galaxyScene };
 export default scene;

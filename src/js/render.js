@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import {
   scene,
+  galaxyScene,
   camera,
   animateScene,
   saberScene,
@@ -47,11 +48,11 @@ reset();
 
 window.addEventListener("resize", reset);
 
-const controls = new OrbitControls(camera, renderer.domElement);
-controls.enableZoom = false;
-controls.enabled = true;
-controls.enableDamping = true;
-controls.dampingFactor = 0.1;
+// const controls = new OrbitControls(camera, renderer.domElement);
+// controls.enableZoom = false;
+// controls.enabled = false;
+// controls.enableDamping = true;
+// controls.dampingFactor = 0.1;
 
 let areaImage = new Image();
 areaImage.src = SMAAEffect.areaImageDataURL;
@@ -82,12 +83,13 @@ const render = () => {
   prevTime = elapsedTime;
   lightSaber1.rotate(delta);
   lightSaber2.rotate(delta);
-  controls.update();
+  // controls.update();
   if (state.loading) {
     composer.render();
   } else {
     renderer.render(scene, camera);
   }
+  renderer.render(galaxyScene, camera);
   window.requestAnimationFrame(render);
 };
 

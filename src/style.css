@@ -66,6 +66,7 @@ html, body {
   top: 20px;
   width: 20vw;
   height: 20vh;
+  opacity: 0.0;
 }
 
 #legends-container > ul > li {
