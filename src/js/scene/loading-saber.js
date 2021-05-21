@@ -6,72 +6,89 @@ import {
   loadingManager,
   state,
 } from "../config";
-import { createTimeline } from "./scene";
+import { createTimeline, timeline } from "./scene";
 import * as THREE from "three";
 import { KernelSize } from "postprocessing";
 import { saberCamera } from "./camera";
+import gsap from "gsap";
+import { Vector3 } from "three";
 
 const saberEffectOptions = {
   height: 480,
   kernelSize: KernelSize.SMALL,
   density: 0.41,
   decay: 0.81,
-  weight: 0.76,
+  weight: 0.86,
   exposure: 0.69,
   samples: 60,
   clampMax: 1,
 };
-const saberParams = {
-  radius: 0.029,
-  length: 4,
-  color: "#ffffff",
-  position: new THREE.Vector3(-2, 2.1, -2),
-};
+
+class LightSaber {
+  constructor(params) {
+    this.params = { ...params };
+    this.group = new THREE.Group();
+    this._createSaber();
+
+    this.group.lookAt(this.params.direction);
+    this.group.position.copy(this.params.position);
+  }
+
+  addHandle(handle) {
+    handle.scale.setScalar(0.08);
+    this.handle = handle;
+    this.group.add(this.handle);
+    this.initSaber();
+  }
+
+  _createSaber() {
+    const { radius, length } = this.params;
+    const lightMaterial = new THREE.MeshBasicMaterial({
+      color: this.params.color,
+    });
+    const light = new THREE.Mesh();
+    light.material = lightMaterial;
+    light.frustumCulled = false;
+    light.matrixAutoUpdate = false;
+    light.scale.y = length;
+    light.position.y = length / 2;
+    light.updateMatrix();
+    this.light = light;
+    this.group.add(light);
+  }
+
+  initSaber() {
+    const r = this.params.radius;
+    this.light.geometry = new THREE.CylinderGeometry(r, r, 1.0, 16, 16);
+  }
+
+  updateLength(dl) {
+    this.setLength(this.params.length + dl);
+  }
+
+  setLength(length) {
+    this.params.length = length;
+    this.light.scale.y = length;
+    this.light.position.y = length / 2;
+    this.light.updateMatrix();
+  }
+
+  rotate(da) {
+    this.group.rotateOnAxis(this.group.up, da);
+  }
+}
 
 const saberScene = new THREE.Scene();
 saberCamera.position.set(0, 0, 2);
 saberScene.add(saberCamera);
 
-let saber = new THREE.Mesh();
-saber.material = new THREE.MeshBasicMaterial({ color: saberParams.color });
-saber.frustumCulled = false;
-saber.matrixAutoUpdate = false;
-const saberGroup = new THREE.Group();
-saberGroup.add(saber);
-saberGroup.rotation.z = Math.PI / 2;
-saberGroup.position.copy(saberParams.position);
-
-let saberHandleLoaded = false;
-let saberHandle;
-const updateSaber = () => {
-  if (!saberHandleLoaded) return;
-  if (saber.geometry) {
-    saber.geometry.dispose();
-  }
-  const r = saberParams.radius;
-  saber.geometry = new THREE.CylinderGeometry(r, r, saberParams.length, 32, 32);
-  saber.material.color.set(saberParams.color);
-  saberGroup.position.copy(saberParams.position);
-  saberGroup.position.x += (saberParams.length * 1.15) / 2;
-  if (saberHandle) {
-    saberHandle.position.copy(saberParams.position);
-  }
-};
-
-const updateSaberPosition = (dx) => {
-  saberParams.position.y += dx;
-  updateSaber();
-};
-
-gui.add(saberParams.position, "y", 0, 5, 0.01).onFinishChange(updateSaber);
-
+// loading text
 let loadingText = new THREE.Mesh();
 loadingText.material = new THREE.MeshBasicMaterial({ color: "#ffffff" });
-loadingText.position.copy(saberParams.position);
-loadingText.position.y -= 0.2;
+loadingText.scale.setScalar(0.7);
+loadingText.position.set(0, -1, -1.0);
 saberScene.add(loadingText);
 const updateLoadingText = (value) => {
-  if (!saberHandleLoaded) return;
   if (loadingText.geometry) {
     loadingText.geometry.dispose();
   }
@@ -79,19 +96,48 @@ const updateLoadingText = (value) => {
     font: assets.font,
     size: 0.1,
     height: 0.02,
-    curveSegments: 4,
+    curveSegments: 8,
     bevelEnabled: false,
   });
   loadingText.geometry.center();
 };
 
+const lightSaber1 = new LightSaber({
+  radius: 0.02,
+  length: 0.0,
+  color: "#0000ff",
+  position: new THREE.Vector3(-1.5, -1, -2),
+  direction: new THREE.Vector3(-1, 1, 0.0),
+});
+
+const lightSaber2 = new LightSaber({
+  radius: 0.02,
+  length: 0.0,
+  color: "#ff0000",
+  position: new THREE.Vector3(1.5, -1, -2),
+  direction: new THREE.Vector3(1, 1, 0.0),
+});
+
 gltfLoader.load("/models/light-saber/scene.gltf", (gltf) => {
-  saberHandle = gltf.scene;
-  saberScene.add(saberHandle);
-  saberHandle.scale.setScalar(0.08);
-  saberHandle.rotation.z = -Math.PI / 2;
-  saberHandle.position.copy(saberParams.position);
-  saberHandleLoaded = true;
+  const saberHandle = gltf.scene;
+  lightSaber1.addHandle(saberHandle.clone());
+  lightSaber2.addHandle(saberHandle.clone());
+
+  saberScene.add(lightSaber1.group);
+  saberScene.add(lightSaber2.group);
+
+  // const props = { length: 0.0 };
+  // let tl = props.length;
+  // gsap.to(props, {
+  //   length: 3.5,
+  //   duration: 1.0,
+  //   ease: "expo",
+  //   onUpdate: () => {
+  //     lightSaber1.updateLength(props.length - tl);
+  //     lightSaber2.updateLength(props.length - tl);
+  //     tl = props.length;
+  //   },
+  // });
 
   fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
     assets.font = font;
@@ -100,27 +146,55 @@ gltfLoader.load("/models/light-saber/scene.gltf", (gltf) => {
   });
 });
 
-const maxLength = saberParams.length;
+const backLight = new THREE.PointLight("#ffffff", 5);
+// backLight.position.copy(saberParams.position);
+backLight.position.z += 1;
+saberScene.add(backLight);
+
+const maxLength = 3.5;
 const loadingCallback = (t) => {
-  saberParams.length = t * maxLength;
-  const value = Math.round(t * 100);
-  updateSaber();
-  updateLoadingText(value);
+  const length = t * maxLength;
+  lightSaber1.setLength(length);
+  lightSaber2.setLength(length);
+  updateLoadingText(Math.round(t * 100));
 };
 
 loadingManager.onProgress = (url, loaded, total) => {
   loadingCallback(loaded / total);
 };
 
+const initialCameraMovement = () => {};
+
 loadingManager.onLoad = () => {
-  state.loading = false;
   loadingText.visible = false;
+  const props = { length: maxLength };
+  gsap.to(props, {
+    length: 0.0,
+    delay: 1.0,
+    duration: 2.0,
+    ease: "expo",
+    onUpdate: () => {
+      lightSaber1.setLength(props.length);
+      lightSaber2.setLength(props.length);
+    },
+  });
+  gsap.to(backLight, {
+    intensity: 0.0,
+    duration: 1.0,
+    delay: 1.5,
+    onComplete: () => {
+      state.loading = false;
+      timeline.visible = true;
+    },
+  });
 };
 
-// saberHandle light
-const saberHandleLight = new THREE.PointLight("#ffffff", 2);
-saberHandleLight.position.copy(saberParams.position);
-saberHandleLight.position.z += 1;
-saberScene.add(saberHandleLight);
+const updateSaberPosition = () => {};
 
-export { saberScene, saber, saberEffectOptions, updateSaberPosition };
+export {
+  saberScene,
+  lightSaber1,
+  lightSaber2,
+  saberEffectOptions,
+  updateSaberPosition,
+};
