@@ -37,6 +37,14 @@ html, body {
   text-align: center;
 }
 
+#sub-title {
+  font-family: 'star-jedi';
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
 .btn {
   position: absolute;
   left: 10px;

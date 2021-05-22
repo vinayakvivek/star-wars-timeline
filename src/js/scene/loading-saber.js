@@ -163,21 +163,6 @@ loadingManager.onProgress = (url, loaded, total) => {
   loadingCallback(loaded / total);
 };
 
-// after light sabers are closed
-const postLoadAnimation = () => {
-  state.loading = false;
-  timeline.visible = true;
-  const legendsContainer = $("#legends-container");
-  gsap.to(camera.rotation, {
-    x: 0.0,
-    duration: 2.0,
-    ease: "expo.inOut",
-    onUpdate: () => {
-      legendsContainer.css("opacity", `${1 - camera.rotation.x}`);
-    },
-  });
-};
-
 loadingManager.onLoad = () => {
   loadingText.visible = false;
   const props = { length: maxLength };
@@ -193,9 +178,22 @@ loadingManager.onLoad = () => {
   });
   gsap.to(backLight, {
     intensity: 0.0,
-    duration: 1.0,
+    duration: 0.5,
     delay: 1.5,
-    onComplete: postLoadAnimation,
+    onComplete: () => {
+      state.loading = false;
+      timeline.visible = true;
+    },
+  });
+  gsap.to(camera.rotation, {
+    x: 0.0,
+    delay: 2.0,
+    duration: 4.0,
+    // ease: "expo.inOut",
+    onComplete: () => {
+      const legendsContainer = $("#legends-container");
+      gsap.to(legendsContainer, { css: { opacity: 1.0 }, duration: 1.0 });
+    },
   });
 };
 
