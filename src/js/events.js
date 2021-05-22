@@ -28,21 +28,18 @@ window.addEventListener("click", (event) => {
   mouse.x = (event.clientX / size.width) * 2 - 1;
   mouse.y = -(event.clientY / size.height) * 2 + 1;
   raycaster.setFromCamera(mouse, camera);
-  timeline.onClick();
+  timeline && timeline.onClick();
 });
 
 const delta = 0.5;
 window.addEventListener("keydown", (e) => {
-  timeline.onKeyPress(e.key);
+  timeline && timeline.onKeyPress(e.key);
 });
 
 let isScrolling;
 let isFront = false;
 window.addEventListener("wheel", (e) => {
-  if (e.ctrlKey) {
-    // zoom event;
-    return;
-  }
+  if (!timeline) return;
 
   galaxy.scroll(0.1 * e.deltaY);
 

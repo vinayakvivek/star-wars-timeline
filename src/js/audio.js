@@ -1,24 +1,6 @@
-import * as THREE from "three";
-import { camera } from "./scene";
-
-const loadAudio = () => {
-  const listener = new THREE.AudioListener();
-  camera.add(listener);
-
-  const sound = new THREE.Audio(listener);
-  const audioLoader = new THREE.AudioLoader();
-  audioLoader.load("audio/ahsoka-theme.mp3", (buffer) => {
-    sound.setBuffer(buffer);
-    sound.setLoop(true);
-    sound.setVolume(0.5);
-    sound.play();
-  });
+const bgm = new Audio("audio/ahsoka-theme.mp3");
+export const playBgm = () => {
+  bgm.loop = true;
+  bgm.volume = 0.5;
+  bgm.play();
 };
-
-let audioStarted = false;
-window.addEventListener("click", () => {
-  if (!audioStarted) {
-    // loadAudio();
-    audioStarted = true;
-  }
-});

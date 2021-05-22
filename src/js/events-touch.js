@@ -8,6 +8,7 @@ const maxDeltas = 5;
 let lastDeltas = [];
 
 const updateScene = (delta) => {
+  if (!timeline) return;
   galaxy.scroll(0.5 * delta.y);
   timeline.scroll(0.02 * delta.y);
   timeline.sideScroll(0.01 * delta.x);
@@ -55,5 +56,5 @@ window.addEventListener("touchend", (e) => {
     .reduce((a, b) => a.add(b), new Vector2())
     .divideScalar(lastDeltas.length);
   damp(avgDelta);
-  timeline.snapToNext(isFront);
+  timeline && timeline.snapToNext(isFront);
 });

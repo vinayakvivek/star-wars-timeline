@@ -96,6 +96,14 @@ html, body {
   margin-right: 10px;
 }
 
+#enter-btn {
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  transform: translate(-50px, 150px);
+  display: none;
+}
+
 /* If the screen size is 600px wide or less */
 @media screen and (max-width: 600px) {
   #title {
@@ -116,4 +124,5 @@ html, body {
   right: 450px;
   left: auto;
   top: 50px;
+  display: none;
 }

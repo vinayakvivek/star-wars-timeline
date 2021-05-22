@@ -12,6 +12,7 @@ import { KernelSize } from "postprocessing";
 import camera, { saberCamera } from "./camera";
 import gsap from "gsap";
 import { Vector3 } from "three";
+import { playBgm } from "../audio";
 
 const saberEffectOptions = {
   height: 480,
@@ -165,8 +166,28 @@ loadingManager.onProgress = (url, loaded, total) => {
   loadingCallback(loaded / total);
 };
 
+const enterButton = $("#enter-btn");
 loadingManager.onLoad = () => {
   loadingText.visible = false;
+  timeline.visible = true;
+  enterButton.show();
+  enterButton.click(onEnterAnimation);
+};
+
+const onEnterAnimation = () => {
+  // play bgm
+  playBgm();
+
+  // face and hide enterButton
+  gsap.to(enterButton, {
+    css: { opacity: 0.0 },
+    duration: 1.0,
+    onComplete: () => {
+      enterButton.hide();
+    },
+  });
+
+  // close light sabers
   const props = { length: maxLength };
   gsap.to(props, {
     length: 0.0,
@@ -178,15 +199,18 @@ loadingManager.onLoad = () => {
       lightSaber2.setLength(props.length);
     },
   });
+
+  // dim saberScene lights, (looks like sabers are fading)
   gsap.to(backLight, {
     intensity: 0.0,
     duration: 0.5,
     delay: 1.5,
     onComplete: () => {
       state.loading = false;
-      timeline.visible = true;
     },
   });
+
+  // rotate camera from top to horizontal view
   gsap.to(camera.rotation, {
     x: 0.0,
     delay: 2.0,
