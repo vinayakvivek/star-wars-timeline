@@ -30,6 +30,22 @@ html, body {
   place-items: center;
 }
 
+.btn {
+  position: absolute;
+  padding: 10px;
+  background: rgba(0,0,0,0.9);
+  color: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #444;
+}
+.btn:focus {
+  outline: none;
+}
+
 #title {
   font-family: 'star-jedi';
   font-size: 4rem;
@@ -45,36 +61,18 @@ html, body {
   letter-spacing: 3px;
 }
 
-.btn {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  padding: 10px;
-  background: rgba(0,0,0,0.9);
-  color: white;
-  border: 1px solid gray;
-  cursor: pointer;
-}
-.btn:hover {
-  background: #444;
-}
-.btn:focus {
-  outline: none;
-}
-
-#export-btn {
-  right: 450px;
-  left: auto;
-  top: 50px;
-}
-
 #legends-container {
   position: absolute;
   left: 20px;
   top: 20px;
-  width: 20vw;
-  height: 20vh;
+  min-width: 100px;
+  min-height: 50px;
   opacity: 0.0;
+  overflow: hidden;
+}
+
+#legends-container > ul {
+  margin-top: 30px;
 }
 
 #legends-container > ul > li {
@@ -86,10 +84,33 @@ html, body {
   padding: 5px;
 }
 
+#legends-container > #toggle-btn {
+  padding: 5px;
+}
+
 .color-box {
   width: 20px;
   height: 10px;
   border: solid 4px green;
   border-radius: 30%;
   margin-right: 10px;
+}
+
+/* If the screen size is 600px wide or less */
+@media screen and (max-width: 600px) {
+  #title {
+    font-size: 2rem;
+  }
+  #sub-title {
+    font-size: 1rem;
+  }
+  #legends-container {
+    margin-top: 60px;
+  }
+}
+
+#export-btn {
+  right: 450px;
+  left: auto;
+  top: 50px;
 }

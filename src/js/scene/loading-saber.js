@@ -143,6 +143,8 @@ gltfLoader.load("/models/light-saber/scene.gltf", (gltf) => {
     assets.font = font;
     updateLoadingText(0);
     createTimeline(() => {});
+    // const legendsContainer = $("#legends-container");
+    // gsap.to(legendsContainer, { css: { opacity: 1.0 }, duration: 1.0 });
   });
 });
 

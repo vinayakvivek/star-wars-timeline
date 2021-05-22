@@ -1,6 +1,7 @@
 import { data, timeline, galaxy, camera, updateSaberPosition } from "./scene";
 import { setDebugModeByLocation } from "./debug";
 import { mouse, raycaster, size } from "./config";
+import gsap from "gsap";
 
 window.addEventListener("load", () => {
   setDebugModeByLocation();
@@ -55,3 +56,31 @@ window.addEventListener("wheel", (e) => {
     timeline.snapToNext(isFront);
   }, 66);
 });
+
+// toggle legend buttons
+const legendList = $("#legends-container > #legends-list");
+const toggleButton = $("#legends-container > #toggle-btn");
+let legendShown = legendList.is(":visible");
+toggleButton.click(() => {
+  if (legendShown) {
+    animateLegend(0.0, () => {
+      legendList.hide();
+      toggleButton.html("Show legend");
+      legendShown = false;
+    });
+  } else {
+    legendList.show();
+    animateLegend(1.0, () => {
+      toggleButton.html("Hide legend");
+      legendShown = true;
+    });
+  }
+});
+
+const animateLegend = (toOpacity, onComplete) => {
+  gsap.to(legendList, {
+    css: { opacity: toOpacity },
+    duration: 0.5,
+    onComplete,
+  });
+};
