@@ -1,29 +1,59 @@
-import { Vector2 } from "three";
+import { Vector2, Clock } from "three";
 import { galaxy, timeline } from "./scene";
+import gsap from "gsap";
 
-const currPos = new Vector2();
+const pos = new Vector2();
+const delta = new Vector2();
+const maxDeltas = 5;
+let lastDeltas = [];
+
+const updateScene = (delta) => {
+  galaxy.scroll(0.5 * delta.y);
+  timeline.scroll(0.02 * delta.y);
+  timeline.translateX(0.01 * delta.x);
+};
 
 window.addEventListener("touchstart", (e) => {
-  currPos.x = e.touches[0].clientX;
-  currPos.y = e.touches[0].clientY;
+  pos.x = e.touches[0].clientX;
+  pos.y = e.touches[0].clientY;
+  delta.x = 0;
+  delta.y = 0;
+  lastDeltas = [];
 });
 
 let isFront = false;
 window.addEventListener("touchmove", (e) => {
-  const deltaX = e.touches[0].clientX - currPos.x;
-  const deltaY = e.touches[0].clientY - currPos.y;
-  console.log(deltaX, deltaY);
-  currPos.x += deltaX;
-  currPos.y += deltaY;
+  delta.x = e.touches[0].clientX - pos.x;
+  delta.y = e.touches[0].clientY - pos.y;
+  pos.x += delta.x;
+  pos.y += delta.y;
 
-  galaxy.scroll(0.5 * deltaY);
-  timeline.scroll(0.02 * deltaY);
-  timeline.translateX(0.01 * deltaX);
+  updateScene(delta);
 
-  isFront = deltaY < 0;
+  isFront = delta.y < 0;
+  lastDeltas.push(delta.clone());
+  if (lastDeltas.length > maxDeltas) {
+    lastDeltas.shift();
+  }
 });
 
+const damp = (delta) => {
+  gsap.to(delta, {
+    x: 0.0,
+    y: 0.0,
+    duration: 1.0,
+    ease: "expo",
+    onUpdate: () => {
+      updateScene(delta);
+    },
+  });
+};
+
 window.addEventListener("touchend", (e) => {
-  console.log(e.touches[0]);
+  if (lastDeltas.length < 1) return;
+  const avgDelta = lastDeltas
+    .reduce((a, b) => a.add(b), new Vector2())
+    .divideScalar(lastDeltas.length);
+  damp(avgDelta);
   timeline.snapToNext(isFront);
 });
