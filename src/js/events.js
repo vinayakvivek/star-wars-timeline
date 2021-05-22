@@ -2,6 +2,7 @@ import { data, timeline, galaxy, camera, updateSaberPosition } from "./scene";
 import { setDebugModeByLocation } from "./debug";
 import { mouse, raycaster, size } from "./config";
 import gsap from "gsap";
+import "./events-touch";
 
 window.addEventListener("load", () => {
   setDebugModeByLocation();

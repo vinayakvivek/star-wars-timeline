@@ -159,7 +159,7 @@ class Timeline extends THREE.Group {
 
   _udpateActiveYearPlane() {
     this._computeCurrentYear();
-    this.activeYearPlane.position.z = this.currentYear * this.params.gap;
+    this.activeYearPlane.position.z = (this.currentYear - 1) * this.params.gap;
   }
 
   _initTweaks() {
