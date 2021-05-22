@@ -279,19 +279,23 @@ class Timeline extends THREE.Group {
   }
 
   snapToNext(f) {
+    // TODO: optimization, create array for nextValidYearIndex (can remove the while loops)
+
     // f -> front(true) or back(false)
     this._computeCurrentYear();
     const startYear = this.params.startYear;
     const yearIndex = Math.round(this.currentYear) - startYear;
-    let toIndex = yearIndex;
-    if (f) {
-      while (toIndex < this.numYears && !this.yearValidity[toIndex]) toIndex++;
-    } else {
-      while (toIndex > 0 && !this.yearValidity[toIndex]) toIndex--;
-    }
+    let fIndex = yearIndex,
+      bIndex = yearIndex;
+    while (fIndex < this.numYears && !this.yearValidity[fIndex]) fIndex++;
+    while (bIndex > 0 && !this.yearValidity[bIndex]) bIndex--;
+
+    console.log(yearIndex, fIndex, bIndex);
+    const toIndex = f ? fIndex : bIndex;
     // if diff less than 1, do not move
     if (
-      Math.abs(yearIndex - toIndex) < 2 ||
+      Math.abs(yearIndex - fIndex) < 2 ||
+      Math.abs(yearIndex - bIndex) < 3 ||
       toIndex == this.numYears ||
       toIndex == 0
     ) {

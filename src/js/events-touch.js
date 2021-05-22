@@ -47,6 +47,9 @@ const damp = (delta) => {
     onUpdate: () => {
       updateScene(delta);
     },
+    onComplete: () => {
+      timeline && timeline.snapToNext(isFront);
+    },
   });
 };
 
@@ -56,5 +59,4 @@ window.addEventListener("touchend", (e) => {
     .reduce((a, b) => a.add(b), new Vector2())
     .divideScalar(lastDeltas.length);
   damp(avgDelta);
-  timeline && timeline.snapToNext(isFront);
 });
