@@ -15,10 +15,12 @@ class Timeline extends THREE.Group {
     };
 
     // startYear must be negative, endYear must be positive
-    const { startYear, endYear, gap } = this.params;
+    const { startYear, endYear, gap, width } = this.params;
     this.startPos = gap * startYear;
     this.endPos = gap * endYear;
     this.numYears = endYear - startYear + 1;
+    this.leftX = width / 2;
+    this.rightX = -width / 2;
 
     this._createLine();
     this._createYearLabels();
@@ -259,6 +261,17 @@ class Timeline extends THREE.Group {
       return;
     }
     this._translate(dz);
+  }
+
+  sideScroll(dx) {
+    if (
+      (this.position.x >= this.leftX - 1 && dx > 0) ||
+      (this.position.x <= this.rightX + 1 && dx < 0)
+    ) {
+      return;
+    }
+    this.translateX(dx);
+    this.yearLabels.translateX(-dx);
   }
 
   _computeCurrentYear() {

@@ -10,7 +10,7 @@ let lastDeltas = [];
 const updateScene = (delta) => {
   galaxy.scroll(0.5 * delta.y);
   timeline.scroll(0.02 * delta.y);
-  timeline.translateX(0.01 * delta.x);
+  timeline.sideScroll(0.01 * delta.x);
 };
 
 window.addEventListener("touchstart", (e) => {
