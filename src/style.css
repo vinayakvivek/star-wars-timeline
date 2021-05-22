@@ -71,11 +71,11 @@ html, body {
   overflow: hidden;
 }
 
-#legends-container > ul {
+#legends-list {
   margin-top: 30px;
 }
 
-#legends-container > ul > li {
+#legends-list li {
   color: white;
   font-family: monospace;
   display: flex;
@@ -84,7 +84,7 @@ html, body {
   padding: 5px;
 }
 
-#legends-container > #toggle-btn {
+#legends-container #toggle-btn {
   padding: 5px;
 }
 
@@ -106,6 +106,9 @@ html, body {
   }
   #legends-container {
     margin-top: 60px;
+  }
+  #legends-list {
+    display: none;
   }
 }
 

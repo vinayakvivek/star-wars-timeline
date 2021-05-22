@@ -62,18 +62,20 @@ window.addEventListener("wheel", (e) => {
 const legendList = $("#legends-container > #legends-list");
 const toggleButton = $("#legends-container > #toggle-btn");
 let legendShown = legendList.is(":visible");
+toggleButton.html(legendShown ? "Hide legend" : "Show Legend");
 toggleButton.click(() => {
   if (legendShown) {
+    toggleButton.html("Show legend");
+    legendShown = false;
     animateLegend(0.0, () => {
       legendList.hide();
-      toggleButton.html("Show legend");
-      legendShown = false;
     });
   } else {
     legendList.show();
+    toggleButton.html("Hide legend");
+    legendShown = true;
     animateLegend(1.0, () => {
-      toggleButton.html("Hide legend");
-      legendShown = true;
+      legendList.show();
     });
   }
 });

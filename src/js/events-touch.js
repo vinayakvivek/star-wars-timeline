@@ -8,7 +8,6 @@ window.addEventListener("touchstart", (e) => {
   currPos.y = e.touches[0].clientY;
 });
 
-let isScrolling;
 let isFront = false;
 window.addEventListener("touchmove", (e) => {
   const deltaX = e.touches[0].clientX - currPos.x;
@@ -22,13 +21,9 @@ window.addEventListener("touchmove", (e) => {
   timeline.translateX(0.01 * deltaX);
 
   isFront = deltaY < 0;
-
-  window.clearTimeout(isScrolling);
-  isScrolling = setTimeout(() => {
-    timeline.snapToNext(isFront);
-  }, 66);
 });
 
 window.addEventListener("touchend", (e) => {
   console.log(e.touches[0]);
+  timeline.snapToNext(isFront);
 });
