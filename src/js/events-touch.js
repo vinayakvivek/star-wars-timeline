@@ -48,7 +48,7 @@ const damp = (delta) => {
       updateScene(delta);
     },
     onComplete: () => {
-      timeline && timeline.snapToNext(isFront);
+      timeline && timeline.snapToNext(isFront, galaxy);
     },
   });
 };

@@ -51,7 +51,7 @@ window.addEventListener("wheel", (e) => {
 
   window.clearTimeout(isScrolling);
   isScrolling = setTimeout(() => {
-    timeline.snapToNext(isFront);
+    timeline.snapToNext(isFront, galaxy);
   }, 66);
 });
 

@@ -27,9 +27,6 @@ class Tile extends THREE.Group {
       tileScale: 0.5,
       tileOffset: 0.0, // percentage offset (of halfWidth)
       labelSize: 0.08,
-      labelPos: 0.3,
-      borderSize: 1.5,
-      markerStart: -1.0,
       yearOffset: 0.0,
       height: 2,
       pos: 0,

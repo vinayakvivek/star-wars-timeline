@@ -9,7 +9,7 @@ class Timeline extends THREE.Group {
       color: "#0f0f0f",
       width: 20,
       lineLength: 100,
-      startYear: -45,
+      startYear: -240,
       endYear: 40,
       gap: 2.0,
     };
@@ -208,11 +208,11 @@ class Timeline extends THREE.Group {
       }
       return;
     }
-    let dPos = 0;
-    let dH = 0;
-    let dY = 0;
-    let dS = 0;
-    let dO = 0;
+    let dPos = 0.0;
+    let dH = 0.0;
+    let dY = 0.0;
+    let dS = 0.0;
+    let dO = 0.0;
     switch (key) {
       case "ArrowLeft":
         dPos += delta;
@@ -296,7 +296,7 @@ class Timeline extends THREE.Group {
     }
   }
 
-  snapToNext(f) {
+  snapToNext(f, galaxy) {
     // f -> front(true) or back(false)
     this._computeCurrentYear();
     const startYear = this.params.startYear;
@@ -325,6 +325,7 @@ class Timeline extends THREE.Group {
         const dz = data.z - prev;
         prev = data.z;
         this._translate(dz);
+        galaxy.scroll(10 * dz);
       },
     });
   }

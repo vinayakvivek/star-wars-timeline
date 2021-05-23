@@ -6,10 +6,10 @@ from utils import parse_date, parse_rdate, fetch_image
 import json
 from random import random
 
-curr_data_path = "../src/data/data.json"
-data_path = "../src/data/data.json"
+curr_data_path = "../src/data/data4.json"
+data_path = "../src/data/data4.json"
 static_dir = "../static"
-last_row = 155
+last_row = 181  # ! UPDATE IF NEW ITEMS ARE ADDED
 
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets.readonly"]
 SERVICE_ACCOUNT_FILE = "key.json"
@@ -19,7 +19,7 @@ credentials = service_account.Credentials.from_service_account_file(
 )
 
 SHEET_ID = "1KaB4ti8NissgX45bOuRpnoE07qknv7VQk_ECJ1zpJt0"
-RANGE = f"Star Wars Universe!A2:F{last_row}"
+RANGE = f"Star Wars Universe!A2:G{last_row}"
 
 service = build("sheets", "v4", credentials=credentials)
 sheet = service.spreadsheets()
@@ -36,17 +36,20 @@ values = result["values"]
 
 
 data = []
+values.reverse()
+print(len(values))
 for row in values:
     # name = re.sub('[]+', '', row[0])
     name = row[0].encode("ascii", "ignore").decode().strip()
     fname = "".join(x for x in name if x.isalnum())
     item = {
         "name": name,
-        "releaseDate": parse_rdate(row[3]),
-        "type": row[2],
+        "releaseDate": parse_rdate(row[4]),
+        "type": row[3],
         "thumbnail": f"/images/{fname}.jpg",
-        "link": row[4],
-        "imageUrl": row[5] if len(row) > 5 else "",
+        "link": row[5],
+        "imageUrl": row[6] if len(row) > 6 else "",
+        "yearOffset": float(row[2]),
         "params": {},
     }
     date = parse_date(row[1])
@@ -68,6 +71,26 @@ def fetch_curr_params(name):
     return None
 
 
+def round_params(params):
+    for key in params:
+        params[key] = round(params[key], 2)
+
+
+default_params = {
+    "labelSize": 0.08,
+    "tileOffset": 0,
+    "tileScale": 0.5,
+}
+
+
+def set_default_params(params):
+    if "labelPos" in params:
+        del params["labelPos"]
+    for key in default_params:
+        if key not in params or params[key] is None:
+            params[key] = default_params[key]
+
+
 for item in data:
     name = item["name"]
 
@@ -75,6 +98,7 @@ for item in data:
     if item["imageUrl"] != "":
         save_path = static_dir + item["thumbnail"]
         fetch_image(item["imageUrl"], item["type"], save_path)
+        del item["imageUrl"]
 
     curr_params = fetch_curr_params(name)
     if curr_params is None:
@@ -83,6 +107,10 @@ for item in data:
     else:
         item["params"] = curr_params
 
+    item["params"]["yearOffset"] = item["yearOffset"]
+    del item["yearOffset"]
+    set_default_params(item["params"])
+    round_params(item["params"])
 
 with open(data_path, "w") as f:
     json.dump(data, f, indent=2, separators=(",", ": "), sort_keys=True)
