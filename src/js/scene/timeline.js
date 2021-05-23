@@ -177,12 +177,6 @@ class Timeline extends THREE.Group {
       .onFinishChange(() => this._createLine());
   }
 
-  _translate(dz) {
-    this.line.translateY(dz);
-    this.translateZ(dz);
-    this._udpateActiveYearPlane();
-  }
-
   onClick() {
     const tiles = this.tiles.children;
     this.activeTile = null;
@@ -253,6 +247,12 @@ class Timeline extends THREE.Group {
     this.activeTile.update(dPos, dH, dY, dS, dO);
   }
 
+  _translate(dz) {
+    this.line.translateY(dz);
+    this.translateZ(dz);
+    this._udpateActiveYearPlane();
+  }
+
   scroll(dz) {
     if (
       (this.position.z >= -this.startPos && dz > 0) ||
@@ -278,17 +278,30 @@ class Timeline extends THREE.Group {
     this.currentYear = -Math.round(this.position.z / this.params.gap);
   }
 
-  snapToNext(f) {
-    // TODO: optimization, create array for nextValidYearIndex (can remove the while loops)
+  populateNextValidYearIndex() {
+    this.nextValidYearIndex = new Array(this.numYears);
+    let currValidIndex = 0;
+    for (let i = 0; i < this.numYears; ++i) {
+      this.nextValidYearIndex[i] = [currValidIndex];
+      if (this.yearValidity[i]) {
+        currValidIndex = i;
+      }
+    }
+    currValidIndex = this.numYears - 1;
+    for (let i = this.numYears - 1; i >= 0; --i) {
+      this.nextValidYearIndex[i].push(currValidIndex);
+      if (this.yearValidity[i]) {
+        currValidIndex = i;
+      }
+    }
+  }
 
+  snapToNext(f) {
     // f -> front(true) or back(false)
     this._computeCurrentYear();
     const startYear = this.params.startYear;
     const yearIndex = Math.round(this.currentYear) - startYear;
-    let fIndex = yearIndex,
-      bIndex = yearIndex;
-    while (fIndex < this.numYears && !this.yearValidity[fIndex]) fIndex++;
-    while (bIndex > 0 && !this.yearValidity[bIndex]) bIndex--;
+    const [bIndex, fIndex] = this.nextValidYearIndex[yearIndex];
 
     console.log(yearIndex, fIndex, bIndex);
     const toIndex = f ? fIndex : bIndex;

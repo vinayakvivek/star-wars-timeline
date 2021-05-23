@@ -127,25 +127,10 @@ gltfLoader.load("/models/light-saber/scene.gltf", (gltf) => {
   saberScene.add(lightSaber1.group);
   saberScene.add(lightSaber2.group);
 
-  // const props = { length: 0.0 };
-  // let tl = props.length;
-  // gsap.to(props, {
-  //   length: 3.5,
-  //   duration: 1.0,
-  //   ease: "expo",
-  //   onUpdate: () => {
-  //     lightSaber1.updateLength(props.length - tl);
-  //     lightSaber2.updateLength(props.length - tl);
-  //     tl = props.length;
-  //   },
-  // });
-
   fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
     assets.font = font;
     updateLoadingText(0);
     createTimeline(() => {});
-    // const legendsContainer = $("#legends-container");
-    // gsap.to(legendsContainer, { css: { opacity: 1.0 }, duration: 1.0 });
   });
 });
 
@@ -223,12 +208,4 @@ const onEnterAnimation = () => {
   });
 };
 
-const updateSaberPosition = () => {};
-
-export {
-  saberScene,
-  lightSaber1,
-  lightSaber2,
-  saberEffectOptions,
-  updateSaberPosition,
-};
+export { saberScene, lightSaber1, lightSaber2, saberEffectOptions };
