@@ -6,7 +6,7 @@
     "params": {
       "height": 0.9,
       "labelSize": 0.1,
-      "pos": 0.9,
+      "pos": 0.5,
       "tileOffset": 0,
       "tileScale": 0.59,
       "yearOffset": 0.0
@@ -24,7 +24,7 @@
     "name": "Tales from the Galaxy's Edge",
     "params": {
       "height": 2.05,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -8.4,
       "tileOffset": 0,
       "tileScale": 0.5,
@@ -43,7 +43,7 @@
     "name": "A Crash of Fate",
     "params": {
       "height": 3.6,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -5.41,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -62,7 +62,7 @@
     "name": "Galaxy's Edge",
     "params": {
       "height": 0.69,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -5.46,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -81,7 +81,7 @@
     "name": "Galaxy's Edge: Black Spire",
     "params": {
       "height": 2.25,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -5.49,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -100,8 +100,8 @@
     "name": "Spark of the Resistance",
     "params": {
       "height": 1.1,
-      "labelSize": 0.08,
-      "pos": 6.1,
+      "labelSize": 0.1,
+      "pos": 6.4,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -119,7 +119,7 @@
     "name": "Star Wars Adventures: Flight of the Falcon",
     "params": {
       "height": 1.04,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 4.01,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -138,7 +138,7 @@
     "name": "Pirate's Price",
     "params": {
       "height": 2.52,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 3.97,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -157,7 +157,7 @@
     "name": "BB-8 and the Snow Monster",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 10,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -176,7 +176,7 @@
     "name": "R2-D2 is LOST!",
     "params": {
       "height": 0.8,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 9,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -195,7 +195,7 @@
     "name": "C-3PO Does NOT Like Sand!",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 8,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -213,11 +213,11 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Allegiance",
     "name": "Allegiance",
     "params": {
-      "height": 0.87,
-      "labelSize": 0.08,
+      "height": 1.17,
+      "labelSize": 0.1,
       "pos": 2.96,
       "tileOffset": 0,
-      "tileScale": 0.8,
+      "tileScale": 0.85,
       "yearOffset": 0.0
     },
     "releaseDate": [
@@ -232,11 +232,11 @@
     "link": "https://starwars.fandom.com/wiki/Resistance_Reborn",
     "name": "Resistance Reborn",
     "params": {
-      "height": 1,
-      "labelSize": 0.08,
-      "pos": -1.15,
+      "height": 1.2,
+      "labelSize": 0.1,
+      "pos": 1.95,
       "tileOffset": 0,
-      "tileScale": 0.8,
+      "tileScale": 0.83,
       "yearOffset": 0.0
     },
     "releaseDate": [
@@ -252,7 +252,7 @@
     "name": "Droid Repair Bay",
     "params": {
       "height": 0.85,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -8.56,
       "tileOffset": 0,
       "tileScale": 0.5,
@@ -270,9 +270,9 @@
     "link": "https://starwars.fandom.com/wiki/Chewie_and_the_Porgs",
     "name": "Chewie and the Porgs",
     "params": {
-      "height": 2.13,
-      "labelSize": 0.08,
-      "pos": 8.25,
+      "height": 1.83,
+      "labelSize": 0.1,
+      "pos": 8.45,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -289,12 +289,12 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Episode_VIII_The_Last_Jedi",
     "name": "Episode VIII: The Last Jedi",
     "params": {
-      "height": 1.4,
+      "height": 1.1,
       "labelSize": 0.1,
-      "pos": -1.5,
+      "pos": -1.0,
       "tileOffset": 0,
       "tileScale": 0.62,
-      "yearOffset": 0.82
+      "yearOffset": 0.47
     },
     "releaseDate": [
       2017
@@ -308,9 +308,9 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_The_Last_Jedi_%E2%80%93_DJ_%E2%80%93_Most_Wanted_1",
     "name": "The Last Jedi - DJ - Most Wanted",
     "params": {
-      "height": 1.04,
-      "labelSize": 0.08,
-      "pos": 4.95,
+      "height": 1.14,
+      "labelSize": 0.1,
+      "pos": 5.35,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -327,12 +327,12 @@
     "link": "https://starwars.fandom.com/wiki/The_Legends_of_Luke_Skywalker",
     "name": "The Legends of Luke Skywalker",
     "params": {
-      "height": 2.47,
-      "labelSize": 0.08,
-      "pos": -2.81,
+      "height": 1.27,
+      "labelSize": 0.1,
+      "pos": -3.41,
       "tileOffset": 0,
       "tileScale": 0.8,
-      "yearOffset": 0.0
+      "yearOffset": -0.22
     },
     "releaseDate": [
       2017
@@ -347,7 +347,7 @@
     "name": "Canto Bight",
     "params": {
       "height": 3.59,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -4.26,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -365,9 +365,9 @@
     "link": "https://starwars.fandom.com/wiki/The_Last_Jedi:_Cobalt_Squadron",
     "name": "The Last Jedi: Cobalt Squadron",
     "params": {
-      "height": 2.64,
-      "labelSize": 0.08,
-      "pos": 4.95,
+      "height": 2.84,
+      "labelSize": 0.1,
+      "pos": 5.05,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": -0.03
@@ -385,8 +385,8 @@
     "name": "Captain Phasma",
     "params": {
       "height": 0.97,
-      "labelSize": 0.08,
-      "pos": -3.32,
+      "labelSize": 0.1,
+      "pos": -3.02,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -403,9 +403,9 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Resistance_-_Rey_1",
     "name": "Age of Resistance: Rey",
     "params": {
-      "height": 2.6,
-      "labelSize": 0.08,
-      "pos": 6,
+      "height": 2.7,
+      "labelSize": 0.1,
+      "pos": 6.2,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": -0.1
@@ -423,7 +423,7 @@
     "name": "Join the Resistance: Attack on Starkiller Base",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -6.8,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -441,9 +441,9 @@
     "link": "https://battlefront.fandom.com/wiki/Resurrection",
     "name": "Battlefront II: Resurrection",
     "params": {
-      "height": 4.01,
-      "labelSize": 0.08,
-      "pos": -2.23,
+      "height": 1.31,
+      "labelSize": 0.1,
+      "pos": -1.93,
       "tileOffset": 0,
       "tileScale": 0.5,
       "yearOffset": 0.0
@@ -461,7 +461,7 @@
     "name": "BB-8 on the Run",
     "params": {
       "height": 2.5,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 9,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -479,9 +479,9 @@
     "link": "https://starwars.fandom.com/wiki/The_Force_Awakens:_Finn%27s_Story",
     "name": "The Force Awakens: Finn's Story",
     "params": {
-      "height": 2.4,
-      "labelSize": 0.08,
-      "pos": 7.2,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": 7.4,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -498,9 +498,9 @@
     "link": "https://starwars.fandom.com/wiki/The_Force_Awakens:_Rey%27s_Story",
     "name": "The Force Awakens: Rey's Story",
     "params": {
-      "height": 4,
-      "labelSize": 0.08,
-      "pos": 7.2,
+      "height": 2.9,
+      "labelSize": 0.1,
+      "pos": 7.4,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -519,7 +519,7 @@
     "params": {
       "height": 1.4,
       "labelSize": 0.1,
-      "pos": -0.9,
+      "pos": -0.3,
       "tileOffset": 0.5,
       "tileScale": 0.73,
       "yearOffset": -0.5
@@ -537,7 +537,7 @@
     "name": "Tales from a Galaxy Far, Far Away: Aliens: Volume I",
     "params": {
       "height": 3.57,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -8.57,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -556,7 +556,7 @@
     "name": "The Perfect Weapon",
     "params": {
       "height": 2.19,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -4.29,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -575,7 +575,7 @@
     "name": "Phasma",
     "params": {
       "height": 0.78,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -4.27,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -594,7 +594,7 @@
     "name": "Join the Resistance: Escape from Vodran",
     "params": {
       "height": 2.5,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -6.9,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -613,7 +613,7 @@
     "name": "Join the Resistance",
     "params": {
       "height": 3.9,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -6.9,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -632,10 +632,10 @@
     "name": "Resistance",
     "params": {
       "height": 1.3,
-      "labelSize": 0.08,
-      "pos": 1.83,
-      "tileOffset": 0,
-      "tileScale": 0.67,
+      "labelSize": 0.1,
+      "pos": 1.33,
+      "tileOffset": 0.47,
+      "tileScale": 0.58,
       "yearOffset": 0.0
     },
     "releaseDate": [
@@ -652,8 +652,8 @@
     "name": "Poe Dameron",
     "params": {
       "height": 1.06,
-      "labelSize": 0.08,
-      "pos": 1.52,
+      "labelSize": 0.1,
+      "pos": 2.62,
       "tileOffset": 0.16,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -672,8 +672,8 @@
     "name": "Force Collector",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": 2.63,
+      "labelSize": 0.1,
+      "pos": 0.03,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -690,10 +690,10 @@
     "link": "https://starwars.fandom.com/wiki/Before_the_Awakening",
     "name": "Before the Awakening",
     "params": {
-      "height": 1,
-      "labelSize": 0.08,
-      "pos": 0.51,
-      "tileOffset": -0.3,
+      "height": 1.2,
+      "labelSize": 0.1,
+      "pos": 5.61,
+      "tileOffset": 0.28,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
@@ -709,9 +709,9 @@
     "link": "https://starwars.fandom.com/wiki/Robot_Resistance",
     "name": "Age of Resistance Special: Robot Resistance",
     "params": {
-      "height": 1,
-      "labelSize": 0.08,
-      "pos": 3.61,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": 3.71,
       "tileOffset": 0.47,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -728,9 +728,9 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Resistance_-_Poe_Dameron_1",
     "name": "Age of Resistance: Poe Dameron",
     "params": {
-      "height": 1,
-      "labelSize": 0.08,
-      "pos": 2.44,
+      "height": 1.2,
+      "labelSize": 0.1,
+      "pos": 3.14,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -748,7 +748,7 @@
     "name": "Age of Resistance: Kylo Ren",
     "params": {
       "height": 1.3,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -4.84,
       "tileOffset": 0.13,
       "tileScale": 0.8,
@@ -767,7 +767,7 @@
     "name": "Age of Resistance: General Hux",
     "params": {
       "height": 1.4,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -6.01,
       "tileOffset": 0.08,
       "tileScale": 0.8,
@@ -785,8 +785,8 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Resistance_-_Captain_Phasma_1",
     "name": "Age of Resistance: Captain Phasma",
     "params": {
-      "height": 1,
-      "labelSize": 0.08,
+      "height": 1.1,
+      "labelSize": 0.1,
       "pos": -3.27,
       "tileOffset": -0.05,
       "tileScale": 0.8,
@@ -804,9 +804,9 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Resistance_-_Finn_1",
     "name": "Age of Resistance: Finn",
     "params": {
-      "height": 1,
-      "labelSize": 0.08,
-      "pos": 1.13,
+      "height": 1.2,
+      "labelSize": 0.1,
+      "pos": 1.93,
       "tileOffset": 0.22,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -823,8 +823,8 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Resistance_-_Supreme_Leader_Snoke_1",
     "name": "Age of Resistance: Supreme Leader Snoke",
     "params": {
-      "height": 1,
-      "labelSize": 0.08,
+      "height": 1.1,
+      "labelSize": 0.1,
       "pos": -4.28,
       "tileOffset": 0.42,
       "tileScale": 0.8,
@@ -843,7 +843,7 @@
     "name": "Age of Resistance: Rose Tico",
     "params": {
       "height": 1.2,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 4.94,
       "tileOffset": 0.15,
       "tileScale": 0.8,
@@ -861,8 +861,8 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars_Adventures:_Destroyer_Down_(miniseries)",
     "name": "Star Wars Adventures: Destroyer Down",
     "params": {
-      "height": 1,
-      "labelSize": 0.08,
+      "height": 1.1,
+      "labelSize": 0.1,
       "pos": -1.35,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -881,7 +881,7 @@
     "name": "The Rise of Kylo Ren",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 1.35,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -900,7 +900,7 @@
     "name": "Bloodline",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -2.21,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -919,7 +919,7 @@
     "name": "Poe Dameron: Free Fall",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -1.55,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -938,7 +938,7 @@
     "name": "The Mandalorian",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 0.82,
       "tileOffset": 0,
       "tileScale": 0.5,
@@ -957,7 +957,7 @@
     "name": "Last Shot",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -1.88,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -976,7 +976,7 @@
     "name": "Age of Resistance Special: Maz's Scoundrels",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -7.02,
       "tileOffset": 0.03,
       "tileScale": 0.8,
@@ -995,8 +995,8 @@
     "name": "The Ghost Ship",
     "params": {
       "height": 0.8,
-      "labelSize": 0.08,
-      "pos": -1.94,
+      "labelSize": 0.1,
+      "pos": 5.66,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -1014,8 +1014,8 @@
     "name": "Aftermath: Empire's End",
     "params": {
       "height": 1.1,
-      "labelSize": 0.08,
-      "pos": -5.58,
+      "labelSize": 0.1,
+      "pos": -6.08,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.13
@@ -1033,7 +1033,7 @@
     "name": "Victory's Price",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 3.11,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -1052,8 +1052,8 @@
     "name": "Aftermath: Life Debt",
     "params": {
       "height": 1.3,
-      "labelSize": 0.08,
-      "pos": -4.97,
+      "labelSize": 0.1,
+      "pos": -5.37,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.01
@@ -1071,7 +1071,7 @@
     "name": "Shadow Fall",
     "params": {
       "height": 1.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 4.08,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -1089,11 +1089,11 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars_Battlefront_II",
     "name": "Battlefront II (DICE)",
     "params": {
-      "height": 0.9,
-      "labelSize": 0.08,
-      "pos": -3.77,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": -1.87,
       "tileOffset": 0,
-      "tileScale": 0.68,
+      "tileScale": 0.52,
       "yearOffset": 0.0
     },
     "releaseDate": [
@@ -1109,8 +1109,8 @@
     "name": "Shattered Empire",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": 6.17,
+      "labelSize": 0.1,
+      "pos": 6.97,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -1127,9 +1127,9 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Squadrons",
     "name": "Squadrons",
     "params": {
-      "height": 1.2,
-      "labelSize": 0.08,
-      "pos": -2.31,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": -1.21,
       "tileOffset": 0,
       "tileScale": 0.54,
       "yearOffset": 0.0
@@ -1146,9 +1146,9 @@
     "link": "https://www.youtube.com/watch?v=f2VmOqjV_7Q",
     "name": "Squadrons: \"Hunted\"",
     "params": {
-      "height": 1.4,
-      "labelSize": 0.08,
-      "pos": -4.1,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": -3.8,
       "tileOffset": 0,
       "tileScale": 0.5,
       "yearOffset": 0.19
@@ -1166,8 +1166,8 @@
     "name": "Uprising",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": 7.2,
+      "labelSize": 0.1,
+      "pos": 8.5,
       "tileOffset": 0,
       "tileScale": 0.5,
       "yearOffset": 0.0
@@ -1185,8 +1185,8 @@
     "name": "Aftermath",
     "params": {
       "height": 1.5,
-      "labelSize": 0.08,
-      "pos": -5.21,
+      "labelSize": 0.1,
+      "pos": -5.71,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.28
@@ -1203,9 +1203,9 @@
     "link": "https://starwars.fandom.com/wiki/Alphabet_Squadron_(novel)",
     "name": "Alphabet Squadron",
     "params": {
-      "height": 1,
-      "labelSize": 0.08,
-      "pos": 3.41,
+      "height": 0.9,
+      "labelSize": 0.1,
+      "pos": 4.41,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": -0.12
@@ -1223,8 +1223,8 @@
     "name": "The Levers of Power",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": -0.67,
+      "labelSize": 0.1,
+      "pos": -5.47,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -1241,9 +1241,9 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_TIE_Fighter_(comic_series)",
     "name": "TIE Fighter (*)",
     "params": {
-      "height": 1,
-      "labelSize": 0.08,
-      "pos": -3.38,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": -3.18,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.08
@@ -1261,10 +1261,10 @@
     "name": "Episode VI: Return of the Jedi",
     "params": {
       "height": 1.1,
-      "labelSize": 0.08,
-      "pos": 0.84,
+      "labelSize": 0.1,
+      "pos": 0.44,
       "tileOffset": 0,
-      "tileScale": 0.76,
+      "tileScale": 0.67,
       "yearOffset": 0.01
     },
     "releaseDate": [
@@ -1279,8 +1279,8 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Rebellion_-_Princess_Leia_1",
     "name": "Age of Rebellion - Princess Leia",
     "params": {
-      "height": 2.5,
-      "labelSize": 0.08,
+      "height": 1,
+      "labelSize": 0.1,
       "pos": 2.22,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -1299,8 +1299,8 @@
     "name": "Age of Rebellion - Luke Skywalker",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": 2.16,
+      "labelSize": 0.1,
+      "pos": 3.36,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -1318,8 +1318,8 @@
     "name": "Moving Target: A Princess Leia Adventure",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": 4.32,
+      "labelSize": 0.1,
+      "pos": 5.92,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -1336,9 +1336,9 @@
     "link": "https://starwars.fandom.com/wiki/The_Bridge",
     "name": "Age of Resistance Special: The Bridge",
     "params": {
-      "height": 1,
-      "labelSize": 0.08,
-      "pos": -6.23,
+      "height": 1.4,
+      "labelSize": 0.1,
+      "pos": 8.87,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -1356,7 +1356,7 @@
     "name": "Battlefront: Twilight Company",
     "params": {
       "height": 1.4,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -5.32,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -1374,9 +1374,9 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Doctor_Aphra_(2020)",
     "name": "Doctor Aphra (2020)",
     "params": {
-      "height": 1.1,
-      "labelSize": 0.08,
-      "pos": 6.17,
+      "height": 0.7,
+      "labelSize": 0.1,
+      "pos": 5.57,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -1394,7 +1394,7 @@
     "name": "Bounty Hunters",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 4.05,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -1413,7 +1413,7 @@
     "name": "Darth Vader (2020)",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -0.88,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -1432,8 +1432,8 @@
     "name": "Star Wars (Marvel 2020)",
     "params": {
       "height": 1.3,
-      "labelSize": 0.08,
-      "pos": 2.24,
+      "labelSize": 0.1,
+      "pos": 2.94,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -1450,9 +1450,9 @@
     "link": "https://starwars.fandom.com/wiki/The_Trial_of_Dagobah",
     "name": "Age of Rebellion Special - \"The Trial of Dagobah\"",
     "params": {
-      "height": 1.8,
-      "labelSize": 0.08,
-      "pos": 5.76,
+      "height": 1.3,
+      "labelSize": 0.1,
+      "pos": 7.06,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -1470,7 +1470,7 @@
     "name": "Episode V: The Empire Strikes Back",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 0.52,
       "tileOffset": 0,
       "tileScale": 0.74,
@@ -1488,9 +1488,9 @@
     "link": "https://starwars.fandom.com/wiki/From_a_Certain_Point_of_View:_The_Empire_Strikes_Back",
     "name": "From a Certain Point of View: The Empire Strikes Back",
     "params": {
-      "height": 1.8,
-      "labelSize": 0.08,
-      "pos": 1.74,
+      "height": 0.9,
+      "labelSize": 0.1,
+      "pos": 1.94,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -1508,7 +1508,7 @@
     "name": "Target Vader",
     "params": {
       "height": 1.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -2.08,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -1527,7 +1527,7 @@
     "name": "Doctor Aphra",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -1.34,
       "tileOffset": 0.28,
       "tileScale": 0.8,
@@ -1545,10 +1545,10 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Rebellion_-_Lando_Calrissian_1",
     "name": "Age of Rebellion - Lando Calrissian",
     "params": {
-      "height": 1,
-      "labelSize": 0.08,
-      "pos": 4.95,
-      "tileOffset": 0,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": 5.05,
+      "tileOffset": 0.28,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
@@ -1565,7 +1565,7 @@
     "name": "Star Wars (Marvel 2015)",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 1.37,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -1583,9 +1583,9 @@
     "link": "https://starwars.fandom.com/wiki/The_Weapon_of_a_Jedi:_A_Luke_Skywalker_Adventure",
     "name": "The Weapon of a Jedi: A Luke Skywalker Adventure",
     "params": {
-      "height": 1,
-      "labelSize": 0.08,
-      "pos": 4.4,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": 7.9,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.05
@@ -1602,9 +1602,9 @@
     "link": "https://starwars.fandom.com/wiki/Heir_to_the_Jedi",
     "name": "Heir to the Jedi",
     "params": {
-      "height": 2.5,
-      "labelSize": 0.08,
-      "pos": 4.15,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": 4.65,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.03
@@ -1621,9 +1621,9 @@
     "link": "https://starwars.fandom.com/wiki/Battlefront_II:_Inferno_Squad",
     "name": "Battlefront II: Inferno Squad",
     "params": {
-      "height": 1,
-      "labelSize": 0.08,
-      "pos": -5.31,
+      "height": 1.3,
+      "labelSize": 0.1,
+      "pos": -7.51,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -1640,9 +1640,9 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Darth_Vader_(2015)",
     "name": "Darth Vader",
     "params": {
-      "height": 1.1,
-      "labelSize": 0.08,
-      "pos": -3.33,
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": -3.13,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -1659,9 +1659,9 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Lando_(comic_series)",
     "name": "Lando",
     "params": {
-      "height": 2.5,
-      "labelSize": 0.08,
-      "pos": 1.96,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": 5.76,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -1678,9 +1678,9 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Han_Solo",
     "name": "Han Solo",
     "params": {
-      "height": 2.4,
-      "labelSize": 0.08,
-      "pos": 3.05,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": 3.75,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -1697,11 +1697,11 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Chewbacca_(Marvel)",
     "name": "Chewbacca",
     "params": {
-      "height": 1.4,
-      "labelSize": 0.08,
-      "pos": 5.39,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": 6.69,
       "tileOffset": 0,
-      "tileScale": 0.81,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
     "releaseDate": [
@@ -1716,9 +1716,9 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Princess_Leia",
     "name": "Princess Leia",
     "params": {
-      "height": 1,
-      "labelSize": 0.08,
-      "pos": 1.91,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": 1.61,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -1735,9 +1735,9 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Rebellion_-_Han_Solo_1",
     "name": "Age of Rebellion - Han Solo",
     "params": {
-      "height": 1,
-      "labelSize": 0.08,
-      "pos": 3.1,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": 2.6,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -1754,9 +1754,9 @@
     "link": "https://starwars.fandom.com/wiki/Smuggler%27s_Run:_A_Han_Solo_%26_Chewbacca_Adventure",
     "name": "Smuggler's Run: A Han Solo & Chewbacca Adventure",
     "params": {
-      "height": 3,
-      "labelSize": 0.08,
-      "pos": 5.11,
+      "height": 2.8,
+      "labelSize": 0.1,
+      "pos": 7.91,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -1774,7 +1774,7 @@
     "name": "Return to Vader's Castle",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -3.7,
       "tileOffset": -0.04,
       "tileScale": 0.8,
@@ -1793,7 +1793,7 @@
     "name": "Tales from Vader's Castle",
     "params": {
       "height": 1.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -2.7,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -1811,9 +1811,9 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Episode_IV_A_New_Hope",
     "name": "Episode IV: A New Hope",
     "params": {
-      "height": 1.1,
-      "labelSize": 0.08,
-      "pos": 0.38,
+      "height": 1.2,
+      "labelSize": 0.1,
+      "pos": -0.12,
       "tileOffset": 0,
       "tileScale": 0.71,
       "yearOffset": 0.3
@@ -1831,8 +1831,8 @@
     "name": "From a Certain Point of View",
     "params": {
       "height": 1.1,
-      "labelSize": 0.08,
-      "pos": -2.21,
+      "labelSize": 0.1,
+      "pos": -4.51,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -1849,9 +1849,9 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Rebellion_-_Grand_Moff_Tarkin_1",
     "name": "Age of Rebellion - Grand Moff Tarkin",
     "params": {
-      "height": 1,
-      "labelSize": 0.08,
-      "pos": -4.35,
+      "height": 1.2,
+      "labelSize": 0.1,
+      "pos": -5.85,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -1869,11 +1869,11 @@
     "name": "Rogue One",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": -1.02,
+      "labelSize": 0.1,
+      "pos": -1.82,
       "tileOffset": 0,
       "tileScale": 0.6,
-      "yearOffset": 0.06
+      "yearOffset": 0.0
     },
     "releaseDate": [
       2016
@@ -1888,7 +1888,7 @@
     "name": "Rogue One: Recon",
     "params": {
       "height": 1.2,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 0.4,
       "tileOffset": 0,
       "tileScale": 0.5,
@@ -1907,11 +1907,11 @@
     "name": "Guardians of the Whills",
     "params": {
       "height": 0.9,
-      "labelSize": 0.08,
-      "pos": -1.61,
+      "labelSize": 0.1,
+      "pos": 2.19,
       "tileOffset": -0.08,
       "tileScale": 0.8,
-      "yearOffset": -0.22
+      "yearOffset": -0.2
     },
     "releaseDate": [
       2017
@@ -1926,7 +1926,7 @@
     "name": "Rogue One - Cassian & K-2SO Special",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 1.08,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -1946,8 +1946,8 @@
     "name": "Thrawn: Treason",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": -2.83,
+      "labelSize": 0.1,
+      "pos": -2.73,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -1966,8 +1966,8 @@
     "name": "Thrawn: Alliances",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": -3.1,
+      "labelSize": 0.1,
+      "pos": -1.9,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -1985,7 +1985,7 @@
     "name": "Age of Rebellion - Boba Fett",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -8.61,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -2004,8 +2004,8 @@
     "name": "Age of Rebellion Special - \"Stolen Valor\"",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": 2.39,
+      "labelSize": 0.1,
+      "pos": 5.79,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -2023,7 +2023,7 @@
     "name": "Vader - Dark Visions",
     "params": {
       "height": 1.3,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -0.45,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -2043,9 +2043,9 @@
     "name": "Vader Immortal",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -5.15,
-      "tileOffset": 0.34,
+      "tileOffset": 0.42,
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
@@ -2063,9 +2063,9 @@
     "name": "Secrets of the Empire",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -3.95,
-      "tileOffset": 0,
+      "tileOffset": 0.41,
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
@@ -2082,9 +2082,9 @@
     "link": "https://starwars.fandom.com/wiki/The_Mighty_Chewbacca_in_the_Forest_of_Fear!",
     "name": "The Mighty Chewbacca in the Forest of Fear!",
     "params": {
-      "height": 1.6,
-      "labelSize": 0.08,
-      "pos": 2.51,
+      "height": 1.2,
+      "labelSize": 0.1,
+      "pos": 3.51,
       "tileOffset": 0.15,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -2103,8 +2103,8 @@
     "name": "Leia, Princess of Alderaan",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": 0.09,
+      "labelSize": 0.1,
+      "pos": 1.99,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -2123,7 +2123,7 @@
     "name": "Rebels",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -1.12,
       "tileOffset": 0,
       "tileScale": 0.5,
@@ -2143,8 +2143,8 @@
     "name": "Ezra's Gamble",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": -0.01,
+      "labelSize": 0.1,
+      "pos": -0.11,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -2163,8 +2163,8 @@
     "name": "Servants of the Empire",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": -4.39,
+      "labelSize": 0.1,
+      "pos": 2.61,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -2183,7 +2183,7 @@
     "name": "Andor",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 1.36,
       "tileOffset": 0,
       "tileScale": 0.5,
@@ -2203,8 +2203,8 @@
     "name": "Obi-Wan Kenobi",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": 0.95,
+      "labelSize": 0.1,
+      "pos": 1.35,
       "tileOffset": 0,
       "tileScale": 0.5,
       "yearOffset": 0.0
@@ -2222,7 +2222,7 @@
     "name": "Age of Rebellion - Jabba the Hutt",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -7.63,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -2241,10 +2241,10 @@
     "name": "Solo: A Star Wars Story",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": -0.21,
+      "labelSize": 0.1,
+      "pos": 0.29,
       "tileOffset": 0,
-      "tileScale": 0.5,
+      "tileScale": 0.66,
       "yearOffset": 0.0
     },
     "releaseDate": [
@@ -2260,8 +2260,8 @@
     "name": "Beckett",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": 2,
+      "labelSize": 0.1,
+      "pos": 2.8,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -2279,9 +2279,9 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Lando_-_Double_or_Nothing",
     "name": "Lando: Double or Nothing",
     "params": {
-      "height": 0.9,
-      "labelSize": 0.08,
-      "pos": -5.92,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": -5.32,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -2300,8 +2300,8 @@
     "name": "Lando's Luck",
     "params": {
       "height": 0.8,
-      "labelSize": 0.08,
-      "pos": -4.8,
+      "labelSize": 0.1,
+      "pos": -4.2,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -2320,8 +2320,8 @@
     "name": "A New Dawn",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": -1.23,
+      "labelSize": 0.1,
+      "pos": 1.67,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -2339,8 +2339,8 @@
     "name": "Bottleneck",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": -4.58,
+      "labelSize": 0.1,
+      "pos": -4.38,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -2358,8 +2358,8 @@
     "name": "Thrawn (Marvel)",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": -3.24,
+      "labelSize": 0.1,
+      "pos": -3.14,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -2378,7 +2378,7 @@
     "name": "Thrawn",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -2.52,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -2397,7 +2397,7 @@
     "name": "Lost Stars",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -0.71,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -2417,8 +2417,8 @@
     "name": "Rebel Rising",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": 4.33,
+      "labelSize": 0.1,
+      "pos": 4.53,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -2437,8 +2437,8 @@
     "name": "Han Solo - Imperial Cadet",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": -3.82,
+      "labelSize": 0.1,
+      "pos": -1.72,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -2457,8 +2457,8 @@
     "name": "Most Wanted",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": 1.25,
+      "labelSize": 0.1,
+      "pos": 1.95,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -2476,7 +2476,7 @@
     "name": "Jedi: Fallen Order",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 0.92,
       "tileOffset": 0,
       "tileScale": 0.5,
@@ -2495,11 +2495,11 @@
     "name": "Tarkin",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": -3,
+      "labelSize": 0.1,
+      "pos": -3.3,
       "tileOffset": 0,
       "tileScale": 0.8,
-      "yearOffset": 0.0
+      "yearOffset": 0.2
     },
     "releaseDate": [
       2015
@@ -2514,8 +2514,8 @@
     "name": "Mercy Mission",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": -0.33,
+      "labelSize": 0.1,
+      "pos": -2.43,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -2533,11 +2533,11 @@
     "name": "Lords of the Sith",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -1.44,
       "tileOffset": 0,
       "tileScale": 0.8,
-      "yearOffset": 0.0
+      "yearOffset": -0.2
     },
     "releaseDate": [
       2015
@@ -2553,10 +2553,10 @@
     "name": "The Bad Batch",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 5.33,
       "tileOffset": 0,
-      "tileScale": 0.69,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
     "releaseDate": [
@@ -2573,7 +2573,7 @@
     "name": "Ahsoka",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 1.67,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -2591,9 +2591,9 @@
     "link": "https://starwars.fandom.com/wiki/Adventures_in_Wild_Space:_The_Escape",
     "name": "Adventures in Wild Space: The Escape",
     "params": {
-      "height": 1.1,
-      "labelSize": 0.08,
-      "pos": 4.63,
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": 6.73,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -2611,7 +2611,7 @@
     "name": "Age of Rebellion Special - \"The Long Game\"",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -6.64,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -2631,10 +2631,10 @@
     "name": "Kanan",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": 4.15,
+      "labelSize": 0.1,
+      "pos": 4.65,
       "tileOffset": 0,
-      "tileScale": 0.84,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
     "releaseDate": [
@@ -2651,8 +2651,8 @@
     "name": "Age of Rebellion - Darth Vader",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": -4.34,
+      "labelSize": 0.1,
+      "pos": -1.94,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -2670,8 +2670,8 @@
     "name": "Darth Vader: Dark Lord of the Sith",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": -2.45,
+      "labelSize": 0.1,
+      "pos": -0.45,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -2691,8 +2691,8 @@
     "name": "Episode III: Revenge of the Sith",
     "params": {
       "height": 1.1,
-      "labelSize": 0.08,
-      "pos": -0.73,
+      "labelSize": 0.1,
+      "pos": 0.77,
       "tileOffset": 0,
       "tileScale": 0.72,
       "yearOffset": 0.17
@@ -2706,13 +2706,32 @@
   },
   {
     "duration": 0,
+    "link": "https://starwars.fandom.com/wiki/Thrawn_Ascendancy:_Lesser_Evil",
+    "name": "Thrawn Ascendancy: Lesser Evil",
+    "params": {
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": -5.88,
+      "tileOffset": 0,
+      "tileScale": 0.8,
+      "yearOffset": 0.2
+    },
+    "releaseDate": [
+      2021
+    ],
+    "thumbnail": "/images/ThrawnAscendancyLesserEvil.jpg",
+    "type": "Novel",
+    "year": -19.0
+  },
+  {
+    "duration": 0,
     "link": "https://starwars.fandom.com/wiki/Thrawn_Ascendancy:_Greater_Good",
     "name": "Thrawn Ascendancy: Greater Good",
     "params": {
-      "height": 1,
-      "labelSize": 0.08,
-      "pos": -5.13,
-      "tileOffset": 0,
+      "height": 1.3,
+      "labelSize": 0.1,
+      "pos": -5.23,
+      "tileOffset": -0.01,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
@@ -2729,12 +2748,12 @@
     "link": "https://starwars.fandom.com/wiki/Thrawn_Ascendancy:_Chaos_Rising",
     "name": "Thrawn Ascendancy: Chaos Rising",
     "params": {
-      "height": 2.5,
-      "labelSize": 0.08,
-      "pos": -5.01,
+      "height": 2.8,
+      "labelSize": 0.1,
+      "pos": -5.31,
       "tileOffset": 0,
       "tileScale": 0.8,
-      "yearOffset": 0.0
+      "yearOffset": -0.2
     },
     "releaseDate": [
       2020
@@ -2749,9 +2768,9 @@
     "link": "https://starwars.fandom.com/wiki/Dark_Disciple",
     "name": "Dark Disciple",
     "params": {
-      "height": 1,
-      "labelSize": 0.08,
-      "pos": 1.37,
+      "height": 0.9,
+      "labelSize": 0.1,
+      "pos": -1.63,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -2769,8 +2788,8 @@
     "name": "Age of Republic Special - \"Sisters\"",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": -2.36,
+      "labelSize": 0.1,
+      "pos": -2.66,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": -0.14
@@ -2788,9 +2807,9 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Darth_Maul%E2%80%94Son_of_Dathomir",
     "name": "Darth Maul: Son of Dathomir",
     "params": {
-      "height": 1.2,
-      "labelSize": 0.08,
-      "pos": -3.37,
+      "height": 1.3,
+      "labelSize": 0.1,
+      "pos": -3.87,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -2809,7 +2828,7 @@
     "name": "Catalyst: A Rogue One Novel",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 3.18,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -2829,7 +2848,7 @@
     "name": "Queen's Hope",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 3.98,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -2848,7 +2867,7 @@
     "name": "The Clone Wars: Stories of Light and Dark",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 2.36,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -2868,8 +2887,8 @@
     "name": "The Clone Wars",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": 0.74,
+      "labelSize": 0.1,
+      "pos": -0.76,
       "tileOffset": -0.35,
       "tileScale": 0.67,
       "yearOffset": 0.0
@@ -2889,8 +2908,8 @@
     "name": "The Clone Wars (film)",
     "params": {
       "height": 1.2,
-      "labelSize": 0.08,
-      "pos": 1.4,
+      "labelSize": 0.1,
+      "pos": -0.3,
       "tileOffset": 0,
       "tileScale": 0.68,
       "yearOffset": 0.0
@@ -2908,8 +2927,8 @@
     "name": "Age of Republic Special - \"501 Plus One\"",
     "params": {
       "height": 1.2,
-      "labelSize": 0.08,
-      "pos": 2.72,
+      "labelSize": 0.1,
+      "pos": 5.72,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -2927,9 +2946,9 @@
     "name": "Age of Republic - General Grievous",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": -4.06,
-      "tileOffset": 0,
+      "labelSize": 0.1,
+      "pos": -4.46,
+      "tileOffset": 0.3,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
@@ -2946,7 +2965,7 @@
     "name": "Age of Republic - Padme Amidala",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 5.12,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -2964,9 +2983,9 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Republic_-_Anakin_Skywalker_1",
     "name": "Age of Republic - Anakin Skywalker",
     "params": {
-      "height": 1,
-      "labelSize": 0.08,
-      "pos": -1.79,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": -2.39,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -2985,8 +3004,8 @@
     "name": "Jedi of the Republic - Mace Windu",
     "params": {
       "height": 1.2,
-      "labelSize": 0.08,
-      "pos": 4.08,
+      "labelSize": 0.1,
+      "pos": 3.18,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -3005,8 +3024,8 @@
     "name": "Episode II: Attack of the Clones",
     "params": {
       "height": 1.2,
-      "labelSize": 0.08,
-      "pos": -0.96,
+      "labelSize": 0.1,
+      "pos": 1.44,
       "tileOffset": 0,
       "tileScale": 0.81,
       "yearOffset": 0.0
@@ -3024,11 +3043,11 @@
     "link": "https://starwars.fandom.com/wiki/Dooku:_Jedi_Lost",
     "name": "Dooku: Jedi Lost",
     "params": {
-      "height": 1,
-      "labelSize": 0.08,
-      "pos": -3.46,
+      "height": 1.2,
+      "labelSize": 0.1,
+      "pos": -4.96,
       "tileOffset": 0,
-      "tileScale": 0.69,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
     "releaseDate": [
@@ -3045,7 +3064,7 @@
     "name": "Queen's Shadow",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 2.09,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -3065,7 +3084,7 @@
     "name": "Obi-Wan and Anakin",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 1.09,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -3084,7 +3103,7 @@
     "name": "Age of Republic - Jango Fett",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -1.65,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -3103,7 +3122,7 @@
     "name": "Age of Republic - Count Dooku",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -3.07,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -3122,7 +3141,7 @@
     "name": "Age of Republic - Obi-Wan Kenobi",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 3.82,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -3142,8 +3161,8 @@
     "name": "Episode I: The Phantom Menace",
     "params": {
       "height": 1.3,
-      "labelSize": 0.08,
-      "pos": -0.43,
+      "labelSize": 0.1,
+      "pos": 0.07,
       "tileOffset": 0,
       "tileScale": 0.87,
       "yearOffset": 0.0
@@ -3162,7 +3181,7 @@
     "name": "Queen's Peril",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 2.97,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -3181,7 +3200,7 @@
     "name": "Age of Republic - Darth Maul",
     "params": {
       "height": 1.2,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -2.14,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -3201,7 +3220,7 @@
     "name": "Darth Maul",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -3.57,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -3220,7 +3239,7 @@
     "name": "Age of Republic Special - \"The Weapon\"",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 2.32,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -3238,9 +3257,9 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Republic_-_Qui-Gon_Jinn_1",
     "name": "Age of Republic - Qui-Gon Jinn",
     "params": {
-      "height": 1,
-      "labelSize": 0.08,
-      "pos": 0.39,
+      "height": 1.3,
+      "labelSize": 0.1,
+      "pos": -0.81,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -3259,7 +3278,7 @@
     "name": "Master & Apprentice",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 1.5,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -3278,8 +3297,8 @@
     "name": "Jedi Fallen Order - Dark Temple",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
-      "pos": -1.19,
+      "labelSize": 0.1,
+      "pos": 1.51,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -3297,7 +3316,7 @@
     "name": "The High Republic Adventures",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -3.03,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -3316,7 +3335,7 @@
     "name": "The High Republic (comic)",
     "params": {
       "height": 1.4,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -4.26,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -3335,18 +3354,18 @@
     "name": "The High Republic: Race to Crashpoint Tower",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 2.39,
       "tileOffset": 0,
       "tileScale": 0.8,
-      "yearOffset": 0.0
+      "yearOffset": 0.2
     },
     "releaseDate": [
       2021
     ],
     "thumbnail": "/images/TheHighRepublicRacetoCrashpointTower.jpg",
     "type": "Junior Novel",
-    "year": -231.8
+    "year": -232.0
   },
   {
     "duration": 0,
@@ -3354,7 +3373,7 @@
     "name": "The High Republic: A Test of Courage",
     "params": {
       "height": 2.5,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 2.51,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -3373,18 +3392,18 @@
     "name": "The High Republic: Out of Shadows",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -0.57,
       "tileOffset": 0,
       "tileScale": 0.8,
-      "yearOffset": 0.0
+      "yearOffset": 0.2
     },
     "releaseDate": [
       2021
     ],
     "thumbnail": "/images/TheHighRepublicOutofShadows.jpg",
     "type": "Young Adult Novel",
-    "year": -231.8
+    "year": -232.0
   },
   {
     "duration": 0,
@@ -3392,7 +3411,7 @@
     "name": "The High Republic: Into the Dark",
     "params": {
       "height": 2.5,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -0.53,
       "tileOffset": 0,
       "tileScale": 0.8,
@@ -3411,18 +3430,18 @@
     "name": "The High Republic: The Rising Storm",
     "params": {
       "height": 1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 0.85,
       "tileOffset": 0,
       "tileScale": 0.8,
-      "yearOffset": 0.0
+      "yearOffset": 0.2
     },
     "releaseDate": [
       2021
     ],
     "thumbnail": "/images/TheHighRepublicTheRisingStorm.jpg",
     "type": "Novel",
-    "year": -231.8
+    "year": -232.0
   },
   {
     "duration": 0,
@@ -3430,7 +3449,7 @@
     "name": "The High Republic: Light of the Jedi",
     "params": {
       "height": 2.5,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 0.95,
       "tileOffset": 0,
       "tileScale": 0.8,

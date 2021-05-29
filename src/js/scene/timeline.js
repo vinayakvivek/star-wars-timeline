@@ -209,10 +209,11 @@ class Timeline extends THREE.Group {
       return;
     }
     let dPos = 0.0;
-    let dH = 0.0;
-    let dY = 0.0;
-    let dS = 0.0;
-    let dO = 0.0;
+    let dH = 0.0; // height
+    let dY = 0.0; // yearOffset
+    let dS = 0.0; // tileScale
+    let dO = 0.0; // tileOffset
+    let dls = 0.0; // labelScale
     switch (key) {
       case "ArrowLeft":
         dPos += delta;
@@ -243,8 +244,15 @@ class Timeline extends THREE.Group {
         break;
       case "c":
         dO -= 0.01;
+        break;
+      case "o":
+        dls += 0.01;
+        break;
+      case "p":
+        dls -= 0.01;
+        break;
     }
-    this.activeTile.update(dPos, dH, dY, dS, dO);
+    this.activeTile.update(dPos, dH, dY, dS, dO, dls);
   }
 
   _translate(dz) {

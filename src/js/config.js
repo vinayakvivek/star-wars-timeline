@@ -18,7 +18,7 @@ const showBorders = true;
 
 const state = {
   loading: true,
-  cameraPosition: new Vector3(0, 0.5, 3),
+  cameraPosition: new Vector3(0, 1.3, 7),
 };
 
 const mouse = new Vector2();

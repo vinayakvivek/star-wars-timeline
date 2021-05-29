@@ -161,7 +161,8 @@ loadingManager.onLoad = () => {
 
 const onEnterAnimation = () => {
   // play bgm
-  playBgm();
+  // TODO: enable after adding mute button
+  // playBgm();
 
   // face and hide enterButton
   gsap.to(enterButton, {

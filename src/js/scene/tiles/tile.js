@@ -23,6 +23,7 @@ class Tile extends THREE.Group {
     this.name = item.name;
     this.borderColor = borderColor;
     this.texture = textureLoader.load(item.thumbnail);
+    item.params.labelSize = 0.1;
     this.params = {
       tileScale: 0.5,
       tileOffset: 0.0, // percentage offset (of halfWidth)
@@ -50,17 +51,23 @@ class Tile extends THREE.Group {
     this.movable.add(this.tile);
   }
 
-  update(dPos = 0, dH = 0, dY = 0, dS = 0, dO = 0) {
+  update(dPos = 0, dH = 0, dY = 0, dS = 0, dO = 0, dls = 0) {
     this.item.params.pos += dPos;
     this.item.params.height += dH;
     this.item.params.yearOffset += dY;
     this.item.params.tileScale += dS;
     this.item.params.tileOffset += dO;
+    this.item.params.labelSize += dls;
     this.params = { ...this.params, ...this.item.params };
     this.position.y += dH;
     this.position.x -= dPos;
     this.position.z += this.timelineGap * dY;
     this.tile.scale.setScalar(this.params.tileScale);
+
+    // // reset label
+    // this.movable.remove(this.label);
+    // this._createLabel();
+
     if (this.halfWidth) {
       this.movable.position.x += this.halfWidth * dO;
     }
@@ -148,7 +155,10 @@ class Tile extends THREE.Group {
       const parts = name.split(" - ");
       return parts;
     }
-    return [name];
+
+    const parts = name.split(" ");
+    const n = parts.length;
+    return [parts.slice(0, n / 2).join(" "), parts.slice(n / 2).join(" ")];
   }
 
   _createLabel() {
@@ -157,7 +167,7 @@ class Tile extends THREE.Group {
     let index = 0;
     for (const namePart of this._nameParts()) {
       const mesh = new THREE.Mesh(this._textGeometry(namePart), material);
-      mesh.position.y -= index++ * 0.15;
+      mesh.position.y -= index++ * 0.2;
       this.label.add(mesh);
     }
 
