@@ -15,6 +15,7 @@ const size = {
 };
 
 const showBorders = true;
+const showLoading = true;
 
 const state = {
   loading: true,
@@ -42,6 +43,7 @@ export {
   size,
   state,
   showBorders,
+  showLoading,
   mouse,
   raycaster,
   gui,

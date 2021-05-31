@@ -8,6 +8,10 @@ import { gui, gltfLoader } from "../config";
 const scene = new THREE.Scene();
 scene.add(camera);
 
+const fogColor = new THREE.Color("#000000");
+scene.background = fogColor;
+scene.fog = new THREE.Fog(fogColor, 1, 50);
+
 let timeline;
 const createTimeline = (loadingCallback) => {
   timeline = new Timeline();

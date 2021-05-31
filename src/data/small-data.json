@@ -1,0 +1,87 @@
+[
+  {
+    "duration": 0,
+    "link": "https://starwars.fandom.com/wiki/Star_Wars:_Episode_IX_The_Rise_of_Skywalker",
+    "name": "Episode IX: The Rise of Skywalker",
+    "params": {
+      "height": 0.9,
+      "labelSize": 0.1,
+      "pos": 0.5,
+      "tileOffset": 0,
+      "tileScale": 0.59,
+      "yearOffset": 0.0
+    },
+    "releaseDate": [2019],
+    "thumbnail": "/images/EpisodeIXTheRiseofSkywalker.jpg",
+    "type": "Movie",
+    "year": 35.0
+  },
+  {
+    "duration": 0,
+    "link": "https://starwars.fandom.com/wiki/Star_Wars:_Tales_from_the_Galaxy%27s_Edge",
+    "name": "Tales from the Galaxy's Edge",
+    "params": {
+      "height": 2.05,
+      "labelSize": 0.1,
+      "pos": -8.4,
+      "tileOffset": 0,
+      "tileScale": 0.5,
+      "yearOffset": 0.0
+    },
+    "releaseDate": [2020],
+    "thumbnail": "/images/TalesfromtheGalaxysEdge.jpg",
+    "type": "VR",
+    "year": 34.0
+  },
+  {
+    "duration": 0,
+    "link": "https://starwars.fandom.com/wiki/A_Crash_of_Fate",
+    "name": "A Crash of Fate",
+    "params": {
+      "height": 3.6,
+      "labelSize": 0.1,
+      "pos": -5.41,
+      "tileOffset": 0,
+      "tileScale": 0.8,
+      "yearOffset": 0.0
+    },
+    "releaseDate": [2019],
+    "thumbnail": "/images/ACrashofFate.jpg",
+    "type": "Novel",
+    "year": 34.0
+  },
+  {
+    "duration": 0,
+    "link": "https://starwars.fandom.com/wiki/Star_Wars:_Galaxy%27s_Edge_(comic_series)",
+    "name": "Galaxy's Edge",
+    "params": {
+      "height": 0.69,
+      "labelSize": 0.1,
+      "pos": -5.46,
+      "tileOffset": 0,
+      "tileScale": 0.8,
+      "yearOffset": 0.0
+    },
+    "releaseDate": [2019],
+    "thumbnail": "/images/GalaxysEdge.jpg",
+    "type": "Comic",
+    "year": 34.0
+  },
+  {
+    "duration": 0,
+    "link": "https://starwars.fandom.com/wiki/Galaxy%27s_Edge:_Black_Spire",
+    "name": "Galaxy's Edge: Black Spire",
+    "params": {
+      "height": 2.25,
+      "labelSize": 0.1,
+      "pos": -5.49,
+      "tileOffset": 0,
+      "tileScale": 0.8,
+      "yearOffset": 0.0
+    },
+    "releaseDate": [2019],
+    "thumbnail": "/images/GalaxysEdgeBlackSpire.jpg",
+    "type": "Novel",
+    "year": 34.0
+  }
+]

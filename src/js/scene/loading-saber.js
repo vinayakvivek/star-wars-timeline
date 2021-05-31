@@ -4,6 +4,7 @@ import {
   gltfLoader,
   gui,
   loadingManager,
+  showLoading,
   state,
 } from "../config";
 import { createTimeline, timeline } from "./scene";
@@ -155,8 +156,12 @@ const enterButton = $("#enter-btn");
 loadingManager.onLoad = () => {
   loadingText.visible = false;
   timeline.visible = true;
-  enterButton.show();
-  enterButton.click(onEnterAnimation);
+  if (showLoading) {
+    enterButton.show();
+    enterButton.click(onEnterAnimation);
+  } else {
+    state.loading = false;
+  }
 };
 
 const onEnterAnimation = () => {
@@ -197,8 +202,8 @@ const onEnterAnimation = () => {
   });
 
   // rotate camera from top to horizontal view
-  gsap.to(camera.rotation, {
-    x: 0.0,
+  gsap.to(camera.position, {
+    z: state.cameraPosition.z,
     delay: 2.0,
     duration: 4.0,
     // ease: "expo.inOut",

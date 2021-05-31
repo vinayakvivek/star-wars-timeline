@@ -33,6 +33,9 @@ class Timeline extends THREE.Group {
       this.yearValidity[i] = false;
     }
 
+    // is snapToNext running?
+    this.snapping = false;
+
     // add gui tweaks
     this._initTweaks();
   }
@@ -262,6 +265,10 @@ class Timeline extends THREE.Group {
   }
 
   scroll(dz) {
+    if (this.snapping) {
+      console.log("snapping in progress");
+      return;
+    }
     if (
       (this.position.z >= -this.startPos && dz > 0) ||
       (this.position.z <= -this.endPos && dz < 0)
@@ -272,6 +279,10 @@ class Timeline extends THREE.Group {
   }
 
   sideScroll(dx) {
+    if (this.snapping) {
+      console.log("snapping in progress");
+      return;
+    }
     if (
       (this.position.x >= this.leftX - 1 && dx > 0) ||
       (this.position.x <= this.rightX + 1 && dx < 0)
@@ -311,18 +322,27 @@ class Timeline extends THREE.Group {
     const yearIndex = Math.round(this.currentYear) - startYear;
     const [bIndex, fIndex] = this.nextValidYearIndex[yearIndex];
 
-    console.log(yearIndex, fIndex, bIndex);
     const toIndex = f ? fIndex : bIndex;
     // if diff less than 1, do not move
     if (
-      Math.abs(yearIndex - fIndex) < 2 ||
+      Math.abs(yearIndex - fIndex) < 3 ||
       Math.abs(yearIndex - bIndex) < 3 ||
-      toIndex == this.numYears ||
+      toIndex == this.numYears - 1 ||
       toIndex == 0
     ) {
       return;
     }
 
+    if (Math.abs(yearIndex - toIndex) > 20) {
+      if (
+        Math.abs(yearIndex - fIndex) < 5 ||
+        Math.abs(yearIndex - bIndex) < 5
+      ) {
+        return;
+      }
+    }
+
+    this.snapping = true;
     const toPos = -(toIndex + startYear + 1) * this.params.gap;
     const data = { z: this.position.z };
     let prev = data.z;
@@ -334,6 +354,9 @@ class Timeline extends THREE.Group {
         prev = data.z;
         this._translate(dz);
         galaxy.scroll(10 * dz);
+      },
+      onComplete: () => {
+        this.snapping = false;
       },
     });
   }

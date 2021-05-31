@@ -6,6 +6,7 @@ const pos = new Vector2();
 const delta = new Vector2();
 const maxDeltas = 5;
 let lastDeltas = [];
+let damingAnimation;
 
 const updateScene = (delta) => {
   if (!timeline) return;
@@ -20,6 +21,11 @@ window.addEventListener("touchstart", (e) => {
   delta.x = 0;
   delta.y = 0;
   lastDeltas = [];
+  if (damingAnimation) {
+    // if touchscroll is started during damping, it can run snap twice => buggy behaviour
+    // so kill current damping
+    damingAnimation.kill();
+  }
 });
 
 let isFront = false;
@@ -39,7 +45,7 @@ window.addEventListener("touchmove", (e) => {
 });
 
 const damp = (delta) => {
-  gsap.to(delta, {
+  damingAnimation = gsap.to(delta, {
     x: 0.0,
     y: 0.0,
     duration: 1.0,
