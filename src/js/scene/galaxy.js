@@ -4,6 +4,11 @@ const randomPos = (width) => {
   return (Math.random() - 0.5) * 2 * width;
 };
 
+const randomExpPos = (width) => {
+  const r = Math.random();
+  return (0.5 - r * r * r) * 2 * width;
+};
+
 class Galaxy extends THREE.Group {
   constructor() {
     super();
@@ -40,10 +45,13 @@ class Galaxy extends THREE.Group {
     const points = new Float32Array(this.count * 3);
     for (let i = 0; i < this.count; ++i) {
       const i3 = i * 3;
-      const z = randomPos(this.fieldSize.z);
+      // const x = randomExpPos(this.fieldSize.x);
+      // const y = randomExpPos(this.fieldSize.y);
+      // let v = new THREE.Vector2(x, y);
+      // v.add(v.clone().normalize().multiplyScalar(10));
       points[i3] = randomPos(this.fieldSize.x);
       points[i3 + 1] = randomPos(this.fieldSize.y);
-      points[i3 + 2] = z;
+      points[i3 + 2] = randomPos(this.fieldSize.z);
     }
     const geometry = new THREE.BufferGeometry();
     geometry.setAttribute("position", new THREE.BufferAttribute(points, 3));

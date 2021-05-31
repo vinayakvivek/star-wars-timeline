@@ -13,7 +13,12 @@ import { KernelSize } from "postprocessing";
 import camera, { saberCamera } from "./camera";
 import gsap from "gsap";
 import { Vector3 } from "three";
-import { playBgm } from "../audio";
+import {
+  playBgm,
+  playSaberHum,
+  playSaberIgnition,
+  stopSaberHum,
+} from "../audio";
 
 const saberEffectOptions = {
   height: 480,
@@ -128,6 +133,8 @@ gltfLoader.load("/models/light-saber/scene.gltf", (gltf) => {
   saberScene.add(lightSaber1.group);
   saberScene.add(lightSaber2.group);
 
+  playSaberHum();
+
   fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
     assets.font = font;
     updateLoadingText(0);
@@ -161,13 +168,18 @@ loadingManager.onLoad = () => {
     enterButton.click(onEnterAnimation);
   } else {
     state.loading = false;
+    stopSaberHum();
   }
 };
 
 const onEnterAnimation = () => {
+  // stop saber hum
+  stopSaberHum();
+
   // play bgm
   // TODO: enable after adding mute button
   // playBgm();
+  playSaberIgnition();
 
   // face and hide enterButton
   gsap.to(enterButton, {
@@ -182,9 +194,13 @@ const onEnterAnimation = () => {
   const props = { length: maxLength };
   gsap.to(props, {
     length: 0.0,
-    delay: 1.0,
+    delay: 0.0,
     duration: 2.0,
     ease: "expo",
+    onStart: () => {
+      // playSaberIgnition();
+      // won't play in mobile, if played here
+    },
     onUpdate: () => {
       lightSaber1.setLength(props.length);
       lightSaber2.setLength(props.length);

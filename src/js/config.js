@@ -19,7 +19,7 @@ const showLoading = true;
 
 const state = {
   loading: true,
-  cameraPosition: new Vector3(0, 1.3, 7),
+  cameraPosition: new Vector3(0, 0.8, 7),
 };
 
 const mouse = new Vector2();
