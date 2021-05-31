@@ -4,15 +4,21 @@ import gsap from "gsap";
 
 const pos = new Vector2();
 const delta = new Vector2();
+
+// for damping, use average of last 5 deltas (there might be outliers)
 const maxDeltas = 5;
 let lastDeltas = [];
-let damingAnimation;
+
+let dampingAnimation;
 
 const updateScene = (delta) => {
   if (!timeline) return;
-  galaxy.scroll(0.5 * delta.y);
-  timeline.scroll(0.02 * delta.y);
-  timeline.sideScroll(0.01 * delta.x);
+  if (Math.abs(delta.y) > Math.abs(delta.x)) {
+    galaxy.scroll(0.5 * delta.y);
+    timeline.scroll(0.02 * delta.y);
+  } else {
+    timeline.sideScroll(0.01 * delta.x);
+  }
 };
 
 window.addEventListener("touchstart", (e) => {
@@ -21,10 +27,10 @@ window.addEventListener("touchstart", (e) => {
   delta.x = 0;
   delta.y = 0;
   lastDeltas = [];
-  if (damingAnimation) {
+  if (dampingAnimation) {
     // if touchscroll is started during damping, it can run snap twice => buggy behaviour
     // so kill current damping
-    damingAnimation.kill();
+    dampingAnimation.kill();
   }
 });
 
@@ -45,7 +51,7 @@ window.addEventListener("touchmove", (e) => {
 });
 
 const damp = (delta) => {
-  damingAnimation = gsap.to(delta, {
+  dampingAnimation = gsap.to(delta, {
     x: 0.0,
     y: 0.0,
     duration: 1.0,

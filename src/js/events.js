@@ -41,14 +41,16 @@ let isFront = false;
 window.addEventListener("wheel", (e) => {
   if (!timeline) return;
 
-  galaxy.scroll(0.1 * e.deltaY);
+  if (Math.abs(e.deltaY) < Math.abs(e.deltaX)) {
+    timeline.sideScroll(-0.003 * e.deltaX);
+    return;
+  }
 
+  galaxy.scroll(0.1 * e.deltaY);
   const dz = 0.003 * e.deltaY;
   timeline.scroll(dz);
-  timeline.sideScroll(-0.003 * e.deltaX);
 
   isFront = dz < 0;
-
   window.clearTimeout(isScrolling);
   isScrolling = setTimeout(() => {
     timeline.snapToNext(isFront, galaxy);
