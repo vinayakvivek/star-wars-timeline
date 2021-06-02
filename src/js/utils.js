@@ -55,19 +55,29 @@ export function disposeHierarchy(node) {
   }
 }
 
+const popupContainerEle = $("#popup-container");
 const popupEle = $("#popup");
 const popupBgEle = $("#popup-bg");
 const popupIframeEle = $("#popup-iframe");
-const t = 500;
+// const iframeWindow = document.getElementById("popup-iframe").contentWindow;
+const t = 300;
+
+const closePopup = () => {
+  popupIframeEle.attr("src", "");
+  popupContainerEle.hide(t);
+};
+
 export const openLinkPopup = (link) => {
   if (!link) return;
-  popupEle.show(t, () => {
+  popupContainerEle.show(t, () => {
     popupIframeEle.attr("src", link);
   });
-  popupBgEle.show(t);
-  popupBgEle.click(() => {
-    popupIframeEle.attr("src", "");
-    popupEle.hide(t);
-    popupBgEle.hide(t);
-  });
 };
+
+popupBgEle.click(closePopup);
+
+// popup buttons
+$("#popup-close").click(closePopup);
+$("#popup-new-tab").click(() => {
+  window.open(popupIframeEle.attr("src"), "_blank").focus();
+});

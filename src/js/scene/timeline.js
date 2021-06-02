@@ -191,8 +191,6 @@ class Timeline extends THREE.Group {
       }
     }
     if (this.activeTile) {
-      // open item url
-      // window.open(this.activeTile.item.link, "_blank").focus();
       openLinkPopup(this.activeTile.item.link);
     }
   }

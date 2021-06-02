@@ -30,10 +30,18 @@
       </div>
 
       <!-- popup on clicking item -->
-      <div id="popup">
-        <iframe id="popup-iframe"></iframe>
+      <div id="popup-container">
+        <div id="popup">
+          <iframe id="popup-iframe"></iframe>
+        </div>
+        <div id="popup-bg"></div>
+        <div id="popup-buttons">
+          <button class="btn" id="popup-new-tab">Open in new tab</button>
+          <button class="btn" id="popup-close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
       </div>
-      <div id="popup-bg"></div>
     </div>
   </body>
 </html>
