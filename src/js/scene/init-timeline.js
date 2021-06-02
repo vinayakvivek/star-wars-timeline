@@ -1,5 +1,5 @@
 import { createTile } from "./tiles/tile-factory";
-import data from "../../data/small-data.json";
+import data from "../../data/data.json";
 
 const initTimeline = (timeline) => {
   let index = 0;
