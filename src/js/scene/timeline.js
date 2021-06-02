@@ -189,7 +189,10 @@ class Timeline extends THREE.Group {
         break;
       }
     }
-    console.log(this.activeTile);
+    if (this.activeTile) {
+      // open item url
+      window.open(this.activeTile.item.link, "_blank").focus();
+    }
   }
 
   onKeyPress(key) {

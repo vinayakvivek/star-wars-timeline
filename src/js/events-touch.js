@@ -1,6 +1,7 @@
 import { Vector2, Clock } from "three";
 import { galaxy, timeline } from "./scene";
 import gsap from "gsap";
+import { timelineClick } from "./events";
 
 const pos = new Vector2();
 const delta = new Vector2();
@@ -66,7 +67,11 @@ const damp = (delta) => {
 };
 
 window.addEventListener("touchend", (e) => {
-  if (lastDeltas.length < 1) return;
+  if (lastDeltas.length < 1) {
+    // just a click, not scroll
+    timelineClick(pos.x, pos.y);
+    return;
+  }
   const avgDelta = lastDeltas
     .reduce((a, b) => a.add(b), new Vector2())
     .divideScalar(lastDeltas.length);

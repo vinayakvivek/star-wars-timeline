@@ -24,11 +24,19 @@ $("#export-btn").click(() => {
   download(JSON.stringify(data, null, 2), "data.json", "application/json");
 });
 
+let isTimelineClicked;
+export const timelineClick = (x, y) => {
+  clearTimeout(isTimelineClicked);
+  isTimelineClicked = setTimeout(() => {
+    mouse.x = (x / size.width) * 2 - 1;
+    mouse.y = -(y / size.height) * 2 + 1;
+    raycaster.setFromCamera(mouse, camera);
+    timeline && timeline.onClick();
+  }, 100);
+};
+
 window.addEventListener("click", (event) => {
-  mouse.x = (event.clientX / size.width) * 2 - 1;
-  mouse.y = -(event.clientY / size.height) * 2 + 1;
-  raycaster.setFromCamera(mouse, camera);
-  timeline && timeline.onClick();
+  timelineClick(event.clientX, event.clientY);
 });
 
 const delta = 0.5;
