@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { gui, fontLoader, assets, raycaster } from "../config";
 import gsap from "gsap";
+import { openLinkPopup } from "../utils";
 
 class Timeline extends THREE.Group {
   constructor() {
@@ -191,7 +192,8 @@ class Timeline extends THREE.Group {
     }
     if (this.activeTile) {
       // open item url
-      window.open(this.activeTile.item.link, "_blank").focus();
+      // window.open(this.activeTile.item.link, "_blank").focus();
+      openLinkPopup(this.activeTile.item.link);
     }
   }
 

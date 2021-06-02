@@ -15,7 +15,7 @@ const size = {
 };
 
 const showBorders = true;
-const showLoading = true;
+const showLoading = false;
 
 const state = {
   loading: true,
