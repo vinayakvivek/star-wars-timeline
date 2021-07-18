@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { size } from "./config";
 
 function disposeNode(node) {
   if (node instanceof THREE.Mesh) {
@@ -59,18 +60,20 @@ const popupContainerEle = $("#popup-container");
 const popupEle = $("#popup");
 const popupBgEle = $("#popup-bg");
 const popupIframeEle = $("#popup-iframe");
-// const iframeWindow = document.getElementById("popup-iframe").contentWindow;
 const t = 300;
+let isPopupOpen = false;
 
 const closePopup = () => {
   popupIframeEle.attr("src", "");
   popupContainerEle.hide(t);
+  isPopupOpen = false;
 };
 
 export const openLinkPopup = (link) => {
   if (!link) return;
   popupContainerEle.show(t, () => {
     popupIframeEle.attr("src", link);
+    isPopupOpen = true;
   });
 };
 
@@ -81,3 +84,31 @@ $("#popup-close").click(closePopup);
 $("#popup-new-tab").click(() => {
   window.open(popupIframeEle.attr("src"), "_blank").focus();
 });
+
+const tooltipEle = $("#tooltip");
+const tooltipOffset = 10;
+export const showTooltip = (data, x, y) => {
+  // if data is null or the popup is open
+  // hide the tooltip
+  if (!data || isPopupOpen) {
+    tooltipEle.hide("slow");
+    return;
+  }
+
+  tooltipEle.hide();
+  tooltipEle.html(`<p>${data}</p>`);
+  const left = Math.min(
+    size.width - tooltipEle.width() - 20,
+    x + tooltipOffset
+  );
+  const top = Math.min(
+    size.height - tooltipEle.height() - 20,
+    y + tooltipOffset
+  );
+  tooltipEle.css({
+    top: top + "px",
+    left: left + "px",
+    position: "absolute",
+  });
+  tooltipEle.show("slow");
+};

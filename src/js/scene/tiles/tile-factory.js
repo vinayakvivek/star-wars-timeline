@@ -10,7 +10,7 @@ const tileTypeProps = {
   "Young Adult Novel": { type: 1, color: "#f0aa99" },
   "Short Story": { type: 1, color: "#ff5500" },
   AudioBook: { type: 1, color: "#665432" },
-  Movie: { type: 0, color: "#550055" },
+  Movie: { type: 0, color: "#1967bf" },
   Series: { type: 0, color: "#128b4e" },
   VR: { type: 0, color: "#873249" },
   Game: { type: 0, color: "#ab3498" },
@@ -28,10 +28,11 @@ legendsListElement.html(items.join(""));
 export const createTile = (item) => {
   try {
     const { type, color } = tileTypeProps[item.type];
+    const blackColor = "#222222";
     if (type == 0) {
-      return new MovieTile(item, color);
+      return new MovieTile(item, blackColor);
     } else {
-      return new BookTile(item, color);
+      return new BookTile(item, blackColor);
     }
   } catch (e) {
     return new MovieTile(item, "#ffffff");

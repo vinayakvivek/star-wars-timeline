@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { gui, fontLoader, assets, raycaster } from "../config";
 import gsap from "gsap";
-import { openLinkPopup } from "../utils";
+import { openLinkPopup, showTooltip } from "../utils";
 
 class Timeline extends THREE.Group {
   constructor() {
@@ -181,7 +181,7 @@ class Timeline extends THREE.Group {
       .onFinishChange(() => this._createLine());
   }
 
-  onClick() {
+  _findActiveTile() {
     const tiles = this.tiles.children;
     this.activeTile = null;
     for (let i = 0; i < tiles.length; i++) {
@@ -190,8 +190,29 @@ class Timeline extends THREE.Group {
         break;
       }
     }
+  }
+
+  onClick() {
+    this._findActiveTile();
     if (this.activeTile) {
       openLinkPopup(this.activeTile.item.link);
+      showTooltip(null);
+    }
+  }
+
+  onHover(x, y) {
+    const prevActiveTile = this.activeTile;
+    this._findActiveTile();
+    if (this.activeTile) {
+      // if previous tile is same as current tile, then the cursor moved only around the image
+      // no need to re-render tooltip in this case
+      if (prevActiveTile === this.activeTile) {
+        return;
+      }
+      console.log(this.activeTile.name);
+      showTooltip(this.activeTile.name, x, y);
+    } else {
+      showTooltip(null);
     }
   }
 

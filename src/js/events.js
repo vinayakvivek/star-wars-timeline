@@ -3,6 +3,7 @@ import { setDebugModeByLocation } from "./debug";
 import { mouse, raycaster, size } from "./config";
 import gsap from "gsap";
 import "./events-touch";
+import { showTooltip } from "./utils";
 
 window.addEventListener("load", () => {
   setDebugModeByLocation();
@@ -57,12 +58,30 @@ window.addEventListener("wheel", (e) => {
   galaxy.scroll(0.1 * e.deltaY);
   const dz = 0.003 * e.deltaY;
   timeline.scroll(dz);
+  showTooltip(null);
 
   isFront = dz < 0;
   window.clearTimeout(isScrolling);
   isScrolling = setTimeout(() => {
     timeline.snapToNext(isFront, galaxy);
+    onMouseMove(e.clientX, e.clientY);
   }, 66);
+});
+
+// show tooltip on hover
+let isMouseMoving;
+const onMouseMove = (x, y) => {
+  clearTimeout(isMouseMoving);
+  isMouseMoving = setTimeout(() => {
+    mouse.x = (x / size.width) * 2 - 1;
+    mouse.y = -(y / size.height) * 2 + 1;
+    raycaster.setFromCamera(mouse, camera);
+    timeline && timeline.onHover(x, y);
+  }, 300);
+};
+
+window.addEventListener("mousemove", (e) => {
+  onMouseMove(e.clientX, e.clientY);
 });
 
 // toggle legend buttons

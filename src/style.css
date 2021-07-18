@@ -104,6 +104,18 @@ html, body {
   display: none;
 }
 
+#tooltip {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  color: white;
+  background-color: rgb(54, 54, 54);
+  padding: 5px 10px;
+  text-overflow: clip;
+  white-space: nowrap;
+  border-radius: 5px;
+}
+
 #popup-container {
   display: none;
   position: fixed;
