@@ -224,7 +224,7 @@ const onEnterAnimation = () => {
     duration: 4.0,
     // ease: "expo.inOut",
     onComplete: () => {
-      const legendsContainer = $("#legends-container");
+      const legendsContainer = $("#tile-type-container");
       gsap.to(legendsContainer, { css: { opacity: 1.0 }, duration: 1.0 });
     },
   });

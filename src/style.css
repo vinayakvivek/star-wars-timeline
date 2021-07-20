@@ -61,21 +61,21 @@ html, body {
   letter-spacing: 3px;
 }
 
-#legends-container {
+#tile-type-container {
   position: absolute;
   left: 20px;
   top: 20px;
-  min-width: 100px;
+  min-width: 150px;
   min-height: 50px;
   opacity: 0.0;
   overflow: hidden;
 }
 
-#legends-list {
+#tile-type-list {
   margin-top: 30px;
 }
 
-#legends-list li {
+#tile-type-list li {
   color: white;
   font-family: monospace;
   display: flex;
@@ -84,7 +84,11 @@ html, body {
   padding: 5px;
 }
 
-#legends-container #toggle-btn {
+#tile-type-list li input {
+  margin-right: 10px;
+}
+
+#tile-type-container #toggle-btn {
   padding: 5px;
 }
 

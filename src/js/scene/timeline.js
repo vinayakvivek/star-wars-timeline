@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { gui, assets } from "../config";
+import { gui, assets, state } from "../config";
 import gsap from "gsap";
 import { openLinkPopup, showTooltip } from "../utils";
 
@@ -29,11 +29,6 @@ class Timeline extends THREE.Group {
     this.tiles = new THREE.Group();
     this.add(this.tiles);
 
-    this.yearValidity = new Array(this.numYears);
-    for (let i = 0; i < this.numYears; ++i) {
-      this.yearValidity[i] = false;
-    }
-
     // is snapToNext running?
     this.snapping = false;
 
@@ -56,9 +51,41 @@ class Timeline extends THREE.Group {
     this.hitTestPlane = plane;
   }
 
+  filterTiles() {
+    // show only comics
+    if (!state.tileFilters.length) {
+      // empty filters
+      this.tiles.children.forEach((tile) => (tile.visible = true));
+    } else {
+      this.tiles.children.forEach((tile) => {
+        tile.visible = state.tileFilters.includes(tile.item.type);
+      });
+    }
+
+    // reset yearValidity for snapping
+    this.yearValidity = new Array(this.numYears);
+    for (let i = 0; i < this.numYears; ++i) {
+      this.yearValidity[i] = false;
+    }
+    const { startYear } = this.params;
+    this.tiles.children.forEach((tile) => {
+      if (!tile.visible) return;
+      const { year, duration } = tile.item;
+      this.yearValidity[Math.round(year - startYear)] = true;
+      if (duration > 0) {
+        const start = Math.round(year - startYear);
+        const end = Math.round(year + duration - startYear);
+        for (let i = start; i <= end; ++i) {
+          this.yearValidity[i] = true;
+        }
+      }
+    });
+    this.populateNextValidYearIndex();
+  }
+
   addTile(tile, item) {
     this.tiles.add(tile);
-    const { year, duration } = item;
+    const { year, duration } = tile.item;
     const gap = this.params.gap;
     if (duration > 0) {
       const startX = year * gap;
@@ -70,17 +97,6 @@ class Timeline extends THREE.Group {
       tile.createMarker();
     }
     tile.rotation.y = Math.PI / 2;
-
-    // add to yearValidity
-    const { startYear } = this.params;
-    this.yearValidity[Math.round(year - startYear)] = true;
-    if (duration > 0) {
-      const start = Math.round(year - startYear);
-      const end = Math.round(year + duration - startYear);
-      for (let i = start; i <= end; ++i) {
-        this.yearValidity[i] = true;
-      }
-    }
   }
 
   removeTile(tile) {
@@ -203,7 +219,7 @@ class Timeline extends THREE.Group {
     for (let i = 0; i < tiles.length; i++) {
       const tilePos = tiles[i].position.z;
       if (tilePos > currPos + 5 || tilePos < currPos - 20) continue;
-      if (tiles[i].checkClick()) {
+      if (tiles[i].visible && tiles[i].checkClick()) {
         this.activeTile = tiles[i];
         break;
       }

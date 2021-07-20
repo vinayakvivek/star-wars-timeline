@@ -1,7 +1,9 @@
+import { state } from "../../config";
+import { timeline } from "../scene";
 import BookTile from "./book-tile";
 import MovieTile from "./movie-tile";
 
-const legendsListElement = $("#legends-list");
+const tileTypeSelectorListElement = $("#tile-type-list");
 
 const tileTypeProps = {
   Novel: { type: 1, color: "#ff0000" },
@@ -20,10 +22,25 @@ const tileTypeProps = {
 const items = [];
 for (const key in tileTypeProps) {
   items.push(
-    `<li><div class="color-box" style="border-color: ${tileTypeProps[key].color}"></div>${key}</li>`
+    `<li><input type="checkbox" class="tile-type-selector" name="type" value="${key}">${key}</li>`
   );
 }
-legendsListElement.html(items.join(""));
+tileTypeSelectorListElement.html(items.join(""));
+
+const tileTypeSelectors = document.getElementsByClassName("tile-type-selector");
+const updateTileFilter = () => {
+  const selected = [];
+  for (let i = 0; i < tileTypeSelectors.length; ++i) {
+    if (tileTypeSelectors.item(i).checked) {
+      selected.push(tileTypeSelectors[i].value);
+    }
+  }
+  state.tileFilters = selected;
+  timeline.filterTiles();
+};
+for (let i = 0; i < tileTypeSelectors.length; ++i) {
+  tileTypeSelectors.item(i).addEventListener("click", updateTileFilter);
+}
 
 export const createTile = (item) => {
   try {

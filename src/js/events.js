@@ -85,20 +85,20 @@ window.addEventListener("mousemove", (e) => {
 });
 
 // toggle legend buttons
-const legendList = $("#legends-container > #legends-list");
-const toggleButton = $("#legends-container > #toggle-btn");
+const legendList = $("#tile-type-container > #tile-type-list");
+const toggleButton = $("#tile-type-container > #toggle-btn");
 let legendShown = legendList.is(":visible");
-toggleButton.html(legendShown ? "Hide legend" : "Show Legend");
+toggleButton.html(legendShown ? "Hide Type Selector" : "Show Type Selector");
 toggleButton.click(() => {
   if (legendShown) {
-    toggleButton.html("Show legend");
+    toggleButton.html("Show Type Selector");
     legendShown = false;
     animateLegend(0.0, () => {
       legendList.hide();
     });
   } else {
     legendList.show();
-    toggleButton.html("Hide legend");
+    toggleButton.html("Hide Type Selector");
     legendShown = true;
     animateLegend(1.0, () => {
       legendList.show();
