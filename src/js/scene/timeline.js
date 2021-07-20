@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { gui, fontLoader, assets, raycaster } from "../config";
+import { gui, assets } from "../config";
 import gsap from "gsap";
 import { openLinkPopup, showTooltip } from "../utils";
 
@@ -39,6 +39,21 @@ class Timeline extends THREE.Group {
 
     // add gui tweaks
     this._initTweaks();
+  }
+
+  // for optimizing hit test, not used now
+  _createHitTestPlane() {
+    const width = this.params.width + 5;
+    const height = 5;
+    const planeGeometry = new THREE.PlaneGeometry(width, height);
+    const plane = new THREE.Mesh(
+      planeGeometry,
+      new THREE.MeshBasicMaterial({ transparent: true, opacity: 0.3 })
+    );
+    plane.position.y = height / 2 - 0.5;
+    plane.position.z = 2;
+    this.add(plane);
+    this.hitTestPlane = plane;
   }
 
   addTile(tile, item) {
@@ -160,10 +175,10 @@ class Timeline extends THREE.Group {
     this.activeYearPlane.lookAt(new THREE.Vector3(0, 1, 0));
     this.activeYearPlane.position.y = 0.001;
     this.add(this.activeYearPlane);
-    this._udpateActiveYearPlane();
+    this._updateActiveYearPlane();
   }
 
-  _udpateActiveYearPlane() {
+  _updateActiveYearPlane() {
     this._computeCurrentYear();
     this.activeYearPlane.position.z = this.currentYear * this.params.gap;
   }
@@ -184,7 +199,10 @@ class Timeline extends THREE.Group {
   _findActiveTile() {
     const tiles = this.tiles.children;
     this.activeTile = null;
+    const currPos = this.currentYear * this.params.gap;
     for (let i = 0; i < tiles.length; i++) {
+      const tilePos = tiles[i].position.z;
+      if (tilePos > currPos + 5 || tilePos < currPos - 20) continue;
       if (tiles[i].checkClick()) {
         this.activeTile = tiles[i];
         break;
@@ -209,8 +227,7 @@ class Timeline extends THREE.Group {
       if (prevActiveTile === this.activeTile) {
         return;
       }
-      console.log(this.activeTile.name);
-      showTooltip(this.activeTile.name, x, y);
+      showTooltip(this.activeTile.item, x, y);
     } else {
       showTooltip(null);
     }
@@ -285,7 +302,8 @@ class Timeline extends THREE.Group {
   _translate(dz) {
     this.line.translateY(dz);
     this.translateZ(dz);
-    this._udpateActiveYearPlane();
+    this._updateActiveYearPlane();
+    // this.hitTestPlane.translateZ(-dz);
   }
 
   scroll(dz) {

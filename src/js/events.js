@@ -77,7 +77,7 @@ const onMouseMove = (x, y) => {
     mouse.y = -(y / size.height) * 2 + 1;
     raycaster.setFromCamera(mouse, camera);
     timeline && timeline.onHover(x, y);
-  }, 300);
+  }, 100);
 };
 
 window.addEventListener("mousemove", (e) => {

@@ -85,18 +85,43 @@ $("#popup-new-tab").click(() => {
   window.open(popupIframeEle.attr("src"), "_blank").focus();
 });
 
+const yearWithSuffix = (year, offset) => {
+  return Math.abs(year) + " " + (year + offset > 0 ? "ABY" : "BBY");
+};
+const tooltipHtml = (data) => {
+  const getYear = () => {
+    const y1 = yearWithSuffix(data.year, data.params.yearOffset);
+    if (data.duration > 0) {
+      const y2 = yearWithSuffix(data.year + data.duration, 0);
+      return `Galactic Years: <span class="value">${y1} - ${y2}</span>`;
+    }
+    return `Galactic Year: <span class="value">${y1}</span>`;
+  };
+  return `
+    <div class="tooltip-content">
+      <p class="name">${data.name}</p>
+      <p class="year">${getYear()}</p>
+      <p class="type">Type: <span class="value">${data.type}</span></p>
+      <p class="release-year">Release Year: <span class="value">${
+        data.releaseDate[0]
+      }</span></p>
+    </div>
+  `;
+};
+
 const tooltipEle = $("#tooltip");
 const tooltipOffset = 10;
 export const showTooltip = (data, x, y) => {
   // if data is null or the popup is open
   // hide the tooltip
   if (!data || isPopupOpen) {
-    tooltipEle.hide("slow");
+    $("body").css("cursor", "default");
+    tooltipEle.hide(1000);
     return;
   }
 
   tooltipEle.hide();
-  tooltipEle.html(`<p>${data}</p>`);
+  tooltipEle.html(tooltipHtml(data));
   const left = Math.min(
     size.width - tooltipEle.width() - 20,
     x + tooltipOffset
@@ -110,5 +135,6 @@ export const showTooltip = (data, x, y) => {
     left: left + "px",
     position: "absolute",
   });
+  $("body").css("cursor", "pointer");
   tooltipEle.show("slow");
 };
