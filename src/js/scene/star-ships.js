@@ -2,7 +2,15 @@ import { gltfLoader } from "../config";
 import gsap from "gsap";
 
 export class StarShip {
-  constructor(scene, name, modelPath, transform = (model) => {}, start, end) {
+  constructor(
+    name,
+    modelPath,
+    transform = (model) => {},
+    start,
+    end,
+    tVisible = 1.6,
+    duration = 5
+  ) {
     this.name = name;
     this.loaded = false;
     this.model = null;
@@ -10,10 +18,11 @@ export class StarShip {
     this.end = end;
     this.enterInProgress = false;
     this.remainIdle = false;
+    this.tVisible = tVisible;
+    this.duration = duration;
     gltfLoader.load(modelPath, (gltf) => {
       this.model = gltf.scene;
       transform(this.model);
-      scene.add(this.model);
       this.model.visible = false;
       this.loaded = true;
     });
@@ -54,14 +63,14 @@ export class StarShip {
     };
 
     gsap.to(props, {
-      t: 1.6,
+      t: this.tVisible,
       delay: 2,
-      duration: 5,
+      duration: this.duration,
       ease: "expo.out",
       onUpdate: updatePos,
       onComplete: () => {
         gsap.to(props, {
-          t: 2,
+          t: 3,
           duration: 1,
           ease: "expo",
           onUpdate: updatePos,
