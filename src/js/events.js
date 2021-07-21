@@ -1,9 +1,10 @@
-import { data, timeline, galaxy, camera, enterShip } from "./scene";
+import { data, timeline, galaxy, camera } from "./scene";
 import { setDebugModeByLocation } from "./debug";
 import { mouse, raycaster, size } from "./config";
 import gsap from "gsap";
 import "./events-touch";
 import { showTooltip } from "./utils";
+import { enterShip } from "./scene/init-ships";
 
 window.addEventListener("load", () => {
   setDebugModeByLocation();

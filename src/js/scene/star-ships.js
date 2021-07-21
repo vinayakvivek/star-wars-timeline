@@ -20,6 +20,7 @@ export class StarShip {
     this.remainIdle = false;
     this.tVisible = tVisible;
     this.duration = duration;
+    console.log(`Creating ship: ${name}`);
     gltfLoader.load(modelPath, (gltf) => {
       this.model = gltf.scene;
       transform(this.model);
