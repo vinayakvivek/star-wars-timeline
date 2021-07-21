@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { gui, assets, state } from "../config";
 import gsap from "gsap";
 import { openLinkPopup, showTooltip } from "../utils";
+// import { ships } from "./star-ships";
 
 class Timeline extends THREE.Group {
   constructor() {
@@ -319,7 +320,6 @@ class Timeline extends THREE.Group {
     this.line.translateY(dz);
     this.translateZ(dz);
     this._updateActiveYearPlane();
-    // this.hitTestPlane.translateZ(-dz);
   }
 
   scroll(dz) {

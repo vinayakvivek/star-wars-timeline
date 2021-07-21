@@ -1,0 +1,11 @@
+Model Information:
+* title:	Naboo Royal Starship (J-type 327 Nubian)
+* source:	https://sketchfab.com/3d-models/naboo-royal-starship-j-type-327-nubian-f631077977754b5591298ecfa201380b
+* author:	hobbit84 (https://sketchfab.com/hobbit84)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Naboo Royal Starship (J-type 327 Nubian)" (https://sketchfab.com/3d-models/naboo-royal-starship-j-type-327-nubian-f631077977754b5591298ecfa201380b) by hobbit84 (https://sketchfab.com/hobbit84) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

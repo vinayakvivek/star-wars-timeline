@@ -1,4 +1,4 @@
-import { data, timeline, galaxy, camera } from "./scene";
+import { data, timeline, galaxy, camera, enterShip } from "./scene";
 import { setDebugModeByLocation } from "./debug";
 import { mouse, raycaster, size } from "./config";
 import gsap from "gsap";
@@ -65,6 +65,7 @@ window.addEventListener("wheel", (e) => {
   isScrolling = setTimeout(() => {
     timeline.snapToNext(isFront, galaxy);
     onMouseMove(e.clientX, e.clientY);
+    enterShip();
   }, 66);
 });
 

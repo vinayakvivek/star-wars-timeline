@@ -19,6 +19,7 @@ import {
   SMAAEffect,
 } from "postprocessing";
 import { saberCamera } from "./scene/camera";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 const renderer = new THREE.WebGLRenderer({
   alpha: true,
