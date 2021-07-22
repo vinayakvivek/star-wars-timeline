@@ -7,7 +7,7 @@ import {
   showLoading,
   state,
 } from "../config";
-import { createTimeline, timeline } from "./scene";
+import scene, { createTimeline, timeline } from "./scene";
 import * as THREE from "three";
 import { KernelSize } from "postprocessing";
 import camera, { saberCamera } from "./camera";
@@ -19,6 +19,7 @@ import {
   playSaberIgnition,
   stopSaberHum,
 } from "../audio";
+import { createShips } from "./init-ships";
 
 const saberEffectOptions = {
   height: 480,
@@ -163,6 +164,7 @@ const enterButton = $("#enter-btn");
 loadingManager.onLoad = () => {
   loadingText.visible = false;
   timeline.visible = true;
+  createShips(scene);
   if (showLoading) {
     enterButton.show();
     enterButton.click(onEnterAnimation);

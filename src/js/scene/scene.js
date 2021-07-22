@@ -3,9 +3,7 @@ import camera from "./camera";
 import Timeline from "./timeline";
 import Galaxy from "./galaxy";
 import { initTimeline } from "./init-timeline";
-import { gui, gltfLoader } from "../config";
-import { StarShip } from "./star-ships";
-import { createShips } from "./init-ships";
+import { gui } from "../config";
 
 const scene = new THREE.Scene();
 scene.add(camera);
@@ -24,7 +22,6 @@ const createTimeline = (loadingCallback) => {
   gui.add(timeline.position, "y", -5, 5, 0.01).name("timelineY");
 
   initTimeline(timeline, loadingCallback);
-  createShips(scene);
 };
 
 const galaxyScene = new THREE.Scene();
