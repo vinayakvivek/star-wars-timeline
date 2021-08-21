@@ -125,19 +125,19 @@ const lightSaber2 = new LightSaber({
   direction: new THREE.Vector3(1, 1, 0.0),
 });
 
-gltfLoader.load("/models/light-saber/scene.gltf", (gltf) => {
-  const saberHandle = gltf.scene;
-  lightSaber1.addHandle(saberHandle.clone());
-  lightSaber2.addHandle(saberHandle.clone());
+fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
+  assets.font = font;
+  updateLoadingText(0);
 
-  saberScene.add(lightSaber1.group);
-  saberScene.add(lightSaber2.group);
+  gltfLoader.load("/models/light-saber/scene.gltf", (gltf) => {
+    const saberHandle = gltf.scene;
+    lightSaber1.addHandle(saberHandle.clone());
+    lightSaber2.addHandle(saberHandle.clone());
 
-  playSaberHum();
+    saberScene.add(lightSaber1.group);
+    saberScene.add(lightSaber2.group);
 
-  fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
-    assets.font = font;
-    updateLoadingText(0);
+    playSaberHum();
     createTimeline(() => {});
   });
 });
