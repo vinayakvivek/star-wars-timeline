@@ -28,6 +28,8 @@ html, body {
   position: absolute;
   width: 100vw;
   place-items: center;
+  color: white;
+  text-align: center;
 }
 
 .btn {
@@ -49,16 +51,24 @@ html, body {
 #title {
   font-family: 'star-jedi';
   font-size: 4rem;
-  color: white;
-  text-align: center;
 }
 
 #sub-title {
   font-family: 'star-jedi';
   font-size: 1.5rem;
-  color: white;
-  text-align: center;
   letter-spacing: 3px;
+}
+
+#created-by {
+  margin-top: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9em;
+}
+#created-by > a:link, a:visited {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 #tile-type-container {
