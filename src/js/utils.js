@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { size } from "./config";
 
 function disposeNode(node) {
   if (node instanceof THREE.Mesh) {
@@ -54,3 +55,86 @@ export function disposeHierarchy(node) {
     disposeNode(child);
   }
 }
+
+const popupContainerEle = $("#popup-container");
+const popupEle = $("#popup");
+const popupBgEle = $("#popup-bg");
+const popupIframeEle = $("#popup-iframe");
+const t = 300;
+let isPopupOpen = false;
+
+const closePopup = () => {
+  popupIframeEle.attr("src", "");
+  popupContainerEle.hide(t);
+  isPopupOpen = false;
+};
+
+export const openLinkPopup = (link) => {
+  if (!link) return;
+  popupContainerEle.show(t, () => {
+    popupIframeEle.attr("src", link);
+    isPopupOpen = true;
+  });
+};
+
+popupBgEle.click(closePopup);
+
+// popup buttons
+$("#popup-close").click(closePopup);
+$("#popup-new-tab").click(() => {
+  window.open(popupIframeEle.attr("src"), "_blank").focus();
+});
+
+const yearWithSuffix = (year, offset) => {
+  return Math.abs(year) + " " + (year + offset > 0 ? "ABY" : "BBY");
+};
+const tooltipHtml = (data) => {
+  const getYear = () => {
+    const y1 = yearWithSuffix(data.year, data.params.yearOffset);
+    if (data.duration > 0) {
+      const y2 = yearWithSuffix(data.year + data.duration, 0);
+      return `Galactic Years: <span class="value">${y1} - ${y2}</span>`;
+    }
+    return `Galactic Year: <span class="value">${y1}</span>`;
+  };
+  return `
+    <div class="tooltip-content">
+      <p class="name">${data.name}</p>
+      <p class="year">${getYear()}</p>
+      <p class="type">Type: <span class="value">${data.type}</span></p>
+      <p class="release-year">Release Year: <span class="value">${
+        data.releaseDate[0]
+      }</span></p>
+    </div>
+  `;
+};
+
+const tooltipEle = $("#tooltip");
+const tooltipOffset = 10;
+export const showTooltip = (data, x, y) => {
+  // if data is null or the popup is open
+  // hide the tooltip
+  if (!data || isPopupOpen) {
+    $("body").css("cursor", "default");
+    tooltipEle.hide(1000);
+    return;
+  }
+
+  tooltipEle.hide();
+  tooltipEle.html(tooltipHtml(data));
+  const left = Math.min(
+    size.width - tooltipEle.width() - 20,
+    x + tooltipOffset
+  );
+  const top = Math.min(
+    size.height - tooltipEle.height() - 20,
+    y + tooltipOffset
+  );
+  tooltipEle.css({
+    top: top + "px",
+    left: left + "px",
+    position: "absolute",
+  });
+  $("body").css("cursor", "pointer");
+  tooltipEle.show("slow");
+};

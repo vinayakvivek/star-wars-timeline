@@ -15,10 +15,12 @@ const size = {
 };
 
 const showBorders = true;
+const showLoading = true;
 
 const state = {
   loading: true,
-  cameraPosition: new Vector3(0, 1.3, 7),
+  cameraPosition: new Vector3(0, 0.8, 7),
+  tileFilters: [],
 };
 
 const mouse = new Vector2();
@@ -42,6 +44,7 @@ export {
   size,
   state,
   showBorders,
+  showLoading,
   mouse,
   raycaster,
   gui,

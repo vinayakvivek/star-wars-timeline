@@ -1,6 +1,7 @@
 import * as THREE from "three";
-import { gui, fontLoader, assets, raycaster } from "../config";
+import { gui, assets, state } from "../config";
 import gsap from "gsap";
+import { openLinkPopup, showTooltip } from "../utils";
 
 class Timeline extends THREE.Group {
   constructor() {
@@ -28,18 +29,63 @@ class Timeline extends THREE.Group {
     this.tiles = new THREE.Group();
     this.add(this.tiles);
 
-    this.yearValidity = new Array(this.numYears);
-    for (let i = 0; i < this.numYears; ++i) {
-      this.yearValidity[i] = false;
-    }
+    // is snapToNext running?
+    this.snapping = false;
 
     // add gui tweaks
     this._initTweaks();
   }
 
+  // for optimizing hit test, not used now
+  _createHitTestPlane() {
+    const width = this.params.width + 5;
+    const height = 5;
+    const planeGeometry = new THREE.PlaneGeometry(width, height);
+    const plane = new THREE.Mesh(
+      planeGeometry,
+      new THREE.MeshBasicMaterial({ transparent: true, opacity: 0.3 })
+    );
+    plane.position.y = height / 2 - 0.5;
+    plane.position.z = 2;
+    this.add(plane);
+    this.hitTestPlane = plane;
+  }
+
+  filterTiles() {
+    // show only comics
+    if (!state.tileFilters.length) {
+      // empty filters
+      this.tiles.children.forEach((tile) => (tile.visible = true));
+    } else {
+      this.tiles.children.forEach((tile) => {
+        tile.visible = state.tileFilters.includes(tile.item.type);
+      });
+    }
+
+    // reset yearValidity for snapping
+    this.yearValidity = new Array(this.numYears);
+    for (let i = 0; i < this.numYears; ++i) {
+      this.yearValidity[i] = false;
+    }
+    const { startYear } = this.params;
+    this.tiles.children.forEach((tile) => {
+      if (!tile.visible) return;
+      const { year, duration } = tile.item;
+      this.yearValidity[Math.round(year - startYear)] = true;
+      if (duration > 0) {
+        const start = Math.round(year - startYear);
+        const end = Math.round(year + duration - startYear);
+        for (let i = start; i <= end; ++i) {
+          this.yearValidity[i] = true;
+        }
+      }
+    });
+    this.populateNextValidYearIndex();
+  }
+
   addTile(tile, item) {
     this.tiles.add(tile);
-    const { year, duration } = item;
+    const { year, duration } = tile.item;
     const gap = this.params.gap;
     if (duration > 0) {
       const startX = year * gap;
@@ -51,17 +97,6 @@ class Timeline extends THREE.Group {
       tile.createMarker();
     }
     tile.rotation.y = Math.PI / 2;
-
-    // add to yearValidity
-    const { startYear } = this.params;
-    this.yearValidity[Math.round(year - startYear)] = true;
-    if (duration > 0) {
-      const start = Math.round(year - startYear);
-      const end = Math.round(year + duration - startYear);
-      for (let i = start; i <= end; ++i) {
-        this.yearValidity[i] = true;
-      }
-    }
   }
 
   removeTile(tile) {
@@ -156,10 +191,10 @@ class Timeline extends THREE.Group {
     this.activeYearPlane.lookAt(new THREE.Vector3(0, 1, 0));
     this.activeYearPlane.position.y = 0.001;
     this.add(this.activeYearPlane);
-    this._udpateActiveYearPlane();
+    this._updateActiveYearPlane();
   }
 
-  _udpateActiveYearPlane() {
+  _updateActiveYearPlane() {
     this._computeCurrentYear();
     this.activeYearPlane.position.z = this.currentYear * this.params.gap;
   }
@@ -177,16 +212,41 @@ class Timeline extends THREE.Group {
       .onFinishChange(() => this._createLine());
   }
 
-  onClick() {
+  _findActiveTile() {
     const tiles = this.tiles.children;
     this.activeTile = null;
+    const currPos = this.currentYear * this.params.gap;
     for (let i = 0; i < tiles.length; i++) {
-      if (tiles[i].checkClick()) {
+      const tilePos = tiles[i].position.z;
+      if (tilePos > currPos + 5 || tilePos < currPos - 20) continue;
+      if (tiles[i].visible && tiles[i].checkClick()) {
         this.activeTile = tiles[i];
         break;
       }
     }
-    console.log(this.activeTile);
+  }
+
+  onClick() {
+    this._findActiveTile();
+    if (this.activeTile) {
+      openLinkPopup(this.activeTile.item.link);
+      showTooltip(null);
+    }
+  }
+
+  onHover(x, y) {
+    const prevActiveTile = this.activeTile;
+    this._findActiveTile();
+    if (this.activeTile) {
+      // if previous tile is same as current tile, then the cursor moved only around the image
+      // no need to re-render tooltip in this case
+      if (prevActiveTile === this.activeTile) {
+        return;
+      }
+      showTooltip(this.activeTile.item, x, y);
+    } else {
+      showTooltip(null);
+    }
   }
 
   onKeyPress(key) {
@@ -258,10 +318,15 @@ class Timeline extends THREE.Group {
   _translate(dz) {
     this.line.translateY(dz);
     this.translateZ(dz);
-    this._udpateActiveYearPlane();
+    this._updateActiveYearPlane();
+    // this.hitTestPlane.translateZ(-dz);
   }
 
   scroll(dz) {
+    if (this.snapping) {
+      console.log("snapping in progress");
+      return;
+    }
     if (
       (this.position.z >= -this.startPos && dz > 0) ||
       (this.position.z <= -this.endPos && dz < 0)
@@ -272,6 +337,10 @@ class Timeline extends THREE.Group {
   }
 
   sideScroll(dx) {
+    if (this.snapping) {
+      console.log("snapping in progress");
+      return;
+    }
     if (
       (this.position.x >= this.leftX - 1 && dx > 0) ||
       (this.position.x <= this.rightX + 1 && dx < 0)
@@ -311,18 +380,27 @@ class Timeline extends THREE.Group {
     const yearIndex = Math.round(this.currentYear) - startYear;
     const [bIndex, fIndex] = this.nextValidYearIndex[yearIndex];
 
-    console.log(yearIndex, fIndex, bIndex);
     const toIndex = f ? fIndex : bIndex;
     // if diff less than 1, do not move
     if (
-      Math.abs(yearIndex - fIndex) < 2 ||
+      Math.abs(yearIndex - fIndex) < 3 ||
       Math.abs(yearIndex - bIndex) < 3 ||
-      toIndex == this.numYears ||
+      toIndex == this.numYears - 1 ||
       toIndex == 0
     ) {
       return;
     }
 
+    if (Math.abs(yearIndex - toIndex) > 20) {
+      if (
+        Math.abs(yearIndex - fIndex) < 5 ||
+        Math.abs(yearIndex - bIndex) < 5
+      ) {
+        return;
+      }
+    }
+
+    this.snapping = true;
     const toPos = -(toIndex + startYear + 1) * this.params.gap;
     const data = { z: this.position.z };
     let prev = data.z;
@@ -334,6 +412,9 @@ class Timeline extends THREE.Group {
         prev = data.z;
         this._translate(dz);
         galaxy.scroll(10 * dz);
+      },
+      onComplete: () => {
+        this.snapping = false;
       },
     });
   }

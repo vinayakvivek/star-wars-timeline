@@ -4,6 +4,7 @@ import {
   gltfLoader,
   gui,
   loadingManager,
+  showLoading,
   state,
 } from "../config";
 import { createTimeline, timeline } from "./scene";
@@ -12,7 +13,12 @@ import { KernelSize } from "postprocessing";
 import camera, { saberCamera } from "./camera";
 import gsap from "gsap";
 import { Vector3 } from "three";
-import { playBgm } from "../audio";
+import {
+  playBgm,
+  playSaberHum,
+  playSaberIgnition,
+  stopSaberHum,
+} from "../audio";
 
 const saberEffectOptions = {
   height: 480,
@@ -119,17 +125,19 @@ const lightSaber2 = new LightSaber({
   direction: new THREE.Vector3(1, 1, 0.0),
 });
 
-gltfLoader.load("/models/light-saber/scene.gltf", (gltf) => {
-  const saberHandle = gltf.scene;
-  lightSaber1.addHandle(saberHandle.clone());
-  lightSaber2.addHandle(saberHandle.clone());
+fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
+  assets.font = font;
+  updateLoadingText(0);
 
-  saberScene.add(lightSaber1.group);
-  saberScene.add(lightSaber2.group);
+  gltfLoader.load("/models/light-saber/scene.gltf", (gltf) => {
+    const saberHandle = gltf.scene;
+    lightSaber1.addHandle(saberHandle.clone());
+    lightSaber2.addHandle(saberHandle.clone());
 
-  fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
-    assets.font = font;
-    updateLoadingText(0);
+    saberScene.add(lightSaber1.group);
+    saberScene.add(lightSaber2.group);
+
+    playSaberHum();
     createTimeline(() => {});
   });
 });
@@ -155,14 +163,23 @@ const enterButton = $("#enter-btn");
 loadingManager.onLoad = () => {
   loadingText.visible = false;
   timeline.visible = true;
-  enterButton.show();
-  enterButton.click(onEnterAnimation);
+  if (showLoading) {
+    enterButton.show();
+    enterButton.click(onEnterAnimation);
+  } else {
+    state.loading = false;
+    stopSaberHum();
+  }
 };
 
 const onEnterAnimation = () => {
+  // stop saber hum
+  stopSaberHum();
+
   // play bgm
   // TODO: enable after adding mute button
   // playBgm();
+  playSaberIgnition();
 
   // face and hide enterButton
   gsap.to(enterButton, {
@@ -177,9 +194,13 @@ const onEnterAnimation = () => {
   const props = { length: maxLength };
   gsap.to(props, {
     length: 0.0,
-    delay: 1.0,
+    delay: 0.0,
     duration: 2.0,
     ease: "expo",
+    onStart: () => {
+      // playSaberIgnition();
+      // won't play in mobile, if played here
+    },
     onUpdate: () => {
       lightSaber1.setLength(props.length);
       lightSaber2.setLength(props.length);
@@ -197,14 +218,14 @@ const onEnterAnimation = () => {
   });
 
   // rotate camera from top to horizontal view
-  gsap.to(camera.rotation, {
-    x: 0.0,
+  gsap.to(camera.position, {
+    z: state.cameraPosition.z,
     delay: 2.0,
     duration: 4.0,
     // ease: "expo.inOut",
     onComplete: () => {
-      const legendsContainer = $("#legends-container");
-      gsap.to(legendsContainer, { css: { opacity: 1.0 }, duration: 1.0 });
+      $("#tile-type-container").fadeTo(1000, 1);
+      $("#created-by").fadeTo(1000, 0);
     },
   });
 };

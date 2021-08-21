@@ -1,4 +1,4 @@
-import './style.css';
-import render from './js/render';
+import "./style.css";
+import render from "./js/render";
 
 render();

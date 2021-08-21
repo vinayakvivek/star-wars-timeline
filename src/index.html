@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ahsoka</title>
     <script
-      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
   </head>
@@ -16,18 +16,38 @@
       <div class="container">
         <h1 id="title">Star Wars</h1>
         <h2 id="sub-title">Timeline</h2>
+        <p id="created-by">
+          Created by:
+          <a href="https://github.com/vinayakvivek" target="_blank">Vinayak</a>
+        </p>
         <button class="btn" id="export-btn">Export Data</button>
       </div>
       <button class="btn" id="enter-btn">Enter</button>
-      <div id="legends-container">
+      <div id="tile-type-container">
         <button class="btn" id="toggle-btn">Hide Legend</button>
-        <ul id="legends-list">
+        <ul id="tile-type-list">
           <li>
             <div class="color-box" style="border-color: red"></div>
             Novel
           </li>
         </ul>
       </div>
+
+      <!-- popup on clicking item -->
+      <div id="popup-container">
+        <div id="popup">
+          <iframe id="popup-iframe"></iframe>
+        </div>
+        <div id="popup-bg"></div>
+        <div id="popup-buttons">
+          <button class="btn" id="popup-new-tab">Open in new tab</button>
+          <button class="btn" id="popup-close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="tooltip"></div>
     </div>
   </body>
 </html>

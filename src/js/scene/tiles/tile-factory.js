@@ -1,7 +1,9 @@
+import { state } from "../../config";
+import { timeline } from "../scene";
 import BookTile from "./book-tile";
 import MovieTile from "./movie-tile";
 
-const legendsListElement = $("#legends-list");
+const tileTypeSelectorListElement = $("#tile-type-list");
 
 const tileTypeProps = {
   Novel: { type: 1, color: "#ff0000" },
@@ -10,7 +12,7 @@ const tileTypeProps = {
   "Young Adult Novel": { type: 1, color: "#f0aa99" },
   "Short Story": { type: 1, color: "#ff5500" },
   AudioBook: { type: 1, color: "#665432" },
-  Movie: { type: 0, color: "#550055" },
+  Movie: { type: 0, color: "#1967bf" },
   Series: { type: 0, color: "#128b4e" },
   VR: { type: 0, color: "#873249" },
   Game: { type: 0, color: "#ab3498" },
@@ -20,18 +22,34 @@ const tileTypeProps = {
 const items = [];
 for (const key in tileTypeProps) {
   items.push(
-    `<li><div class="color-box" style="border-color: ${tileTypeProps[key].color}"></div>${key}</li>`
+    `<li><input type="checkbox" class="tile-type-selector" name="type" value="${key}">${key}</li>`
   );
 }
-legendsListElement.html(items.join(""));
+tileTypeSelectorListElement.html(items.join(""));
+
+const tileTypeSelectors = document.getElementsByClassName("tile-type-selector");
+const updateTileFilter = () => {
+  const selected = [];
+  for (let i = 0; i < tileTypeSelectors.length; ++i) {
+    if (tileTypeSelectors.item(i).checked) {
+      selected.push(tileTypeSelectors[i].value);
+    }
+  }
+  state.tileFilters = selected;
+  timeline.filterTiles();
+};
+for (let i = 0; i < tileTypeSelectors.length; ++i) {
+  tileTypeSelectors.item(i).addEventListener("click", updateTileFilter);
+}
 
 export const createTile = (item) => {
   try {
     const { type, color } = tileTypeProps[item.type];
+    const blackColor = "#222222";
     if (type == 0) {
-      return new MovieTile(item, color);
+      return new MovieTile(item, blackColor);
     } else {
-      return new BookTile(item, color);
+      return new BookTile(item, blackColor);
     }
   } catch (e) {
     return new MovieTile(item, "#ffffff");

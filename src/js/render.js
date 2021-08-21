@@ -11,7 +11,6 @@ import {
 } from "./scene";
 import { gui, size, state } from "./config";
 import "./events";
-import "./audio";
 import {
   EffectComposer,
   EffectPass,
@@ -19,7 +18,6 @@ import {
   GodRaysEffect,
   SMAAEffect,
 } from "postprocessing";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { saberCamera } from "./scene/camera";
 
 const renderer = new THREE.WebGLRenderer({
@@ -29,7 +27,7 @@ const renderer = new THREE.WebGLRenderer({
 const canvas = document.querySelector(".webgl");
 canvas.appendChild(renderer.domElement);
 
-const reset = () => {
+export const resetRender = () => {
   // Update size
   size.width = window.innerWidth;
   size.height = window.innerHeight;
@@ -44,9 +42,11 @@ const reset = () => {
   renderer.setSize(size.width, size.height);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 };
-reset();
-
-window.addEventListener("resize", reset);
+resetRender();
+window.addEventListener("resize", resetRender);
+window.addEventListener("orientationchange", () => {
+  setTimeout(resetRender, 1);
+});
 
 // const controls = new OrbitControls(camera, renderer.domElement);
 // controls.enableZoom = false;
