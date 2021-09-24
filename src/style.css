@@ -102,6 +102,12 @@ html, body {
   padding: 5px;
 }
 
+#mute-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
 .color-box {
   width: 20px;
   height: 10px;

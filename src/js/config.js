@@ -21,6 +21,7 @@ const state = {
   loading: true,
   cameraPosition: new Vector3(0, 0.8, 7),
   tileFilters: [],
+  bgmMuted: false,
 };
 
 const mouse = new Vector2();

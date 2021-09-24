@@ -177,8 +177,7 @@ const onEnterAnimation = () => {
   stopSaberHum();
 
   // play bgm
-  // TODO: enable after adding mute button
-  // playBgm();
+  playBgm();
   playSaberIgnition();
 
   // face and hide enterButton
