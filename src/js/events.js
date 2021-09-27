@@ -48,7 +48,7 @@ window.addEventListener("keydown", (e) => {
 let isScrolling;
 let isFront = false;
 window.addEventListener("wheel", (e) => {
-  if (!timeline) return;
+  if (!timeline || timeline.snapping) return;
 
   if (Math.abs(e.deltaY) < Math.abs(e.deltaX)) {
     timeline.sideScroll(-0.003 * e.deltaX);

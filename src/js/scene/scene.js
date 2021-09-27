@@ -13,8 +13,15 @@ scene.background = fogColor;
 scene.fog = new THREE.Fog(fogColor, 1, 50);
 
 let timeline;
+const timelineParams = {
+  width: 20,
+  lineLength: 100,
+  startYear: -240,
+  endYear: 40,
+  gap: 2.0,
+}
 const createTimeline = (loadingCallback) => {
-  timeline = new Timeline();
+  timeline = new Timeline(timelineParams);
   scene.add(timeline);
   timeline.scroll(-75);
   timeline.position.y = -2.81;

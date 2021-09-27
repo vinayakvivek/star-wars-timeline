@@ -3,8 +3,17 @@ import { gui, assets, state } from "../config";
 import gsap from "gsap";
 import { openLinkPopup, showTooltip } from "../utils";
 
+// year slider setup
+const slider = document.getElementById("year-range");
+const valueEle = document.getElementById("current-year");
+
+const resetSlider = (value) => {
+  slider.value = value;
+  slider.lastValue = value;
+  valueEle.innerHTML = `${Math.ceil(value)} ${value > 0 ? 'ABY' : 'BBY'}`;
+}
 class Timeline extends THREE.Group {
-  constructor() {
+  constructor(params) {
     super();
     this.params = {
       color: "#0f0f0f",
@@ -13,7 +22,19 @@ class Timeline extends THREE.Group {
       startYear: -240,
       endYear: 40,
       gap: 2.0,
+      ...params
     };
+
+    slider.setAttribute("min", this.params.startYear);
+    slider.setAttribute("max", this.params.endYear);
+    slider.setAttribute("step", 0.1);
+    slider.value = 0;
+    slider.lastValue = 0;
+    slider.addEventListener("input", () => {
+      const diff = slider.lastValue - slider.value;
+      this._translate(diff * this.params.gap);
+      resetSlider(slider.value);
+    });
 
     // startYear must be negative, endYear must be positive
     const { startYear, endYear, gap, width } = this.params;
@@ -194,11 +215,6 @@ class Timeline extends THREE.Group {
     this._updateActiveYearPlane();
   }
 
-  _updateActiveYearPlane() {
-    this._computeCurrentYear();
-    this.activeYearPlane.position.z = this.currentYear * this.params.gap;
-  }
-
   _initTweaks() {
     const folder = gui.addFolder("Timeline");
     folder
@@ -315,11 +331,15 @@ class Timeline extends THREE.Group {
     this.activeTile.update(dPos, dH, dY, dS, dO, dls);
   }
 
+  _updateActiveYearPlane() {
+    this._computeCurrentYear();
+    this.activeYearPlane.position.z = this.currentYear * this.params.gap;
+  }
+
   _translate(dz) {
     this.line.translateY(dz);
     this.translateZ(dz);
     this._updateActiveYearPlane();
-    // this.hitTestPlane.translateZ(-dz);
   }
 
   scroll(dz) {
@@ -334,6 +354,7 @@ class Timeline extends THREE.Group {
       return;
     }
     this._translate(dz);
+    resetSlider(this.currentYear);
   }
 
   sideScroll(dx) {
@@ -380,6 +401,10 @@ class Timeline extends THREE.Group {
     const yearIndex = Math.round(this.currentYear) - startYear;
     const [bIndex, fIndex] = this.nextValidYearIndex[yearIndex];
 
+    if (yearIndex > this.numYears - 3 || yearIndex < 3) {
+      return;
+    }
+
     const toIndex = f ? fIndex : bIndex;
     // if diff less than 1, do not move
     if (
@@ -411,6 +436,7 @@ class Timeline extends THREE.Group {
         const dz = data.z - prev;
         prev = data.z;
         this._translate(dz);
+        resetSlider(this.currentYear);
         galaxy.scroll(10 * dz);
       },
       onComplete: () => {
