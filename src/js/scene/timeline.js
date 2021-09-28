@@ -6,12 +6,16 @@ import { openLinkPopup, showTooltip } from "../utils";
 // year slider setup
 const slider = document.getElementById("year-range");
 const valueEle = document.getElementById("current-year");
+const yearMarkersContainer = document.getElementById("year-markers-container");
+
+const getPosition = (value) => -4 + 100 * (Math.ceil(value) - slider.min) / (slider.max - slider.min);
+const getLabel = (value) => `${Math.abs(Math.ceil(value))} ${value > 0 ? 'ABY' : 'BBY'}`;
 
 const resetSlider = (value) => {
   slider.value = value;
   slider.lastValue = value;
-  valueEle.innerHTML = `${Math.abs(Math.ceil(value))} ${value > 0 ? 'ABY' : 'BBY'}`;
-  const left = 100 * (Math.ceil(value) - slider.min) / (slider.max - slider.min);
+  valueEle.innerHTML = getLabel(value);
+  const left = getPosition(value);
   valueEle.style.left = `${left}%`;
 }
 class Timeline extends THREE.Group {
@@ -37,6 +41,12 @@ class Timeline extends THREE.Group {
       this._translate(diff * this.params.gap);
       resetSlider(slider.value);
     });
+    // set slider year-markers
+    const markerYears = [-220, -100, -30, 0, 40]
+    yearMarkersContainer.innerHTML = markerYears.map(y => `
+      <p class="year-marker" style="left:${getPosition(y)}%">${getLabel(y)}</p>
+    `).join('');
+    // <p class="year-marker">0</p>
 
     // startYear must be negative, endYear must be positive
     const { startYear, endYear, gap, width } = this.params;
