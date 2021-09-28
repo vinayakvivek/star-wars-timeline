@@ -15,14 +15,14 @@ let dampingAnimation;
 
 const updateScene = (delta) => {
   if (!timeline) return;
+  // don't scroll while using slider or top of the screen
+  if (pos.y < size.height / 2) return;
+
   if (Math.abs(delta.y) > Math.abs(delta.x)) {
     galaxy.scroll(0.5 * delta.y);
     timeline.scroll(0.02 * delta.y);
   } else {
-    // don't side-scroll while using slider
-    if (pos.y > size.height / 2) {
-      timeline.sideScroll(0.01 * delta.x);
-    }
+    timeline.sideScroll(0.01 * delta.x);
   }
 };
 
@@ -76,6 +76,9 @@ window.addEventListener("touchend", (e) => {
     timelineClick(pos.x, pos.y);
     return;
   }
+  // don't scroll while using slider or top of the screen
+  if (pos.y < size.height / 2) return;
+
   const avgDelta = lastDeltas
     .reduce((a, b) => a.add(b), new Vector2())
     .divideScalar(lastDeltas.length);
