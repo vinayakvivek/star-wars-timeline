@@ -87,6 +87,7 @@ html, body {
   opacity: 1;
   -webkit-transition: .2s;
   transition: opacity .2s;
+  padding: 0px;
 }
 .slider:hover {
   opacity: 1;
@@ -117,7 +118,6 @@ html, body {
   left: 0;
   width: fit-content;
 }
-
 .year-marker {
   position: absolute;
   bottom: 10px;
@@ -125,15 +125,17 @@ html, body {
   font-size: 0.8em;
   color: #9b9b9b;
   width: fit-content;
+  transform: translateX(-40%);
 }
 .year-marker:after {
-  content: '';
+  /* content: ''; */
   display: block;
   margin-left: 50%;
   width: 2px;
   height: 10px;
   background-color: #9b9b9b;
 }
+
 
 #tile-type-container {
   position: absolute;

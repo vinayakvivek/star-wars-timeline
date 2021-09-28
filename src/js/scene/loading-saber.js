@@ -169,6 +169,7 @@ loadingManager.onLoad = () => {
   } else {
     $("#tile-type-container").fadeTo(1000, 1);
     $(".slider-container").fadeTo(1000, 1);
+    $("#created-by").fadeTo(1000, 0);
     state.loading = false;
     stopSaberHum();
   }

@@ -34,17 +34,17 @@ export const playSaberIgnition = () => {
 
 
 const muteBtn = $("#mute-btn");
-const updateVolume = () => {
+const updateVolume = (initial = false) => {
   if (state.bgmMuted) {
     pauseBgm();
     muteBtn.html(`<em class="fas fa-volume-mute"></em>`)
   } else {
-    playBgm();
+    !initial && playBgm();
     muteBtn.html(`<em class="fas fa-volume-up"></em>`)
   }
 }
 
-updateVolume();
+updateVolume(true);
 muteBtn.click(() => {
   state.bgmMuted = !state.bgmMuted;
   updateVolume();

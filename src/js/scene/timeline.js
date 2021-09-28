@@ -8,7 +8,8 @@ const slider = document.getElementById("year-range");
 const valueEle = document.getElementById("current-year");
 const yearMarkersContainer = document.getElementById("year-markers-container");
 
-const getPosition = (value) => -4 + 100 * (Math.ceil(value) - slider.min) / (slider.max - slider.min);
+var minPos, maxPos;
+const getPosition = (value) => 100 * (Math.ceil(value) - minPos) / (maxPos - minPos);
 const getLabel = (value) => `${Math.abs(Math.ceil(value))} ${value > 0 ? 'ABY' : 'BBY'}`;
 
 const resetSlider = (value) => {
@@ -34,6 +35,8 @@ class Timeline extends THREE.Group {
     slider.setAttribute("min", this.params.startYear);
     slider.setAttribute("max", this.params.endYear);
     slider.setAttribute("step", 0.1);
+    minPos = parseInt(slider.min);
+    maxPos = parseInt(slider.max);
     slider.value = 0;
     slider.lastValue = 0;
     slider.addEventListener("input", () => {
@@ -42,7 +45,7 @@ class Timeline extends THREE.Group {
       resetSlider(slider.value);
     });
     // set slider year-markers
-    const markerYears = [-220, -100, -30, 0, 40]
+    const markerYears = [-240, 0]
     yearMarkersContainer.innerHTML = markerYears.map(y => `
       <p class="year-marker" style="left:${getPosition(y)}%">${getLabel(y)}</p>
     `).join('');
