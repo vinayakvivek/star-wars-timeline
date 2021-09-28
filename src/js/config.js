@@ -15,13 +15,13 @@ const size = {
 };
 
 const showBorders = true;
-const showLoading = false;
+const showLoading = true;
 
 const state = {
   loading: true,
   cameraPosition: new Vector3(0, 0.8, 7),
   tileFilters: [],
-  bgmMuted: false,
+  bgmMuted: true,
 };
 
 const mouse = new Vector2();

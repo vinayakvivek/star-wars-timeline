@@ -10,7 +10,9 @@ const valueEle = document.getElementById("current-year");
 const resetSlider = (value) => {
   slider.value = value;
   slider.lastValue = value;
-  valueEle.innerHTML = `${Math.ceil(value)} ${value > 0 ? 'ABY' : 'BBY'}`;
+  valueEle.innerHTML = `${Math.abs(Math.ceil(value))} ${value > 0 ? 'ABY' : 'BBY'}`;
+  const left = 100 * (Math.ceil(value) - slider.min) / (slider.max - slider.min);
+  valueEle.style.left = `${left}%`;
 }
 class Timeline extends THREE.Group {
   constructor(params) {
@@ -395,6 +397,8 @@ class Timeline extends THREE.Group {
   }
 
   snapToNext(f, galaxy) {
+    if (this.snapping) return;
+
     // f -> front(true) or back(false)
     this._computeCurrentYear();
     const startYear = this.params.startYear;
@@ -418,8 +422,8 @@ class Timeline extends THREE.Group {
 
     if (Math.abs(yearIndex - toIndex) > 20) {
       if (
-        Math.abs(yearIndex - fIndex) < 5 ||
-        Math.abs(yearIndex - bIndex) < 5
+        Math.abs(yearIndex - fIndex) < 4 ||
+        Math.abs(yearIndex - bIndex) < 4
       ) {
         return;
       }

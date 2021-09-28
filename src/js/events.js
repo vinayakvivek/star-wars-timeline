@@ -47,6 +47,7 @@ window.addEventListener("keydown", (e) => {
 
 let isScrolling;
 let isFront = false;
+let isSnapping = false;
 window.addEventListener("wheel", (e) => {
   if (!timeline || timeline.snapping) return;
 

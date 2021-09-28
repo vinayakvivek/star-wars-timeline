@@ -2,6 +2,7 @@ import { Vector2, Clock } from "three";
 import { galaxy, timeline } from "./scene";
 import gsap from "gsap";
 import { timelineClick } from "./events";
+import { size } from "./config";
 
 const pos = new Vector2();
 const delta = new Vector2();
@@ -18,7 +19,10 @@ const updateScene = (delta) => {
     galaxy.scroll(0.5 * delta.y);
     timeline.scroll(0.02 * delta.y);
   } else {
-    timeline.sideScroll(0.01 * delta.x);
+    // don't side-scroll while using slider
+    if (pos.y > size.height / 2) {
+      timeline.sideScroll(0.01 * delta.x);
+    }
   }
 };
 

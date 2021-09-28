@@ -72,8 +72,8 @@ html, body {
 }
 
 .slider-container {
-  margin-top: 50px;
   width: 100%;
+  opacity: 0;
 }
 .slider {
   -webkit-appearance: none;
@@ -104,6 +104,21 @@ html, body {
   border-radius: 50%;
   background: #73a5c2;
   cursor: pointer;
+}
+
+#year-container {
+  position: absolute;
+  left: 15%;
+  width: 70%;
+}
+#current-year {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 10px;
+  position: absolute;
+  left: 0;
+  width: fit-content;
 }
 
 #tile-type-container {
