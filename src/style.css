@@ -287,6 +287,10 @@ html, body {
   #legends-list {
     display: none;
   }
+  #tile-type-list {
+    display: none;
+    background-color: black;
+  }
 }
 
 #export-btn {

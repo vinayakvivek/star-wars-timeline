@@ -6,24 +6,30 @@ const saberHum = new Audio("audio/saber-hum.mp3");
 const saberIgnition = new Audio("audio/saber-ignition.mp3");
 
 export const playBgm = () => {
-  bgm.loop = true;
-  bgm.volume = bgmVolume;
-  bgm.play();
+  if (!state.bgmMuted) {
+    bgm.loop = true;
+    bgm.volume = bgmVolume;
+    bgm.play();
+  }
 };
 
 export const pauseBgm = () => {
   bgm.pause();
 };
 
+
+var saberHumStopped = false;
 export const playSaberHum = () => {
-  if (!state.bgmMuted) {
+  if (!state.bgmMuted && !saberHumStopped) {
     saberHum.loop = true;
     saberHum.play();
   }
 };
 
-export const stopSaberHum = () => {
+export const stopSaberHum = (completeStop = true) => {
   saberHum.pause();
+  if (saberHumStopped) return;
+  saberHumStopped = completeStop;
 };
 
 export const playSaberIgnition = () => {
@@ -37,9 +43,11 @@ const muteBtn = $("#mute-btn");
 const updateVolume = (initial = false) => {
   if (state.bgmMuted) {
     pauseBgm();
+    stopSaberHum(false);
     muteBtn.html(`<em class="fas fa-volume-mute"></em>`)
   } else {
     !initial && playBgm();
+    playSaberHum();
     muteBtn.html(`<em class="fas fa-volume-up"></em>`)
   }
 }
