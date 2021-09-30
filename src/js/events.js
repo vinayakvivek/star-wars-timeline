@@ -45,9 +45,8 @@ window.addEventListener("keydown", (e) => {
   timeline && timeline.onKeyPress(e.key);
 });
 
-let isScrolling;
+let scrollTimer;
 let isFront = false;
-let isSnapping = false;
 window.addEventListener("wheel", (e) => {
   if (!timeline || timeline.snapping) return;
 
@@ -62,8 +61,8 @@ window.addEventListener("wheel", (e) => {
   showTooltip(null);
 
   isFront = dz < 0;
-  window.clearTimeout(isScrolling);
-  isScrolling = setTimeout(() => {
+  window.clearTimeout(scrollTimer);
+  scrollTimer = setTimeout(() => {
     timeline.snapToNext(isFront, galaxy);
     onMouseMove(e.clientX, e.clientY);
   }, 66);
@@ -116,15 +115,47 @@ const animateLegend = (toOpacity, onComplete) => {
 };
 
 // search
+const names = data.map(item => item.name.toLowerCase());
+const MAX_RESULTS = 5;
+const searchResultList = $("#search-result");
+const search = (keyword) => {
+  if (!keyword) {
+    searchResultList.html('');
+    return;
+  };
+  keyword = keyword.toLowerCase();
+  const results = [];
+  // check for starts-with first
+  for (const index in names) {
+    names[index].startsWith(keyword) && results.push(index);
+    if (results.length >= MAX_RESULTS) break;
+  }
+  for (const index in names) {
+    if (results.length >= MAX_RESULTS) break;
+    names[index].includes(keyword) && !results.includes(index) && results.push(index);
+  }
+  let listContent = '';
+  results.forEach(i => {
+    listContent += `<li data-index="${i}">${data[i].name}</li>\n`;
+  })
+  searchResultList.html(listContent);
+}
+
 const clearIcon = document.querySelector(".clear-icon");
 const searchBar = document.querySelector(".search");
 
-searchBar.addEventListener("keyup", () => {
-  if(searchBar.value && clearIcon.style.visibility != "visible"){
+let searchTimer;
+searchBar.addEventListener("keyup", (e) => {
+  if (searchBar.value && clearIcon.style.visibility != "visible") {
     clearIcon.style.visibility = "visible";
-  } else if(!searchBar.value) {
+  } else if (!searchBar.value) {
     clearIcon.style.visibility = "hidden";
   }
+  const keyword = e.target.value;
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => {
+    search(keyword);
+  }, 300);
 });
 
 clearIcon.addEventListener("click", () => {

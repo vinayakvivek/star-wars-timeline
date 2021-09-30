@@ -138,3 +138,25 @@ export const showTooltip = (data, x, y) => {
   $("body").css("cursor", "pointer");
   tooltipEle.show("slow");
 };
+
+// TODO: check and validate these two
+export const throttle = (fn, limit) => {
+  var waiting = false;
+  return () => {
+    if (!waiting) {
+      fn.apply(this, arguments);
+      waiting = true;
+      setTimeout(() => {
+        waiting = false;
+      }, limit);
+    }
+  }
+}
+
+export const debounce = (fn, timeout) => {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => { fn.apply(this, args); }, timeout);
+  }
+}

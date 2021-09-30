@@ -110,7 +110,7 @@ html, body {
 }
 
 #current-year {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Helvetica, sans-serif;
   font-size: 1em;
   font-weight: bold;
   margin-top: 10px;
@@ -119,6 +119,7 @@ html, body {
   width: fit-content;
 }
 .year-marker {
+  font-family: Helvetica, sans-serif;
   position: absolute;
   bottom: 10px;
   font-weight: bold;
@@ -217,6 +218,32 @@ html, body {
   caret-color: white;
   color: white;
   background-color: #000000;
+}
+.search:hover, .search:focus {
+  border: 1px solid white;
+}
+#search-result-container {
+  color: white;
+  position: absolute;
+  /* width: 180px; */
+  left: 50%;
+  top: 40px;
+  text-align: left;
+  -ms-transform: translateX(-100px);
+  -webkit-transform: translate(-100px);
+  transform: translateX(-100px);
+}
+#search-result-container ul {
+  list-style-type: none;
+}
+#search-result-container ul li {
+  font-size: 0.8em;
+  font-family: Helvetica, sans-serif;
+  margin: 5px;
+  padding: 3px 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: fit-content;
 }
 
 .color-box {
