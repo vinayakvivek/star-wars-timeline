@@ -118,6 +118,11 @@ const animateLegend = (toOpacity, onComplete) => {
 const names = data.map(item => item.name.toLowerCase());
 const MAX_RESULTS = 5;
 const searchResultList = $("#search-result");
+function searchItemOnClick() {
+  const id = $(this).attr('data-index');
+  console.log(id, data[id]);
+}
+
 const search = (keyword) => {
   if (!keyword) {
     searchResultList.html('');
@@ -136,9 +141,10 @@ const search = (keyword) => {
   }
   let listContent = '';
   results.forEach(i => {
-    listContent += `<li data-index="${i}">${data[i].name}</li>\n`;
+    listContent += `<li data-index="${i}" class="search-result-item">${data[i].name}</li>\n`;
   })
   searchResultList.html(listContent);
+  $(".search-result-item").click(searchItemOnClick);  // add event listener
 }
 
 const clearIcon = document.querySelector(".clear-icon");

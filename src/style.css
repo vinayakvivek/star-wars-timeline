@@ -236,7 +236,7 @@ html, body {
 #search-result-container ul {
   list-style-type: none;
 }
-#search-result-container ul li {
+.search-result-item {
   font-size: 0.8em;
   font-family: Helvetica, sans-serif;
   margin: 5px;
