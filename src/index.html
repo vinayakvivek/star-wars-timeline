@@ -22,11 +22,11 @@
       <div class="container">
         <h1 id="title">Star Wars</h1>
         <h2 id="sub-title">Timeline</h2>
-        <p id="created-by">
+        <p id="created-by" class="hide-on-load">
           Created by:
           <a href="https://github.com/vinayakvivek" target="_blank">Vinayak</a>
         </p>
-        <div class="slider-container">
+        <div class="slider-container show-on-load">
           <div id="year-markers-container"></div>
           <input type="range" class="slider" id="year-range" />
           <p id="year-container"><span id="current-year"></span></p>
@@ -36,7 +36,7 @@
 
       <button class="btn" id="enter-btn">Enter</button>
 
-      <div id="search-container">
+      <div id="search-container" class="show-on-load">
         <div id="search-bar-wrapper">
           <em class="fas fa-search search-icon"></em>
           <input
@@ -49,7 +49,7 @@
         </div>
       </div>
 
-      <div id="tile-type-container">
+      <div id="tile-type-container" class="show-on-load">
         <button class="btn" id="toggle-btn">Hide Legend</button>
         <ul id="tile-type-list">
           <li>

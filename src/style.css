@@ -136,6 +136,9 @@ html, body {
   background-color: #9b9b9b;
 }
 
+.show-on-load {
+  opacity: 0.0;
+}
 
 #tile-type-container {
   position: absolute;
@@ -202,6 +205,7 @@ html, body {
   right: 8px;
   width: 10px;
   cursor: pointer;
+  visibility: hidden;
 }
 .search {
   border: 1px solid grey;
