@@ -14,14 +14,15 @@ const size = {
   height: window.innerHeight,
 };
 
-const showBorders = true;
-const showLoading = true;
+export const showBorders = true;
+export const showLoading = false;
+export const useSmallData = false;
 
 const state = {
   loading: true,
   cameraPosition: new Vector3(0, 0.8, 7),
   tileFilters: [],
-  bgmMuted: false,
+  bgmMuted: true,
 };
 
 const mouse = new Vector2();
@@ -44,8 +45,6 @@ const gltfLoader = new GLTFLoader();
 export {
   size,
   state,
-  showBorders,
-  showLoading,
   mouse,
   raycaster,
   gui,
