@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { gui, assets, state } from "../config";
 import gsap from "gsap";
 import { openLinkPopup, showTooltip } from "../utils";
+import { galaxy } from ".";
 
 // year slider setup
 const slider = document.getElementById("year-range");
@@ -372,8 +373,13 @@ class Timeline extends THREE.Group {
     resetSlider(this.currentYear);
   }
 
+  _translateX(dx) {
+    this.translateX(dx);
+    this.yearLabels.translateX(-dx);
+  }
+
   sideScroll(dx) {
-    if (this.snapping) {
+    if (this.snapping || this.sideSnapping) {
       console.log("snapping in progress");
       return;
     }
@@ -383,8 +389,7 @@ class Timeline extends THREE.Group {
     ) {
       return;
     }
-    this.translateX(dx);
-    this.yearLabels.translateX(-dx);
+    this._translateX(dx);
   }
 
   _computeCurrentYear() {
@@ -409,7 +414,7 @@ class Timeline extends THREE.Group {
     }
   }
 
-  snapToNext(f, galaxy) {
+  snapToNext(f) {
     if (this.snapping) return;
 
     // f -> front(true) or back(false)
@@ -442,12 +447,25 @@ class Timeline extends THREE.Group {
       }
     }
 
-    this.snapping = true;
     const toPos = -(toIndex + startYear + 1) * this.params.gap;
+    this.snapTo(toPos);
+  }
+
+  snapToItem(item) {
+    if (this.snapping) return;
+
+    const year = Math.round(item.year + item.duration / 2);
+    const toPos = -year * this.params.gap;
+    this.snapTo(toPos);
+    this.sideSnapTo(item.params.pos, 0.5);
+  }
+
+  snapTo(pos, callback = () => {}) {
+    this.snapping = true;
     const data = { z: this.position.z };
     let prev = data.z;
     gsap.to(data, {
-      z: toPos,
+      z: pos,
       duration: 1.0,
       onUpdate: () => {
         const dz = data.z - prev;
@@ -458,7 +476,27 @@ class Timeline extends THREE.Group {
       },
       onComplete: () => {
         this.snapping = false;
+        callback();
       },
+    });
+  }
+
+  sideSnapTo(pos, duration = 1.0, callback = () => {}) {
+    this.sideSnapping = true;
+    const data = { x: this.position.x };
+    let prev = data.x;
+    gsap.to(data, {
+      x: pos,
+      duration,
+      onUpdate: () => {
+        const dx = data.x - prev;
+        prev = data.x;
+        this._translateX(dx);
+      },
+      onComplete: () => {
+        this.sideSnapping = false;
+        callback();
+      }
     });
   }
 }

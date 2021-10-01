@@ -121,6 +121,7 @@ const searchResultList = $("#search-result");
 function searchItemOnClick() {
   const id = $(this).attr('data-index');
   console.log(id, data[id]);
+  timeline.snapToItem(data[id]);
 }
 
 const search = (keyword) => {
