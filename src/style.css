@@ -245,6 +245,10 @@ html, body {
   border-radius: 5px;
   width: fit-content;
 }
+.search-result-item.selected {
+  border: 1px solid white;
+  background-color: rgb(32, 32, 32);
+}
 
 .color-box {
   width: 20px;

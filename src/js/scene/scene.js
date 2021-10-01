@@ -14,7 +14,7 @@ scene.fog = new THREE.Fog(fogColor, 1, 50);
 
 let timeline;
 const timelineParams = {
-  width: 20,
+  width: 24,
   lineLength: 100,
   startYear: -240,
   endYear: 40,

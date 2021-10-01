@@ -119,9 +119,14 @@ const names = data.map(item => item.name.toLowerCase());
 const MAX_RESULTS = 5;
 const searchResultList = $("#search-result");
 function searchItemOnClick() {
-  const id = $(this).attr('data-index');
-  console.log(id, data[id]);
-  timeline.snapToItem(data[id]);
+  $(".search-result-item").removeClass("selected");
+  $(this).addClass("selected");
+  try {
+    const id = $(this).attr('data-index');
+    timeline.snapToItem(data[id]);
+  } catch (e) {
+    console.error(e.message);
+  }
 }
 
 const search = (keyword) => {
@@ -168,4 +173,5 @@ searchBar.addEventListener("keyup", (e) => {
 clearIcon.addEventListener("click", () => {
   searchBar.value = "";
   clearIcon.style.visibility = "hidden";
+  search();
 })
