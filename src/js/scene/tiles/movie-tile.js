@@ -20,13 +20,11 @@ class MovieTile extends Tile {
       })
     );
     tile.add(image);
-    if (showBorders) {
-      const border = new THREE.Mesh(
-        borderGeometry,
-        new THREE.MeshBasicMaterial({ color: this.borderColor })
-      );
-      tile.add(border);
-    }
+    this.border = new THREE.Mesh(
+      borderGeometry,
+      new THREE.MeshBasicMaterial({ color: this.borderColor })
+    );
+    showBorders && tile.add(this.border);
     return tile;
   }
 }

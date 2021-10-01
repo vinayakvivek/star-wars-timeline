@@ -51,6 +51,23 @@ class Tile extends THREE.Group {
     this.movable.add(this.tile);
   }
 
+  updateBorderColor(color) {
+    this.borderColor = color;
+    this.border.material = new THREE.MeshBasicMaterial({ color: this.borderColor })
+  }
+
+  highlight() {
+    this.movable.scale.setScalar(1.5);
+    this.updateBorderColor("#ffffff");
+    this.label.visible = false;
+  }
+
+  unhighlight() {
+    this.movable.scale.setScalar(1.0);
+    this.updateBorderColor("#222222");
+    this.label.visible = true;
+  }
+
   update(dPos = 0, dH = 0, dY = 0, dS = 0, dO = 0, dls = 0) {
     this.item.params.pos += dPos;
     this.item.params.height += dH;

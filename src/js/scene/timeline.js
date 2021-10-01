@@ -451,6 +451,18 @@ class Timeline extends THREE.Group {
     this.snapTo(toPos);
   }
 
+  _updateActiveItem(id) {
+    const tiles = this.tiles.children;
+    if (this.selectedTile) {
+      // make it inactive
+      this.selectedTile.unhighlight();
+    }
+    this.selectedTile = tiles.find(tile => tile.item.id == id);
+    if (this.selectedTile) {
+      this.selectedTile.highlight();
+    }
+  }
+
   snapToItem(item) {
     if (this.snapping) return;
 
@@ -458,6 +470,7 @@ class Timeline extends THREE.Group {
     const toPos = -year * this.params.gap;
     this.snapTo(toPos);
     this.sideSnapTo(item.params.pos, 0.5);
+    this._updateActiveItem(item.id);
   }
 
   snapTo(pos, callback = () => {}) {

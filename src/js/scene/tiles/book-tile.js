@@ -22,16 +22,15 @@ class BookTile extends Tile {
       })
     );
     tile.add(image);
-    if (showBorders) {
-      const border = new THREE.Mesh(
-        borderGeometry,
-        new THREE.MeshBasicMaterial({
-          color: this.borderColor,
-        })
-      );
-      border.position.z -= 0.01;
-      tile.add(border);
-    }
+
+    this.border = new THREE.Mesh(
+      borderGeometry,
+      new THREE.MeshBasicMaterial({
+        color: this.borderColor,
+      })
+    );
+    this.border.position.z -= 0.01;
+    showBorders && tile.add(this.border);
     return tile;
   }
 }

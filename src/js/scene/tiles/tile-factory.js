@@ -52,6 +52,7 @@ export const createTile = (item) => {
       return new BookTile(item, blackColor);
     }
   } catch (e) {
+    console.error("Error while creating tiles", e.message);
     return new MovieTile(item, "#ffffff");
   }
 };

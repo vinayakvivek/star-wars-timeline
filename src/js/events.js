@@ -132,6 +132,7 @@ function searchItemOnClick() {
 const search = (keyword) => {
   if (!keyword) {
     searchResultList.html('');
+    timeline._updateActiveItem(-1);
     return;
   };
   keyword = keyword.toLowerCase();
