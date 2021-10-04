@@ -4,6 +4,7 @@ import Tile from "./tile";
 
 const movieTileGeometry = new THREE.CircleBufferGeometry(1, 64);
 const borderGeometry = new THREE.RingGeometry(1, 1.1, 32);
+const defaultOpacity = 1.0;
 
 class MovieTile extends Tile {
   constructor(item, borderColor) {
@@ -17,12 +18,18 @@ class MovieTile extends Tile {
       new THREE.MeshBasicMaterial({
         map: this.texture,
         side: THREE.DoubleSide,
+        opacity: defaultOpacity,
+        transparent: true,
       })
     );
     tile.add(image);
     this.border = new THREE.Mesh(
       borderGeometry,
-      new THREE.MeshBasicMaterial({ color: this.borderColor })
+      new THREE.MeshBasicMaterial({
+        color: this.borderColor,
+        opacity: defaultOpacity,
+        transparent: true,
+      })
     );
     showBorders && tile.add(this.border);
     return tile;

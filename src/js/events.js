@@ -118,7 +118,8 @@ const animateLegend = (toOpacity, onComplete) => {
 const names = data.map(item => item.name.toLowerCase());
 const MAX_RESULTS = 5;
 const searchResultList = $("#search-result");
-function searchItemOnClick() {
+function searchItemOnClick(e) {
+  e.stopPropagation();
   $(".search-result-item").removeClass("selected");
   $(this).addClass("selected");
   try {

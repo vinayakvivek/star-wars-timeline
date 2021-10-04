@@ -56,6 +56,15 @@ export function disposeHierarchy(node) {
   }
 }
 
+export const updateOpacity = (mesh, opacity) => {
+  mesh.traverse((node) => {
+    if (node.material) {
+      node.material.opacity = opacity;
+      node.material.transparent = true;
+    }
+  });
+}
+
 const popupContainerEle = $("#popup-container");
 const popupEle = $("#popup");
 const popupBgEle = $("#popup-bg");

@@ -218,6 +218,7 @@ html, body {
   caret-color: white;
   color: white;
   background-color: #000000;
+  font-size: 16px;
 }
 .search:hover, .search:focus {
   border: 1px solid white;

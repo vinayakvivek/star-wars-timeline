@@ -260,6 +260,9 @@ class Timeline extends THREE.Group {
 
   onClick() {
     this._findActiveTile();
+    if (this.selectedTile) {
+      this._updateActiveItem(-1);
+    }
     if (this.activeTile) {
       openLinkPopup(this.activeTile.item.link);
       showTooltip(null);
@@ -456,10 +459,13 @@ class Timeline extends THREE.Group {
     if (this.selectedTile) {
       // make it inactive
       this.selectedTile.unhighlight();
+      tiles.forEach(tile => tile.show());
     }
     this.selectedTile = tiles.find(tile => tile.item.id == id);
     if (this.selectedTile) {
       this.selectedTile.highlight();
+      // reduce opacity of other items
+      tiles.filter(tile => tile !== this.selectedTile).forEach(tile => tile.hide());
     }
   }
 
