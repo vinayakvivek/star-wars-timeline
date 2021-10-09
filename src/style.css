@@ -5,7 +5,7 @@
 
 html, body {
   height: 100vh;
-  font-family: 'Poppins';
+  font-family: Arial, Helvetica, sans-serif;
   background: rgb(0, 0, 0);
   overflow: hidden;
   overscroll-behavior-x: none;
@@ -245,6 +245,7 @@ html, body {
   border: 1px solid grey;
   border-radius: 5px;
   width: fit-content;
+  background-color: black;
 }
 .search-result-item.selected {
   border: 1px solid white;

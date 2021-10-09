@@ -1,6 +1,6 @@
 import { data, timeline, galaxy, camera } from "./scene";
 import { setDebugModeByLocation } from "./debug";
-import { mouse, raycaster, size } from "./config";
+import { mouse, raycaster, size, state } from "./config";
 import gsap from "gsap";
 import "./events-touch";
 import { showTooltip } from "./utils";
@@ -114,6 +114,24 @@ const animateLegend = (toOpacity, onComplete) => {
   });
 };
 
+// tile-type selection
+const tileTypeSelectors = document.getElementsByClassName("tile-type-selector");
+const updateTileFilter = () => {
+  const selected = [];
+  for (let i = 0; i < tileTypeSelectors.length; ++i) {
+    if (tileTypeSelectors.item(i).checked) {
+      selected.push(tileTypeSelectors[i].value);
+    }
+  }
+  state.tileFilters = selected;
+  timeline.filterTiles();
+  // re-search
+  search(searchBar.value);
+};
+for (let i = 0; i < tileTypeSelectors.length; ++i) {
+  tileTypeSelectors.item(i).addEventListener("click", updateTileFilter);
+}
+
 // search
 const names = data.map(item => item.name.toLowerCase());
 const MAX_RESULTS = 5;
@@ -130,22 +148,16 @@ function searchItemOnClick(e) {
   }
 }
 
-const search = (keyword) => {
+export const search = (keyword) => {
   if (!keyword) {
     searchResultList.html('');
     timeline._updateActiveItem(-1);
     return;
   };
-  keyword = keyword.toLowerCase();
-  const results = [];
-  // check for starts-with first
-  for (const index in names) {
-    names[index].startsWith(keyword) && results.push(index);
-    if (results.length >= MAX_RESULTS) break;
-  }
-  for (const index in names) {
-    if (results.length >= MAX_RESULTS) break;
-    names[index].includes(keyword) && !results.includes(index) && results.push(index);
+  const results = timeline.search(keyword.toLowerCase());
+  if (!results.length) {
+    searchResultList.html(`<p><small>No matching items</small></p>`);
+    return;
   }
   let listContent = '';
   results.forEach(i => {

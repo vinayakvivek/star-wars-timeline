@@ -200,8 +200,8 @@ class Timeline extends THREE.Group {
     dummy.rotation.z = Math.PI / 2;
 
     for (let year = startYear; year <= endYear; ++year) {
-      // const label = `${Math.abs(year)} ${year < 0 ? 'BBY' : 'ABY'}`;
-      const label = `${year}`;
+      const label = `${Math.abs(year)} ${year <= 0 ? 'BBY' : 'ABY'}`;
+      // const label = `${year}`;
       const textGeometry = _createTextGeometry(label, assets.font, 0.3);
       textGeometry.center();
       const text = new THREE.Mesh(textGeometry, textMaterial);
@@ -284,6 +284,7 @@ class Timeline extends THREE.Group {
     }
   }
 
+  // only for debugging tile positions
   onKeyPress(key) {
     const delta = 0.1;
     if (!this.activeTile) {
@@ -452,6 +453,26 @@ class Timeline extends THREE.Group {
 
     const toPos = -(toIndex + startYear + 1) * this.params.gap;
     this.snapTo(toPos);
+  }
+
+  search(keyword) {
+    const nameIds = this.tiles.children.filter(tile => tile.visible)
+                                     .map(tile => ({
+                                       id: tile.item.id,
+                                       name: tile.item.name.toLowerCase(),
+                                     }));
+    const MAX_RESULTS = 5;
+    const results = []
+    // check for starts-with first
+    for (const nameId of nameIds) {
+      nameId.name.startsWith(keyword) && results.push(nameId.id);
+      if (results.length >= MAX_RESULTS) break;
+    }
+    for (const nameId of nameIds) {
+      if (results.length >= MAX_RESULTS) break;
+      nameId.name.includes(keyword) && results.push(nameId.id);
+    }
+    return results;
   }
 
   _updateActiveItem(id) {

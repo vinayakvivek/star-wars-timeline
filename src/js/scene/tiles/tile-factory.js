@@ -1,5 +1,3 @@
-import { state } from "../../config";
-import { timeline } from "../scene";
 import BookTile from "./book-tile";
 import MovieTile from "./movie-tile";
 
@@ -26,21 +24,6 @@ for (const key in tileTypeProps) {
   );
 }
 tileTypeSelectorListElement.html(items.join(""));
-
-const tileTypeSelectors = document.getElementsByClassName("tile-type-selector");
-const updateTileFilter = () => {
-  const selected = [];
-  for (let i = 0; i < tileTypeSelectors.length; ++i) {
-    if (tileTypeSelectors.item(i).checked) {
-      selected.push(tileTypeSelectors[i].value);
-    }
-  }
-  state.tileFilters = selected;
-  timeline.filterTiles();
-};
-for (let i = 0; i < tileTypeSelectors.length; ++i) {
-  tileTypeSelectors.item(i).addEventListener("click", updateTileFilter);
-}
 
 export const createTile = (item) => {
   try {
