@@ -118,23 +118,23 @@ html, body {
   left: 0;
   width: fit-content;
 }
-.year-marker {
-  font-family: Helvetica, sans-serif;
-  position: absolute;
-  bottom: 10px;
-  font-weight: bold;
-  font-size: 0.8em;
-  color: #9b9b9b;
-  width: fit-content;
-  transform: translateX(-40%);
+#year-markers-container {
+  width: 100%;
 }
-.year-marker:after {
-  /* content: ''; */
-  display: block;
-  margin-left: 50%;
+.year-marker {
+  position: absolute;
+  bottom: 8px;
   width: 2px;
-  height: 10px;
+  height: 13px;
   background-color: #9b9b9b;
+}
+.year-marker::after {
+  content: attr(data-label);
+  font-size: 0.8em;
+  position: absolute;
+  bottom: 20px;
+  width: 100px;
+  transform: translate(-50%, 0);
 }
 
 .show-on-load {
