@@ -3353,7 +3353,7 @@
     "link": "https://starwars.fandom.com/wiki/The_High_Republic:_Tempest_Runner",
     "name": "The High Republic: Tempest Runner",
     "params": {
-      "height": 0.7,
+      "height": 1.0,
       "labelSize": 0.1,
       "pos": -2.14,
       "tileOffset": 0,
@@ -3391,7 +3391,7 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_The_High_Republic_Adventures",
     "name": "The High Republic Adventures",
     "params": {
-      "height": 1.8,
+      "height": 2.0,
       "labelSize": 0.1,
       "pos": -3.13,
       "tileOffset": 0,
