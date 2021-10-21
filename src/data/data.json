@@ -11,7 +11,9 @@
       "tileScale": 0.59,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/EpisodeIXTheRiseofSkywalker.jpg",
     "type": "Movie",
     "year": 35.0
@@ -28,7 +30,9 @@
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
-    "releaseDate": [2020],
+    "releaseDate": [
+      2020
+    ],
     "thumbnail": "/images/TalesfromtheGalaxysEdge.jpg",
     "type": "VR",
     "year": 34.0
@@ -45,7 +49,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/ACrashofFate.jpg",
     "type": "Novel",
     "year": 34.0
@@ -62,7 +68,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/GalaxysEdge.jpg",
     "type": "Comic",
     "year": 34.0
@@ -79,7 +87,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/GalaxysEdgeBlackSpire.jpg",
     "type": "Novel",
     "year": 34.0
@@ -96,7 +106,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/SparkoftheResistance.jpg",
     "type": "Junior Novel",
     "year": 34.0
@@ -113,7 +125,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.06
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/StarWarsAdventuresFlightoftheFalcon.jpg",
     "type": "Comic",
     "year": 34.0
@@ -130,7 +144,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/PiratesPrice.jpg",
     "type": "Junior Novel",
     "year": 34.0
@@ -147,7 +163,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2022],
+    "releaseDate": [
+      2022
+    ],
     "thumbnail": "/images/BB8andtheSnowMonster.jpg",
     "type": "Comic",
     "year": 34.0
@@ -157,14 +175,16 @@
     "link": "https://starwars.fandom.com/wiki/R2-D2_is_LOST!",
     "name": "R2-D2 is LOST!",
     "params": {
-      "height": 1.0,
+      "height": 1,
       "labelSize": 0.1,
       "pos": 9,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2020],
+    "releaseDate": [
+      2020
+    ],
     "thumbnail": "/images/R2D2isLOST.jpg",
     "type": "Comic",
     "year": 34.0
@@ -181,7 +201,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/C3PODoesNOTLikeSand.jpg",
     "type": "Comic",
     "year": 34.0
@@ -198,7 +220,9 @@
       "tileScale": 0.85,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/Allegiance.jpg",
     "type": "Comic",
     "year": 34.0
@@ -215,7 +239,9 @@
       "tileScale": 0.83,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/ResistanceReborn.jpg",
     "type": "Novel",
     "year": 34.0
@@ -232,7 +258,9 @@
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/DroidRepairBay.jpg",
     "type": "VR",
     "year": 34.0
@@ -249,7 +277,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/ChewieandthePorgs.jpg",
     "type": "Junior Novel",
     "year": 34.0
@@ -261,12 +291,14 @@
     "params": {
       "height": 1.1,
       "labelSize": 0.1,
-      "pos": -1.0,
+      "pos": -1,
       "tileOffset": 0,
       "tileScale": 0.62,
       "yearOffset": 0.47
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/EpisodeVIIITheLastJedi.jpg",
     "type": "Movie",
     "year": 34.0
@@ -283,7 +315,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2018],
+    "releaseDate": [
+      2018
+    ],
     "thumbnail": "/images/TheLastJediDJMostWanted.jpg",
     "type": "Comic",
     "year": 34.0
@@ -300,7 +334,9 @@
       "tileScale": 0.8,
       "yearOffset": -0.22
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/TheLegendsofLukeSkywalker.jpg",
     "type": "Junior Novel",
     "year": 34.0
@@ -317,7 +353,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/CantoBight.jpg",
     "type": "Novel",
     "year": 34.0
@@ -334,7 +372,9 @@
       "tileScale": 0.8,
       "yearOffset": -0.03
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/TheLastJediCobaltSquadron.jpg",
     "type": "Novel",
     "year": 34.0
@@ -351,7 +391,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/CaptainPhasma.jpg",
     "type": "Comic",
     "year": 34.0
@@ -368,7 +410,9 @@
       "tileScale": 0.8,
       "yearOffset": -0.1
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofResistanceRey.jpg",
     "type": "Comic",
     "year": 34.0
@@ -385,7 +429,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.2
     },
-    "releaseDate": [2018],
+    "releaseDate": [
+      2018
+    ],
     "thumbnail": "/images/JointheResistanceAttackonStarkillerBase.jpg",
     "type": "Junior Novel",
     "year": 34.0
@@ -402,7 +448,9 @@
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/BattlefrontIIResurrection.jpg",
     "type": "Game",
     "year": 34.0
@@ -419,7 +467,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.21
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/BB8ontheRun.jpg",
     "type": "Junior Novel",
     "year": 34.0
@@ -436,7 +486,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2016],
+    "releaseDate": [
+      2016
+    ],
     "thumbnail": "/images/TheForceAwakensFinnsStory.jpg",
     "type": "Junior Novel",
     "year": 34.0
@@ -453,7 +505,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2016],
+    "releaseDate": [
+      2016
+    ],
     "thumbnail": "/images/TheForceAwakensReysStory.jpg",
     "type": "Junior Novel",
     "year": 34.0
@@ -470,7 +524,9 @@
       "tileScale": 0.73,
       "yearOffset": -0.5
     },
-    "releaseDate": [2015],
+    "releaseDate": [
+      2015
+    ],
     "thumbnail": "/images/EpisodeVIITheForceAwakens.jpg",
     "type": "Movie",
     "year": 34.0
@@ -487,7 +543,9 @@
       "tileScale": 0.8,
       "yearOffset": -0.1
     },
-    "releaseDate": [2016],
+    "releaseDate": [
+      2016
+    ],
     "thumbnail": "/images/TalesfromaGalaxyFarFarAwayAliensVolumeI.jpg",
     "type": "Short Story",
     "year": 34.0
@@ -504,7 +562,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2015],
+    "releaseDate": [
+      2015
+    ],
     "thumbnail": "/images/ThePerfectWeapon.jpg",
     "type": "Short Story",
     "year": 34.0
@@ -521,7 +581,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/Phasma.jpg",
     "type": "Novel",
     "year": 34.0
@@ -538,7 +600,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/JointheResistanceEscapefromVodran.jpg",
     "type": "Junior Novel",
     "year": 34.0
@@ -555,7 +619,9 @@
       "tileScale": 0.8,
       "yearOffset": -0.2
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/JointheResistance.jpg",
     "type": "Junior Novel",
     "year": 34.0
@@ -572,7 +638,10 @@
       "tileScale": 0.58,
       "yearOffset": 0.0
     },
-    "releaseDate": [2018, 2020],
+    "releaseDate": [
+      2018,
+      2020
+    ],
     "thumbnail": "/images/Resistance.jpg",
     "type": "Series",
     "year": 33.0
@@ -589,7 +658,10 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2016, 2018],
+    "releaseDate": [
+      2016,
+      2018
+    ],
     "thumbnail": "/images/PoeDameron.jpg",
     "type": "Comic",
     "year": 32.0
@@ -606,7 +678,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/ForceCollector.jpg",
     "type": "Young Adult Novel",
     "year": 31.0
@@ -623,7 +697,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2015],
+    "releaseDate": [
+      2015
+    ],
     "thumbnail": "/images/BeforetheAwakening.jpg",
     "type": "Junior Novel",
     "year": 31.0
@@ -640,7 +716,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofResistanceSpecialRobotResistance.jpg",
     "type": "Comic",
     "year": 31.0
@@ -657,7 +735,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofResistancePoeDameron.jpg",
     "type": "Comic",
     "year": 30.0
@@ -674,7 +754,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofResistanceKyloRen.jpg",
     "type": "Comic",
     "year": 29.0
@@ -691,7 +773,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofResistanceGeneralHux.jpg",
     "type": "Comic",
     "year": 29.0
@@ -708,7 +792,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofResistanceCaptainPhasma.jpg",
     "type": "Comic",
     "year": 29.0
@@ -725,7 +811,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofResistanceFinn.jpg",
     "type": "Comic",
     "year": 29.0
@@ -742,7 +830,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofResistanceSupremeLeaderSnoke.jpg",
     "type": "Comic",
     "year": 28.0
@@ -759,7 +849,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofResistanceRoseTico.jpg",
     "type": "Comic",
     "year": 28.0
@@ -776,7 +868,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2018],
+    "releaseDate": [
+      2018
+    ],
     "thumbnail": "/images/StarWarsAdventuresDestroyerDown.jpg",
     "type": "Comic",
     "year": 28.0
@@ -793,7 +887,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/TheRiseofKyloRen.jpg",
     "type": "Comic",
     "year": 28.0
@@ -810,7 +906,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2016],
+    "releaseDate": [
+      2016
+    ],
     "thumbnail": "/images/Bloodline.jpg",
     "type": "Novel",
     "year": 28.0
@@ -827,7 +925,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2020],
+    "releaseDate": [
+      2020
+    ],
     "thumbnail": "/images/PoeDameronFreeFall.jpg",
     "type": "Novel",
     "year": 18.0
@@ -844,7 +944,9 @@
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/TheMandalorian.jpg",
     "type": "Series",
     "year": 9.0
@@ -861,7 +963,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2018],
+    "releaseDate": [
+      2018
+    ],
     "thumbnail": "/images/LastShot.jpg",
     "type": "Novel",
     "year": 7.0
@@ -878,7 +982,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofResistanceSpecialMazsScoundrels.jpg",
     "type": "Comic",
     "year": -4.0
@@ -895,7 +1001,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/TheGhostShip.jpg",
     "type": "Short Story",
     "year": 5.0
@@ -912,7 +1020,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.13
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/AftermathEmpiresEnd.jpg",
     "type": "Novel",
     "year": 5.0
@@ -929,7 +1039,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.11
     },
-    "releaseDate": [2021],
+    "releaseDate": [
+      2021
+    ],
     "thumbnail": "/images/VictorysPrice.jpg",
     "type": "Novel",
     "year": 5.0
@@ -946,7 +1058,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.01
     },
-    "releaseDate": [2016],
+    "releaseDate": [
+      2016
+    ],
     "thumbnail": "/images/AftermathLifeDebt.jpg",
     "type": "Novel",
     "year": 5.0
@@ -963,7 +1077,9 @@
       "tileScale": 0.8,
       "yearOffset": -0.01
     },
-    "releaseDate": [2020],
+    "releaseDate": [
+      2020
+    ],
     "thumbnail": "/images/ShadowFall.jpg",
     "type": "Novel",
     "year": 5.0
@@ -980,7 +1096,9 @@
       "tileScale": 0.52,
       "yearOffset": 0.0
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/BattlefrontIIDICE.jpg",
     "type": "Game",
     "year": 4.0
@@ -997,7 +1115,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2015],
+    "releaseDate": [
+      2015
+    ],
     "thumbnail": "/images/ShatteredEmpire.jpg",
     "type": "Comic",
     "year": 4.0
@@ -1014,7 +1134,9 @@
       "tileScale": 0.54,
       "yearOffset": 0.0
     },
-    "releaseDate": [2020],
+    "releaseDate": [
+      2020
+    ],
     "thumbnail": "/images/Squadrons.jpg",
     "type": "Game",
     "year": 4.0
@@ -1031,7 +1153,9 @@
       "tileScale": 0.5,
       "yearOffset": 0.19
     },
-    "releaseDate": [2020],
+    "releaseDate": [
+      2020
+    ],
     "thumbnail": "/images/SquadronsHunted.jpg",
     "type": "Short",
     "year": 4.0
@@ -1048,7 +1172,9 @@
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
-    "releaseDate": [2015],
+    "releaseDate": [
+      2015
+    ],
     "thumbnail": "/images/Uprising.jpg",
     "type": "Game",
     "year": 4.0
@@ -1065,7 +1191,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.28
     },
-    "releaseDate": [2015],
+    "releaseDate": [
+      2015
+    ],
     "thumbnail": "/images/Aftermath.jpg",
     "type": "Novel",
     "year": 4.0
@@ -1082,7 +1210,9 @@
       "tileScale": 0.8,
       "yearOffset": -0.12
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AlphabetSquadron.jpg",
     "type": "Novel",
     "year": 4.0
@@ -1099,7 +1229,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2015],
+    "releaseDate": [
+      2015
+    ],
     "thumbnail": "/images/TheLeversofPower.jpg",
     "type": "Short Story",
     "year": 4.0
@@ -1116,7 +1248,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.08
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/TIEFighter.jpg",
     "type": "Comic",
     "year": 3.0
@@ -1133,7 +1267,9 @@
       "tileScale": 0.67,
       "yearOffset": 0.01
     },
-    "releaseDate": [1983],
+    "releaseDate": [
+      1983
+    ],
     "thumbnail": "/images/EpisodeVIReturnoftheJedi.jpg",
     "type": "Movie",
     "year": 4.0
@@ -1150,7 +1286,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofRebellionPrincessLeia.jpg",
     "type": "Comic",
     "year": 4.0
@@ -1167,7 +1305,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofRebellionLukeSkywalker.jpg",
     "type": "Comic",
     "year": 4.0
@@ -1184,7 +1324,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2015],
+    "releaseDate": [
+      2015
+    ],
     "thumbnail": "/images/MovingTargetAPrincessLeiaAdventure.jpg",
     "type": "Junior Novel",
     "year": 4.0
@@ -1201,7 +1343,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofResistanceSpecialTheBridge.jpg",
     "type": "Comic",
     "year": -2.0
@@ -1218,7 +1362,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2015],
+    "releaseDate": [
+      2015
+    ],
     "thumbnail": "/images/BattlefrontTwilightCompany.jpg",
     "type": "Novel",
     "year": 3.0
@@ -1235,7 +1381,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2020],
+    "releaseDate": [
+      2020
+    ],
     "thumbnail": "/images/DoctorAphra2020.jpg",
     "type": "Comic",
     "year": 3.0
@@ -1252,7 +1400,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2020],
+    "releaseDate": [
+      2020
+    ],
     "thumbnail": "/images/BountyHunters.jpg",
     "type": "Comic",
     "year": 3.0
@@ -1269,7 +1419,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2020],
+    "releaseDate": [
+      2020
+    ],
     "thumbnail": "/images/DarthVader2020.jpg",
     "type": "Comic",
     "year": 3.0
@@ -1286,7 +1438,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2020],
+    "releaseDate": [
+      2020
+    ],
     "thumbnail": "/images/StarWarsMarvel2020.jpg",
     "type": "Comic",
     "year": 3.0
@@ -1303,7 +1457,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofRebellionSpecialTheTrialofDagobah.jpg",
     "type": "Comic",
     "year": 3.0
@@ -1320,7 +1476,9 @@
       "tileScale": 0.74,
       "yearOffset": 0.0
     },
-    "releaseDate": [1980],
+    "releaseDate": [
+      1980
+    ],
     "thumbnail": "/images/EpisodeVTheEmpireStrikesBack.jpg",
     "type": "Movie",
     "year": 3.0
@@ -1337,7 +1495,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2020],
+    "releaseDate": [
+      2020
+    ],
     "thumbnail": "/images/FromaCertainPointofViewTheEmpireStrikesBack.jpg",
     "type": "Short Story",
     "year": 3.0
@@ -1354,7 +1514,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/TargetVader.jpg",
     "type": "Comic",
     "year": 3.0
@@ -1371,7 +1533,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2016],
+    "releaseDate": [
+      2016
+    ],
     "thumbnail": "/images/DoctorAphra.jpg",
     "type": "Comic",
     "year": 1.0
@@ -1388,7 +1552,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofRebellionLandoCalrissian.jpg",
     "type": "Comic",
     "year": 0.0
@@ -1405,7 +1571,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2015],
+    "releaseDate": [
+      2015
+    ],
     "thumbnail": "/images/StarWarsMarvel2015.jpg",
     "type": "Comic",
     "year": 0.0
@@ -1422,7 +1590,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.05
     },
-    "releaseDate": [2015],
+    "releaseDate": [
+      2015
+    ],
     "thumbnail": "/images/TheWeaponofaJediALukeSkywalkerAdventure.jpg",
     "type": "Junior Novel",
     "year": 0.0
@@ -1439,7 +1609,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.03
     },
-    "releaseDate": [2015],
+    "releaseDate": [
+      2015
+    ],
     "thumbnail": "/images/HeirtotheJedi.jpg",
     "type": "Novel",
     "year": 0.0
@@ -1456,7 +1628,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/BattlefrontIIInfernoSquad.jpg",
     "type": "Novel",
     "year": 0.0
@@ -1473,7 +1647,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2015],
+    "releaseDate": [
+      2015
+    ],
     "thumbnail": "/images/DarthVader.jpg",
     "type": "Comic",
     "year": 0.0
@@ -1490,7 +1666,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2015],
+    "releaseDate": [
+      2015
+    ],
     "thumbnail": "/images/Lando.jpg",
     "type": "Comic",
     "year": 0.0
@@ -1507,7 +1685,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2016],
+    "releaseDate": [
+      2016
+    ],
     "thumbnail": "/images/HanSolo.jpg",
     "type": "Comic",
     "year": 0.0
@@ -1524,7 +1704,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2015],
+    "releaseDate": [
+      2015
+    ],
     "thumbnail": "/images/Chewbacca.jpg",
     "type": "Comic",
     "year": 0.0
@@ -1541,7 +1723,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2015],
+    "releaseDate": [
+      2015
+    ],
     "thumbnail": "/images/PrincessLeia.jpg",
     "type": "Comic",
     "year": 0.0
@@ -1558,7 +1742,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofRebellionHanSolo.jpg",
     "type": "Comic",
     "year": 0.0
@@ -1575,7 +1761,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2015],
+    "releaseDate": [
+      2015
+    ],
     "thumbnail": "/images/SmugglersRunAHanSoloChewbaccaAdventure.jpg",
     "type": "Junior Novel",
     "year": 0.0
@@ -1592,7 +1780,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/ReturntoVadersCastle.jpg",
     "type": "Comic",
     "year": -0.0
@@ -1609,7 +1799,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2018],
+    "releaseDate": [
+      2018
+    ],
     "thumbnail": "/images/TalesfromVadersCastle.jpg",
     "type": "Comic",
     "year": -0.0
@@ -1626,7 +1818,9 @@
       "tileScale": 0.71,
       "yearOffset": 0.3
     },
-    "releaseDate": [1977],
+    "releaseDate": [
+      1977
+    ],
     "thumbnail": "/images/EpisodeIVANewHope.jpg",
     "type": "Movie",
     "year": -0.0
@@ -1643,7 +1837,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/FromaCertainPointofView.jpg",
     "type": "Short Story",
     "year": -0.5
@@ -1660,7 +1856,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofRebellionGrandMoffTarkin.jpg",
     "type": "Comic",
     "year": -0.0
@@ -1677,7 +1875,9 @@
       "tileScale": 0.6,
       "yearOffset": 0.0
     },
-    "releaseDate": [2016],
+    "releaseDate": [
+      2016
+    ],
     "thumbnail": "/images/RogueOne.jpg",
     "type": "Movie",
     "year": -0.1
@@ -1694,7 +1894,9 @@
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
-    "releaseDate": [2016],
+    "releaseDate": [
+      2016
+    ],
     "thumbnail": "/images/RogueOneRecon.jpg",
     "type": "Short",
     "year": -0.2
@@ -1711,7 +1913,9 @@
       "tileScale": 0.8,
       "yearOffset": -0.2
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/GuardiansoftheWhills.jpg",
     "type": "Novel",
     "year": -0.6
@@ -1728,7 +1932,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/RogueOneCassianK2SOSpecial.jpg",
     "type": "Comic",
     "year": -2.0
@@ -1746,7 +1952,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/ThrawnTreason.jpg",
     "type": "Novel",
     "year": -1.0
@@ -1764,7 +1972,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2018],
+    "releaseDate": [
+      2018
+    ],
     "thumbnail": "/images/ThrawnAlliances.jpg",
     "type": "Novel",
     "year": -2.0
@@ -1781,7 +1991,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofRebellionBobaFett.jpg",
     "type": "Comic",
     "year": -2.0
@@ -1798,7 +2010,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofRebellionSpecialStolenValor.jpg",
     "type": "Comic",
     "year": -2.0
@@ -1815,7 +2029,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/VaderDarkVisions.jpg",
     "type": "Comic",
     "year": -2.0
@@ -1833,7 +2049,9 @@
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/VaderImmortal.jpg",
     "type": "VR",
     "year": -2.0
@@ -1851,7 +2069,9 @@
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/SecretsoftheEmpire.jpg",
     "type": "VR",
     "year": -2.0
@@ -1869,7 +2089,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2018],
+    "releaseDate": [
+      2018
+    ],
     "thumbnail": "/images/TheMightyChewbaccaintheForestofFear.jpg",
     "type": "Junior Novel",
     "year": -2.0
@@ -1887,7 +2109,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/LeiaPrincessofAlderaan.jpg",
     "type": "Young Adult Novel",
     "year": -3.0
@@ -1905,7 +2129,10 @@
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
-    "releaseDate": [2014, 2018],
+    "releaseDate": [
+      2014,
+      2018
+    ],
     "thumbnail": "/images/Rebels.jpg",
     "type": "Series",
     "year": -5.0
@@ -1922,7 +2149,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2014],
+    "releaseDate": [
+      2014
+    ],
     "thumbnail": "/images/EzrasGamble.jpg",
     "type": "Junior Novel",
     "year": -5.0
@@ -1940,7 +2169,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2014],
+    "releaseDate": [
+      2014
+    ],
     "thumbnail": "/images/ServantsoftheEmpire.jpg",
     "type": "Junior Novel",
     "year": -6.0
@@ -1958,7 +2189,9 @@
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
-    "releaseDate": [2022],
+    "releaseDate": [
+      2022
+    ],
     "thumbnail": "/images/Andor.jpg",
     "type": "Series",
     "year": -5.0
@@ -1976,7 +2209,9 @@
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
-    "releaseDate": [2022],
+    "releaseDate": [
+      2022
+    ],
     "thumbnail": "/images/ObiWanKenobi.jpg",
     "type": "Series",
     "year": -9.0
@@ -1993,7 +2228,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofRebellionJabbatheHutt.jpg",
     "type": "Comic",
     "year": -10.0
@@ -2010,7 +2247,9 @@
       "tileScale": 0.66,
       "yearOffset": 0.0
     },
-    "releaseDate": [2018],
+    "releaseDate": [
+      2018
+    ],
     "thumbnail": "/images/SoloAStarWarsStory.jpg",
     "type": "Movie",
     "year": -10.0
@@ -2027,7 +2266,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2018],
+    "releaseDate": [
+      2018
+    ],
     "thumbnail": "/images/Beckett.jpg",
     "type": "Comic",
     "year": -11.0
@@ -2045,7 +2286,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2018],
+    "releaseDate": [
+      2018
+    ],
     "thumbnail": "/images/LandoDoubleorNothing.jpg",
     "type": "Comic",
     "year": -10.0
@@ -2063,7 +2306,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2018],
+    "releaseDate": [
+      2018
+    ],
     "thumbnail": "/images/LandosLuck.jpg",
     "type": "Junior Novel",
     "year": -10.0
@@ -2081,7 +2326,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2014],
+    "releaseDate": [
+      2014
+    ],
     "thumbnail": "/images/ANewDawn.jpg",
     "type": "Novel",
     "year": -11.0
@@ -2098,7 +2345,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2015],
+    "releaseDate": [
+      2015
+    ],
     "thumbnail": "/images/Bottleneck.jpg",
     "type": "Short Story",
     "year": -11.0
@@ -2115,7 +2364,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2018],
+    "releaseDate": [
+      2018
+    ],
     "thumbnail": "/images/ThrawnMarvel.jpg",
     "type": "Comic",
     "year": -13.0
@@ -2133,7 +2384,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/Thrawn.jpg",
     "type": "Novel",
     "year": -11.0
@@ -2150,7 +2403,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2015],
+    "releaseDate": [
+      2015
+    ],
     "thumbnail": "/images/LostStars.jpg",
     "type": "Young Adult Novel",
     "year": -11.0
@@ -2168,7 +2423,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/RebelRising.jpg",
     "type": "Novel",
     "year": -13.0
@@ -2186,7 +2443,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2018],
+    "releaseDate": [
+      2018
+    ],
     "thumbnail": "/images/HanSoloImperialCadet.jpg",
     "type": "Comic",
     "year": -13.0
@@ -2204,7 +2463,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2018],
+    "releaseDate": [
+      2018
+    ],
     "thumbnail": "/images/MostWanted.jpg",
     "type": "Novel",
     "year": -13.0
@@ -2221,7 +2482,9 @@
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/JediFallenOrder.jpg",
     "type": "Game",
     "year": -14.0
@@ -2238,7 +2501,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.2
     },
-    "releaseDate": [2015],
+    "releaseDate": [
+      2015
+    ],
     "thumbnail": "/images/Tarkin.jpg",
     "type": "Novel",
     "year": -14.0
@@ -2255,7 +2520,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2015],
+    "releaseDate": [
+      2015
+    ],
     "thumbnail": "/images/MercyMission.jpg",
     "type": "Short Story",
     "year": -14.0
@@ -2272,7 +2539,9 @@
       "tileScale": 0.8,
       "yearOffset": -0.2
     },
-    "releaseDate": [2015],
+    "releaseDate": [
+      2015
+    ],
     "thumbnail": "/images/LordsoftheSith.jpg",
     "type": "Novel",
     "year": -14.0
@@ -2290,7 +2559,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2021],
+    "releaseDate": [
+      2021
+    ],
     "thumbnail": "/images/TheBadBatch.jpg",
     "type": "Series",
     "year": -19.0
@@ -2308,7 +2579,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2016],
+    "releaseDate": [
+      2016
+    ],
     "thumbnail": "/images/Ahsoka.jpg",
     "type": "Novel",
     "year": -18.0
@@ -2325,7 +2598,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2016],
+    "releaseDate": [
+      2016
+    ],
     "thumbnail": "/images/AdventuresinWildSpaceTheEscape.jpg",
     "type": "Junior Novel",
     "year": -18.0
@@ -2342,7 +2617,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofRebellionSpecialTheLongGame.jpg",
     "type": "Comic",
     "year": -19.0
@@ -2360,7 +2637,10 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2015, 2016],
+    "releaseDate": [
+      2015,
+      2016
+    ],
     "thumbnail": "/images/Kanan.jpg",
     "type": "Comic",
     "year": -19.0
@@ -2377,7 +2657,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofRebellionDarthVader.jpg",
     "type": "Comic",
     "year": -19.0
@@ -2394,7 +2676,10 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2017, 2018],
+    "releaseDate": [
+      2017,
+      2018
+    ],
     "thumbnail": "/images/DarthVaderDarkLordoftheSith.jpg",
     "type": "Comic",
     "year": -19.0
@@ -2412,7 +2697,9 @@
       "tileScale": 0.72,
       "yearOffset": 0.17
     },
-    "releaseDate": [2005],
+    "releaseDate": [
+      2005
+    ],
     "thumbnail": "/images/EpisodeIIIRevengeoftheSith.jpg",
     "type": "Movie",
     "year": -19.0
@@ -2429,7 +2716,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.2
     },
-    "releaseDate": [2021],
+    "releaseDate": [
+      2021
+    ],
     "thumbnail": "/images/ThrawnAscendancyLesserEvil.jpg",
     "type": "Novel",
     "year": -19.0
@@ -2446,7 +2735,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2021],
+    "releaseDate": [
+      2021
+    ],
     "thumbnail": "/images/ThrawnAscendancyGreaterGood.jpg",
     "type": "Novel",
     "year": -19.0
@@ -2464,7 +2755,9 @@
       "tileScale": 0.8,
       "yearOffset": -0.2
     },
-    "releaseDate": [2020],
+    "releaseDate": [
+      2020
+    ],
     "thumbnail": "/images/ThrawnAscendancyChaosRising.jpg",
     "type": "Novel",
     "year": -19.0
@@ -2482,7 +2775,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2015],
+    "releaseDate": [
+      2015
+    ],
     "thumbnail": "/images/DarkDisciple.jpg",
     "type": "Novel",
     "year": -19.0
@@ -2499,7 +2794,9 @@
       "tileScale": 0.8,
       "yearOffset": -0.14
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofRepublicSpecialSisters.jpg",
     "type": "Comic",
     "year": -19.0
@@ -2517,7 +2814,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2014],
+    "releaseDate": [
+      2014
+    ],
     "thumbnail": "/images/DarthMaulSonofDathomir.jpg",
     "type": "Comic",
     "year": -19.0
@@ -2535,7 +2834,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2016],
+    "releaseDate": [
+      2016
+    ],
     "thumbnail": "/images/CatalystARogueOneNovel.jpg",
     "type": "Novel",
     "year": -21.0
@@ -2553,7 +2854,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2021],
+    "releaseDate": [
+      2021
+    ],
     "thumbnail": "/images/QueensHope.jpg",
     "type": "Novel",
     "year": -22.0
@@ -2570,7 +2873,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2020],
+    "releaseDate": [
+      2020
+    ],
     "thumbnail": "/images/TheCloneWarsStoriesofLightandDark.jpg",
     "type": "Comic",
     "year": -22.0
@@ -2588,7 +2893,10 @@
       "tileScale": 0.67,
       "yearOffset": 0.0
     },
-    "releaseDate": [2008, 2020],
+    "releaseDate": [
+      2008,
+      2020
+    ],
     "thumbnail": "/images/TheCloneWars.jpg",
     "type": "Series",
     "year": -22.0
@@ -2606,7 +2914,9 @@
       "tileScale": 0.68,
       "yearOffset": 0.0
     },
-    "releaseDate": [2008],
+    "releaseDate": [
+      2008
+    ],
     "thumbnail": "/images/TheCloneWarsfilm.jpg",
     "type": "Movie",
     "year": -22.0
@@ -2623,7 +2933,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofRepublicSpecial501PlusOne.jpg",
     "type": "Comic",
     "year": -22.0
@@ -2640,7 +2952,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofRepublicGeneralGrievous.jpg",
     "type": "Comic",
     "year": -22.0
@@ -2657,7 +2971,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofRepublicPadmeAmidala.jpg",
     "type": "Comic",
     "year": -22.0
@@ -2674,7 +2990,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofRepublicAnakinSkywalker.jpg",
     "type": "Comic",
     "year": -22.0
@@ -2692,7 +3010,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/JedioftheRepublicMaceWindu.jpg",
     "type": "Comic",
     "year": -22.0
@@ -2710,7 +3030,9 @@
       "tileScale": 0.81,
       "yearOffset": 0.0
     },
-    "releaseDate": [2002],
+    "releaseDate": [
+      2002
+    ],
     "thumbnail": "/images/EpisodeIIAttackoftheClones.jpg",
     "type": "Movie",
     "year": -22.0
@@ -2728,7 +3050,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/DookuJediLost.jpg",
     "type": "AudioBook",
     "year": -22.0
@@ -2746,7 +3070,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/QueensShadow.jpg",
     "type": "Novel",
     "year": -28.0
@@ -2764,7 +3090,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2016],
+    "releaseDate": [
+      2016
+    ],
     "thumbnail": "/images/ObiWanandAnakin.jpg",
     "type": "Comic",
     "year": -29.0
@@ -2781,7 +3109,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2018],
+    "releaseDate": [
+      2018
+    ],
     "thumbnail": "/images/AgeofRepublicJangoFett.jpg",
     "type": "Comic",
     "year": -32.0
@@ -2798,7 +3128,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofRepublicCountDooku.jpg",
     "type": "Comic",
     "year": -32.0
@@ -2815,7 +3147,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofRepublicObiWanKenobi.jpg",
     "type": "Comic",
     "year": -32.0
@@ -2833,7 +3167,9 @@
       "tileScale": 0.87,
       "yearOffset": 0.0
     },
-    "releaseDate": [1999],
+    "releaseDate": [
+      1999
+    ],
     "thumbnail": "/images/EpisodeIThePhantomMenace.jpg",
     "type": "Movie",
     "year": -32.0
@@ -2851,7 +3187,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2020],
+    "releaseDate": [
+      2020
+    ],
     "thumbnail": "/images/QueensPeril.jpg",
     "type": "Novel",
     "year": -32.0
@@ -2868,7 +3206,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2018],
+    "releaseDate": [
+      2018
+    ],
     "thumbnail": "/images/AgeofRepublicDarthMaul.jpg",
     "type": "Comic",
     "year": -32.0
@@ -2886,7 +3226,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2017],
+    "releaseDate": [
+      2017
+    ],
     "thumbnail": "/images/DarthMaul.jpg",
     "type": "Comic",
     "year": -32.0
@@ -2903,7 +3245,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/AgeofRepublicSpecialTheWeapon.jpg",
     "type": "Comic",
     "year": -33.0
@@ -2920,7 +3264,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2018],
+    "releaseDate": [
+      2018
+    ],
     "thumbnail": "/images/AgeofRepublicQuiGonJinn.jpg",
     "type": "Comic",
     "year": -44.0
@@ -2938,7 +3284,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/MasterApprentice.jpg",
     "type": "Novel",
     "year": -40.0
@@ -2955,24 +3303,104 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2019],
+    "releaseDate": [
+      2019
+    ],
     "thumbnail": "/images/JediFallenOrderDarkTemple.jpg",
     "type": "Comic",
     "year": -42.0
   },
   {
     "duration": 0,
-    "link": "https://starwars.fandom.com/wiki/Star_Wars:_The_High_Republic_Adventures",
-    "name": "The High Republic Adventures",
+    "link": "https://starwars.fandom.com/wiki/Star_Wars:_The_High_Republic:_Trail_of_Shadows",
+    "name": "The High Republic: Trail of Shadows",
     "params": {
       "height": 1,
       "labelSize": 0.1,
-      "pos": -3.03,
+      "pos": -4.5,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2021],
+    "releaseDate": [
+      2021
+    ],
+    "thumbnail": "/images/TheHighRepublicTrailofShadows.jpg",
+    "type": "Comic",
+    "year": -231.0
+  },
+  {
+    "duration": 0,
+    "link": "https://starwars.fandom.com/wiki/Star_Wars:_The_High_Republic:_The_Edge_of_Balance",
+    "name": "The High Republic: The Edge of Balance",
+    "params": {
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": 0.47,
+      "tileOffset": 0,
+      "tileScale": 0.5,
+      "yearOffset": 0.0
+    },
+    "releaseDate": [
+      2021
+    ],
+    "thumbnail": "/images/TheHighRepublicTheEdgeofBalance.jpg",
+    "type": "Others",
+    "year": -231.0
+  },
+  {
+    "duration": 0,
+    "link": "https://starwars.fandom.com/wiki/The_High_Republic:_Tempest_Runner",
+    "name": "The High Republic: Tempest Runner",
+    "params": {
+      "height": 0.7,
+      "labelSize": 0.1,
+      "pos": -2.14,
+      "tileOffset": 0,
+      "tileScale": 0.8,
+      "yearOffset": 0.0
+    },
+    "releaseDate": [
+      2021
+    ],
+    "thumbnail": "/images/TheHighRepublicTempestRunner.jpg",
+    "type": "AudioBook",
+    "year": -231.0
+  },
+  {
+    "duration": 0,
+    "link": "https://starwars.fandom.com/wiki/Star_Wars:_The_High_Republic_Adventures_%E2%80%94_The_Monster_of_Temple_Peak",
+    "name": "The High Republic Adventures - The Monster of Temple Peak",
+    "params": {
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": -6.42,
+      "tileOffset": 0,
+      "tileScale": 0.8,
+      "yearOffset": 0.0
+    },
+    "releaseDate": [
+      2021
+    ],
+    "thumbnail": "/images/TheHighRepublicAdventuresTheMonsterofTemplePeak.jpg",
+    "type": "Comic",
+    "year": -231.0
+  },
+  {
+    "duration": 0,
+    "link": "https://starwars.fandom.com/wiki/Star_Wars:_The_High_Republic_Adventures",
+    "name": "The High Republic Adventures",
+    "params": {
+      "height": 1.8,
+      "labelSize": 0.1,
+      "pos": -3.13,
+      "tileOffset": 0,
+      "tileScale": 0.8,
+      "yearOffset": 0.0
+    },
+    "releaseDate": [
+      2021
+    ],
     "thumbnail": "/images/TheHighRepublicAdventures.jpg",
     "type": "Comic",
     "year": -232.0
@@ -2989,7 +3417,9 @@
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2021],
+    "releaseDate": [
+      2021
+    ],
     "thumbnail": "/images/TheHighRepubliccomic.jpg",
     "type": "Comic",
     "year": -232.0
@@ -3001,12 +3431,14 @@
     "params": {
       "height": 1,
       "labelSize": 0.1,
-      "pos": 2.39,
+      "pos": -1.11,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.2
     },
-    "releaseDate": [2021],
+    "releaseDate": [
+      2021
+    ],
     "thumbnail": "/images/TheHighRepublicRacetoCrashpointTower.jpg",
     "type": "Junior Novel",
     "year": -232.0
@@ -3018,12 +3450,14 @@
     "params": {
       "height": 2.5,
       "labelSize": 0.1,
-      "pos": 2.51,
+      "pos": -1.09,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2021],
+    "releaseDate": [
+      2021
+    ],
     "thumbnail": "/images/TheHighRepublicATestofCourage.jpg",
     "type": "Junior Novel",
     "year": -232.0
@@ -3033,17 +3467,19 @@
     "link": "https://starwars.fandom.com/wiki/The_High_Republic:_Out_of_the_Shadows",
     "name": "The High Republic: Out of Shadows",
     "params": {
-      "height": 1,
+      "height": 1.3,
       "labelSize": 0.1,
-      "pos": -0.57,
+      "pos": 1.83,
       "tileOffset": 0,
       "tileScale": 0.8,
-      "yearOffset": 0.2
+      "yearOffset": 0.0
     },
-    "releaseDate": [2021],
+    "releaseDate": [
+      2021
+    ],
     "thumbnail": "/images/TheHighRepublicOutofShadows.jpg",
     "type": "Young Adult Novel",
-    "year": -232.0
+    "year": -231.0
   },
   {
     "duration": 0,
@@ -3052,46 +3488,71 @@
     "params": {
       "height": 2.5,
       "labelSize": 0.1,
-      "pos": -0.53,
+      "pos": 1.77,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2021],
+    "releaseDate": [
+      2021
+    ],
     "thumbnail": "/images/TheHighRepublicIntotheDark.jpg",
     "type": "Young Adult Novel",
     "year": -232.0
   },
   {
     "duration": 0,
-    "link": "https://starwars.fandom.com/wiki/The_High_Republic:_The_Rising_Storm",
-    "name": "The High Republic: The Rising Storm",
+    "link": "https://starwars.fandom.com/wiki/The_High_Republic:_The_Fallen_Star",
+    "name": "The High Republic: The Fallen Star",
     "params": {
       "height": 1,
       "labelSize": 0.1,
-      "pos": 0.85,
+      "pos": 3.99,
       "tileOffset": 0,
       "tileScale": 0.8,
-      "yearOffset": 0.2
+      "yearOffset": 0.5
     },
-    "releaseDate": [2021],
+    "releaseDate": [
+      2022
+    ],
+    "thumbnail": "/images/TheHighRepublicTheFallenStar.jpg",
+    "type": "AudioBook",
+    "year": -231.0
+  },
+  {
+    "duration": 0,
+    "link": "https://starwars.fandom.com/wiki/The_High_Republic:_The_Rising_Storm",
+    "name": "The High Republic: The Rising Storm",
+    "params": {
+      "height": 1.4,
+      "labelSize": 0.1,
+      "pos": 3.45,
+      "tileOffset": 0,
+      "tileScale": 0.8,
+      "yearOffset": 0.0
+    },
+    "releaseDate": [
+      2021
+    ],
     "thumbnail": "/images/TheHighRepublicTheRisingStorm.jpg",
     "type": "Novel",
-    "year": -232.0
+    "year": -231.0
   },
   {
     "duration": 0,
     "link": "https://starwars.fandom.com/wiki/The_High_Republic:_Light_of_the_Jedi",
     "name": "The High Republic: Light of the Jedi",
     "params": {
-      "height": 2.5,
+      "height": 2.6,
       "labelSize": 0.1,
-      "pos": 0.95,
+      "pos": 3.85,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [2021],
+    "releaseDate": [
+      2021
+    ],
     "thumbnail": "/images/TheHighRepublicLightoftheJedi.jpg",
     "type": "Novel",
     "year": -232.0

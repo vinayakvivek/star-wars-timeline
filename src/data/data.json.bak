@@ -5,16 +5,13 @@
     "name": "Episode IX: The Rise of Skywalker",
     "params": {
       "height": 0.9,
-      "labelPos": -0.1,
       "labelSize": 0.1,
-      "pos": 0.9,
+      "pos": 0.5,
       "tileOffset": 0,
       "tileScale": 0.59,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/EpisodeIXTheRiseofSkywalker.jpg",
     "type": "Movie",
     "year": 35.0
@@ -25,16 +22,13 @@
     "name": "Tales from the Galaxy's Edge",
     "params": {
       "height": 2.05,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -8.4,
       "tileOffset": 0,
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2020
-    ],
+    "releaseDate": [2020],
     "thumbnail": "/images/TalesfromtheGalaxysEdge.jpg",
     "type": "VR",
     "year": 34.0
@@ -45,16 +39,13 @@
     "name": "A Crash of Fate",
     "params": {
       "height": 3.6,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -5.41,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/ACrashofFate.jpg",
     "type": "Novel",
     "year": 34.0
@@ -65,16 +56,13 @@
     "name": "Galaxy's Edge",
     "params": {
       "height": 0.69,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -5.46,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/GalaxysEdge.jpg",
     "type": "Comic",
     "year": 34.0
@@ -85,16 +73,13 @@
     "name": "Galaxy's Edge: Black Spire",
     "params": {
       "height": 2.25,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -5.49,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/GalaxysEdgeBlackSpire.jpg",
     "type": "Novel",
     "year": 34.0
@@ -105,16 +90,13 @@
     "name": "Spark of the Resistance",
     "params": {
       "height": 1.1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 6.1,
+      "labelSize": 0.1,
+      "pos": 6.4,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/SparkoftheResistance.jpg",
     "type": "Junior Novel",
     "year": 34.0
@@ -125,16 +107,13 @@
     "name": "Star Wars Adventures: Flight of the Falcon",
     "params": {
       "height": 1.04,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 4.01,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.06
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/StarWarsAdventuresFlightoftheFalcon.jpg",
     "type": "Comic",
     "year": 34.0
@@ -145,16 +124,13 @@
     "name": "Pirate's Price",
     "params": {
       "height": 2.52,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 3.97,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/PiratesPrice.jpg",
     "type": "Junior Novel",
     "year": 34.0
@@ -165,16 +141,13 @@
     "name": "BB-8 and the Snow Monster",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 10,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2022
-    ],
+    "releaseDate": [2022],
     "thumbnail": "/images/BB8andtheSnowMonster.jpg",
     "type": "Comic",
     "year": 34.0
@@ -184,17 +157,14 @@
     "link": "https://starwars.fandom.com/wiki/R2-D2_is_LOST!",
     "name": "R2-D2 is LOST!",
     "params": {
-      "height": 0.8,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "height": 1.0,
+      "labelSize": 0.1,
       "pos": 9,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2020
-    ],
+    "releaseDate": [2020],
     "thumbnail": "/images/R2D2isLOST.jpg",
     "type": "Comic",
     "year": 34.0
@@ -205,16 +175,13 @@
     "name": "C-3PO Does NOT Like Sand!",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 8,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/C3PODoesNOTLikeSand.jpg",
     "type": "Comic",
     "year": 34.0
@@ -224,17 +191,14 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Allegiance",
     "name": "Allegiance",
     "params": {
-      "height": 0.87,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "height": 1.17,
+      "labelSize": 0.1,
       "pos": 2.96,
       "tileOffset": 0,
-      "tileScale": 0.8,
+      "tileScale": 0.85,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/Allegiance.jpg",
     "type": "Comic",
     "year": 34.0
@@ -244,13 +208,14 @@
     "link": "https://starwars.fandom.com/wiki/Resistance_Reborn",
     "name": "Resistance Reborn",
     "params": {
-      "height": 1.0,
-      "pos": -1.15,
+      "height": 1.2,
+      "labelSize": 0.1,
+      "pos": 1.95,
+      "tileOffset": 0,
+      "tileScale": 0.83,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/ResistanceReborn.jpg",
     "type": "Novel",
     "year": 34.0
@@ -261,16 +226,13 @@
     "name": "Droid Repair Bay",
     "params": {
       "height": 0.85,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -8.56,
       "tileOffset": 0,
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/DroidRepairBay.jpg",
     "type": "VR",
     "year": 34.0
@@ -280,17 +242,14 @@
     "link": "https://starwars.fandom.com/wiki/Chewie_and_the_Porgs",
     "name": "Chewie and the Porgs",
     "params": {
-      "height": 2.13,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 8.25,
+      "height": 1.83,
+      "labelSize": 0.1,
+      "pos": 8.45,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/ChewieandthePorgs.jpg",
     "type": "Junior Novel",
     "year": 34.0
@@ -300,17 +259,14 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Episode_VIII_The_Last_Jedi",
     "name": "Episode VIII: The Last Jedi",
     "params": {
-      "height": 1.4,
-      "labelPos": -0.1,
+      "height": 1.1,
       "labelSize": 0.1,
-      "pos": -1.5,
+      "pos": -1.0,
       "tileOffset": 0,
       "tileScale": 0.62,
-      "yearOffset": 0.82
+      "yearOffset": 0.47
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/EpisodeVIIITheLastJedi.jpg",
     "type": "Movie",
     "year": 34.0
@@ -320,17 +276,14 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_The_Last_Jedi_%E2%80%93_DJ_%E2%80%93_Most_Wanted_1",
     "name": "The Last Jedi - DJ - Most Wanted",
     "params": {
-      "height": 1.04,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 4.95,
+      "height": 1.14,
+      "labelSize": 0.1,
+      "pos": 5.35,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2018
-    ],
+    "releaseDate": [2018],
     "thumbnail": "/images/TheLastJediDJMostWanted.jpg",
     "type": "Comic",
     "year": 34.0
@@ -340,17 +293,14 @@
     "link": "https://starwars.fandom.com/wiki/The_Legends_of_Luke_Skywalker",
     "name": "The Legends of Luke Skywalker",
     "params": {
-      "height": 2.47,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -2.81,
+      "height": 1.27,
+      "labelSize": 0.1,
+      "pos": -3.41,
       "tileOffset": 0,
       "tileScale": 0.8,
-      "yearOffset": 0.0
+      "yearOffset": -0.22
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/TheLegendsofLukeSkywalker.jpg",
     "type": "Junior Novel",
     "year": 34.0
@@ -361,16 +311,13 @@
     "name": "Canto Bight",
     "params": {
       "height": 3.59,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -4.26,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/CantoBight.jpg",
     "type": "Novel",
     "year": 34.0
@@ -380,17 +327,14 @@
     "link": "https://starwars.fandom.com/wiki/The_Last_Jedi:_Cobalt_Squadron",
     "name": "The Last Jedi: Cobalt Squadron",
     "params": {
-      "height": 2.64,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 4.95,
+      "height": 2.84,
+      "labelSize": 0.1,
+      "pos": 5.05,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": -0.03
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/TheLastJediCobaltSquadron.jpg",
     "type": "Novel",
     "year": 34.0
@@ -401,16 +345,13 @@
     "name": "Captain Phasma",
     "params": {
       "height": 0.97,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -3.32,
+      "labelSize": 0.1,
+      "pos": -3.02,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/CaptainPhasma.jpg",
     "type": "Comic",
     "year": 34.0
@@ -420,17 +361,14 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Resistance_-_Rey_1",
     "name": "Age of Resistance: Rey",
     "params": {
-      "height": 2.6,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 6,
+      "height": 2.7,
+      "labelSize": 0.1,
+      "pos": 6.2,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": -0.1
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofResistanceRey.jpg",
     "type": "Comic",
     "year": 34.0
@@ -441,16 +379,13 @@
     "name": "Join the Resistance: Attack on Starkiller Base",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -6.8,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.2
     },
-    "releaseDate": [
-      2018
-    ],
+    "releaseDate": [2018],
     "thumbnail": "/images/JointheResistanceAttackonStarkillerBase.jpg",
     "type": "Junior Novel",
     "year": 34.0
@@ -460,17 +395,14 @@
     "link": "https://battlefront.fandom.com/wiki/Resurrection",
     "name": "Battlefront II: Resurrection",
     "params": {
-      "height": 4.01,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -2.23,
+      "height": 1.31,
+      "labelSize": 0.1,
+      "pos": -1.93,
       "tileOffset": 0,
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/BattlefrontIIResurrection.jpg",
     "type": "Game",
     "year": 34.0
@@ -481,16 +413,13 @@
     "name": "BB-8 on the Run",
     "params": {
       "height": 2.5,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 9,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.21
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/BB8ontheRun.jpg",
     "type": "Junior Novel",
     "year": 34.0
@@ -500,17 +429,14 @@
     "link": "https://starwars.fandom.com/wiki/The_Force_Awakens:_Finn%27s_Story",
     "name": "The Force Awakens: Finn's Story",
     "params": {
-      "height": 2.4,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 7.2,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": 7.4,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2016
-    ],
+    "releaseDate": [2016],
     "thumbnail": "/images/TheForceAwakensFinnsStory.jpg",
     "type": "Junior Novel",
     "year": 34.0
@@ -520,17 +446,14 @@
     "link": "https://starwars.fandom.com/wiki/The_Force_Awakens:_Rey%27s_Story",
     "name": "The Force Awakens: Rey's Story",
     "params": {
-      "height": 4,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 7.2,
+      "height": 2.9,
+      "labelSize": 0.1,
+      "pos": 7.4,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2016
-    ],
+    "releaseDate": [2016],
     "thumbnail": "/images/TheForceAwakensReysStory.jpg",
     "type": "Junior Novel",
     "year": 34.0
@@ -541,16 +464,13 @@
     "name": "Episode VII: The Force Awakens",
     "params": {
       "height": 1.4,
-      "labelPos": -0.1,
       "labelSize": 0.1,
-      "pos": -0.9,
+      "pos": -0.3,
       "tileOffset": 0.5,
       "tileScale": 0.73,
       "yearOffset": -0.5
     },
-    "releaseDate": [
-      2015
-    ],
+    "releaseDate": [2015],
     "thumbnail": "/images/EpisodeVIITheForceAwakens.jpg",
     "type": "Movie",
     "year": 34.0
@@ -561,16 +481,13 @@
     "name": "Tales from a Galaxy Far, Far Away: Aliens: Volume I",
     "params": {
       "height": 3.57,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -8.57,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": -0.1
     },
-    "releaseDate": [
-      2016
-    ],
+    "releaseDate": [2016],
     "thumbnail": "/images/TalesfromaGalaxyFarFarAwayAliensVolumeI.jpg",
     "type": "Short Story",
     "year": 34.0
@@ -581,16 +498,13 @@
     "name": "The Perfect Weapon",
     "params": {
       "height": 2.19,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -4.29,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2015
-    ],
+    "releaseDate": [2015],
     "thumbnail": "/images/ThePerfectWeapon.jpg",
     "type": "Short Story",
     "year": 34.0
@@ -601,16 +515,13 @@
     "name": "Phasma",
     "params": {
       "height": 0.78,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -4.27,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/Phasma.jpg",
     "type": "Novel",
     "year": 34.0
@@ -621,16 +532,13 @@
     "name": "Join the Resistance: Escape from Vodran",
     "params": {
       "height": 2.5,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -6.9,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/JointheResistanceEscapefromVodran.jpg",
     "type": "Junior Novel",
     "year": 34.0
@@ -641,16 +549,13 @@
     "name": "Join the Resistance",
     "params": {
       "height": 3.9,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -6.9,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": -0.2
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/JointheResistance.jpg",
     "type": "Junior Novel",
     "year": 34.0
@@ -661,17 +566,13 @@
     "name": "Resistance",
     "params": {
       "height": 1.3,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 1.83,
-      "tileOffset": 0,
-      "tileScale": 0.67,
+      "labelSize": 0.1,
+      "pos": 1.33,
+      "tileOffset": 0.47,
+      "tileScale": 0.58,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2018,
-      2020
-    ],
+    "releaseDate": [2018, 2020],
     "thumbnail": "/images/Resistance.jpg",
     "type": "Series",
     "year": 33.0
@@ -682,17 +583,13 @@
     "name": "Poe Dameron",
     "params": {
       "height": 1.06,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 1.52,
+      "labelSize": 0.1,
+      "pos": 2.62,
       "tileOffset": 0.16,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2016,
-      2018
-    ],
+    "releaseDate": [2016, 2018],
     "thumbnail": "/images/PoeDameron.jpg",
     "type": "Comic",
     "year": 32.0
@@ -703,16 +600,13 @@
     "name": "Force Collector",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 2.63,
+      "labelSize": 0.1,
+      "pos": 0.03,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/ForceCollector.jpg",
     "type": "Young Adult Novel",
     "year": 31.0
@@ -722,17 +616,14 @@
     "link": "https://starwars.fandom.com/wiki/Before_the_Awakening",
     "name": "Before the Awakening",
     "params": {
-      "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 0.51,
-      "tileOffset": -0.3,
+      "height": 1.2,
+      "labelSize": 0.1,
+      "pos": 5.61,
+      "tileOffset": 0.28,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2015
-    ],
+    "releaseDate": [2015],
     "thumbnail": "/images/BeforetheAwakening.jpg",
     "type": "Junior Novel",
     "year": 31.0
@@ -742,17 +633,14 @@
     "link": "https://starwars.fandom.com/wiki/Robot_Resistance",
     "name": "Age of Resistance Special: Robot Resistance",
     "params": {
-      "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 3.61,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": 3.71,
       "tileOffset": 0.47,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofResistanceSpecialRobotResistance.jpg",
     "type": "Comic",
     "year": 31.0
@@ -762,17 +650,14 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Resistance_-_Poe_Dameron_1",
     "name": "Age of Resistance: Poe Dameron",
     "params": {
-      "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 2.44,
+      "height": 1.2,
+      "labelSize": 0.1,
+      "pos": 3.14,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofResistancePoeDameron.jpg",
     "type": "Comic",
     "year": 30.0
@@ -783,16 +668,13 @@
     "name": "Age of Resistance: Kylo Ren",
     "params": {
       "height": 1.3,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -4.84,
       "tileOffset": 0.13,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofResistanceKyloRen.jpg",
     "type": "Comic",
     "year": 29.0
@@ -803,16 +685,13 @@
     "name": "Age of Resistance: General Hux",
     "params": {
       "height": 1.4,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -6.01,
       "tileOffset": 0.08,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofResistanceGeneralHux.jpg",
     "type": "Comic",
     "year": 29.0
@@ -822,17 +701,14 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Resistance_-_Captain_Phasma_1",
     "name": "Age of Resistance: Captain Phasma",
     "params": {
-      "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "height": 1.1,
+      "labelSize": 0.1,
       "pos": -3.27,
       "tileOffset": -0.05,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofResistanceCaptainPhasma.jpg",
     "type": "Comic",
     "year": 29.0
@@ -842,17 +718,14 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Resistance_-_Finn_1",
     "name": "Age of Resistance: Finn",
     "params": {
-      "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 1.13,
+      "height": 1.2,
+      "labelSize": 0.1,
+      "pos": 1.93,
       "tileOffset": 0.22,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofResistanceFinn.jpg",
     "type": "Comic",
     "year": 29.0
@@ -862,17 +735,14 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Resistance_-_Supreme_Leader_Snoke_1",
     "name": "Age of Resistance: Supreme Leader Snoke",
     "params": {
-      "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "height": 1.1,
+      "labelSize": 0.1,
       "pos": -4.28,
       "tileOffset": 0.42,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofResistanceSupremeLeaderSnoke.jpg",
     "type": "Comic",
     "year": 28.0
@@ -883,16 +753,13 @@
     "name": "Age of Resistance: Rose Tico",
     "params": {
       "height": 1.2,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 4.94,
       "tileOffset": 0.15,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofResistanceRoseTico.jpg",
     "type": "Comic",
     "year": 28.0
@@ -902,17 +769,14 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars_Adventures:_Destroyer_Down_(miniseries)",
     "name": "Star Wars Adventures: Destroyer Down",
     "params": {
-      "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "height": 1.1,
+      "labelSize": 0.1,
       "pos": -1.35,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2018
-    ],
+    "releaseDate": [2018],
     "thumbnail": "/images/StarWarsAdventuresDestroyerDown.jpg",
     "type": "Comic",
     "year": 28.0
@@ -923,16 +787,13 @@
     "name": "The Rise of Kylo Ren",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 1.35,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/TheRiseofKyloRen.jpg",
     "type": "Comic",
     "year": 28.0
@@ -943,16 +804,13 @@
     "name": "Bloodline",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -2.21,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2016
-    ],
+    "releaseDate": [2016],
     "thumbnail": "/images/Bloodline.jpg",
     "type": "Novel",
     "year": 28.0
@@ -963,16 +821,13 @@
     "name": "Poe Dameron: Free Fall",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -1.55,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2020
-    ],
+    "releaseDate": [2020],
     "thumbnail": "/images/PoeDameronFreeFall.jpg",
     "type": "Novel",
     "year": 18.0
@@ -983,16 +838,13 @@
     "name": "The Mandalorian",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 0.82,
       "tileOffset": 0,
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/TheMandalorian.jpg",
     "type": "Series",
     "year": 9.0
@@ -1003,16 +855,13 @@
     "name": "Last Shot",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -1.88,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2018
-    ],
+    "releaseDate": [2018],
     "thumbnail": "/images/LastShot.jpg",
     "type": "Novel",
     "year": 7.0
@@ -1023,16 +872,13 @@
     "name": "Age of Resistance Special: Maz's Scoundrels",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -7.02,
       "tileOffset": 0.03,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofResistanceSpecialMazsScoundrels.jpg",
     "type": "Comic",
     "year": -4.0
@@ -1043,16 +889,13 @@
     "name": "The Ghost Ship",
     "params": {
       "height": 0.8,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -2.24,
+      "labelSize": 0.1,
+      "pos": 5.66,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/TheGhostShip.jpg",
     "type": "Short Story",
     "year": 5.0
@@ -1063,16 +906,13 @@
     "name": "Aftermath: Empire's End",
     "params": {
       "height": 1.1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -3.98,
+      "labelSize": 0.1,
+      "pos": -6.08,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.13
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/AftermathEmpiresEnd.jpg",
     "type": "Novel",
     "year": 5.0
@@ -1083,16 +923,13 @@
     "name": "Victory's Price",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 3.11,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.11
     },
-    "releaseDate": [
-      2021
-    ],
+    "releaseDate": [2021],
     "thumbnail": "/images/VictorysPrice.jpg",
     "type": "Novel",
     "year": 5.0
@@ -1103,16 +940,13 @@
     "name": "Aftermath: Life Debt",
     "params": {
       "height": 1.3,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -3.37,
+      "labelSize": 0.1,
+      "pos": -5.37,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.01
     },
-    "releaseDate": [
-      2016
-    ],
+    "releaseDate": [2016],
     "thumbnail": "/images/AftermathLifeDebt.jpg",
     "type": "Novel",
     "year": 5.0
@@ -1123,16 +957,13 @@
     "name": "Shadow Fall",
     "params": {
       "height": 1.1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 4.08,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": -0.01
     },
-    "releaseDate": [
-      2020
-    ],
+    "releaseDate": [2020],
     "thumbnail": "/images/ShadowFall.jpg",
     "type": "Novel",
     "year": 5.0
@@ -1142,17 +973,14 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars_Battlefront_II",
     "name": "Battlefront II (DICE)",
     "params": {
-      "height": 0.8,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -1.27,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": -1.87,
       "tileOffset": 0,
-      "tileScale": 0.68,
+      "tileScale": 0.52,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/BattlefrontIIDICE.jpg",
     "type": "Game",
     "year": 4.0
@@ -1163,16 +991,13 @@
     "name": "Shattered Empire",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 6.17,
+      "labelSize": 0.1,
+      "pos": 6.97,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2015
-    ],
+    "releaseDate": [2015],
     "thumbnail": "/images/ShatteredEmpire.jpg",
     "type": "Comic",
     "year": 4.0
@@ -1182,17 +1007,14 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Squadrons",
     "name": "Squadrons",
     "params": {
-      "height": 1.2,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -2.31,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": -1.21,
       "tileOffset": 0,
       "tileScale": 0.54,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2020
-    ],
+    "releaseDate": [2020],
     "thumbnail": "/images/Squadrons.jpg",
     "type": "Game",
     "year": 4.0
@@ -1202,17 +1024,14 @@
     "link": "https://www.youtube.com/watch?v=f2VmOqjV_7Q",
     "name": "Squadrons: \"Hunted\"",
     "params": {
-      "height": 1.2,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -4.5,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": -3.8,
       "tileOffset": 0,
       "tileScale": 0.5,
       "yearOffset": 0.19
     },
-    "releaseDate": [
-      2020
-    ],
+    "releaseDate": [2020],
     "thumbnail": "/images/SquadronsHunted.jpg",
     "type": "Short",
     "year": 4.0
@@ -1223,16 +1042,13 @@
     "name": "Uprising",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 7.2,
+      "labelSize": 0.1,
+      "pos": 8.5,
       "tileOffset": 0,
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2015
-    ],
+    "releaseDate": [2015],
     "thumbnail": "/images/Uprising.jpg",
     "type": "Game",
     "year": 4.0
@@ -1243,16 +1059,13 @@
     "name": "Aftermath",
     "params": {
       "height": 1.5,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -3.41,
+      "labelSize": 0.1,
+      "pos": -5.71,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.28
     },
-    "releaseDate": [
-      2015
-    ],
+    "releaseDate": [2015],
     "thumbnail": "/images/Aftermath.jpg",
     "type": "Novel",
     "year": 4.0
@@ -1262,17 +1075,14 @@
     "link": "https://starwars.fandom.com/wiki/Alphabet_Squadron_(novel)",
     "name": "Alphabet Squadron",
     "params": {
-      "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -0.79,
+      "height": 0.9,
+      "labelSize": 0.1,
+      "pos": 4.41,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": -0.12
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AlphabetSquadron.jpg",
     "type": "Novel",
     "year": 4.0
@@ -1282,13 +1092,14 @@
     "link": "https://starwars.fandom.com/wiki/The_Levers_of_Power",
     "name": "The Levers of Power",
     "params": {
-      "height": 1.0,
-      "pos": -1.67,
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": -5.47,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2015
-    ],
+    "releaseDate": [2015],
     "thumbnail": "/images/TheLeversofPower.jpg",
     "type": "Short Story",
     "year": 4.0
@@ -1298,17 +1109,14 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_TIE_Fighter_(comic_series)",
     "name": "TIE Fighter (*)",
     "params": {
-      "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -3.38,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": -3.18,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.08
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/TIEFighter.jpg",
     "type": "Comic",
     "year": 3.0
@@ -1319,16 +1127,13 @@
     "name": "Episode VI: Return of the Jedi",
     "params": {
       "height": 1.1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 0.84,
+      "labelSize": 0.1,
+      "pos": 0.44,
       "tileOffset": 0,
-      "tileScale": 0.76,
+      "tileScale": 0.67,
       "yearOffset": 0.01
     },
-    "releaseDate": [
-      1983
-    ],
+    "releaseDate": [1983],
     "thumbnail": "/images/EpisodeVIReturnoftheJedi.jpg",
     "type": "Movie",
     "year": 4.0
@@ -1338,17 +1143,14 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Rebellion_-_Princess_Leia_1",
     "name": "Age of Rebellion - Princess Leia",
     "params": {
-      "height": 2.5,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 2.92,
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": 2.22,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofRebellionPrincessLeia.jpg",
     "type": "Comic",
     "year": 4.0
@@ -1359,16 +1161,13 @@
     "name": "Age of Rebellion - Luke Skywalker",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 2.96,
+      "labelSize": 0.1,
+      "pos": 3.36,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofRebellionLukeSkywalker.jpg",
     "type": "Comic",
     "year": 4.0
@@ -1379,16 +1178,13 @@
     "name": "Moving Target: A Princess Leia Adventure",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 4.32,
+      "labelSize": 0.1,
+      "pos": 5.92,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2015
-    ],
+    "releaseDate": [2015],
     "thumbnail": "/images/MovingTargetAPrincessLeiaAdventure.jpg",
     "type": "Junior Novel",
     "year": 4.0
@@ -1398,17 +1194,14 @@
     "link": "https://starwars.fandom.com/wiki/The_Bridge",
     "name": "Age of Resistance Special: The Bridge",
     "params": {
-      "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -6.23,
+      "height": 1.4,
+      "labelSize": 0.1,
+      "pos": 8.87,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofResistanceSpecialTheBridge.jpg",
     "type": "Comic",
     "year": -2.0
@@ -1419,16 +1212,13 @@
     "name": "Battlefront: Twilight Company",
     "params": {
       "height": 1.4,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -3.42,
+      "labelSize": 0.1,
+      "pos": -5.32,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2015
-    ],
+    "releaseDate": [2015],
     "thumbnail": "/images/BattlefrontTwilightCompany.jpg",
     "type": "Novel",
     "year": 3.0
@@ -1438,17 +1228,14 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Doctor_Aphra_(2020)",
     "name": "Doctor Aphra (2020)",
     "params": {
-      "height": 1.1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 6.17,
+      "height": 0.7,
+      "labelSize": 0.1,
+      "pos": 5.57,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2020
-    ],
+    "releaseDate": [2020],
     "thumbnail": "/images/DoctorAphra2020.jpg",
     "type": "Comic",
     "year": 3.0
@@ -1459,16 +1246,13 @@
     "name": "Bounty Hunters",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 4.05,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2020
-    ],
+    "releaseDate": [2020],
     "thumbnail": "/images/BountyHunters.jpg",
     "type": "Comic",
     "year": 3.0
@@ -1479,16 +1263,13 @@
     "name": "Darth Vader (2020)",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -0.88,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2020
-    ],
+    "releaseDate": [2020],
     "thumbnail": "/images/DarthVader2020.jpg",
     "type": "Comic",
     "year": 3.0
@@ -1499,16 +1280,13 @@
     "name": "Star Wars (Marvel 2020)",
     "params": {
       "height": 1.3,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 2.74,
+      "labelSize": 0.1,
+      "pos": 2.94,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2020
-    ],
+    "releaseDate": [2020],
     "thumbnail": "/images/StarWarsMarvel2020.jpg",
     "type": "Comic",
     "year": 3.0
@@ -1518,17 +1296,14 @@
     "link": "https://starwars.fandom.com/wiki/The_Trial_of_Dagobah",
     "name": "Age of Rebellion Special - \"The Trial of Dagobah\"",
     "params": {
-      "height": 1.8,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 5.76,
+      "height": 1.3,
+      "labelSize": 0.1,
+      "pos": 7.06,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofRebellionSpecialTheTrialofDagobah.jpg",
     "type": "Comic",
     "year": 3.0
@@ -1539,16 +1314,13 @@
     "name": "Episode V: The Empire Strikes Back",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 0.52,
       "tileOffset": 0,
       "tileScale": 0.74,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      1980
-    ],
+    "releaseDate": [1980],
     "thumbnail": "/images/EpisodeVTheEmpireStrikesBack.jpg",
     "type": "Movie",
     "year": 3.0
@@ -1558,13 +1330,14 @@
     "link": "https://starwars.fandom.com/wiki/From_a_Certain_Point_of_View:_The_Empire_Strikes_Back",
     "name": "From a Certain Point of View: The Empire Strikes Back",
     "params": {
-      "height": 1.0,
-      "pos": -2.46,
+      "height": 0.9,
+      "labelSize": 0.1,
+      "pos": 1.94,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2020
-    ],
+    "releaseDate": [2020],
     "thumbnail": "/images/FromaCertainPointofViewTheEmpireStrikesBack.jpg",
     "type": "Short Story",
     "year": 3.0
@@ -1575,16 +1348,13 @@
     "name": "Target Vader",
     "params": {
       "height": 1.1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -2.08,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/TargetVader.jpg",
     "type": "Comic",
     "year": 3.0
@@ -1595,16 +1365,13 @@
     "name": "Doctor Aphra",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -1.34,
       "tileOffset": 0.28,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2016
-    ],
+    "releaseDate": [2016],
     "thumbnail": "/images/DoctorAphra.jpg",
     "type": "Comic",
     "year": 1.0
@@ -1614,17 +1381,14 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Rebellion_-_Lando_Calrissian_1",
     "name": "Age of Rebellion - Lando Calrissian",
     "params": {
-      "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 4.95,
-      "tileOffset": 0,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": 5.05,
+      "tileOffset": 0.28,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofRebellionLandoCalrissian.jpg",
     "type": "Comic",
     "year": 0.0
@@ -1635,16 +1399,13 @@
     "name": "Star Wars (Marvel 2015)",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 1.37,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2015
-    ],
+    "releaseDate": [2015],
     "thumbnail": "/images/StarWarsMarvel2015.jpg",
     "type": "Comic",
     "year": 0.0
@@ -1654,17 +1415,14 @@
     "link": "https://starwars.fandom.com/wiki/The_Weapon_of_a_Jedi:_A_Luke_Skywalker_Adventure",
     "name": "The Weapon of a Jedi: A Luke Skywalker Adventure",
     "params": {
-      "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 4.4,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": 7.9,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.05
     },
-    "releaseDate": [
-      2015
-    ],
+    "releaseDate": [2015],
     "thumbnail": "/images/TheWeaponofaJediALukeSkywalkerAdventure.jpg",
     "type": "Junior Novel",
     "year": 0.0
@@ -1674,17 +1432,14 @@
     "link": "https://starwars.fandom.com/wiki/Heir_to_the_Jedi",
     "name": "Heir to the Jedi",
     "params": {
-      "height": 2.5,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 4.15,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": 4.65,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.03
     },
-    "releaseDate": [
-      2015
-    ],
+    "releaseDate": [2015],
     "thumbnail": "/images/HeirtotheJedi.jpg",
     "type": "Novel",
     "year": 0.0
@@ -1694,17 +1449,14 @@
     "link": "https://starwars.fandom.com/wiki/Battlefront_II:_Inferno_Squad",
     "name": "Battlefront II: Inferno Squad",
     "params": {
-      "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -5.31,
+      "height": 1.3,
+      "labelSize": 0.1,
+      "pos": -7.51,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/BattlefrontIIInfernoSquad.jpg",
     "type": "Novel",
     "year": 0.0
@@ -1714,17 +1466,14 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Darth_Vader_(2015)",
     "name": "Darth Vader",
     "params": {
-      "height": 1.1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -3.33,
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": -3.13,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2015
-    ],
+    "releaseDate": [2015],
     "thumbnail": "/images/DarthVader.jpg",
     "type": "Comic",
     "year": 0.0
@@ -1734,17 +1483,14 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Lando_(comic_series)",
     "name": "Lando",
     "params": {
-      "height": 2.5,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 1.96,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": 5.76,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2015
-    ],
+    "releaseDate": [2015],
     "thumbnail": "/images/Lando.jpg",
     "type": "Comic",
     "year": 0.0
@@ -1754,17 +1500,14 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Han_Solo",
     "name": "Han Solo",
     "params": {
-      "height": 2.4,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 3.05,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": 3.75,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2016
-    ],
+    "releaseDate": [2016],
     "thumbnail": "/images/HanSolo.jpg",
     "type": "Comic",
     "year": 0.0
@@ -1774,17 +1517,14 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Chewbacca_(Marvel)",
     "name": "Chewbacca",
     "params": {
-      "height": 1.4,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 5.39,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": 6.69,
       "tileOffset": 0,
-      "tileScale": 0.81,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2015
-    ],
+    "releaseDate": [2015],
     "thumbnail": "/images/Chewbacca.jpg",
     "type": "Comic",
     "year": 0.0
@@ -1794,17 +1534,14 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Princess_Leia",
     "name": "Princess Leia",
     "params": {
-      "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 1.91,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": 1.61,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2015
-    ],
+    "releaseDate": [2015],
     "thumbnail": "/images/PrincessLeia.jpg",
     "type": "Comic",
     "year": 0.0
@@ -1814,17 +1551,14 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Rebellion_-_Han_Solo_1",
     "name": "Age of Rebellion - Han Solo",
     "params": {
-      "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 3.1,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": 2.6,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofRebellionHanSolo.jpg",
     "type": "Comic",
     "year": 0.0
@@ -1834,17 +1568,14 @@
     "link": "https://starwars.fandom.com/wiki/Smuggler%27s_Run:_A_Han_Solo_%26_Chewbacca_Adventure",
     "name": "Smuggler's Run: A Han Solo & Chewbacca Adventure",
     "params": {
-      "height": 3.0,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 5.11,
+      "height": 2.8,
+      "labelSize": 0.1,
+      "pos": 7.91,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2015
-    ],
+    "releaseDate": [2015],
     "thumbnail": "/images/SmugglersRunAHanSoloChewbaccaAdventure.jpg",
     "type": "Junior Novel",
     "year": 0.0
@@ -1855,16 +1586,13 @@
     "name": "Return to Vader's Castle",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -3.7,
       "tileOffset": -0.04,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/ReturntoVadersCastle.jpg",
     "type": "Comic",
     "year": -0.0
@@ -1875,16 +1603,13 @@
     "name": "Tales from Vader's Castle",
     "params": {
       "height": 1.1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -2.7,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2018
-    ],
+    "releaseDate": [2018],
     "thumbnail": "/images/TalesfromVadersCastle.jpg",
     "type": "Comic",
     "year": -0.0
@@ -1894,17 +1619,14 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Episode_IV_A_New_Hope",
     "name": "Episode IV: A New Hope",
     "params": {
-      "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 0.38,
+      "height": 1.2,
+      "labelSize": 0.1,
+      "pos": -0.12,
       "tileOffset": 0,
       "tileScale": 0.71,
       "yearOffset": 0.3
     },
-    "releaseDate": [
-      1977
-    ],
+    "releaseDate": [1977],
     "thumbnail": "/images/EpisodeIVANewHope.jpg",
     "type": "Movie",
     "year": -0.0
@@ -1914,13 +1636,14 @@
     "link": "https://starwars.fandom.com/wiki/From_a_Certain_Point_of_View",
     "name": "From a Certain Point of View",
     "params": {
-      "height": 1.0,
-      "pos": -0.61,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": -4.51,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/FromaCertainPointofView.jpg",
     "type": "Short Story",
     "year": -0.5
@@ -1930,17 +1653,14 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Rebellion_-_Grand_Moff_Tarkin_1",
     "name": "Age of Rebellion - Grand Moff Tarkin",
     "params": {
-      "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -4.35,
+      "height": 1.2,
+      "labelSize": 0.1,
+      "pos": -5.85,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofRebellionGrandMoffTarkin.jpg",
     "type": "Comic",
     "year": -0.0
@@ -1950,17 +1670,14 @@
     "link": "https://starwars.fandom.com/wiki/Rogue_One:_A_Star_Wars_Story",
     "name": "Rogue One",
     "params": {
-      "height": 0.8,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -0.82,
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": -1.82,
       "tileOffset": 0,
       "tileScale": 0.6,
-      "yearOffset": 0.06
+      "yearOffset": 0.0
     },
-    "releaseDate": [
-      2016
-    ],
+    "releaseDate": [2016],
     "thumbnail": "/images/RogueOne.jpg",
     "type": "Movie",
     "year": -0.1
@@ -1970,13 +1687,14 @@
     "link": "https://www.youtube.com/watch?v=Hh8sTR2b4zI",
     "name": "Rogue One: Recon",
     "params": {
-      "height": 1.0,
-      "pos": -0.9,
+      "height": 1.2,
+      "labelSize": 0.1,
+      "pos": 0.4,
+      "tileOffset": 0,
+      "tileScale": 0.5,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2016
-    ],
+    "releaseDate": [2016],
     "thumbnail": "/images/RogueOneRecon.jpg",
     "type": "Short",
     "year": -0.2
@@ -1987,16 +1705,13 @@
     "name": "Guardians of the Whills",
     "params": {
       "height": 0.9,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -1.61,
+      "labelSize": 0.1,
+      "pos": 2.19,
       "tileOffset": -0.08,
       "tileScale": 0.8,
-      "yearOffset": -0.22
+      "yearOffset": -0.2
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/GuardiansoftheWhills.jpg",
     "type": "Novel",
     "year": -0.6
@@ -2006,13 +1721,14 @@
     "link": "https://starwars.fandom.com/wiki/Rogue_One_-_Cassian_%26_K-2SO_Special_1",
     "name": "Rogue One - Cassian & K-2SO Special",
     "params": {
-      "height": 1.0,
-      "pos": 0.78,
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": 1.08,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/RogueOneCassianK2SOSpecial.jpg",
     "type": "Comic",
     "year": -2.0
@@ -2024,16 +1740,13 @@
     "name": "Thrawn: Treason",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 0.47,
+      "labelSize": 0.1,
+      "pos": -2.73,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/ThrawnTreason.jpg",
     "type": "Novel",
     "year": -1.0
@@ -2045,16 +1758,13 @@
     "name": "Thrawn: Alliances",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 1.9,
+      "labelSize": 0.1,
+      "pos": -1.9,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2018
-    ],
+    "releaseDate": [2018],
     "thumbnail": "/images/ThrawnAlliances.jpg",
     "type": "Novel",
     "year": -2.0
@@ -2065,16 +1775,13 @@
     "name": "Age of Rebellion - Boba Fett",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -4.71,
+      "labelSize": 0.1,
+      "pos": -8.61,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofRebellionBobaFett.jpg",
     "type": "Comic",
     "year": -2.0
@@ -2085,16 +1792,13 @@
     "name": "Age of Rebellion Special - \"Stolen Valor\"",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 2.39,
+      "labelSize": 0.1,
+      "pos": 5.79,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofRebellionSpecialStolenValor.jpg",
     "type": "Comic",
     "year": -2.0
@@ -2104,13 +1808,14 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Vader_-_Dark_Visions",
     "name": "Vader - Dark Visions",
     "params": {
-      "height": 1.0,
-      "pos": -1.95,
+      "height": 1.3,
+      "labelSize": 0.1,
+      "pos": -0.45,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/VaderDarkVisions.jpg",
     "type": "Comic",
     "year": -2.0
@@ -2122,16 +1827,13 @@
     "name": "Vader Immortal",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -5.15,
-      "tileOffset": 0.34,
+      "tileOffset": 0.42,
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/VaderImmortal.jpg",
     "type": "VR",
     "year": -2.0
@@ -2143,16 +1845,13 @@
     "name": "Secrets of the Empire",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -3.95,
-      "tileOffset": 0,
+      "tileOffset": 0.41,
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/SecretsoftheEmpire.jpg",
     "type": "VR",
     "year": -2.0
@@ -2163,17 +1862,14 @@
     "link": "https://starwars.fandom.com/wiki/The_Mighty_Chewbacca_in_the_Forest_of_Fear!",
     "name": "The Mighty Chewbacca in the Forest of Fear!",
     "params": {
-      "height": 0.9,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -2.49,
-      "tileOffset": 0,
+      "height": 1.2,
+      "labelSize": 0.1,
+      "pos": 3.51,
+      "tileOffset": 0.15,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2018
-    ],
+    "releaseDate": [2018],
     "thumbnail": "/images/TheMightyChewbaccaintheForestofFear.jpg",
     "type": "Junior Novel",
     "year": -2.0
@@ -2185,16 +1881,13 @@
     "name": "Leia, Princess of Alderaan",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -3.21,
+      "labelSize": 0.1,
+      "pos": 1.99,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/LeiaPrincessofAlderaan.jpg",
     "type": "Young Adult Novel",
     "year": -3.0
@@ -2206,17 +1899,13 @@
     "name": "Rebels",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -1.12,
       "tileOffset": 0,
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2014,
-      2018
-    ],
+    "releaseDate": [2014, 2018],
     "thumbnail": "/images/Rebels.jpg",
     "type": "Series",
     "year": -5.0
@@ -2226,13 +1915,14 @@
     "link": "https://starwars.fandom.com/wiki/Ezra%27s_Gamble",
     "name": "Ezra's Gamble",
     "params": {
-      "height": 1.0,
-      "pos": 2.19,
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": -0.11,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2014
-    ],
+    "releaseDate": [2014],
     "thumbnail": "/images/EzrasGamble.jpg",
     "type": "Junior Novel",
     "year": -5.0
@@ -2244,16 +1934,13 @@
     "name": "Servants of the Empire",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -2.59,
+      "labelSize": 0.1,
+      "pos": 2.61,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2014
-    ],
+    "releaseDate": [2014],
     "thumbnail": "/images/ServantsoftheEmpire.jpg",
     "type": "Junior Novel",
     "year": -6.0
@@ -2265,16 +1952,13 @@
     "name": "Andor",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 0.76,
+      "labelSize": 0.1,
+      "pos": 1.36,
       "tileOffset": 0,
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2022
-    ],
+    "releaseDate": [2022],
     "thumbnail": "/images/Andor.jpg",
     "type": "Series",
     "year": -5.0
@@ -2286,16 +1970,13 @@
     "name": "Obi-Wan Kenobi",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 0.95,
+      "labelSize": 0.1,
+      "pos": 1.35,
       "tileOffset": 0,
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2022
-    ],
+    "releaseDate": [2022],
     "thumbnail": "/images/ObiWanKenobi.jpg",
     "type": "Series",
     "year": -9.0
@@ -2306,16 +1987,13 @@
     "name": "Age of Rebellion - Jabba the Hutt",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -7.63,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofRebellionJabbatheHutt.jpg",
     "type": "Comic",
     "year": -10.0
@@ -2325,13 +2003,14 @@
     "link": "https://starwars.fandom.com/wiki/Solo:_A_Star_Wars_Story",
     "name": "Solo: A Star Wars Story",
     "params": {
-      "height": 1.0,
-      "pos": 0.49,
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": 0.29,
+      "tileOffset": 0,
+      "tileScale": 0.66,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2018
-    ],
+    "releaseDate": [2018],
     "thumbnail": "/images/SoloAStarWarsStory.jpg",
     "type": "Movie",
     "year": -10.0
@@ -2341,13 +2020,14 @@
     "link": "https://starwars.fandom.com/wiki/Beckett_1",
     "name": "Beckett",
     "params": {
-      "height": 1.0,
-      "pos": 1.1,
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": 2.8,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2018
-    ],
+    "releaseDate": [2018],
     "thumbnail": "/images/Beckett.jpg",
     "type": "Comic",
     "year": -11.0
@@ -2358,17 +2038,14 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Lando_-_Double_or_Nothing",
     "name": "Lando: Double or Nothing",
     "params": {
-      "height": 0.9,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 0.78,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": -5.32,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2018
-    ],
+    "releaseDate": [2018],
     "thumbnail": "/images/LandoDoubleorNothing.jpg",
     "type": "Comic",
     "year": -10.0
@@ -2380,16 +2057,13 @@
     "name": "Lando's Luck",
     "params": {
       "height": 0.8,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -2.5,
+      "labelSize": 0.1,
+      "pos": -4.2,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2018
-    ],
+    "releaseDate": [2018],
     "thumbnail": "/images/LandosLuck.jpg",
     "type": "Junior Novel",
     "year": -10.0
@@ -2401,16 +2075,13 @@
     "name": "A New Dawn",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 2.77,
+      "labelSize": 0.1,
+      "pos": 1.67,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2014
-    ],
+    "releaseDate": [2014],
     "thumbnail": "/images/ANewDawn.jpg",
     "type": "Novel",
     "year": -11.0
@@ -2420,13 +2091,14 @@
     "link": "https://starwars.fandom.com/wiki/Bottleneck_(short_story)",
     "name": "Bottleneck",
     "params": {
-      "height": 1.0,
-      "pos": 2.32,
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": -4.38,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2015
-    ],
+    "releaseDate": [2015],
     "thumbnail": "/images/Bottleneck.jpg",
     "type": "Short Story",
     "year": -11.0
@@ -2436,13 +2108,14 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Thrawn",
     "name": "Thrawn (Marvel)",
     "params": {
-      "height": 1.0,
-      "pos": -1.04,
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": -3.14,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2018
-    ],
+    "releaseDate": [2018],
     "thumbnail": "/images/ThrawnMarvel.jpg",
     "type": "Comic",
     "year": -13.0
@@ -2454,16 +2127,13 @@
     "name": "Thrawn",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -1.82,
+      "labelSize": 0.1,
+      "pos": -2.52,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/Thrawn.jpg",
     "type": "Novel",
     "year": -11.0
@@ -2474,16 +2144,13 @@
     "name": "Lost Stars",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -0.71,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2015
-    ],
+    "releaseDate": [2015],
     "thumbnail": "/images/LostStars.jpg",
     "type": "Young Adult Novel",
     "year": -11.0
@@ -2495,16 +2162,13 @@
     "name": "Rebel Rising",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 4.33,
+      "labelSize": 0.1,
+      "pos": 4.53,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/RebelRising.jpg",
     "type": "Novel",
     "year": -13.0
@@ -2516,16 +2180,13 @@
     "name": "Han Solo - Imperial Cadet",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -4.02,
+      "labelSize": 0.1,
+      "pos": -1.72,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2018
-    ],
+    "releaseDate": [2018],
     "thumbnail": "/images/HanSoloImperialCadet.jpg",
     "type": "Comic",
     "year": -13.0
@@ -2537,16 +2198,13 @@
     "name": "Most Wanted",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 1.25,
+      "labelSize": 0.1,
+      "pos": 1.95,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2018
-    ],
+    "releaseDate": [2018],
     "thumbnail": "/images/MostWanted.jpg",
     "type": "Novel",
     "year": -13.0
@@ -2557,16 +2215,13 @@
     "name": "Jedi: Fallen Order",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 0.92,
       "tileOffset": 0,
       "tileScale": 0.5,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/JediFallenOrder.jpg",
     "type": "Game",
     "year": -14.0
@@ -2577,16 +2232,13 @@
     "name": "Tarkin",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -3.0,
+      "labelSize": 0.1,
+      "pos": -3.3,
       "tileOffset": 0,
       "tileScale": 0.8,
-      "yearOffset": 0.0
+      "yearOffset": 0.2
     },
-    "releaseDate": [
-      2015
-    ],
+    "releaseDate": [2015],
     "thumbnail": "/images/Tarkin.jpg",
     "type": "Novel",
     "year": -14.0
@@ -2596,13 +2248,14 @@
     "link": "https://starwars.fandom.com/wiki/Mercy_Mission_(short_story)",
     "name": "Mercy Mission",
     "params": {
-      "height": 1.0,
-      "pos": -1.93,
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": -2.43,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2015
-    ],
+    "releaseDate": [2015],
     "thumbnail": "/images/MercyMission.jpg",
     "type": "Short Story",
     "year": -14.0
@@ -2613,16 +2266,13 @@
     "name": "Lords of the Sith",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -1.44,
       "tileOffset": 0,
       "tileScale": 0.8,
-      "yearOffset": 0.0
+      "yearOffset": -0.2
     },
-    "releaseDate": [
-      2015
-    ],
+    "releaseDate": [2015],
     "thumbnail": "/images/LordsoftheSith.jpg",
     "type": "Novel",
     "year": -14.0
@@ -2634,16 +2284,13 @@
     "name": "The Bad Batch",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 5.33,
       "tileOffset": 0,
-      "tileScale": 0.69,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2021
-    ],
+    "releaseDate": [2021],
     "thumbnail": "/images/TheBadBatch.jpg",
     "type": "Series",
     "year": -19.0
@@ -2655,16 +2302,13 @@
     "name": "Ahsoka",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 1.67,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2016
-    ],
+    "releaseDate": [2016],
     "thumbnail": "/images/Ahsoka.jpg",
     "type": "Novel",
     "year": -18.0
@@ -2674,17 +2318,14 @@
     "link": "https://starwars.fandom.com/wiki/Adventures_in_Wild_Space:_The_Escape",
     "name": "Adventures in Wild Space: The Escape",
     "params": {
-      "height": 1.1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 4.63,
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": 6.73,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2016
-    ],
+    "releaseDate": [2016],
     "thumbnail": "/images/AdventuresinWildSpaceTheEscape.jpg",
     "type": "Junior Novel",
     "year": -18.0
@@ -2695,16 +2336,13 @@
     "name": "Age of Rebellion Special - \"The Long Game\"",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": -6.64,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofRebellionSpecialTheLongGame.jpg",
     "type": "Comic",
     "year": -19.0
@@ -2716,17 +2354,13 @@
     "name": "Kanan",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 3.85,
+      "labelSize": 0.1,
+      "pos": 4.65,
       "tileOffset": 0,
-      "tileScale": 0.84,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2015,
-      2016
-    ],
+    "releaseDate": [2015, 2016],
     "thumbnail": "/images/Kanan.jpg",
     "type": "Comic",
     "year": -19.0
@@ -2737,16 +2371,13 @@
     "name": "Age of Rebellion - Darth Vader",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -4.34,
+      "labelSize": 0.1,
+      "pos": -1.94,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofRebellionDarthVader.jpg",
     "type": "Comic",
     "year": -19.0
@@ -2757,17 +2388,13 @@
     "name": "Darth Vader: Dark Lord of the Sith",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -2.45,
+      "labelSize": 0.1,
+      "pos": -0.45,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2017,
-      2018
-    ],
+    "releaseDate": [2017, 2018],
     "thumbnail": "/images/DarthVaderDarkLordoftheSith.jpg",
     "type": "Comic",
     "year": -19.0
@@ -2779,18 +2406,32 @@
     "name": "Episode III: Revenge of the Sith",
     "params": {
       "height": 1.1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -0.73,
+      "labelSize": 0.1,
+      "pos": 0.77,
       "tileOffset": 0,
       "tileScale": 0.72,
       "yearOffset": 0.17
     },
-    "releaseDate": [
-      2005
-    ],
+    "releaseDate": [2005],
     "thumbnail": "/images/EpisodeIIIRevengeoftheSith.jpg",
     "type": "Movie",
+    "year": -19.0
+  },
+  {
+    "duration": 0,
+    "link": "https://starwars.fandom.com/wiki/Thrawn_Ascendancy:_Lesser_Evil",
+    "name": "Thrawn Ascendancy: Lesser Evil",
+    "params": {
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": -5.88,
+      "tileOffset": 0,
+      "tileScale": 0.8,
+      "yearOffset": 0.2
+    },
+    "releaseDate": [2021],
+    "thumbnail": "/images/ThrawnAscendancyLesserEvil.jpg",
+    "type": "Novel",
     "year": -19.0
   },
   {
@@ -2798,17 +2439,14 @@
     "link": "https://starwars.fandom.com/wiki/Thrawn_Ascendancy:_Greater_Good",
     "name": "Thrawn Ascendancy: Greater Good",
     "params": {
-      "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -4.03,
-      "tileOffset": 0,
+      "height": 1.3,
+      "labelSize": 0.1,
+      "pos": -5.23,
+      "tileOffset": -0.01,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2021
-    ],
+    "releaseDate": [2021],
     "thumbnail": "/images/ThrawnAscendancyGreaterGood.jpg",
     "type": "Novel",
     "year": -19.0
@@ -2819,17 +2457,14 @@
     "link": "https://starwars.fandom.com/wiki/Thrawn_Ascendancy:_Chaos_Rising",
     "name": "Thrawn Ascendancy: Chaos Rising",
     "params": {
-      "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -3.31,
+      "height": 2.8,
+      "labelSize": 0.1,
+      "pos": -5.31,
       "tileOffset": 0,
       "tileScale": 0.8,
-      "yearOffset": 0.0
+      "yearOffset": -0.2
     },
-    "releaseDate": [
-      2020
-    ],
+    "releaseDate": [2020],
     "thumbnail": "/images/ThrawnAscendancyChaosRising.jpg",
     "type": "Novel",
     "year": -19.0
@@ -2840,17 +2475,14 @@
     "link": "https://starwars.fandom.com/wiki/Dark_Disciple",
     "name": "Dark Disciple",
     "params": {
-      "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 1.37,
+      "height": 0.9,
+      "labelSize": 0.1,
+      "pos": -1.63,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2015
-    ],
+    "releaseDate": [2015],
     "thumbnail": "/images/DarkDisciple.jpg",
     "type": "Novel",
     "year": -19.0
@@ -2860,13 +2492,14 @@
     "link": "https://starwars.fandom.com/wiki/Sisters",
     "name": "Age of Republic Special - \"Sisters\"",
     "params": {
-      "height": 1.0,
-      "pos": -1.36,
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": -2.66,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": -0.14
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofRepublicSpecialSisters.jpg",
     "type": "Comic",
     "year": -19.0
@@ -2877,17 +2510,14 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Darth_Maul%E2%80%94Son_of_Dathomir",
     "name": "Darth Maul: Son of Dathomir",
     "params": {
-      "height": 1.2,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -2.17,
+      "height": 1.3,
+      "labelSize": 0.1,
+      "pos": -3.87,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2014
-    ],
+    "releaseDate": [2014],
     "thumbnail": "/images/DarthMaulSonofDathomir.jpg",
     "type": "Comic",
     "year": -19.0
@@ -2899,16 +2529,13 @@
     "name": "Catalyst: A Rogue One Novel",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 3.38,
+      "labelSize": 0.1,
+      "pos": 3.18,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2016
-    ],
+    "releaseDate": [2016],
     "thumbnail": "/images/CatalystARogueOneNovel.jpg",
     "type": "Novel",
     "year": -21.0
@@ -2920,16 +2547,13 @@
     "name": "Queen's Hope",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 3.98,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2021
-    ],
+    "releaseDate": [2021],
     "thumbnail": "/images/QueensHope.jpg",
     "type": "Novel",
     "year": -22.0
@@ -2939,13 +2563,14 @@
     "link": "https://starwars.fandom.com/wiki/The_Clone_Wars:_Stories_of_Light_and_Dark",
     "name": "The Clone Wars: Stories of Light and Dark",
     "params": {
-      "height": 1.0,
-      "pos": -0.24,
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": 2.36,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2020
-    ],
+    "releaseDate": [2020],
     "thumbnail": "/images/TheCloneWarsStoriesofLightandDark.jpg",
     "type": "Comic",
     "year": -22.0
@@ -2957,17 +2582,13 @@
     "name": "The Clone Wars",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 0.74,
+      "labelSize": 0.1,
+      "pos": -0.76,
       "tileOffset": -0.35,
       "tileScale": 0.67,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2008,
-      2020
-    ],
+    "releaseDate": [2008, 2020],
     "thumbnail": "/images/TheCloneWars.jpg",
     "type": "Series",
     "year": -22.0
@@ -2978,17 +2599,14 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_The_Clone_Wars_(film)",
     "name": "The Clone Wars (film)",
     "params": {
-      "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 1.6,
+      "height": 1.2,
+      "labelSize": 0.1,
+      "pos": -0.3,
       "tileOffset": 0,
       "tileScale": 0.68,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2008
-    ],
+    "releaseDate": [2008],
     "thumbnail": "/images/TheCloneWarsfilm.jpg",
     "type": "Movie",
     "year": -22.0
@@ -2998,13 +2616,14 @@
     "link": "https://starwars.fandom.com/wiki/501_Plus_One",
     "name": "Age of Republic Special - \"501 Plus One\"",
     "params": {
-      "height": 1.0,
-      "pos": 2.02,
+      "height": 1.2,
+      "labelSize": 0.1,
+      "pos": 5.72,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofRepublicSpecial501PlusOne.jpg",
     "type": "Comic",
     "year": -22.0
@@ -3014,13 +2633,14 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Republic_-_General_Grievous_1",
     "name": "Age of Republic - General Grievous",
     "params": {
-      "height": 1.0,
-      "pos": 1.84,
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": -4.46,
+      "tileOffset": 0.3,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofRepublicGeneralGrievous.jpg",
     "type": "Comic",
     "year": -22.0
@@ -3030,13 +2650,14 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Republic_-_Padm%C3%A9_Amidala_1",
     "name": "Age of Republic - Padme Amidala",
     "params": {
-      "height": 1.0,
-      "pos": -1.48,
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": 5.12,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofRepublicPadmeAmidala.jpg",
     "type": "Comic",
     "year": -22.0
@@ -3046,13 +2667,14 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Republic_-_Anakin_Skywalker_1",
     "name": "Age of Republic - Anakin Skywalker",
     "params": {
-      "height": 1.0,
-      "pos": -0.09,
+      "height": 1.1,
+      "labelSize": 0.1,
+      "pos": -2.39,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofRepublicAnakinSkywalker.jpg",
     "type": "Comic",
     "year": -22.0
@@ -3063,17 +2685,14 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Jedi_of_the_Republic_%E2%80%93_Mace_Windu",
     "name": "Jedi of the Republic - Mace Windu",
     "params": {
-      "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 2.88,
+      "height": 1.2,
+      "labelSize": 0.1,
+      "pos": 3.18,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/JedioftheRepublicMaceWindu.jpg",
     "type": "Comic",
     "year": -22.0
@@ -3084,17 +2703,14 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_Episode_II_Attack_of_the_Clones",
     "name": "Episode II: Attack of the Clones",
     "params": {
-      "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -0.86,
+      "height": 1.2,
+      "labelSize": 0.1,
+      "pos": 1.44,
       "tileOffset": 0,
       "tileScale": 0.81,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2002
-    ],
+    "releaseDate": [2002],
     "thumbnail": "/images/EpisodeIIAttackoftheClones.jpg",
     "type": "Movie",
     "year": -22.0
@@ -3105,17 +2721,14 @@
     "link": "https://starwars.fandom.com/wiki/Dooku:_Jedi_Lost",
     "name": "Dooku: Jedi Lost",
     "params": {
-      "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -3.46,
+      "height": 1.2,
+      "labelSize": 0.1,
+      "pos": -4.96,
       "tileOffset": 0,
-      "tileScale": 0.5,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/DookuJediLost.jpg",
     "type": "AudioBook",
     "year": -22.0
@@ -3127,16 +2740,13 @@
     "name": "Queen's Shadow",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -1.01,
+      "labelSize": 0.1,
+      "pos": 2.09,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/QueensShadow.jpg",
     "type": "Novel",
     "year": -28.0
@@ -3148,16 +2758,13 @@
     "name": "Obi-Wan and Anakin",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 1.09,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2016
-    ],
+    "releaseDate": [2016],
     "thumbnail": "/images/ObiWanandAnakin.jpg",
     "type": "Comic",
     "year": -29.0
@@ -3167,13 +2774,14 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Republic_-_Jango_Fett_1",
     "name": "Age of Republic - Jango Fett",
     "params": {
-      "height": 1.0,
-      "pos": 1.15,
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": -1.65,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2018
-    ],
+    "releaseDate": [2018],
     "thumbnail": "/images/AgeofRepublicJangoFett.jpg",
     "type": "Comic",
     "year": -32.0
@@ -3183,13 +2791,14 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Republic_-_Count_Dooku_1",
     "name": "Age of Republic - Count Dooku",
     "params": {
-      "height": 1.0,
-      "pos": 0.33,
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": -3.07,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofRepublicCountDooku.jpg",
     "type": "Comic",
     "year": -32.0
@@ -3199,13 +2808,14 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Republic_-_Obi-Wan_Kenobi_1",
     "name": "Age of Republic - Obi-Wan Kenobi",
     "params": {
-      "height": 1.0,
-      "pos": 1.62,
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": 3.82,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofRepublicObiWanKenobi.jpg",
     "type": "Comic",
     "year": -32.0
@@ -3217,16 +2827,13 @@
     "name": "Episode I: The Phantom Menace",
     "params": {
       "height": 1.3,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 1.47,
+      "labelSize": 0.1,
+      "pos": 0.07,
       "tileOffset": 0,
       "tileScale": 0.87,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      1999
-    ],
+    "releaseDate": [1999],
     "thumbnail": "/images/EpisodeIThePhantomMenace.jpg",
     "type": "Movie",
     "year": -32.0
@@ -3238,16 +2845,13 @@
     "name": "Queen's Peril",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
+      "labelSize": 0.1,
       "pos": 2.97,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2020
-    ],
+    "releaseDate": [2020],
     "thumbnail": "/images/QueensPeril.jpg",
     "type": "Novel",
     "year": -32.0
@@ -3257,13 +2861,14 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Republic_-_Darth_Maul_1",
     "name": "Age of Republic - Darth Maul",
     "params": {
-      "height": 1.0,
-      "pos": 0.26,
+      "height": 1.2,
+      "labelSize": 0.1,
+      "pos": -2.14,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2018
-    ],
+    "releaseDate": [2018],
     "thumbnail": "/images/AgeofRepublicDarthMaul.jpg",
     "type": "Comic",
     "year": -32.0
@@ -3275,16 +2880,13 @@
     "name": "Darth Maul",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -1.97,
+      "labelSize": 0.1,
+      "pos": -3.57,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2017
-    ],
+    "releaseDate": [2017],
     "thumbnail": "/images/DarthMaul.jpg",
     "type": "Comic",
     "year": -32.0
@@ -3294,13 +2896,14 @@
     "link": "https://starwars.fandom.com/wiki/The_Weapon",
     "name": "Age of Republic Special - \"The Weapon\"",
     "params": {
-      "height": 1.0,
+      "height": 1,
+      "labelSize": 0.1,
       "pos": 2.32,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/AgeofRepublicSpecialTheWeapon.jpg",
     "type": "Comic",
     "year": -33.0
@@ -3310,13 +2913,14 @@
     "link": "https://starwars.fandom.com/wiki/Age_of_Republic_-_Qui-Gon_Jinn_1",
     "name": "Age of Republic - Qui-Gon Jinn",
     "params": {
-      "height": 1.0,
-      "pos": -1.31,
+      "height": 1.3,
+      "labelSize": 0.1,
+      "pos": -0.81,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2018
-    ],
+    "releaseDate": [2018],
     "thumbnail": "/images/AgeofRepublicQuiGonJinn.jpg",
     "type": "Comic",
     "year": -44.0
@@ -3328,16 +2932,13 @@
     "name": "Master & Apprentice",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": 0.7,
+      "labelSize": 0.1,
+      "pos": 1.5,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/MasterApprentice.jpg",
     "type": "Novel",
     "year": -40.0
@@ -3348,16 +2949,13 @@
     "name": "Jedi Fallen Order - Dark Temple",
     "params": {
       "height": 1,
-      "labelPos": -0.1,
-      "labelSize": 0.08,
-      "pos": -1.19,
+      "labelSize": 0.1,
+      "pos": 1.51,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2019
-    ],
+    "releaseDate": [2019],
     "thumbnail": "/images/JediFallenOrderDarkTemple.jpg",
     "type": "Comic",
     "year": -42.0
@@ -3367,13 +2965,14 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_The_High_Republic_Adventures",
     "name": "The High Republic Adventures",
     "params": {
-      "height": 1.0,
-      "pos": 0.47,
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": -3.03,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2021
-    ],
+    "releaseDate": [2021],
     "thumbnail": "/images/TheHighRepublicAdventures.jpg",
     "type": "Comic",
     "year": -232.0
@@ -3383,13 +2982,14 @@
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_The_High_Republic_(comic_series)",
     "name": "The High Republic (comic)",
     "params": {
-      "height": 1.0,
-      "pos": -2.06,
+      "height": 1.4,
+      "labelSize": 0.1,
+      "pos": -4.26,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2021
-    ],
+    "releaseDate": [2021],
     "thumbnail": "/images/TheHighRepubliccomic.jpg",
     "type": "Comic",
     "year": -232.0
@@ -3399,29 +2999,31 @@
     "link": "https://starwars.fandom.com/wiki/The_High_Republic:_Race_to_Crashpoint_Tower",
     "name": "The High Republic: Race to Crashpoint Tower",
     "params": {
-      "height": 1.0,
-      "pos": -1.61,
-      "yearOffset": 0.0
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": 2.39,
+      "tileOffset": 0,
+      "tileScale": 0.8,
+      "yearOffset": 0.2
     },
-    "releaseDate": [
-      2021
-    ],
+    "releaseDate": [2021],
     "thumbnail": "/images/TheHighRepublicRacetoCrashpointTower.jpg",
     "type": "Junior Novel",
-    "year": -231.8
+    "year": -232.0
   },
   {
     "duration": 0,
     "link": "https://starwars.fandom.com/wiki/The_High_Republic:_A_Test_of_Courage",
     "name": "The High Republic: A Test of Courage",
     "params": {
-      "height": 1.0,
-      "pos": -2.49,
+      "height": 2.5,
+      "labelSize": 0.1,
+      "pos": 2.51,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2021
-    ],
+    "releaseDate": [2021],
     "thumbnail": "/images/TheHighRepublicATestofCourage.jpg",
     "type": "Junior Novel",
     "year": -232.0
@@ -3431,29 +3033,31 @@
     "link": "https://starwars.fandom.com/wiki/The_High_Republic:_Out_of_the_Shadows",
     "name": "The High Republic: Out of Shadows",
     "params": {
-      "height": 1.0,
-      "pos": 0.93,
-      "yearOffset": 0.0
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": -0.57,
+      "tileOffset": 0,
+      "tileScale": 0.8,
+      "yearOffset": 0.2
     },
-    "releaseDate": [
-      2021
-    ],
+    "releaseDate": [2021],
     "thumbnail": "/images/TheHighRepublicOutofShadows.jpg",
     "type": "Young Adult Novel",
-    "year": -231.8
+    "year": -232.0
   },
   {
     "duration": 0,
     "link": "https://starwars.fandom.com/wiki/The_High_Republic:_Into_the_Dark",
     "name": "The High Republic: Into the Dark",
     "params": {
-      "height": 1.0,
-      "pos": -0.73,
+      "height": 2.5,
+      "labelSize": 0.1,
+      "pos": -0.53,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2021
-    ],
+    "releaseDate": [2021],
     "thumbnail": "/images/TheHighRepublicIntotheDark.jpg",
     "type": "Young Adult Novel",
     "year": -232.0
@@ -3463,29 +3067,31 @@
     "link": "https://starwars.fandom.com/wiki/The_High_Republic:_The_Rising_Storm",
     "name": "The High Republic: The Rising Storm",
     "params": {
-      "height": 1.0,
-      "pos": 2.25,
-      "yearOffset": 0.0
+      "height": 1,
+      "labelSize": 0.1,
+      "pos": 0.85,
+      "tileOffset": 0,
+      "tileScale": 0.8,
+      "yearOffset": 0.2
     },
-    "releaseDate": [
-      2021
-    ],
+    "releaseDate": [2021],
     "thumbnail": "/images/TheHighRepublicTheRisingStorm.jpg",
     "type": "Novel",
-    "year": -231.8
+    "year": -232.0
   },
   {
     "duration": 0,
     "link": "https://starwars.fandom.com/wiki/The_High_Republic:_Light_of_the_Jedi",
     "name": "The High Republic: Light of the Jedi",
     "params": {
-      "height": 1.0,
-      "pos": -2.25,
+      "height": 2.5,
+      "labelSize": 0.1,
+      "pos": 0.95,
+      "tileOffset": 0,
+      "tileScale": 0.8,
       "yearOffset": 0.0
     },
-    "releaseDate": [
-      2021
-    ],
+    "releaseDate": [2021],
     "thumbnail": "/images/TheHighRepublicLightoftheJedi.jpg",
     "type": "Novel",
     "year": -232.0
