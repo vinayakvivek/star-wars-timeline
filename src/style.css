@@ -143,8 +143,8 @@ html, body {
 
 #tile-type-container {
   position: absolute;
-  left: 20px;
-  top: 20px;
+  left: 1rem;
+  top: 0.8rem;
   min-width: 150px;
   min-height: 50px;
   opacity: 0.0;
@@ -152,7 +152,7 @@ html, body {
 }
 
 #tile-type-list {
-  margin-top: 30px;
+  margin-top: 3rem;
 }
 
 #tile-type-list li {
@@ -168,8 +168,12 @@ html, body {
   margin-right: 10px;
 }
 
-#tile-type-container #toggle-btn {
+#tile-type-container {
   padding: 5px;
+}
+
+#toggle-btn {
+  margin-bottom: 3rem;
 }
 
 #mute-btn {
@@ -377,8 +381,8 @@ html, body {
     top: 2rem;
   }
   #tile-type-container {
-    top: 3rem;
-    left: 1rem;
+    top: 0.5rem;
+    left: 0.5rem;
   }
   #mute-btn {
     top: 1rem;
