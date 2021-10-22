@@ -174,8 +174,14 @@ html, body {
 
 #mute-btn {
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 1rem;
+  top: 1rem;
+}
+
+#github-btn {
+  position: absolute;
+  right: 4rem;
+  top: 1rem;
 }
 
 #search-container {
@@ -368,6 +374,19 @@ html, body {
   #tile-type-list {
     display: none;
     background-color: black;
+    top: 2rem;
+  }
+  #tile-type-container {
+    top: 3rem;
+    left: 1rem;
+  }
+  #mute-btn {
+    top: 1rem;
+    right: 0.5rem;
+  }
+  #github-btn {
+    top: 4rem;
+    right: 0.5rem;
   }
 }
 
