@@ -478,7 +478,9 @@ class Timeline extends THREE.Group {
     }
     for (const nameId of nameIds) {
       if (results.length >= MAX_RESULTS) break;
-      nameId.name.includes(keyword) && results.push(nameId.id);
+      !results.includes(nameId.id) &&
+        nameId.name.includes(keyword) &&
+        results.push(nameId.id);
     }
     return results;
   }
