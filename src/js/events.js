@@ -1,6 +1,6 @@
 import { data, timeline, galaxy, camera } from "./scene";
 import { setDebugModeByLocation } from "./debug";
-import { mouse, raycaster, size } from "./config";
+import { mouse, raycaster, size, state } from "./config";
 import gsap from "gsap";
 import "./events-touch";
 import { showTooltip } from "./utils";
@@ -45,10 +45,10 @@ window.addEventListener("keydown", (e) => {
   timeline && timeline.onKeyPress(e.key);
 });
 
-let isScrolling;
+let scrollTimer;
 let isFront = false;
 window.addEventListener("wheel", (e) => {
-  if (!timeline) return;
+  if (!timeline || timeline.snapping) return;
 
   if (Math.abs(e.deltaY) < Math.abs(e.deltaX)) {
     timeline.sideScroll(-0.003 * e.deltaX);
@@ -61,8 +61,8 @@ window.addEventListener("wheel", (e) => {
   showTooltip(null);
 
   isFront = dz < 0;
-  window.clearTimeout(isScrolling);
-  isScrolling = setTimeout(() => {
+  window.clearTimeout(scrollTimer);
+  scrollTimer = setTimeout(() => {
     timeline.snapToNext(isFront, galaxy);
     onMouseMove(e.clientX, e.clientY);
   }, 66);
@@ -88,17 +88,14 @@ window.addEventListener("mousemove", (e) => {
 const legendList = $("#tile-type-container > #tile-type-list");
 const toggleButton = $("#tile-type-container > #toggle-btn");
 let legendShown = legendList.is(":visible");
-toggleButton.html(legendShown ? "Hide Type Selector" : "Show Type Selector");
 toggleButton.click(() => {
   if (legendShown) {
-    toggleButton.html("Show Type Selector");
     legendShown = false;
     animateLegend(0.0, () => {
       legendList.hide();
     });
   } else {
     legendList.show();
-    toggleButton.html("Hide Type Selector");
     legendShown = true;
     animateLegend(1.0, () => {
       legendList.show();
@@ -113,3 +110,79 @@ const animateLegend = (toOpacity, onComplete) => {
     onComplete,
   });
 };
+
+// tile-type selection
+const tileTypeSelectors = document.getElementsByClassName("tile-type-selector");
+const updateTileFilter = () => {
+  const selected = [];
+  for (let i = 0; i < tileTypeSelectors.length; ++i) {
+    if (tileTypeSelectors.item(i).checked) {
+      selected.push(tileTypeSelectors[i].value);
+    }
+  }
+  state.tileFilters = selected;
+  timeline.filterTiles();
+  // re-search
+  search(searchBar.value);
+};
+for (let i = 0; i < tileTypeSelectors.length; ++i) {
+  tileTypeSelectors.item(i).addEventListener("click", updateTileFilter);
+}
+
+// search
+const names = data.map(item => item.name.toLowerCase());
+const MAX_RESULTS = 5;
+const searchResultList = $("#search-result");
+function searchItemOnClick(e) {
+  e.stopPropagation();
+  $(".search-result-item").removeClass("selected");
+  $(this).addClass("selected");
+  try {
+    const id = $(this).attr('data-index');
+    timeline.snapToItem(data[id]);
+  } catch (e) {
+    console.error(e.message);
+  }
+}
+
+export const search = (keyword) => {
+  if (!keyword) {
+    searchResultList.html('');
+    timeline._updateActiveItem(-1);
+    return;
+  };
+  const results = timeline.search(keyword.toLowerCase());
+  if (!results.length) {
+    searchResultList.html(`<p><small>No matching items</small></p>`);
+    return;
+  }
+  let listContent = '';
+  results.forEach(i => {
+    listContent += `<li data-index="${i}" class="search-result-item">${data[i].name}</li>\n`;
+  })
+  searchResultList.html(listContent);
+  $(".search-result-item").click(searchItemOnClick);  // add event listener
+}
+
+const clearIcon = document.querySelector(".clear-icon");
+const searchBar = document.querySelector(".search");
+
+let searchTimer;
+searchBar.addEventListener("keyup", (e) => {
+  if (searchBar.value && clearIcon.style.visibility != "visible") {
+    clearIcon.style.visibility = "visible";
+  } else if (!searchBar.value) {
+    clearIcon.style.visibility = "hidden";
+  }
+  const keyword = e.target.value;
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => {
+    search(keyword);
+  }, 300);
+});
+
+clearIcon.addEventListener("click", () => {
+  searchBar.value = "";
+  clearIcon.style.visibility = "hidden";
+  search();
+})

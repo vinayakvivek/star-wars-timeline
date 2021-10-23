@@ -2,6 +2,7 @@ import { Vector2, Clock } from "three";
 import { galaxy, timeline } from "./scene";
 import gsap from "gsap";
 import { timelineClick } from "./events";
+import { size } from "./config";
 
 const pos = new Vector2();
 const delta = new Vector2();
@@ -14,6 +15,9 @@ let dampingAnimation;
 
 const updateScene = (delta) => {
   if (!timeline) return;
+  // don't scroll while using slider or top of the screen
+  if (pos.y < size.height / 2) return;
+
   if (Math.abs(delta.y) > Math.abs(delta.x)) {
     galaxy.scroll(0.5 * delta.y);
     timeline.scroll(0.02 * delta.y);
@@ -72,6 +76,9 @@ window.addEventListener("touchend", (e) => {
     timelineClick(pos.x, pos.y);
     return;
   }
+  // don't scroll while using slider or top of the screen
+  if (pos.y < size.height / 2) return;
+
   const avgDelta = lastDeltas
     .reduce((a, b) => a.add(b), new Vector2())
     .divideScalar(lastDeltas.length);

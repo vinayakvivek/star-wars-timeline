@@ -2,9 +2,28 @@ import * as THREE from "three";
 import { gui, assets, state } from "../config";
 import gsap from "gsap";
 import { openLinkPopup, showTooltip } from "../utils";
+import { galaxy } from ".";
 
+// year slider setup
+const slider = document.getElementById("year-range");
+const valueEle = document.getElementById("current-year");
+const yearMarkersContainer = document.getElementById("year-markers-container");
+
+var minPos, maxPos;
+const getPosition = (value) =>
+  Math.floor((100 * (Math.ceil(value) - minPos)) / (maxPos - minPos));
+const getLabel = (value) =>
+  `${Math.abs(Math.ceil(value))} ${value > 0 ? "ABY" : "BBY"}`;
+
+const resetSlider = (value) => {
+  slider.value = value;
+  slider.lastValue = value;
+  valueEle.innerHTML = getLabel(value);
+  const left = getPosition(value);
+  valueEle.style.left = `${left}%`;
+};
 class Timeline extends THREE.Group {
-  constructor() {
+  constructor(params) {
     super();
     this.params = {
       color: "#0f0f0f",
@@ -13,7 +32,32 @@ class Timeline extends THREE.Group {
       startYear: -240,
       endYear: 40,
       gap: 2.0,
+      ...params,
     };
+
+    slider.setAttribute("min", this.params.startYear);
+    slider.setAttribute("max", this.params.endYear);
+    slider.setAttribute("step", 0.1);
+    minPos = parseInt(slider.min);
+    maxPos = parseInt(slider.max);
+    slider.value = 0;
+    slider.lastValue = 0;
+    slider.addEventListener("input", () => {
+      const diff = slider.lastValue - slider.value;
+      this._translate(diff * this.params.gap);
+      resetSlider(slider.value);
+    });
+    // set slider year-markers
+    const markerYears = [-200, 0];
+    yearMarkersContainer.innerHTML = markerYears
+      .map(
+        (y) => `
+      <div class="year-marker" style="left: ${getPosition(y)}%;"
+      data-label="${getLabel(y)}"><span></span></div>
+    `
+      )
+      .join("");
+    // <p class="year-marker">0</p>
 
     // startYear must be negative, endYear must be positive
     const { startYear, endYear, gap, width } = this.params;
@@ -163,8 +207,8 @@ class Timeline extends THREE.Group {
     dummy.rotation.z = Math.PI / 2;
 
     for (let year = startYear; year <= endYear; ++year) {
-      // const label = `${Math.abs(year)} ${year < 0 ? 'BBY' : 'ABY'}`;
-      const label = `${year}`;
+      const label = `${Math.abs(year)} ${year <= 0 ? "BBY" : "ABY"}`;
+      // const label = `${year}`;
       const textGeometry = _createTextGeometry(label, assets.font, 0.3);
       textGeometry.center();
       const text = new THREE.Mesh(textGeometry, textMaterial);
@@ -192,11 +236,6 @@ class Timeline extends THREE.Group {
     this.activeYearPlane.position.y = 0.001;
     this.add(this.activeYearPlane);
     this._updateActiveYearPlane();
-  }
-
-  _updateActiveYearPlane() {
-    this._computeCurrentYear();
-    this.activeYearPlane.position.z = this.currentYear * this.params.gap;
   }
 
   _initTweaks() {
@@ -228,6 +267,9 @@ class Timeline extends THREE.Group {
 
   onClick() {
     this._findActiveTile();
+    if (this.selectedTile) {
+      this._updateActiveItem(-1);
+    }
     if (this.activeTile) {
       openLinkPopup(this.activeTile.item.link);
       showTooltip(null);
@@ -249,6 +291,7 @@ class Timeline extends THREE.Group {
     }
   }
 
+  // only for debugging tile positions
   onKeyPress(key) {
     const delta = 0.1;
     if (!this.activeTile) {
@@ -315,11 +358,15 @@ class Timeline extends THREE.Group {
     this.activeTile.update(dPos, dH, dY, dS, dO, dls);
   }
 
+  _updateActiveYearPlane() {
+    this._computeCurrentYear();
+    this.activeYearPlane.position.z = this.currentYear * this.params.gap;
+  }
+
   _translate(dz) {
     this.line.translateY(dz);
     this.translateZ(dz);
     this._updateActiveYearPlane();
-    // this.hitTestPlane.translateZ(-dz);
   }
 
   scroll(dz) {
@@ -334,10 +381,16 @@ class Timeline extends THREE.Group {
       return;
     }
     this._translate(dz);
+    resetSlider(this.currentYear);
+  }
+
+  _translateX(dx) {
+    this.translateX(dx);
+    this.yearLabels.translateX(-dx);
   }
 
   sideScroll(dx) {
-    if (this.snapping) {
+    if (this.snapping || this.sideSnapping) {
       console.log("snapping in progress");
       return;
     }
@@ -347,8 +400,7 @@ class Timeline extends THREE.Group {
     ) {
       return;
     }
-    this.translateX(dx);
-    this.yearLabels.translateX(-dx);
+    this._translateX(dx);
   }
 
   _computeCurrentYear() {
@@ -373,12 +425,18 @@ class Timeline extends THREE.Group {
     }
   }
 
-  snapToNext(f, galaxy) {
+  snapToNext(f) {
+    if (this.snapping) return;
+
     // f -> front(true) or back(false)
     this._computeCurrentYear();
     const startYear = this.params.startYear;
     const yearIndex = Math.round(this.currentYear) - startYear;
     const [bIndex, fIndex] = this.nextValidYearIndex[yearIndex];
+
+    if (yearIndex > this.numYears - 3 || yearIndex < 3) {
+      return;
+    }
 
     const toIndex = f ? fIndex : bIndex;
     // if diff less than 1, do not move
@@ -393,28 +451,103 @@ class Timeline extends THREE.Group {
 
     if (Math.abs(yearIndex - toIndex) > 20) {
       if (
-        Math.abs(yearIndex - fIndex) < 5 ||
-        Math.abs(yearIndex - bIndex) < 5
+        Math.abs(yearIndex - fIndex) < 4 ||
+        Math.abs(yearIndex - bIndex) < 4
       ) {
         return;
       }
     }
 
-    this.snapping = true;
     const toPos = -(toIndex + startYear + 1) * this.params.gap;
+    this.snapTo(toPos);
+  }
+
+  search(keyword) {
+    const nameIds = this.tiles.children
+      .filter((tile) => tile.visible)
+      .map((tile) => ({
+        id: tile.item.id,
+        name: tile.item.name.toLowerCase(),
+      }));
+    const MAX_RESULTS = 5;
+    const results = [];
+    // check for starts-with first
+    for (const nameId of nameIds) {
+      nameId.name.startsWith(keyword) && results.push(nameId.id);
+      if (results.length >= MAX_RESULTS) break;
+    }
+    for (const nameId of nameIds) {
+      if (results.length >= MAX_RESULTS) break;
+      !results.includes(nameId.id) &&
+        nameId.name.includes(keyword) &&
+        results.push(nameId.id);
+    }
+    return results;
+  }
+
+  _updateActiveItem(id) {
+    const tiles = this.tiles.children;
+    if (this.selectedTile) {
+      // make it inactive
+      this.selectedTile.unhighlight();
+      tiles.forEach((tile) => tile.show());
+    }
+    this.selectedTile = tiles.find((tile) => tile.item.id == id);
+    if (this.selectedTile) {
+      this.selectedTile.highlight();
+      // reduce opacity of other items
+      tiles
+        .filter((tile) => tile !== this.selectedTile)
+        .forEach((tile) => tile.hide());
+    }
+  }
+
+  snapToItem(item) {
+    if (this.snapping) return;
+
+    const year = Math.round(item.year + item.duration / 2);
+    const toPos = -year * this.params.gap;
+    this.snapTo(toPos);
+    this.sideSnapTo(item.params.pos, 0.5);
+    this._updateActiveItem(item.id);
+  }
+
+  snapTo(pos, callback = () => {}) {
+    this.snapping = true;
     const data = { z: this.position.z };
     let prev = data.z;
     gsap.to(data, {
-      z: toPos,
+      z: pos,
       duration: 1.0,
       onUpdate: () => {
         const dz = data.z - prev;
         prev = data.z;
         this._translate(dz);
+        resetSlider(this.currentYear);
         galaxy.scroll(10 * dz);
       },
       onComplete: () => {
         this.snapping = false;
+        callback();
+      },
+    });
+  }
+
+  sideSnapTo(pos, duration = 1.0, callback = () => {}) {
+    this.sideSnapping = true;
+    const data = { x: this.position.x };
+    let prev = data.x;
+    gsap.to(data, {
+      x: pos,
+      duration,
+      onUpdate: () => {
+        const dx = data.x - prev;
+        prev = data.x;
+        this._translateX(dx);
+      },
+      onComplete: () => {
+        this.sideSnapping = false;
+        callback();
       },
     });
   }

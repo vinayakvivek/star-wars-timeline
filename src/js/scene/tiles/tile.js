@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { MeshBasicMaterial } from "three";
 import { assets, raycaster, textureLoader } from "../../config";
-import { disposeHierarchy } from "../../utils";
+import { disposeHierarchy, updateOpacity } from "../../utils";
 
 const material = new THREE.MeshBasicMaterial({
   side: THREE.DoubleSide,
@@ -49,6 +49,31 @@ class Tile extends THREE.Group {
     tile.position.z = 0.02;
     this.tile = tile;
     this.movable.add(this.tile);
+  }
+
+  updateBorderColor(color) {
+    this.borderColor = color;
+    this.border.material = new THREE.MeshBasicMaterial({ color: this.borderColor })
+  }
+
+  hide() {
+    updateOpacity(this, 0.2);
+  }
+
+  show() {
+    updateOpacity(this, 1.0);
+  }
+
+  highlight() {
+    // this.movable.scale.setScalar(1.5);
+    this.updateBorderColor("#ffffff");
+    // this.label.visible = false;
+  }
+
+  unhighlight() {
+    // this.movable.scale.setScalar(1.0);
+    this.updateBorderColor("#222222");
+    // this.label.visible = true;
   }
 
   update(dPos = 0, dH = 0, dY = 0, dS = 0, dO = 0, dls = 0) {
@@ -101,7 +126,7 @@ class Tile extends THREE.Group {
 
     const connector = new THREE.Mesh(
       new THREE.PlaneGeometry(halfWidth * 2, 0.05),
-      material
+      material.clone()
     );
     const connectorPlane = new THREE.Mesh(
       new THREE.PlaneGeometry(halfWidth * 2, h),
@@ -117,12 +142,14 @@ class Tile extends THREE.Group {
   }
 
   createMarker() {
-    const h = this.params.height;
+    const movableBox = new THREE.Box3().setFromObject(this.movable);
+    const boxH = movableBox.max.y - movableBox.min.y;
+    const h = this.params.height - boxH / 2;
     const marker = new THREE.Mesh(
       new THREE.PlaneGeometry(0.05, Math.abs(h)),
-      material
+      material.clone()
     );
-    marker.position.y = -h / 2;
+    marker.position.y -= (h / 2 + boxH / 2);
     marker.rotation.y = Math.PI / 2;
     this.add(marker);
   }
@@ -166,7 +193,7 @@ class Tile extends THREE.Group {
     this.label = new THREE.Group();
     let index = 0;
     for (const namePart of this._nameParts()) {
-      const mesh = new THREE.Mesh(this._textGeometry(namePart), material);
+      const mesh = new THREE.Mesh(this._textGeometry(namePart), material.clone());
       mesh.position.y -= index++ * 0.2;
       this.label.add(mesh);
     }
@@ -178,7 +205,7 @@ class Tile extends THREE.Group {
     const h = bbox.max.y - bbox.min.y + margin;
     const cx = (bbox.max.x + bbox.min.x) / 2;
     const cy = (bbox.max.y + bbox.min.y) / 2;
-    const mask = new THREE.Mesh(new THREE.PlaneGeometry(w, h), maskMaterial);
+    const mask = new THREE.Mesh(new THREE.PlaneGeometry(w, h), maskMaterial.clone());
     mask.position.set(cx, cy, -0.001);
     this.label.add(mask);
 

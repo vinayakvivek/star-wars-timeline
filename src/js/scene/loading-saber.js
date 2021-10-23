@@ -167,6 +167,8 @@ loadingManager.onLoad = () => {
     enterButton.show();
     enterButton.click(onEnterAnimation);
   } else {
+    $(".show-on-load").fadeTo(1000, 1);
+    $(".hide-on-load").fadeTo(1000, 0);
     state.loading = false;
     stopSaberHum();
   }
@@ -223,8 +225,8 @@ const onEnterAnimation = () => {
     duration: 4.0,
     // ease: "expo.inOut",
     onComplete: () => {
-      $("#tile-type-container").fadeTo(1000, 1);
-      $("#created-by").fadeTo(1000, 0);
+      $(".show-on-load").fadeTo(1000, 1);
+      $(".hide-on-load").fadeTo(1000, 0);
     },
   });
 };

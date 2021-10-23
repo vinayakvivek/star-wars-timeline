@@ -6,12 +6,13 @@ from utils import parse_date, parse_rdate, fetch_image
 import json
 from random import random
 
-curr_data_path = "../src/data/data2.json"
-data_path = "../src/data/data2-1.json"
+curr_data_path = "../src/data/data.json"
+data_path = "../src/data/data2.json"
 static_dir = "../static"
-last_row = 181  # ! UPDATE IF NEW ITEMS ARE ADDED
+last_row = 300  # ! UPDATE IF NEW ITEMS ARE ADDED
 
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets.readonly"]
+# create key from: https://console.cloud.google.com/iam-admin/serviceaccounts/details/101814217430080252583;edit=true/keys?project=star-wars-timeline-313312
 SERVICE_ACCOUNT_FILE = "key.json"
 
 credentials = service_account.Credentials.from_service_account_file(

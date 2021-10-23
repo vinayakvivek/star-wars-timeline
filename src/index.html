@@ -22,15 +22,40 @@
       <div class="container">
         <h1 id="title">Star Wars</h1>
         <h2 id="sub-title">Timeline</h2>
-        <p id="created-by">
+        <p id="created-by" class="hide-on-load">
           Created by:
           <a href="https://github.com/vinayakvivek" target="_blank">Vinayak</a>
         </p>
+        <div class="slider-container show-on-load">
+          <div id="year-markers-container"></div>
+          <input type="range" class="slider" id="year-range" />
+          <p id="year-container"><span id="current-year"></span></p>
+        </div>
         <button class="btn" id="export-btn">Export Data</button>
       </div>
+
       <button class="btn" id="enter-btn">Enter</button>
-      <div id="tile-type-container">
-        <button class="btn" id="toggle-btn">Hide Legend</button>
+
+      <div id="search-container" class="show-on-load">
+        <div id="search-bar-wrapper">
+          <em class="fas fa-search search-icon"></em>
+          <input
+            class="search"
+            type="text"
+            id="search-input"
+            placeholder="Search ..."
+          />
+          <em class="fas fa-times-circle clear-icon"></em>
+        </div>
+        <div id="search-result-container">
+          <ul id="search-result"></ul>
+        </div>
+      </div>
+
+      <div id="tile-type-container" class="show-on-load">
+        <button class="btn" id="toggle-btn">
+          <em class="fas fa-filter"></em>
+        </button>
         <ul id="tile-type-list">
           <li>
             <div class="color-box" style="border-color: red"></div>
@@ -41,6 +66,15 @@
 
       <button id="mute-btn" class="btn">
         <em class="fas fa-volume-up"></em>
+      </button>
+
+      <button id="github-btn" class="btn">
+        <a
+          href="https://github.com/vinayakvivek/star-wars-timeline"
+          target="_blank"
+        >
+          <em class="fab fa-github"></em>
+        </a>
       </button>
 
       <!-- popup on clicking item -->
