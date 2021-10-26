@@ -2547,16 +2547,16 @@
     "year": -14.0
   },
   {
-    "duration": 14.0,
+    "duration": 1.0,
     "imageUrl": "",
     "link": "https://starwars.fandom.com/wiki/Star_Wars:_The_Bad_Batch",
     "name": "The Bad Batch",
     "params": {
       "height": 1,
       "labelSize": 0.1,
-      "pos": 5.33,
+      "pos": 3.33,
       "tileOffset": 0,
-      "tileScale": 0.8,
+      "tileScale": 0.7,
       "yearOffset": 0.0
     },
     "releaseDate": [
@@ -2593,7 +2593,7 @@
     "params": {
       "height": 1,
       "labelSize": 0.1,
-      "pos": 6.73,
+      "pos": 7.0,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
@@ -2827,9 +2827,9 @@
     "link": "https://starwars.fandom.com/wiki/Catalyst:_A_Rogue_One_Novel",
     "name": "Catalyst: A Rogue One Novel",
     "params": {
-      "height": 1,
+      "height": 1.1,
       "labelSize": 0.1,
-      "pos": 3.18,
+      "pos": 6.0,
       "tileOffset": 0,
       "tileScale": 0.8,
       "yearOffset": 0.0
